@@ -15,6 +15,12 @@ export class GaugesController {
     return this.gauges.getPostalGauges(code);
   }
 
+  @Get('leaderboard')
+  leaderboard(@Query('limit') limit?: string) {
+    const n = limit ? Number(limit) : 10;
+    return this.gauges.getLeaderboard(Number.isFinite(n) ? n : 10);
+  }
+
   @Get('social-proof')
   socialProof(
     @Query('postalCode') postalCode: string,

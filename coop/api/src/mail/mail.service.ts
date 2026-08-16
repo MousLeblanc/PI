@@ -25,7 +25,8 @@ export class MailService {
     const appUrl = (
       this.config.get<string>('APP_PUBLIC_URL') ?? 'http://localhost:3000'
     ).replace(/\/$/, '');
-    const subject = 'Pré-inscription confirmée — bienvenue chez Pi COOP';
+    // Deliverability: avoid emoji-heavy subjects (spam filters)
+    const subject = 'Bienvenue chez Pi COOP — voici notre plan';
 
     const placeLabel = ctx.commune
       ? `${ctx.commune} (${ctx.postalCode})`
@@ -34,49 +35,68 @@ export class MailService {
     const text = [
       'Bonjour,',
       '',
-      'Félicitations — votre pré-inscription à Pi COOP est confirmée.',
+      'Votre pré-inscription à Pi COOP est confirmée. Bienvenue du bon côté de la distribution.',
       '',
-      'Vous venez de réserver votre place dans un supermarché citoyen : courses de qualité, du grossiste à votre assiette, avec seulement 20 centimes de marge fixe (prix cibles estimés, non contractuels).',
+      'Si vous nous avez rejoints via un lien (WhatsApp, Facebook, Instagram…), vous vous demandez peut-être : comment vendre du bio de qualité à un prix aussi bas ?',
       '',
-      `Où en est ${placeLabel} ?`,
-      'Pour ouvrir le magasin, la jauge doit atteindre 5 000 préinscrits. C’est la force du nombre qui porte le projet.',
+      'La réponse est simple : nous réduisons les intermédiaires. Pi COOP n’est pas un supermarché classique — c’est votre coopérative.',
       '',
-      'Et maintenant ?',
-      '• Votre place est réservée — la préinscription reste 100 % gratuite.',
-      '• Faites monter la jauge : parlez-en à vos voisins, votre famille, vos amis.',
-      '• Le Jour J : dès que votre ville atteint l’objectif, vous serez alerté·e pour activer votre compte (cotisation solidaire de 10 € / personne / mois, enfants inclus) et préparer l’ouverture.',
+      'Les 3 piliers :',
       '',
-      `Partagez le lien pour accélérer le compteur : ${appUrl}`,
+      '1. Zéro profit sur la nourriture',
+      'Nous achetons au prix grossiste. Vous payez ce prix coûtant, plus 20 centimes fixes par article pour l’énergie, le loyer et le fonctionnement. (Prix cibles estimés, non contractuels.)',
       '',
-      'Merci de faire partie des pionniers.',
-      'Ensemble, on change les règles de la grande distribution.',
+      '2. Le bénévolat (notre force)',
+      'Chaque adulte actif consacre 2 heures par mois (caisse, rayons…). Moins de masse salariale = des prix plus bas pour tout le monde. Les plus jeunes et les seniors sont exemptés.',
+      '',
+      '3. Le trésor commun',
+      'Une fois le magasin ouvert : 10 € / mois / personne (enfants inclus). Ce n’est pas une « dépense gaspillée » : c’est le fonds collectif qui permet d’acheter en volume, sans dépendre du crédit bancaire classique.',
+      '',
+      `Objectif pour ${placeLabel} : 10 000 personnes (chaque membre du foyer compte).`,
+      'C’est le point de bascule pour ouvrir — pas la ligne d’arrivée. Au-delà, on continue pour renforcer le pouvoir de négociation.',
+      'La première ville à franchir 10 000 accueille le magasin historique ; les suivantes suivent sur une roadmap d’ouverture.',
+      'Aujourd’hui, vous ne payez rien. Votre mission : faire grandir le réseau — surtout localement.',
+      '',
+      `Partagez ce lien à 3 personnes de votre entourage : ${appUrl}`,
+      '',
+      'L’inflation n’est pas une fatalité. Reprenons le pouvoir d’achat, ensemble.',
       '',
       'À très vite,',
-      'Les membres fondateurs de Pi COOP',
+      'L’équipe fondatrice de Pi COOP',
     ].join('\n');
 
     const html = `
-      <div style="font-family:Georgia,serif;line-height:1.55;color:#12261f;max-width:560px;margin:0 auto">
-        <p style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#1f6f54;margin:0 0 8px">Pi COOP</p>
-        <h1 style="font-size:22px;line-height:1.25;margin:0 0 16px">Pré-inscription confirmée</h1>
+      <div style="font-family:Georgia,'Times New Roman',serif;line-height:1.55;color:#12261f;max-width:560px;margin:0 auto;padding:8px">
+        <p style="font-size:13px;letter-spacing:0.12em;text-transform:uppercase;color:#1f6f54;margin:0 0 10px">Pi COOP</p>
+        <h1 style="font-size:22px;line-height:1.3;margin:0 0 18px;font-weight:600">Bienvenue — voici notre plan</h1>
         <p>Bonjour,</p>
-        <p><strong>Félicitations</strong> — votre pré-inscription à Pi COOP est confirmée.</p>
-        <p>Vous venez de réserver votre place dans un supermarché citoyen : courses de qualité, du grossiste à votre assiette, avec seulement <strong>20 centimes</strong> de marge fixe. <em style="color:#5b6b63">(Prix cibles estimés, non contractuels.)</em></p>
-        <h2 style="font-size:17px;margin:28px 0 8px">Où en est ${escapeHtml(placeLabel)}&nbsp;?</h2>
-        <p>Pour ouvrir le magasin, la jauge doit atteindre <strong>5&nbsp;000 préinscrits</strong>. C’est la force du nombre qui porte le projet.</p>
-        <h2 style="font-size:17px;margin:28px 0 8px">Et maintenant&nbsp;?</h2>
-        <ul>
-          <li>Votre place est réservée — la préinscription reste <strong>100&nbsp;% gratuite</strong>.</li>
-          <li><strong>Faites monter la jauge</strong> : voisins, famille, amis.</li>
-          <li><strong>Le Jour J</strong> : dès l’objectif atteint, alerte pour activer votre compte (cotisation solidaire de <strong>10&nbsp;€ / personne / mois</strong>, enfants inclus) et préparer l’ouverture.</li>
-        </ul>
+        <p>Votre pré-inscription à <strong>Pi COOP</strong> est confirmée. Bienvenue du bon côté de la distribution.</p>
+        <p>Si vous nous avez rejoints via un lien (WhatsApp, Facebook, Instagram…), vous vous demandez peut-être : <em>comment vendre du bio de qualité à un prix aussi bas&nbsp;?</em></p>
+        <p>La réponse est simple : nous réduisons les intermédiaires. Pi COOP n’est pas un supermarché classique — <strong>c’est votre coopérative</strong>.</p>
+
+        <h2 style="font-size:17px;margin:28px 0 12px">Les 3 piliers</h2>
+
+        <p style="margin:0 0 6px"><strong>1. Zéro profit sur la nourriture</strong></p>
+        <p style="margin:0 0 16px">Nous achetons au prix grossiste. Vous payez ce prix coûtant, plus <strong>20&nbsp;centimes</strong> fixes par article pour l’énergie, le loyer et le fonctionnement. <span style="color:#5b6b63;font-size:13px">(Prix cibles estimés, non contractuels.)</span></p>
+
+        <p style="margin:0 0 6px"><strong>2. Le bénévolat (notre force)</strong></p>
+        <p style="margin:0 0 16px">Chaque adulte actif consacre <strong>2&nbsp;heures par mois</strong> (caisse, rayons…). Moins de masse salariale = des prix plus bas pour tout le monde. Les plus jeunes et les seniors sont exemptés.</p>
+
+        <p style="margin:0 0 6px"><strong>3. Le trésor commun</strong></p>
+        <p style="margin:0 0 16px">Une fois le magasin ouvert : <strong>10&nbsp;€ / mois / personne</strong> (enfants inclus). Ce fonds collectif permet d’acheter en volume, sans dépendre du crédit bancaire classique.</p>
+
+        <h2 style="font-size:17px;margin:28px 0 8px">Objectif pour ${escapeHtml(placeLabel)}</h2>
+        <p><strong>10&nbsp;000 personnes</strong> (chaque membre du foyer compte) = le point de bascule pour ouvrir — pas la ligne d’arrivée.</p>
+        <p>La <strong>première ville</strong> à franchir le cap accueille le magasin historique ; les suivantes entrent sur la roadmap d’ouverture. Aujourd’hui, vous ne payez rien : faites grandir le réseau, surtout près de chez vous.</p>
+
         <p style="margin:28px 0">
-          <a href="${appUrl}" style="display:inline-block;background:#1f6f54;color:#fff;text-decoration:none;padding:12px 20px;border-radius:999px;font-weight:600">
-            Suivre la jauge &amp; partager
+          <a href="${appUrl}" style="display:inline-block;background:#1f6f54;color:#ffffff;text-decoration:none;padding:14px 22px;border-radius:999px;font-weight:600">
+            Partager Pi COOP à 3 personnes
           </a>
         </p>
-        <p>Merci de faire partie des pionniers.<br/>Ensemble, on change les règles de la grande distribution.</p>
-        <p style="margin-top:28px">À très vite,<br/><strong>Les membres fondateurs de Pi COOP</strong></p>
+
+        <p>L’inflation n’est pas une fatalité. Reprenons le pouvoir d’achat, ensemble.</p>
+        <p style="margin-top:28px">À très vite,<br/><strong>L’équipe fondatrice de Pi COOP</strong></p>
       </div>
     `;
 
@@ -96,7 +116,6 @@ export class MailService {
 
     if (error) {
       this.logger.error(`Resend failed: ${JSON.stringify(error)}`);
-      // Don't fail registration if email provider blips — account already created
       return;
     }
 

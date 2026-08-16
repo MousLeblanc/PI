@@ -38,7 +38,7 @@ export function PiCounter() {
   const digits = formatPiFromCount(total, PI_DECIMALS);
   const base = digits.slice(0, -1);
   const last = digits.length > 2 ? digits.slice(-1) : "";
-  const word = total <= 1 ? "préinscrit" : "préinscrits";
+  const word = total <= 1 ? "personne" : "personnes";
 
   return (
     <Badge

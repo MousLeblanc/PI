@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 
-const DEFAULT_TARGET = 5000;
+const DEFAULT_TARGET = 10_000;
 
 /** Digits of π after "3." for visual elongation of the counter */
 const PI_FRAC =
@@ -21,9 +21,18 @@ function normalizeStreet(value: string): string {
 export class GaugesService {
   constructor(private readonly prisma: PrismaService) {}
 
+  /** Counts personnes (somme des tailles de foyer), pas le nombre de comptes. */
+  private async totalPersons(where?: { postalCode?: string }) {
+    const agg = await this.prisma.user.aggregate({
+      where,
+      _sum: { householdSize: true },
+    });
+    return agg._sum.householdSize ?? 0;
+  }
+
   async getPiCounter() {
-    const total = await this.prisma.user.count();
-    // 1 decimal digit per préinscrit (same rule as frontend gamification)
+    const total = await this.totalPersons();
+    // 1 décimale de π par personne préinscrite
     const fracLen = Math.min(Math.max(total, 0), PI_FRAC.length);
     const display =
       fracLen === 0 ? '3,' : `3,${PI_FRAC.slice(0, fracLen)}`;
@@ -35,9 +44,7 @@ export class GaugesService {
       if (!/^\d{4}$/.test(code)) {
         throw new BadRequestException('Code postal invalide');
       }
-      const count = await this.prisma.user.count({
-        where: { postalCode: code },
-      });
+      const count = await this.totalPersons({ postalCode: code });
       return {
         items: [
           {
@@ -51,7 +58,7 @@ export class GaugesService {
 
     const grouped = await this.prisma.user.groupBy({
       by: ['postalCode'],
-      _count: { _all: true },
+      _sum: { householdSize: true },
       orderBy: { postalCode: 'asc' },
       take: 50,
     });
@@ -59,8 +66,26 @@ export class GaugesService {
     return {
       items: grouped.map((g) => ({
         postalCode: g.postalCode,
-        count: g._count._all,
+        count: g._sum.householdSize ?? 0,
         target: DEFAULT_TARGET,
+      })),
+    };
+  }
+
+  async getLeaderboard(limit = 10) {
+    const take = Math.min(Math.max(limit, 1), 25);
+    const grouped = await this.prisma.user.groupBy({
+      by: ['postalCode'],
+      _sum: { householdSize: true },
+      orderBy: { _sum: { householdSize: 'desc' } },
+      take,
+    });
+
+    return {
+      openingTarget: DEFAULT_TARGET,
+      items: grouped.map((g) => ({
+        postalCode: g.postalCode,
+        count: g._sum.householdSize ?? 0,
       })),
     };
   }

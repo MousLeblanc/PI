@@ -24,6 +24,16 @@ export type PostalGaugesResponse = {
   items: Array<{ postalCode: string; count: number; target: number }>;
 };
 
+export type LeaderboardItem = {
+  postalCode: string;
+  count: number;
+};
+
+export type LeaderboardResponse = {
+  openingTarget: number;
+  items: LeaderboardItem[];
+};
+
 export type SocialProofResponse = {
   postalCode: string;
   streetName: string;
@@ -56,6 +66,12 @@ export function getPiCounter() {
 export function getPostalGauges(code?: string) {
   const q = code ? `?code=${encodeURIComponent(code)}` : "";
   return apiGet<PostalGaugesResponse>(`/gauges/postal${q}`);
+}
+
+export function getLeaderboard(limit = 8) {
+  return apiGet<LeaderboardResponse>(
+    `/gauges/leaderboard?limit=${encodeURIComponent(String(limit))}`,
+  );
 }
 
 export function getSocialProof(postalCode: string, streetName: string) {

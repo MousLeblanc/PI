@@ -1,10 +1,12 @@
-import Link from "next/link";
+import { CityLeaderboard } from "@/components/CityLeaderboard";
 import { FolderPi } from "@/components/FolderPi";
+import { HowItWorks } from "@/components/HowItWorks";
 import { PiCounter } from "@/components/PiCounter";
 import { PostalGauges } from "@/components/PostalGauges";
 import { RegisterForm } from "@/components/RegisterForm";
 import { SocialProof } from "@/components/SocialProof";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -45,7 +47,7 @@ export default function HomePage() {
               <a href="#inscription">Débloquer les prix dans ma ville</a>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <a href="#folder">Voir les prix</a>
+              <a href="#comment-ca-marche">Comment ça marche&nbsp;?</a>
             </Button>
           </div>
         </div>
@@ -70,14 +72,29 @@ export default function HomePage() {
             Débloquez le magasin dans votre ville
           </h2>
           <p className="mt-3 mb-8 max-w-2xl text-muted-foreground">
-            Dès que votre code postal atteint 5&nbsp;000 préinscrits, nous y
-            ouvrons un supermarché. Invitez vos voisins&nbsp;!
+            <strong>10&nbsp;000 personnes</strong> = le point de bascule pour
+            ouvrir (chaque membre du foyer compte — une famille de 5 = +5). Au‑delà,
+            la jauge continue : plus on est nombreux, plus le pouvoir de
+            négociation est fort. La{" "}
+            <strong>première ville</strong> à franchir le cap accueille le
+            magasin historique&nbsp;; les suivantes suivent sur une roadmap
+            d’ouverture.
           </p>
           <PostalGauges />
+          <CityLeaderboard />
         </div>
       </section>
 
-      <section className="scroll-mt-24 py-16 sm:py-20">
+      <section
+        id="comment-ca-marche"
+        className="scroll-mt-24 py-16 sm:py-20"
+      >
+        <div className="mx-auto w-[min(1120px,calc(100%-2rem))]">
+          <HowItWorks />
+        </div>
+      </section>
+
+      <section className="scroll-mt-24 bg-white/50 py-16 sm:py-20">
         <div className="mx-auto w-[min(1120px,calc(100%-2rem))]">
           <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
             Vos voisins sont déjà là
@@ -109,29 +126,40 @@ export default function HomePage() {
       </section>
 
       <footer className="border-t py-10">
-        <div className="mx-auto flex w-[min(1120px,calc(100%-2rem))] flex-col gap-3 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <span>
-            Pi ·{" "}
-            <Link href="/" className="text-foreground">
-              COOP
-            </Link>{" "}
-            · Finance · Academy
-          </span>
-          <nav className="flex flex-wrap gap-4">
-            <Link
-              href="/mentions-legales"
-              className="hover:text-foreground hover:underline"
-            >
-              Mentions légales
-            </Link>
-            <Link
-              href="/confidentialite"
-              className="hover:text-foreground hover:underline"
-            >
-              Confidentialité
-            </Link>
-            <span>Préinscription gratuite</span>
-          </nav>
+        <div className="mx-auto flex w-[min(1120px,calc(100%-2rem))] flex-col gap-4 text-sm text-muted-foreground">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <span>
+              Pi ·{" "}
+              <Link href="/" className="text-foreground">
+                COOP
+              </Link>{" "}
+              · Finance · Academy
+            </span>
+            <nav className="flex flex-wrap gap-4">
+              <a
+                href="#comment-ca-marche"
+                className="hover:text-foreground hover:underline"
+              >
+                Comment ça marche
+              </a>
+              <Link
+                href="/mentions-legales"
+                className="hover:text-foreground hover:underline"
+              >
+                Mentions légales
+              </Link>
+              <Link
+                href="/confidentialite"
+                className="hover:text-foreground hover:underline"
+              >
+                Confidentialité
+              </Link>
+            </nav>
+          </div>
+          <p className="text-xs text-muted-foreground/90">
+            Pi COOP n’est que la Phase&nbsp;1. Bientôt : Pi Academy et Pi
+            Finance.
+          </p>
         </div>
       </footer>
     </main>
