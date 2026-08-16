@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: pi-coop-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: picoop
+      POSTGRES_PASSWORD: picoop
+      POSTGRES_DB: picoop
+    ports:
+      # 5433 host → évite le conflit avec PostgreSQL Windows sur 5432
+      - "5433:5432"
+    volumes:
+      - pi_coop_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U picoop -d picoop"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  pi_coop_pg:
