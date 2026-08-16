@@ -15,10 +15,10 @@ import {
 } from 'class-validator';
 
 export enum AgeBandDto {
-  AGE_0_2 = 'AGE_0_2',
-  AGE_3_12 = 'AGE_3_12',
-  AGE_13_17 = 'AGE_13_17',
-  AGE_18_PLUS = 'AGE_18_PLUS',
+  AGE_0_4 = 'AGE_0_4',
+  AGE_5_17 = 'AGE_5_17',
+  AGE_18_64 = 'AGE_18_64',
+  AGE_65_PLUS = 'AGE_65_PLUS',
 }
 
 export class RegisterDto {

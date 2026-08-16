@@ -37,7 +37,7 @@ async function main() {
         email: d.email,
         passwordHash,
         householdSize: 1,
-        ageBands: [AgeBand.AGE_18_PLUS],
+        ageBands: [AgeBand.AGE_18_64],
         postalCode: '1050',
         streetName: 'Avenue Émile de Béco',
         houseNumber: d.houseNumber,

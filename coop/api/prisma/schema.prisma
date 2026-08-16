@@ -8,10 +8,10 @@ datasource db {
 }
 
 enum AgeBand {
-  AGE_0_2
-  AGE_3_12
-  AGE_13_17
-  AGE_18_PLUS
+  AGE_0_4
+  AGE_5_17
+  AGE_18_64
+  AGE_65_PLUS
 }
 
 model User {

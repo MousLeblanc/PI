@@ -10,7 +10,7 @@ const PILLARS = [
   {
     icon: HandHeart,
     title: "L’entraide (2 h / mois)",
-    body: "Pas de masse salariale = des prix vraiment bas. Chaque adulte actif donne 2 heures par mois pour faire tourner la boutique. Les plus jeunes et les seniors sont exemptés : la solidarité fait le reste.",
+    body: "Pas de masse salariale = des prix vraiment bas. Chaque adulte de 18–64 ans donne 2 heures par mois. Les 0–17 ans et les 65+ sont exemptés : la solidarité fait le reste.",
   },
   {
     icon: Scale,

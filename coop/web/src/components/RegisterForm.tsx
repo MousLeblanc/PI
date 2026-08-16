@@ -25,17 +25,17 @@ import { register } from "@/lib/api";
 import { getCommune } from "@/lib/belgium";
 
 const AGE_BANDS = [
-  { value: "AGE_0_2", label: "0–2 ans" },
-  { value: "AGE_3_12", label: "3–12 ans" },
-  { value: "AGE_13_17", label: "13–17 ans" },
-  { value: "AGE_18_PLUS", label: "18+" },
+  { value: "AGE_0_4", label: "0–4 ans (quotas bébé)" },
+  { value: "AGE_5_17", label: "5–17 ans" },
+  { value: "AGE_18_64", label: "18–64 ans (bénévolat)" },
+  { value: "AGE_65_PLUS", label: "65+ ans" },
 ] as const;
 
 export function RegisterForm() {
   const [householdSize, setHouseholdSize] = useState(2);
   const [ageBands, setAgeBands] = useState<string[]>([
-    "AGE_18_PLUS",
-    "AGE_18_PLUS",
+    "AGE_18_64",
+    "AGE_18_64",
   ]);
   const [postalCode, setPostalCode] = useState("");
   const [streetName, setStreetName] = useState("");
@@ -58,7 +58,7 @@ export function RegisterForm() {
     setHouseholdSize(size);
     setAgeBands((prev) => {
       const next = [...prev];
-      while (next.length < size) next.push("AGE_18_PLUS");
+      while (next.length < size) next.push("AGE_18_64");
       return next.slice(0, size);
     });
   }
@@ -142,7 +142,7 @@ export function RegisterForm() {
 
           <div className="space-y-3 rounded-xl border bg-slate-50/80 p-4">
             <p className="text-sm font-medium text-muted-foreground">
-              Composition du foyer (tranches d’âge pour calculer vos quotas,
+              Composition du foyer (tranches pour quotas bébé et bénévolat —
               aucun âge exact ne sera conservé).
             </p>
             {bandSelects.map((i) => (
