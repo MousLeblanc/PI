@@ -17,7 +17,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Pi COOP — Coopérative citoyenne",
   description:
-    "Préinscription à Pi COOP : achats groupés bio à prix coûtant + 0,20 €, transparence et solidarité.",
+    "Préinscription à Pi COOP : achats groupés bio à prix grossiste + 20 à 50 centimes, transparence et solidarité.",
 };
 
 export default function RootLayout({

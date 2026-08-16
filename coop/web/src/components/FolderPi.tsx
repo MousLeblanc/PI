@@ -5,6 +5,11 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge";
 import { getFolderPi, type FolderPiResponse } from "@/lib/api";
 
+function formatMarkupBadge(markupEur: number) {
+  const cents = Math.round(markupEur * 100);
+  return `+${cents}\u00a0centimes de marge fixe`;
+}
+
 export function FolderPi() {
   const [data, setData] = useState<FolderPiResponse | null>(null);
 
@@ -23,7 +28,7 @@ export function FolderPi() {
           Folder Digital Pi
         </Badge>
         <p className="text-sm text-muted-foreground">
-          Prix grossiste + 0,20&nbsp;€ = prix Pi
+          Prix grossiste + marge fixe (0,20&nbsp;€ ou 0,50&nbsp;€) = prix Pi
         </p>
       </div>
 
@@ -55,8 +60,14 @@ export function FolderPi() {
               </p>
             </CardContent>
             <CardFooter>
-              <Badge className="border-transparent bg-emerald-800 text-sm font-semibold text-white hover:bg-emerald-800">
-                +20&nbsp;centimes de marge fixe
+              <Badge
+                className={
+                  item.tier === "premium"
+                    ? "border-transparent bg-teal-800 text-sm font-semibold text-white hover:bg-teal-800"
+                    : "border-transparent bg-emerald-800 text-sm font-semibold text-white hover:bg-emerald-800"
+                }
+              >
+                {formatMarkupBadge(item.markupEur)}
               </Badge>
             </CardFooter>
           </Card>

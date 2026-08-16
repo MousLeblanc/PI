@@ -15,7 +15,7 @@ const PILLARS = [
   {
     icon: Scale,
     title: "Transparence totale",
-    body: "Le prix grossiste s’affiche. On y ajoute une marge fixe de 20 centimes pour le loyer, l’énergie et le fonctionnement. Rien n’est caché — vous savez où va chaque centime. (Prix cibles estimés.)",
+    body: "Le prix du grossiste s’affiche en rayon. On y ajoute une marge de fonctionnement fixe et minime : 20 centimes sur les produits du quotidien, et 50 centimes sur les produits plus chers (huile, langes…). Rien n’est caché — vous savez où va chaque centime. (Prix cibles estimés.)",
   },
 ] as const;
 

@@ -3,7 +3,8 @@ const API_URL =
 
 export type FolderPiResponse = {
   disclaimer: string;
-  markupEur: number;
+  markupBasicEur: number;
+  markupPremiumEur: number;
   items: Array<{
     id: string;
     name: string;
@@ -11,6 +12,7 @@ export type FolderPiResponse = {
     retailEur: number;
     piPriceEur: number;
     markupEur: number;
+    tier: "basic" | "premium";
   }>;
 };
 
