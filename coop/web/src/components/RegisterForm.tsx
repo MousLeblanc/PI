@@ -223,8 +223,8 @@ export function RegisterForm() {
               className="mt-0.5"
             />
             <Label htmlFor="optIn" className="font-normal leading-relaxed">
-              J’accepte que mon numéro de maison soit affiché anonymement dans
-              ma rue.
+              Montrer l’exemple dans ma rue : afficher le numéro de ma maison
+              pour encourager mes voisins (anonyme — aucun nom).
             </Label>
           </div>
 
