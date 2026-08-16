@@ -14,6 +14,7 @@ RUN npx prisma generate && npm run build && test -f dist/src/main.js
 FROM node:20-bookworm-slim
 WORKDIR /app
 ENV NODE_ENV=production
+ENV PORT=8080
 
 RUN apt-get update -y && apt-get install -y --no-install-recommends openssl ca-certificates \
   && rm -rf /var/lib/apt/lists/*

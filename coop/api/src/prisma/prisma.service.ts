@@ -7,7 +7,7 @@ export class PrismaService
   implements OnModuleInit, OnModuleDestroy
 {
   async onModuleInit() {
-    await this.$connect();
+    // Lazy connect: don't block HTTP listen (Neon pooler can stall $connect at boot).
   }
 
   async onModuleDestroy() {

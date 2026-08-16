@@ -19,7 +19,8 @@ async function bootstrap() {
       transformOptions: { enableImplicitConversion: true },
     }),
   );
-  const port = Number(process.env.PORT ?? 3001);
+  const port = Number(process.env.PORT ?? 8080);
+  console.log(`Pi COOP API listening on 0.0.0.0:${port}`);
   await app.listen(port, '0.0.0.0');
 }
 bootstrap();
