@@ -29,13 +29,29 @@ export default function HomePage() {
           </div>
 
           <h1 className="animate-fade-up-delay mt-8 max-w-4xl font-display text-[clamp(2.1rem,5.5vw,3.75rem)] font-semibold leading-[1.08] tracking-[-0.03em] text-foreground">
-            Vos courses à prix grossiste +&nbsp;20&nbsp;à&nbsp;50&nbsp;centimes.
+            Vos courses à prix grossiste +&nbsp;20&nbsp;centimes
+            <a
+              href="#comment-ca-marche"
+              className="align-super text-[0.45em] font-semibold text-emerald-800 no-underline hover:underline"
+              aria-label="Voir le détail des marges fixes"
+            >
+              *
+            </a>
+            .
           </h1>
 
           <p className="animate-fade-up-delay mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
             Marge fixe, jamais cachée. Devenez copropriétaire de votre
             supermarché citoyen pour 10&nbsp;€/mois et 2&nbsp;h de bénévolat.
             Préinscription 100&nbsp;% gratuite.
+          </p>
+          <p className="animate-fade-up-delay mt-3 max-w-xl text-xs text-muted-foreground/90">
+            <a href="#comment-ca-marche" className="text-emerald-800 hover:underline">
+              *
+            </a>{" "}
+            20&nbsp;centimes sur l’essentiel du rayon · 50&nbsp;centimes sur les
+            produits plus chers (huile, langes…) — détail dans «&nbsp;Comment ça
+            marche&nbsp;?&nbsp;».
           </p>
 
           <div className="animate-fade-up-delay mt-10 flex flex-col items-center gap-3 sm:flex-row">
