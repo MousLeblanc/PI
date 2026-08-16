@@ -19,9 +19,12 @@ async function bootstrap() {
       transformOptions: { enableImplicitConversion: true },
     }),
   );
-  // Public domain is pinned to 8080 on Railway — bind that port explicitly.
-  const port = 8080;
-  console.log(`Pi COOP API listening on 0.0.0.0:${port}`);
-  await app.listen(port, '0.0.0.0');
+  const port = Number(process.env.PORT ?? 8080);
+  console.log(`Pi COOP API binding host=:: port=${port}`);
+  await app.listen(port, '::');
+  console.log(`Pi COOP API ready on :${port}`);
 }
-bootstrap();
+bootstrap().catch((err) => {
+  console.error('Fatal bootstrap error', err);
+  process.exit(1);
+});

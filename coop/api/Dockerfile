@@ -26,4 +26,5 @@ RUN npm ci --omit=dev && npx prisma generate
 COPY --from=build /app/dist ./dist
 
 EXPOSE 8080
-CMD ["sh", "-c", "npx prisma migrate deploy && node dist/src/main.js"]
+# Migrate then start; print a marker so Deploy Logs prove Node launched.
+CMD ["sh", "-c", "npx prisma migrate deploy && echo STARTING_NODE && node dist/src/main.js"]
