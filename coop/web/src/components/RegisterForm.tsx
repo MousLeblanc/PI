@@ -68,7 +68,8 @@ export function RegisterForm() {
     setLoading(true);
     setError(null);
     setStatus(null);
-    const form = new FormData(e.currentTarget);
+    const formEl = e.currentTarget;
+    const form = new FormData(formEl);
     try {
       await register({
         email: String(form.get("email")),
@@ -84,10 +85,13 @@ export function RegisterForm() {
       setStatus(
         "Pré-inscription réussie. Un email de bienvenue vous sera envoyé si le service mail est configuré.",
       );
-      e.currentTarget.reset();
+      formEl.reset();
+      setHouseholdSize(2);
+      setAgeBands(["AGE_18_64", "AGE_18_64"]);
       setPostalCode("");
       setStreetName("");
       setOptIn(false);
+      setToken(undefined);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Erreur d’inscription");
     } finally {
