@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -54,6 +55,7 @@ export default async function RootLayout({
           {children}
           <SiteFooter />
         </I18nProvider>
+        <Analytics />
       </body>
     </html>
   );
