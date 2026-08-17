@@ -24,15 +24,18 @@ import {
 import { register } from "@/lib/api";
 import { getCommune } from "@/lib/belgium";
 import { WelcomeToast } from "@/components/WelcomeToast";
+import { translateApiError } from "@/i18n/api-errors";
+import { useI18n } from "@/i18n/use-t";
 
-const AGE_BANDS = [
-  { value: "AGE_0_4", label: "0–4 ans (quotas bébé)" },
-  { value: "AGE_5_17", label: "5–17 ans" },
-  { value: "AGE_18_64", label: "18–64 ans (bénévolat)" },
-  { value: "AGE_65_PLUS", label: "65+ ans" },
+const AGE_BAND_KEYS = [
+  "AGE_0_4",
+  "AGE_5_17",
+  "AGE_18_64",
+  "AGE_65_PLUS",
 ] as const;
 
 export function RegisterForm() {
+  const { t, messages, locale } = useI18n();
   const [householdSize, setHouseholdSize] = useState(2);
   const [ageBands, setAgeBands] = useState<string[]>([
     "AGE_18_64",
@@ -91,15 +94,13 @@ export function RegisterForm() {
       const total = Number(data.piPersonCount ?? added) || added;
       const from = Math.max(1, total - added + 1);
       setToast({
-        title: "Bienvenue, coopérateur !",
+        title: t("register.toastTitle"),
         body:
           added === 1
-            ? `Inscription validée. Grâce à vous, Pi gagne une décimale — vous êtes le chiffre ${total}.`
-            : `Inscription validée. Votre foyer allonge Pi de ${added} décimales (chiffres ${from} à ${total}). La chaîne compte maintenant ${total} chiffres.`,
+            ? t("register.toastOne", { total })
+            : t("register.toastMany", { added, from, total }),
       });
-      setStatus(
-        "Préinscription réussie. Un email de bienvenue vous sera envoyé.",
-      );
+      setStatus(t("register.success"));
       formEl.reset();
       setHouseholdSize(2);
       setAgeBands(["AGE_18_64", "AGE_18_64"]);
@@ -108,7 +109,12 @@ export function RegisterForm() {
       setOptIn(false);
       setToken(undefined);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Erreur d’inscription");
+      setError(
+        translateApiError(
+          err instanceof Error ? err.message : "",
+          t,
+        ),
+      );
     } finally {
       turnstileRef.current?.reset();
       setToken(undefined);
@@ -119,17 +125,14 @@ export function RegisterForm() {
   return (
     <Card className="border-slate-200/80 shadow-lg shadow-slate-900/5">
       <CardHeader>
-        <CardTitle>Devenir coopérateur</CardTitle>
-        <CardDescription>
-          Préinscription gratuite · vous rejoignez la chaîne Pi · sans paiement
-          aujourd’hui
-        </CardDescription>
+        <CardTitle>{t("register.title")}</CardTitle>
+        <CardDescription>{t("register.description")}</CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={onSubmit} className="grid gap-5">
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">{t("register.email")}</Label>
               <Input
                 id="email"
                 name="email"
@@ -139,7 +142,7 @@ export function RegisterForm() {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password">Mot de passe (8+)</Label>
+              <Label htmlFor="password">{t("register.password")}</Label>
               <Input
                 id="password"
                 name="password"
@@ -151,7 +154,7 @@ export function RegisterForm() {
           </div>
 
           <div className="max-w-[10rem] space-y-2">
-            <Label htmlFor="household">Taille du ménage</Label>
+            <Label htmlFor="household">{t("register.household")}</Label>
             <Input
               id="household"
               type="number"
@@ -164,15 +167,14 @@ export function RegisterForm() {
 
           <div className="space-y-3 rounded-xl border bg-slate-50/80 p-4">
             <p className="text-sm font-medium text-muted-foreground">
-              Composition du foyer (tranches pour quotas bébé et bénévolat —
-              aucun âge exact ne sera conservé).
+              {t("register.composition")}
             </p>
             {bandSelects.map((i) => (
               <div
                 key={i}
                 className="grid grid-cols-[5.5rem_1fr] items-center gap-3"
               >
-                <Label>Pers. {i + 1}</Label>
+                <Label>{t("register.person", { n: i + 1 })}</Label>
                 <Select
                   value={ageBands[i]}
                   onValueChange={(value) => {
@@ -182,12 +184,12 @@ export function RegisterForm() {
                   }}
                 >
                   <SelectTrigger>
-                    <SelectValue placeholder="Tranche" />
+                    <SelectValue placeholder={t("register.bandPlaceholder")} />
                   </SelectTrigger>
                   <SelectContent>
-                    {AGE_BANDS.map((b) => (
-                      <SelectItem key={b.value} value={b.value}>
-                        {b.label}
+                    {AGE_BAND_KEYS.map((value) => (
+                      <SelectItem key={value} value={value}>
+                        {messages.register.ageBands[value]}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -198,7 +200,7 @@ export function RegisterForm() {
 
           <div className="grid gap-4 sm:grid-cols-[8rem_1fr_5.5rem]">
             <div className="space-y-2">
-              <Label htmlFor="postalCode">Code postal</Label>
+              <Label htmlFor="postalCode">{t("register.postalCode")}</Label>
               <Input
                 id="postalCode"
                 name="postalCode"
@@ -218,12 +220,12 @@ export function RegisterForm() {
                 {commune
                   ? commune
                   : postalCode.length === 4
-                    ? "Code postal inconnu"
+                    ? t("register.unknownPostal")
                     : "\u00a0"}
               </p>
             </div>
             <div className="space-y-2">
-              <Label>Rue</Label>
+              <Label>{t("register.street")}</Label>
               <StreetCombobox
                 postalCode={postalCode}
                 value={streetName}
@@ -232,7 +234,7 @@ export function RegisterForm() {
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="houseNumber">N°</Label>
+              <Label htmlFor="houseNumber">{t("register.houseNumber")}</Label>
               <Input id="houseNumber" name="houseNumber" required />
             </div>
           </div>
@@ -245,8 +247,7 @@ export function RegisterForm() {
               className="mt-0.5"
             />
             <Label htmlFor="optIn" className="font-normal leading-relaxed">
-              Montrer l’exemple dans ma rue : afficher le numéro de ma maison
-              pour encourager mes voisins (anonyme — aucun nom).
+              {t("register.optIn")}
             </Label>
           </div>
 
@@ -254,7 +255,7 @@ export function RegisterForm() {
             <Turnstile
               ref={turnstileRef}
               siteKey={siteKey}
-              options={{ action: "signup" }}
+              options={{ action: "signup", language: locale }}
               onSuccess={setToken}
               onExpire={() => setToken(undefined)}
               onError={() => setToken(undefined)}
@@ -262,9 +263,7 @@ export function RegisterForm() {
           ) : null}
 
           <Button type="submit" size="xl" className="w-full" disabled={loading}>
-            {loading
-              ? "Envoi…"
-              : "Je deviens coopérateur — c’est gratuit"}
+            {loading ? t("register.submitting") : t("register.submit")}
           </Button>
 
           {status && <p className="text-sm font-medium text-primary">{status}</p>}

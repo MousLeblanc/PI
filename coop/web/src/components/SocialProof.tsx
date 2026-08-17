@@ -9,8 +9,11 @@ import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { getSocialProof } from "@/lib/api";
 import { getCommune } from "@/lib/belgium";
+import { useI18n } from "@/i18n/use-t";
+import { translateApiError } from "@/i18n/api-errors";
 
 export function SocialProof() {
+  const { t } = useI18n();
   const [postalCode, setPostalCode] = useState("1050");
   const [streetName, setStreetName] = useState("");
   const [numbers, setNumbers] = useState<string[] | null>(null);
@@ -21,7 +24,7 @@ export function SocialProof() {
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (!streetName.trim()) {
-      setError("Choisissez ou saisissez une rue");
+      setError(t("social.chooseStreet"));
       return;
     }
     setLoading(true);
@@ -31,7 +34,11 @@ export function SocialProof() {
       setNumbers(res.houseNumbers);
     } catch (err) {
       setNumbers([]);
-      setError(err instanceof Error ? err.message : "Erreur");
+      setError(
+        err instanceof Error
+          ? translateApiError(err.message, t)
+          : t("social.error"),
+      );
     } finally {
       setLoading(false);
     }
@@ -45,7 +52,7 @@ export function SocialProof() {
           className="grid gap-3 sm:grid-cols-[8rem_1fr_auto]"
         >
           <div className="space-y-2">
-            <Label htmlFor="sp-cp">CP</Label>
+            <Label htmlFor="sp-cp">{t("social.cp")}</Label>
             <Input
               id="sp-cp"
               required
@@ -64,12 +71,12 @@ export function SocialProof() {
               {commune
                 ? commune
                 : postalCode.length === 4
-                  ? "Code postal inconnu"
+                  ? t("register.unknownPostal")
                   : "\u00a0"}
             </p>
           </div>
           <div className="space-y-2">
-            <Label>Rue</Label>
+            <Label>{t("social.street")}</Label>
             <StreetCombobox
               postalCode={postalCode}
               value={streetName}
@@ -86,31 +93,28 @@ export function SocialProof() {
               disabled={loading || !streetName.trim()}
               className="w-full sm:w-auto"
             >
-              {loading ? "…" : "Voir"}
+              {loading ? t("social.loading") : t("social.see")}
             </Button>
           </div>
         </form>
 
         {error && <p className="text-sm text-destructive">{error}</p>}
 
-        <p className="text-sm text-muted-foreground">
-          Affichage anonyme — uniquement les numéros dont les habitants ont
-          donné leur accord.
-        </p>
+        <p className="text-sm text-muted-foreground">{t("social.anonymous")}</p>
 
         <div className="flex flex-wrap gap-2">
           {numbers === null ? (
             <span className="text-sm text-muted-foreground">
-              Sélectionnez une rue puis cliquez sur Voir.
+              {t("social.hint")}
             </span>
           ) : numbers.length === 0 ? (
             <span className="text-sm text-muted-foreground">
-              Aucun numéro public pour cette rue.
+              {t("social.none")}
             </span>
           ) : (
             numbers.map((n) => (
               <Badge key={n} variant="outline" className="text-sm">
-                n° {n}
+                {t("social.houseNo", { n })}
               </Badge>
             ))
           )}

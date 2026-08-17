@@ -5,10 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import { getPiCounter } from "@/lib/api";
 import { formatPiFromCount } from "@/lib/belgium";
 import { PI_DECIMALS } from "@/data/pi-decimals";
+import { useI18n } from "@/i18n/use-t";
 
 const VISIBLE_HEAD = 14; // caractères après "3," avant d’abréger
 
 export function PiCounter() {
+  const { t, numberLocale } = useI18n();
   const [total, setTotal] = useState(0);
   const prevTotal = useRef(0);
   const [flash, setFlash] = useState(false);
@@ -46,12 +48,13 @@ export function PiCounter() {
   const steady = glowLen > 0 ? head.slice(0, -glowLen) : head;
   const glow = glowLen > 0 ? head.slice(-glowLen) : "";
 
-  const coopWord = total > 1 ? "coopérateurs" : "coopérateur";
-  const decWord = total > 1 ? "décimales" : "décimale";
+  const coopWord = total > 1 ? t("pi.coopMany") : t("pi.coopOne");
+  const decWord = total > 1 ? t("pi.decMany") : t("pi.decOne");
+  const count = total.toLocaleString(numberLocale);
   const subtitle =
     total === 0
-      ? "Soyez le premier coopérateur : vous écrirez le « 1 » de 3,14…"
-      : `${total.toLocaleString("fr-BE")} ${coopWord} = ${total.toLocaleString("fr-BE")} ${decWord}. Rejoignez-nous pour allonger la chaîne !`;
+      ? t("pi.empty")
+      : t("pi.filled", { count, coopWord, decWord });
 
   return (
     <div className="flex max-w-[min(92vw,42rem)] flex-col items-center gap-2">

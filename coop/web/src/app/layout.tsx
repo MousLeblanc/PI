@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
+import { I18nProvider } from "@/i18n/I18nProvider";
+import { getMessages } from "@/i18n/messages";
+import { resolveLocale } from "@/i18n/resolve-locale";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -14,23 +19,31 @@ const manrope = Manrope({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Pi COOP — Coopérative citoyenne",
-  description:
-    "Préinscription à Pi COOP : achats groupés bio à prix grossiste + 20 centimes (50 centimes sur produits plus chers), transparence et solidarité.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await resolveLocale();
+  const messages = getMessages(locale);
+  return {
+    title: messages.meta.title,
+    description: messages.meta.description,
+  };
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await resolveLocale();
   return (
-    <html lang="fr">
+    <html lang={locale}>
       <body
         className={`${fraunces.variable} ${manrope.variable} min-h-screen font-sans antialiased`}
       >
-        {children}
+        <I18nProvider locale={locale}>
+          <SiteHeader />
+          {children}
+          <SiteFooter />
+        </I18nProvider>
       </body>
     </html>
   );

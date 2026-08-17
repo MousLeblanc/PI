@@ -1,33 +1,39 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { getMessages } from "@/i18n/messages";
+import { resolveLocale } from "@/i18n/resolve-locale";
 
-export const metadata = {
-  title: "Mentions légales — Pi COOP",
-  description: "Mentions légales de la préinscription Pi COOP.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await resolveLocale();
+  const messages = getMessages(locale);
+  return {
+    title: messages.legal.metaTitle,
+    description: messages.legal.metaDescription,
+  };
+}
 
-export default function MentionsLegalesPage() {
+export default async function MentionsLegalesPage() {
+  const locale = await resolveLocale();
+  const t = getMessages(locale).legal;
+
   return (
     <main className="mx-auto w-[min(720px,calc(100%-2rem))] py-16">
       <p className="mb-6 text-sm">
         <Link href="/" className="text-emerald-800 underline-offset-4 hover:underline">
-          ← Retour
+          {t.back}
         </Link>
       </p>
       <h1 className="font-display text-3xl font-semibold tracking-tight">
-        Mentions légales
+        {t.title}
       </h1>
       <div className="mt-8 space-y-6 text-sm leading-relaxed text-muted-foreground">
         <section className="space-y-2">
-          <h2 className="text-base font-semibold text-foreground">Éditeur</h2>
+          <h2 className="text-base font-semibold text-foreground">
+            {t.publisherTitle}
+          </h2>
+          <p>{t.publisherBody}</p>
           <p>
-            Le site de préinscription <strong className="text-foreground">Pi COOP</strong>{" "}
-            est édité dans le cadre du projet de coopérative citoyenne Pi
-            (Belgique). Les mentions d’identité complète (forme juridique,
-            numéro d’entreprise, siège) seront complétées dès la constitution
-            formelle de l’entité.
-          </p>
-          <p>
-            Contact provisoire :{" "}
+            {t.contact}{" "}
             <a className="text-emerald-800 underline" href="mailto:contact@picoop.be">
               contact@picoop.be
             </a>
@@ -35,22 +41,20 @@ export default function MentionsLegalesPage() {
         </section>
         <section className="space-y-2">
           <h2 className="text-base font-semibold text-foreground">
-            Hébergement
+            {t.hostingTitle}
           </h2>
-          <p>
-            Frontend : Vercel Inc. — Backend / base de données : prestataires
-            cloud (ex. Railway, Neon) selon l’environnement de production.
-          </p>
+          <p>{t.hostingBody}</p>
         </section>
         <section className="space-y-2">
           <h2 className="text-base font-semibold text-foreground">
-            Nature du service
+            {t.natureTitle}
           </h2>
           <p>
-            La préinscription est <strong className="text-foreground">gratuite</strong> et
-            ne constitue pas un engagement d’achat. Les prix affichés dans le
-            Folder Digital Pi sont des <strong className="text-foreground">estimations
-            non contractuelles</strong>.
+            {t.natureBefore}{" "}
+            <strong className="text-foreground">{t.natureFree}</strong>{" "}
+            {t.natureMid}{" "}
+            <strong className="text-foreground">{t.natureEstimates}</strong>
+            {t.natureEnd}
           </p>
         </section>
       </div>

@@ -1,0 +1,29 @@
+"use client";
+
+import Link from "next/link";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { Button } from "@/components/ui/button";
+import { useI18n } from "@/i18n/use-t";
+
+export function SiteHeader() {
+  const { t } = useI18n();
+
+  return (
+    <header className="sticky top-0 z-40 border-b border-border/70 bg-background/80 backdrop-blur-md">
+      <div className="mx-auto flex w-[min(1120px,calc(100%-2rem))] items-center justify-between gap-3 py-4">
+        <Link
+          href="/"
+          className="font-display text-xl font-semibold tracking-tight text-foreground"
+        >
+          Pi COOP
+        </Link>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <LanguageSwitcher />
+          <Button asChild size="sm">
+            <Link href="/#inscription">{t("header.cta")}</Link>
+          </Button>
+        </div>
+      </div>
+    </header>
+  );
+}

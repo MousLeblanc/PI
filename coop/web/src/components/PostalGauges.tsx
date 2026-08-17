@@ -10,10 +10,12 @@ import { getPostalGauges, type PostalGaugesResponse } from "@/lib/api";
 import { getCommune } from "@/lib/belgium";
 import { OPENING_TARGET, getStretchMeta } from "@/lib/stretch";
 import { cn } from "@/lib/utils";
+import { useI18n } from "@/i18n/use-t";
 
 const HIGHLIGHT_CODES = ["1000", "2000", "4000", "7000", "9000"];
 
 export function PostalGauges() {
+  const { t, numberLocale } = useI18n();
   const [filter, setFilter] = useState("");
   const [data, setData] = useState<PostalGaugesResponse>({ items: [] });
 
@@ -48,24 +50,22 @@ export function PostalGauges() {
   return (
     <div className="space-y-5">
       <div className="max-w-xs space-y-2">
-        <Label htmlFor="cp">Votre code postal</Label>
+        <Label htmlFor="cp">{t("gauges.postalLabel")}</Label>
         <Input
           id="cp"
           value={filter}
           onChange={(e) =>
             setFilter(e.target.value.replace(/\D/g, "").slice(0, 4))
           }
-          placeholder="ex. 1050"
+          placeholder={t("gauges.placeholder")}
           inputMode="numeric"
         />
         <p className="min-h-5 text-sm font-medium text-emerald-800">
           {getCommune(filter) ??
-            (filter.length === 4 ? "Code postal inconnu" : "\u00a0")}
+            (filter.length === 4 ? t("gauges.unknownPostal") : "\u00a0")}
         </p>
         {filter.length === 4 && getCommune(filter) && items[0]?.count === 0 ? (
-          <p className="text-xs text-muted-foreground">
-            Vous pouvez être le pionnier ici — partagez le lien localement.
-          </p>
+          <p className="text-xs text-muted-foreground">{t("gauges.pioneer")}</p>
         ) : null}
       </div>
 
@@ -87,12 +87,12 @@ export function PostalGauges() {
                 <div className="flex items-baseline justify-between gap-3">
                   <CardTitle className="text-xl">{label}</CardTitle>
                   <span className="text-sm tabular-nums text-muted-foreground">
-                    {item.count.toLocaleString("fr-BE")} /{" "}
-                    {meta.openingTarget.toLocaleString("fr-BE")}
+                    {item.count.toLocaleString(numberLocale)} /{" "}
+                    {meta.openingTarget.toLocaleString(numberLocale)}
                   </span>
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  CP {item.postalCode}
+                  {t("gauges.cp", { code: item.postalCode })}
                 </p>
               </CardHeader>
               <CardContent className="space-y-3">
@@ -106,25 +106,24 @@ export function PostalGauges() {
                 {meta.exploded ? (
                   <>
                     <Badge className="border-transparent bg-amber-500 text-amber-950 hover:bg-amber-500">
-                      Objectif explosé — prochain palier{" "}
-                      {meta.nextTier.toLocaleString("fr-BE")}
+                      {t("gauges.exploded", {
+                        tier: meta.nextTier.toLocaleString(numberLocale),
+                      })}
                     </Badge>
                     <Progress
                       value={meta.stretchPct}
                       className="h-2 bg-emerald-100"
                     />
                     <p className="text-sm text-muted-foreground">
-                      Ouverture validée pour cette ville. Continuez : plus on
-                      est nombreux, plus le pouvoir de négociation est fort.
+                      {t("gauges.explodedBody")}
                     </p>
                   </>
                 ) : (
                   <p className="text-sm text-muted-foreground">
-                    {meta.openingPct}&nbsp;% · encore{" "}
-                    <strong className="text-foreground">
-                      {remaining.toLocaleString("fr-BE")}
-                    </strong>{" "}
-                    personnes pour débloquer l’ouverture ici
+                    {t("gauges.remaining", {
+                      pct: meta.openingPct,
+                      remaining: remaining.toLocaleString(numberLocale),
+                    })}
                   </p>
                 )}
               </CardContent>

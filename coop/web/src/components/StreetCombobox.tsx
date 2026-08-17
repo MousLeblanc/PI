@@ -5,6 +5,7 @@ import { Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { searchStreets, type StreetSuggestion } from "@/lib/api";
 import { cn } from "@/lib/utils";
+import { useI18n } from "@/i18n/use-t";
 
 type Props = {
   postalCode: string;
@@ -23,6 +24,7 @@ export function StreetCombobox({
   required,
   id,
 }: Props) {
+  const { t } = useI18n();
   const [items, setItems] = useState<StreetSuggestion[]>([]);
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
@@ -81,9 +83,7 @@ export function StreetCombobox({
           aria-controls={listId}
           aria-expanded={open}
           placeholder={
-            enabled
-              ? "Tapez le début de la rue…"
-              : "Entrez d’abord le code postal"
+            enabled ? t("street.placeholder") : t("street.needPostal")
           }
           onChange={(e) => onChange(e.target.value)}
           onFocus={() => {
@@ -118,7 +118,7 @@ export function StreetCombobox({
         >
           {items.length === 0 && !loading ? (
             <li className="px-3 py-2 text-sm text-muted-foreground">
-              Aucune rue trouvée
+              {t("street.none")}
             </li>
           ) : (
             items.map((item, i) => (

@@ -5,10 +5,12 @@ import { getLeaderboard, type LeaderboardItem } from "@/lib/api";
 import { getCommune } from "@/lib/belgium";
 import { OPENING_TARGET, getStretchMeta } from "@/lib/stretch";
 import { cn } from "@/lib/utils";
+import { useI18n } from "@/i18n/use-t";
 
 const MEDALS = ["1", "2", "3"] as const;
 
 export function CityLeaderboard() {
+  const { t, numberLocale } = useI18n();
   const [items, setItems] = useState<LeaderboardItem[]>([]);
 
   useEffect(() => {
@@ -42,15 +44,13 @@ export function CityLeaderboard() {
     <div className="mt-10 overflow-hidden rounded-2xl border border-emerald-900/10 bg-[var(--bg-deep,#0f2a22)] text-emerald-50 shadow-lg">
       <div className="border-b border-white/10 px-5 py-4 sm:px-6">
         <p className="m-0 text-xs uppercase tracking-[0.2em] text-emerald-200/80">
-          Course nationale
+          {t("leaderboard.kicker")}
         </p>
         <h3 className="mt-1 font-display text-2xl font-semibold tracking-tight text-white">
-          La course au premier magasin
+          {t("leaderboard.title")}
         </h3>
         <p className="mt-2 max-w-2xl text-sm text-emerald-100/75">
-          Quelle ville franchira 10&nbsp;000 personnes en premier&nbsp;? Le
-          premier palier débloque le magasin historique (flagship). Les villes
-          suivantes entrent sur la roadmap d’ouverture.
+          {t("leaderboard.intro")}
         </p>
       </div>
 
@@ -88,21 +88,24 @@ export function CityLeaderboard() {
                   </p>
                   {meta.exploded ? (
                     <p className="m-0 text-xs text-amber-300">
-                      Objectif d’ouverture explosé · prochain palier{" "}
-                      {meta.nextTier.toLocaleString("fr-BE")}
+                      {t("leaderboard.exploded", {
+                        tier: meta.nextTier.toLocaleString(numberLocale),
+                      })}
                     </p>
                   ) : (
                     <p className="m-0 text-xs text-emerald-200/55">
-                      Encore{" "}
-                      {(OPENING_TARGET - row.count).toLocaleString("fr-BE")}{" "}
-                      pour débloquer
+                      {t("leaderboard.remaining", {
+                        count: (
+                          OPENING_TARGET - row.count
+                        ).toLocaleString(numberLocale),
+                      })}
                     </p>
                   )}
                 </div>
               </div>
               <p className="m-0 tabular-nums text-sm font-semibold text-emerald-100">
-                {row.count.toLocaleString("fr-BE")} /{" "}
-                {OPENING_TARGET.toLocaleString("fr-BE")}
+                {row.count.toLocaleString(numberLocale)} /{" "}
+                {OPENING_TARGET.toLocaleString(numberLocale)}
               </p>
             </li>
           );

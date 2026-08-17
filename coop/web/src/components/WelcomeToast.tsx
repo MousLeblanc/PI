@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { useI18n } from "@/i18n/use-t";
 
 type Props = {
   open: boolean;
@@ -10,6 +11,7 @@ type Props = {
 };
 
 export function WelcomeToast({ open, title, body, onClose }: Props) {
+  const { t } = useI18n();
   useEffect(() => {
     if (!open) return;
     const id = window.setTimeout(onClose, 8000);
@@ -40,9 +42,9 @@ export function WelcomeToast({ open, title, body, onClose }: Props) {
           type="button"
           onClick={onClose}
           className="rounded-md px-2 py-1 text-xs text-muted-foreground hover:bg-slate-100"
-          aria-label="Fermer"
+          aria-label={t("common.close")}
         >
-          Fermer
+          {t("common.close")}
         </button>
       </div>
     </div>
