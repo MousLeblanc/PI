@@ -6,6 +6,8 @@ import { getPiCounter } from "@/lib/api";
 import { formatPiFromCount } from "@/lib/belgium";
 import { PI_DECIMALS } from "@/data/pi-decimals";
 
+const VISIBLE_HEAD = 14; // caractères après "3," avant d’abréger
+
 export function PiCounter() {
   const [total, setTotal] = useState(0);
   const prevTotal = useRef(0);
@@ -35,12 +37,21 @@ export function PiCounter() {
     };
   }, []);
 
-  const digits = formatPiFromCount(total, PI_DECIMALS);
-  const glowCount = Math.min(3, Math.max(0, digits.length - 2));
-  const base = glowCount > 0 ? digits.slice(0, -glowCount) : digits;
-  const glow = glowCount > 0 ? digits.slice(-glowCount) : "";
-  const coopLabel =
-    total <= 1 ? "1 coopérateur" : `${total.toLocaleString("fr-BE")} coopérateurs`;
+  // 1 personne = 1 décimale → "3,1" ; 0 personne → "3,"
+  const full = formatPiFromCount(total, PI_DECIMALS);
+  const frac = total === 0 ? "" : full.slice(2); // après "3,"
+  const abbreviated = frac.length > VISIBLE_HEAD;
+  const head = abbreviated ? frac.slice(0, VISIBLE_HEAD) : frac;
+  const glowLen = Math.min(3, head.length);
+  const steady = glowLen > 0 ? head.slice(0, -glowLen) : head;
+  const glow = glowLen > 0 ? head.slice(-glowLen) : "";
+
+  const coopWord = total > 1 ? "coopérateurs" : "coopérateur";
+  const decWord = total > 1 ? "décimales" : "décimale";
+  const subtitle =
+    total === 0
+      ? "Soyez le premier coopérateur : vous écrirez le « 1 » de 3,14…"
+      : `${total.toLocaleString("fr-BE")} ${coopWord} = ${total.toLocaleString("fr-BE")} ${decWord}. Rejoignez-nous pour allonger la chaîne !`;
 
   return (
     <div className="flex max-w-[min(92vw,42rem)] flex-col items-center gap-2">
@@ -51,11 +62,10 @@ export function PiCounter() {
         <span className="inline-block h-2 w-2 shrink-0 rounded-full bg-emerald-700" />
         <span className="font-display text-base tracking-tight text-emerald-950">
           <span className="inline-block max-w-[70vw] overflow-x-auto whitespace-nowrap align-bottom sm:max-w-[32rem]">
-            {total === 0 ? (
-              <span>3,</span>
-            ) : (
+            <span>3,</span>
+            {total > 0 ? (
               <>
-                <span>{base}</span>
+                <span>{steady}</span>
                 <span
                   className={
                     flash
@@ -65,16 +75,16 @@ export function PiCounter() {
                 >
                   {glow}
                 </span>
+                {abbreviated ? (
+                  <span className="text-emerald-800/70">…</span>
+                ) : null}
               </>
-            )}
+            ) : null}
           </span>
         </span>
       </Badge>
       <p className="max-w-md text-center text-sm text-muted-foreground">
-        <span className="font-medium text-emerald-900">{coopLabel}</span>
-        {" = "}
-        {total.toLocaleString("fr-BE")} décimale
-        {total > 1 ? "s" : ""}. Rejoignez-nous pour allonger la chaîne&nbsp;!
+        {subtitle}
       </p>
     </div>
   );
