@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/select";
 import { register } from "@/lib/api";
 import { getCommune } from "@/lib/belgium";
+import { WelcomeToast } from "@/components/WelcomeToast";
 
 const AGE_BANDS = [
   { value: "AGE_0_4", label: "0–4 ans (quotas bébé)" },
@@ -44,6 +45,9 @@ export function RegisterForm() {
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [toast, setToast] = useState<{ title: string; body: string } | null>(
+    null,
+  );
 
   const skipTurnstile = process.env.NEXT_PUBLIC_TURNSTILE_SKIP === "true";
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
@@ -71,7 +75,7 @@ export function RegisterForm() {
     const formEl = e.currentTarget;
     const form = new FormData(formEl);
     try {
-      await register({
+      const data = await register({
         email: String(form.get("email")),
         password: String(form.get("password")),
         householdSize,
@@ -82,8 +86,18 @@ export function RegisterForm() {
         optInPublicNumber: optIn,
         turnstileToken: token,
       });
+      const added = Number(data.decimalsAdded ?? householdSize) || householdSize;
+      const total = Number(data.piPersonCount ?? added) || added;
+      const from = Math.max(1, total - added + 1);
+      setToast({
+        title: "Bienvenue, coopérateur !",
+        body:
+          added === 1
+            ? `Inscription validée. Grâce à vous, Pi gagne une décimale — vous êtes le chiffre ${total}.`
+            : `Inscription validée. Votre foyer allonge Pi de ${added} décimales (chiffres ${from} à ${total}). La chaîne compte maintenant ${total} chiffres.`,
+      });
       setStatus(
-        "Pré-inscription réussie. Un email de bienvenue vous sera envoyé si le service mail est configuré.",
+        "Préinscription réussie. Un email de bienvenue vous sera envoyé.",
       );
       formEl.reset();
       setHouseholdSize(2);
@@ -102,9 +116,10 @@ export function RegisterForm() {
   return (
     <Card className="border-slate-200/80 shadow-lg shadow-slate-900/5">
       <CardHeader>
-        <CardTitle>Rejoindre Pi COOP</CardTitle>
+        <CardTitle>Devenir coopérateur</CardTitle>
         <CardDescription>
-          Préinscription gratuite · données minimisées · sans paiement
+          Préinscription gratuite · vous rejoignez la chaîne Pi · sans paiement
+          aujourd’hui
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -237,12 +252,20 @@ export function RegisterForm() {
           ) : null}
 
           <Button type="submit" size="xl" className="w-full" disabled={loading}>
-            {loading ? "Envoi…" : "Je me préinscris — c’est gratuit"}
+            {loading
+              ? "Envoi…"
+              : "Je deviens coopérateur — c’est gratuit"}
           </Button>
 
           {status && <p className="text-sm font-medium text-primary">{status}</p>}
           {error && <p className="text-sm text-destructive">{error}</p>}
         </form>
+        <WelcomeToast
+          open={Boolean(toast)}
+          title={toast?.title ?? ""}
+          body={toast?.body ?? ""}
+          onClose={() => setToast(null)}
+        />
       </CardContent>
     </Card>
   );

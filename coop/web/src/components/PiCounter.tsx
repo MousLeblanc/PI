@@ -19,7 +19,7 @@ export function PiCounter() {
         if (!alive) return;
         if (next.total > prevTotal.current) {
           setFlash(true);
-          window.setTimeout(() => setFlash(false), 700);
+          window.setTimeout(() => setFlash(false), 1200);
         }
         prevTotal.current = next.total;
         setTotal(next.total);
@@ -36,40 +36,46 @@ export function PiCounter() {
   }, []);
 
   const digits = formatPiFromCount(total, PI_DECIMALS);
-  const base = digits.slice(0, -1);
-  const last = digits.length > 2 ? digits.slice(-1) : "";
-  const word = total <= 1 ? "personne" : "personnes";
+  const glowCount = Math.min(3, Math.max(0, digits.length - 2));
+  const base = glowCount > 0 ? digits.slice(0, -glowCount) : digits;
+  const glow = glowCount > 0 ? digits.slice(-glowCount) : "";
+  const coopLabel =
+    total <= 1 ? "1 coopérateur" : `${total.toLocaleString("fr-BE")} coopérateurs`;
 
   return (
-    <Badge
-      variant="soft"
-      className="max-w-[min(92vw,42rem)] gap-2 border-emerald-300 px-4 py-2 text-sm shadow-sm"
-    >
-      <span className="inline-block h-2 w-2 shrink-0 rounded-full bg-emerald-700" />
-      <span className="font-display text-base tracking-tight text-emerald-950">
-        <span className="inline-block max-w-[70vw] overflow-x-auto whitespace-nowrap align-bottom sm:max-w-[32rem]">
-          {total === 0 ? (
-            <span>3,</span>
-          ) : (
-            <>
-              <span>{base}</span>
-              <span
-                className={
-                  flash
-                    ? "inline-block origin-bottom animate-pi-digit text-emerald-700"
-                    : "text-emerald-800"
-                }
-              >
-                {last}
-              </span>
-            </>
-          )}
+    <div className="flex max-w-[min(92vw,42rem)] flex-col items-center gap-2">
+      <Badge
+        variant="soft"
+        className="gap-2 border-emerald-300 px-4 py-2 text-sm shadow-sm"
+      >
+        <span className="inline-block h-2 w-2 shrink-0 rounded-full bg-emerald-700" />
+        <span className="font-display text-base tracking-tight text-emerald-950">
+          <span className="inline-block max-w-[70vw] overflow-x-auto whitespace-nowrap align-bottom sm:max-w-[32rem]">
+            {total === 0 ? (
+              <span>3,</span>
+            ) : (
+              <>
+                <span>{base}</span>
+                <span
+                  className={
+                    flash
+                      ? "inline-block origin-bottom animate-pi-glow font-semibold text-emerald-500"
+                      : "font-semibold text-emerald-700"
+                  }
+                >
+                  {glow}
+                </span>
+              </>
+            )}
+          </span>
         </span>
-        <span className="text-emerald-800/80">
-          {" "}
-          ({total.toLocaleString("fr-BE")} {word})
-        </span>
-      </span>
-    </Badge>
+      </Badge>
+      <p className="max-w-md text-center text-sm text-muted-foreground">
+        <span className="font-medium text-emerald-900">{coopLabel}</span>
+        {" = "}
+        {total.toLocaleString("fr-BE")} décimale
+        {total > 1 ? "s" : ""}. Rejoignez-nous pour allonger la chaîne&nbsp;!
+      </p>
+    </div>
   );
 }

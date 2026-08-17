@@ -67,12 +67,23 @@ export default {
           "0%": { transform: "scale(1.45)", color: "rgb(4 120 87)" },
           "100%": { transform: "scale(1)", color: "inherit" },
         },
+        "pi-glow": {
+          "0%, 100%": {
+            color: "rgb(16 185 129)",
+            textShadow: "0 0 0 rgba(16,185,129,0)",
+          },
+          "50%": {
+            color: "rgb(52 211 153)",
+            textShadow: "0 0 12px rgba(16,185,129,0.55)",
+          },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.7s ease-out both",
         "fade-up-delay": "fade-up 0.8s ease-out 0.12s both",
         "pulse-soft": "pulse-soft 3s ease-in-out infinite",
         "pi-digit": "pi-digit 0.65s ease-out",
+        "pi-glow": "pi-glow 1.1s ease-in-out 2",
       },
     },
   },

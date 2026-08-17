@@ -4,8 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const PILLARS = [
   {
     icon: Landmark,
-    title: "Le trésor commun",
-    body: "Dès l’ouverture, chaque membre du foyer (adultes et enfants) cotise 10 € / mois. Ce fonds collectif sert à acheter en volume — directement, sans passer par la logique de crédit bancaire classique.",
+    title: "Votre part dans la coopérative",
+    body: "Ici, pas d’actionnaires invisibles. Dès l’ouverture, chaque membre du foyer contribue 10 € / mois — ce n’est pas un abonnement : c’est votre part dans la coopérative. Vous n’êtes pas clients, vous êtes co-propriétaires de votre supermarché. Ce fonds collectif sert à acheter en volume.",
   },
   {
     icon: HandHeart,

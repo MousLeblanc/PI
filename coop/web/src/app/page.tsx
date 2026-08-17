@@ -41,9 +41,12 @@ export default function HomePage() {
           </h1>
 
           <p className="animate-fade-up-delay mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Marge fixe, jamais cachée. Devenez copropriétaire de votre
-            supermarché citoyen pour 10&nbsp;€/mois et 2&nbsp;h de bénévolat.
-            Préinscription 100&nbsp;% gratuite.
+            Marge fixe, jamais cachée. Devenez{" "}
+            <strong className="font-medium text-foreground">
+              coopérateur · co-propriétaire
+            </strong>{" "}
+            de votre supermarché citoyen : 10&nbsp;€/mois de part coopérative et
+            2&nbsp;h de bénévolat. Préinscription 100&nbsp;% gratuite.
           </p>
           <p className="animate-fade-up-delay mt-3 max-w-xl text-xs text-muted-foreground/90">
             <a href="#comment-ca-marche" className="text-emerald-800 hover:underline">
@@ -130,11 +133,11 @@ export default function HomePage() {
         <div className="mx-auto w-[min(720px,calc(100%-2rem))]">
           <div className="mb-8 text-center">
             <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-              Préinscription
+              Devenir coopérateur
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-              Rejoignez les préinscrits de votre code postal. Aucun paiement
-              aujourd’hui.
+              Rejoignez la chaîne Pi dans votre code postal. Aucun paiement
+              aujourd’hui — vous entrez comme futur co-propriétaire.
             </p>
           </div>
           <RegisterForm />

@@ -69,7 +69,16 @@ export class AuthService {
       commune: lookupCommune(user.postalCode),
     });
     const accessToken = await this.signToken(user.id, user.email);
-    return { user, accessToken };
+    const personsAgg = await this.prisma.user.aggregate({
+      _sum: { householdSize: true },
+    });
+    const piPersonCount = personsAgg._sum.householdSize ?? 0;
+    return {
+      user,
+      accessToken,
+      piPersonCount,
+      decimalsAdded: user.householdSize,
+    };
   }
 
   async login(dto: LoginDto) {
