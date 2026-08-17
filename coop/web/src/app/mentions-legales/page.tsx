@@ -59,14 +59,8 @@ export default async function MentionsLegalesPage() {
           <h2 className="text-base font-semibold text-foreground">
             {t.natureTitle}
           </h2>
-          <p>
-            {t.natureBefore}{" "}
-            <strong className="text-foreground">{t.natureFree}</strong>{" "}
-            {t.natureMid}{" "}
-            <strong className="text-foreground">{t.natureEstimates}</strong>
-            {t.natureEnd}
-          </p>
-          <p>{t.natureAfter}</p>
+          <p>{t.natureIntro}</p>
+          <p>{t.natureStore}</p>
         </section>
         <section className="space-y-2">
           <h2 className="text-base font-semibold text-foreground">{t.ipTitle}</h2>

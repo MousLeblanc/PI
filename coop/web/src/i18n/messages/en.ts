@@ -36,10 +36,10 @@ export const en = {
     disclaimer: "* Target prices for guidance only. Non-contractual.",
   },
   gauges: {
-    title: "Unlock the first Pi store in your city",
+    title: "Unlock the first Pi supermarket in your city",
     introLead: "10,000 people",
     introMid:
-      "= the tipping point to open a neighbourhood store (every household member counts — a family of 5 = +5). Not a hypermarket: ours, together. Beyond that, the gauge keeps going: the more of us there are, the stronger our bargaining power. The",
+      "= the tipping point to open a human-scale supermarket (every household member counts — a family of 5 = +5). Not a conventional hypermarket: ours, together. Beyond that, the gauge keeps going: the more of us there are, the stronger our bargaining power. The",
     introStrong: "first city",
     introEnd:
       "to cross the line opens first. You pay nothing today; the opening pack is only paid once there is a premises and statutes. The next ones follow on an opening roadmap.",
@@ -56,16 +56,16 @@ export const en = {
   },
   leaderboard: {
     kicker: "National race",
-    title: "The race for the first store",
+    title: "The race for the first supermarket",
     intro:
-      "Which city will hit 10,000 people first? The first tier opens a Pi neighbourhood store, for members. The next cities join the opening roadmap.",
+      "Which city will hit 10,000 people first? The first tier opens a pilot Pi supermarket at human scale, for members. The next cities join the opening roadmap.",
     remaining: "{count} more to unlock",
     exploded: "Opening target smashed · next tier {tier}",
   },
   how: {
     title: "How it works",
     intro:
-      "The Pi COOP recipe in three rules. Not a classic supermarket: a citizen cooperative where purchasing power returns to members.",
+      "The Pi COOP recipe in three rules. A human-scale supermarket, not a conventional hypermarket: a citizen cooperative where purchasing power returns to members.",
     pillars: [
       {
         title: "Your share in the cooperative",
@@ -188,14 +188,10 @@ export const en = {
       "Database: Neon, Inc., hosted in the European Union.",
     ],
     natureTitle: "Nature of the service",
-    natureBefore: "Pre-registration is",
-    natureFree: "free",
-    natureMid:
-      "and does not constitute a purchase commitment. Prices shown in the Pi digital leaflet are",
-    natureEstimates: "non-contractual estimates",
-    natureEnd: ".",
-    natureAfter:
-      "The first store aimed at is a neighbourhood shop, not a hypermarket. No payment is requested today. An opening pack would only be offered if premises and cooperative statutes exist.",
+    natureIntro:
+      "Pre-registration is 100\u00a0% free, without obligation, and does not constitute a purchase or subscription commitment. Prices shown (on the site or in the Pi digital leaflet) are estimated target prices and are strictly non-contractual.",
+    natureStore:
+      "The project aims to open a pilot supermarket at human scale, not a conventional hypermarket. No payment or contribution is requested at this stage. Share capital or an opening pack will only be offered to the public once the cooperative has been formally constituted before a notary and commercial premises have been identified.",
     ipTitle: "Intellectual property",
     ipBody:
       "The texts, the π logo, the visual identity and the other elements of the site are protected. Unauthorised reproduction is prohibited.",
@@ -203,7 +199,7 @@ export const en = {
     lawBody:
       "The site is governed by Belgian law. In the event of a dispute, Belgian courts have jurisdiction, without prejudice to mandatory consumer-protection rules.",
     relatedPrivacy: "Privacy policy",
-    updated: "Last updated: 17 August 2026",
+    updated: "Last updated: 18 August 2026",
   },
   privacy: {
     metaTitle: "Privacy — Pi COOP",

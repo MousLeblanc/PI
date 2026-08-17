@@ -39,10 +39,10 @@ export const nl = {
       "* Richtprijzen ter indicatie. Niet contractueel.",
   },
   gauges: {
-    title: "Ontgrendel de eerste Pi-winkel in jouw stad",
+    title: "Ontgrendel de eerste Pi-supermarkt in jouw stad",
     introLead: "10.000 personen",
     introMid:
-      "= het kantelpunt om een buurtwinkel te openen (elk gezinslid telt — een gezin van 5 = +5). Geen hypermarkt: de onze, van ons. Daarna loopt de meter verder: hoe meer we zijn, hoe sterker de onderhandelingskracht. De",
+      "= het kantelpunt om een supermarkt op menselijke schaal te openen (elk gezinslid telt — een gezin van 5 = +5). Geen klassieke hypermarkt: de onze, van ons. Daarna loopt de meter verder: hoe meer we zijn, hoe sterker de onderhandelingskracht. De",
     introStrong: "eerste stad",
     introEnd:
       "die de kaap haalt, opent als eerste. Vandaag betaal je niets; het openingspakket betaal je pas als er een pand en statuten zijn. De volgende volgen op de roadmap.",
@@ -59,16 +59,16 @@ export const nl = {
   },
   leaderboard: {
     kicker: "Nationale race",
-    title: "De race naar de eerste winkel",
+    title: "De race naar de eerste supermarkt",
     intro:
-      "Welke stad haalt als eerste 10.000 personen\u00a0? De eerste drempel opent een Pi-buurtwinkel, voor de leden. De volgende steden komen op de openingsroadmap.",
+      "Welke stad haalt als eerste 10.000 personen\u00a0? De eerste drempel opent een piloot-Pi-supermarkt op menselijke schaal, voor de leden. De volgende steden komen op de openingsroadmap.",
     remaining: "Nog {count} om te ontgrendelen",
     exploded: "Openingsdoel overschreden · volgende drempel {tier}",
   },
   how: {
     title: "Hoe werkt het\u00a0?",
     intro:
-      "Het Pi COOP-recept in drie regels. Geen klassieke supermarkt: een burgercoöperatie waar de koopkracht terug naar de leden gaat.",
+      "Het Pi COOP-recept in drie regels. Een supermarkt op menselijke schaal, geen klassieke hypermarkt: een burgercoöperatie waar de koopkracht terug naar de leden gaat.",
     pillars: [
       {
         title: "Jouw aandeel in de coöperatie",
@@ -195,14 +195,10 @@ export const nl = {
       "Databank: Neon, Inc., hosting in de Europese Unie.",
     ],
     natureTitle: "Aard van de dienst",
-    natureBefore: "De voorinschrijving is",
-    natureFree: "gratis",
-    natureMid:
-      "en vormt geen aankoopverbintenis. De prijzen in de Digitale folder Pi zijn",
-    natureEstimates: "niet-contractuele schattingen",
-    natureEnd: ".",
-    natureAfter:
-      "De eerste beoogde winkel is een buurtwinkel, geen hypermarkt. Vandaag wordt geen betaling gevraagd. Een openingspakket zou alleen worden aangeboden als er een pand en coöperatiestatuten zijn.",
+    natureIntro:
+      "De voorinschrijving is 100\u00a0% gratis, zonder verplichting, en vormt geen aankoop- of inschrijvingsverbintenis. De getoonde prijzen (op de site of in de Digitale folder Pi) zijn geschatte richtprijzen en strikt niet-contractueel.",
+    natureStore:
+      "Het project streeft naar een pilootsupermarkt op menselijke schaal, geen klassieke hypermarkt. In deze fase wordt geen betaling of bijdrage gevraagd. Aandelen of een openingspakket worden pas aan het publiek aangeboden zodra de coöperatieve vennootschap formeel is opgericht voor notaris en een handelszaak is geïdentificeerd.",
     ipTitle: "Intellectuele eigendom",
     ipBody:
       "De teksten, het π-logo, de visuele identiteit en de andere elementen van de site zijn beschermd. Ongeoorloofde reproductie is verboden.",
@@ -210,7 +206,7 @@ export const nl = {
     lawBody:
       "De site valt onder Belgisch recht. Bij een geschil zijn de Belgische rechtbanken bevoegd, onverminderd dwingende regels van consumentenbescherming.",
     relatedPrivacy: "Privacybeleid",
-    updated: "Laatst bijgewerkt: 17 augustus 2026",
+    updated: "Laatst bijgewerkt: 18 augustus 2026",
   },
   privacy: {
     metaTitle: "Privacy — Pi COOP",

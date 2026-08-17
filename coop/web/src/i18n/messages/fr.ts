@@ -36,10 +36,10 @@ export const fr = {
       "* Prix cibles estimés à titre indicatif. Non contractuels.",
   },
   gauges: {
-    title: "Débloquez le premier magasin Pi dans votre ville",
+    title: "Débloquez le premier supermarché Pi dans votre ville",
     introLead: "10\u00a0000 personnes",
     introMid:
-      "= le point de bascule pour ouvrir un magasin de quartier (chaque membre du foyer compte — une famille de 5 = +5). Pas un hypermarché : le nôtre, à nous. Au‑delà, la jauge continue : plus on est nombreux, plus le pouvoir de négociation est fort. La",
+      "= le point de bascule pour ouvrir un supermarché à taille humaine (chaque membre du foyer compte — une famille de 5 = +5). Pas un hypermarché classique : le nôtre, à nous. Au‑delà, la jauge continue : plus on est nombreux, plus le pouvoir de négociation est fort. La",
     introStrong: "première ville",
     introEnd:
       "à franchir le cap ouvre en premier. Aujourd’hui vous ne payez rien ; le pack d’ouverture ne se paie que lorsqu’un local et des statuts existent. Les suivantes suivent sur la roadmap.",
@@ -56,16 +56,16 @@ export const fr = {
   },
   leaderboard: {
     kicker: "Course nationale",
-    title: "La course au premier magasin",
+    title: "La course au premier supermarché",
     intro:
-      "Quelle ville franchira 10\u00a0000 personnes en premier\u00a0? Le premier palier ouvre un magasin de quartier Pi, aux membres. Les villes suivantes entrent sur la roadmap d’ouverture.",
+      "Quelle ville franchira 10\u00a0000 personnes en premier\u00a0? Le premier palier ouvre un supermarché pilote Pi à taille humaine, aux membres. Les villes suivantes entrent sur la roadmap d’ouverture.",
     remaining: "Encore {count} pour débloquer",
     exploded: "Objectif d’ouverture explosé · prochain palier {tier}",
   },
   how: {
     title: "Comment ça marche\u00a0?",
     intro:
-      "La recette Pi COOP en trois règles. Pas un supermarché classique : une coopérative citoyenne où le pouvoir d’achat revient aux membres.",
+      "La recette Pi COOP en trois règles. Un supermarché à taille humaine, pas un hypermarché classique : une coopérative citoyenne où le pouvoir d’achat revient aux membres.",
     pillars: [
       {
         title: "Votre part dans la coopérative",
@@ -192,14 +192,10 @@ export const fr = {
       "Base de données : Neon, Inc., hébergement dans l’Union européenne.",
     ],
     natureTitle: "Nature du service",
-    natureBefore: "La préinscription est",
-    natureFree: "gratuite",
-    natureMid:
-      "et ne constitue pas un engagement d’achat. Les prix affichés dans le Folder Digital Pi sont des",
-    natureEstimates: "estimations non contractuelles",
-    natureEnd: ".",
-    natureAfter:
-      "Le premier magasin visé est un magasin de quartier, pas un hypermarché. Aucun paiement n’est demandé aujourd’hui. Un pack d’ouverture ne serait proposé que s’il existe un local et des statuts de coopérative.",
+    natureIntro:
+      "La préinscription est 100\u00a0% gratuite, sans obligation, et ne constitue pas un engagement d’achat ni de souscription. Les prix affichés (sur le site ou dans le Folder Digital Pi) sont des objectifs cibles estimés et sont strictement non contractuels.",
+    natureStore:
+      "Le projet vise l’ouverture d’un supermarché pilote à taille humaine, et non d’un hypermarché classique. Aucun paiement ni versement n’est demandé à ce stade du projet. Des parts sociales ou un pack d’ouverture ne seront proposés au public qu’une fois la société coopérative officiellement constituée devant notaire et un local commercial identifié.",
     ipTitle: "Propriété intellectuelle",
     ipBody:
       "Les textes, le logo π, la charte graphique et les autres éléments du site sont protégés. Toute reproduction non autorisée est interdite.",
@@ -207,7 +203,7 @@ export const fr = {
     lawBody:
       "Le site est régi par le droit belge. En cas de litige, les tribunaux belges sont compétents, sous réserve des règles impératives de protection des consommateurs.",
     relatedPrivacy: "Politique de confidentialité",
-    updated: "Dernière mise à jour : 17 août 2026",
+    updated: "Dernière mise à jour : 18 août 2026",
   },
   privacy: {
     metaTitle: "Confidentialité — Pi COOP",
