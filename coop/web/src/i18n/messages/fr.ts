@@ -14,7 +14,7 @@ export const fr = {
     subtitleBefore: "Marge fixe, jamais cachée. Devenez",
     subtitleStrong: "coopérateur · co-propriétaire",
     subtitleAfter:
-      "de votre supermarché citoyen : 10\u00a0€/mois de part coopérative et 2\u00a0h de bénévolat. Préinscription 100\u00a0% gratuite.",
+      "de votre magasin citoyen : 10\u00a0€/mois de part coopérative et 2\u00a0h de bénévolat. Préinscription 100\u00a0% gratuite.",
     footnote:
       "20\u00a0centimes sur l’essentiel du rayon · 50\u00a0centimes sur les produits plus chers (huile, langes…) — détail dans «\u00a0Comment ça marche\u00a0?\u00a0».",
     ctaUnlock: "Débloquer les prix dans ma ville",
@@ -36,13 +36,13 @@ export const fr = {
       "* Prix cibles estimés à titre indicatif. Non contractuels.",
   },
   gauges: {
-    title: "Débloquez le magasin dans votre ville",
+    title: "Débloquez le premier magasin Pi dans votre ville",
     introLead: "10\u00a0000 personnes",
     introMid:
-      "= le point de bascule pour ouvrir (chaque membre du foyer compte — une famille de 5 = +5). Au‑delà, la jauge continue : plus on est nombreux, plus le pouvoir de négociation est fort. La",
+      "= le point de bascule pour ouvrir un magasin de quartier (chaque membre du foyer compte — une famille de 5 = +5). Pas un hypermarché : le nôtre, à nous. Au‑delà, la jauge continue : plus on est nombreux, plus le pouvoir de négociation est fort. La",
     introStrong: "première ville",
     introEnd:
-      "à franchir le cap accueille le magasin historique\u00a0; les suivantes suivent sur une roadmap d’ouverture.",
+      "à franchir le cap ouvre en premier. Aujourd’hui vous ne payez rien ; le pack d’ouverture ne se paie que lorsqu’un local et des statuts existent. Les suivantes suivent sur la roadmap.",
     postalLabel: "Votre code postal",
     placeholder: "ex. 1050",
     unknownPostal: "Code postal inconnu",
@@ -58,7 +58,7 @@ export const fr = {
     kicker: "Course nationale",
     title: "La course au premier magasin",
     intro:
-      "Quelle ville franchira 10\u00a0000 personnes en premier\u00a0? Le premier palier débloque le magasin historique (flagship). Les villes suivantes entrent sur la roadmap d’ouverture.",
+      "Quelle ville franchira 10\u00a0000 personnes en premier\u00a0? Le premier palier ouvre un magasin de quartier Pi, aux membres. Les villes suivantes entrent sur la roadmap d’ouverture.",
     remaining: "Encore {count} pour débloquer",
     exploded: "Objectif d’ouverture explosé · prochain palier {tier}",
   },
@@ -69,7 +69,7 @@ export const fr = {
     pillars: [
       {
         title: "Votre part dans la coopérative",
-        body: "Ici, pas d’actionnaires invisibles. Dès l’ouverture, chaque membre du foyer contribue 10 € / mois — ce n’est pas un abonnement : c’est votre part dans la coopérative. Vous n’êtes pas clients, vous êtes co-propriétaires de votre supermarché. Ce fonds collectif sert à acheter en volume.",
+        body: "Ici, pas d’actionnaires invisibles. Dès l’ouverture, chaque membre du foyer contribue 10 € / mois — ce n’est pas un abonnement : c’est votre part dans la coopérative. Vous n’êtes pas clients, vous êtes co-propriétaires de votre magasin. Ce fonds collectif sert à acheter en volume.",
       },
       {
         title: "L’entraide (2 h / mois)",

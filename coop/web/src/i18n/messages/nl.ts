@@ -16,7 +16,7 @@ export const nl = {
     subtitleBefore: "Vaste marge, nooit verborgen. Word",
     subtitleStrong: "coöperant · mede-eigenaar",
     subtitleAfter:
-      "van je burgersupermarkt: 10\u00a0€/maand coöperatief aandeel en 2\u00a0u vrijwilligerswerk. Voorinschrijving 100\u00a0% gratis.",
+      "van je burgerwinkel: 10\u00a0€/maand coöperatief aandeel en 2\u00a0u vrijwilligerswerk. Voorinschrijving 100\u00a0% gratis.",
     footnote:
       "20\u00a0cent op het dagelijkse schap · 50\u00a0cent op duurdere producten (olie, luiers…) — details in «\u00a0Hoe werkt het\u00a0?\u00a0».",
     ctaUnlock: "Ontgrendel de prijzen in mijn stad",
@@ -39,13 +39,13 @@ export const nl = {
       "* Richtprijzen ter indicatie. Niet contractueel.",
   },
   gauges: {
-    title: "Ontgrendel de winkel in jouw stad",
+    title: "Ontgrendel de eerste Pi-winkel in jouw stad",
     introLead: "10.000 personen",
     introMid:
-      "= het kantelpunt om te openen (elk gezinslid telt — een gezin van 5 = +5). Daarna loopt de meter verder: hoe meer we zijn, hoe sterker de onderhandelingskracht. De",
+      "= het kantelpunt om een buurtwinkel te openen (elk gezinslid telt — een gezin van 5 = +5). Geen hypermarkt: de onze, van ons. Daarna loopt de meter verder: hoe meer we zijn, hoe sterker de onderhandelingskracht. De",
     introStrong: "eerste stad",
     introEnd:
-      "die de kaap haalt, krijgt de historische winkel\u00a0; de volgende volgen op een openingsroadmap.",
+      "die de kaap haalt, opent als eerste. Vandaag betaal je niets; het openingspakket betaal je pas als er een pand en statuten zijn. De volgende volgen op de roadmap.",
     postalLabel: "Jouw postcode",
     placeholder: "bv. 1050",
     unknownPostal: "Onbekende postcode",
@@ -61,7 +61,7 @@ export const nl = {
     kicker: "Nationale race",
     title: "De race naar de eerste winkel",
     intro:
-      "Welke stad haalt als eerste 10.000 personen\u00a0? De eerste drempel ontgrendelt de historische winkel (flagship). De volgende steden komen op de openingsroadmap.",
+      "Welke stad haalt als eerste 10.000 personen\u00a0? De eerste drempel opent een Pi-buurtwinkel, voor de leden. De volgende steden komen op de openingsroadmap.",
     remaining: "Nog {count} om te ontgrendelen",
     exploded: "Openingsdoel overschreden · volgende drempel {tier}",
   },
@@ -72,7 +72,7 @@ export const nl = {
     pillars: [
       {
         title: "Jouw aandeel in de coöperatie",
-        body: "Hier geen onzichtbare aandeelhouders. Vanaf de opening draagt elk gezinslid 10 € / maand bij — dit is geen abonnement: het is jouw aandeel in de coöperatie. Jullie zijn geen klanten, jullie zijn mede-eigenaars van jullie supermarkt. Dit collectieve fonds dient om in volume te kopen.",
+        body: "Hier geen onzichtbare aandeelhouders. Vanaf de opening draagt elk gezinslid 10 € / maand bij — dit is geen abonnement: het is jouw aandeel in de coöperatie. Jullie zijn geen klanten, jullie zijn mede-eigenaars van jullie winkel. Dit collectieve fonds dient om in volume te kopen.",
       },
       {
         title: "Wederzijdse hulp (2 u / maand)",

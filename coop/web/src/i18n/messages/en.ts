@@ -16,7 +16,7 @@ export const en = {
     subtitleBefore: "Fixed margin, never hidden. Become a",
     subtitleStrong: "co-operator · co-owner",
     subtitleAfter:
-      "of your citizen supermarket: €10/month cooperative share and 2\u00a0hours of volunteering. Pre-registration is 100%\u00a0free.",
+      "of your citizen store: €10/month cooperative share and 2\u00a0hours of volunteering. Pre-registration is 100%\u00a0free.",
     footnote:
       "20\u00a0cents on everyday items · 50\u00a0cents on pricier products (oil, nappies…) — details in “How it works”.",
     ctaUnlock: "Unlock prices in my city",
@@ -36,13 +36,13 @@ export const en = {
     disclaimer: "* Target prices for guidance only. Non-contractual.",
   },
   gauges: {
-    title: "Unlock the store in your city",
+    title: "Unlock the first Pi store in your city",
     introLead: "10,000 people",
     introMid:
-      "= the tipping point to open (every household member counts — a family of 5 = +5). Beyond that, the gauge keeps going: the more of us there are, the stronger our bargaining power. The",
+      "= the tipping point to open a neighbourhood store (every household member counts — a family of 5 = +5). Not a hypermarket: ours, together. Beyond that, the gauge keeps going: the more of us there are, the stronger our bargaining power. The",
     introStrong: "first city",
     introEnd:
-      "to cross the line hosts the flagship store; the next ones follow on an opening roadmap.",
+      "to cross the line opens first. You pay nothing today; the opening pack is only paid once there is a premises and statutes. The next ones follow on an opening roadmap.",
     postalLabel: "Your postal code",
     placeholder: "e.g. 1050",
     unknownPostal: "Unknown postal code",
@@ -58,7 +58,7 @@ export const en = {
     kicker: "National race",
     title: "The race for the first store",
     intro:
-      "Which city will hit 10,000 people first? The first tier unlocks the flagship store. The next cities join the opening roadmap.",
+      "Which city will hit 10,000 people first? The first tier opens a Pi neighbourhood store, for members. The next cities join the opening roadmap.",
     remaining: "{count} more to unlock",
     exploded: "Opening target smashed · next tier {tier}",
   },
@@ -69,7 +69,7 @@ export const en = {
     pillars: [
       {
         title: "Your share in the cooperative",
-        body: "No invisible shareholders here. From opening day, every household member contributes €10 / month — this is not a subscription: it is your share in the cooperative. You are not customers, you are co-owners of your supermarket. This collective fund is used to buy in volume.",
+        body: "No invisible shareholders here. From opening day, every household member contributes €10 / month — this is not a subscription: it is your share in the cooperative. You are not customers, you are co-owners of your store. This collective fund is used to buy in volume.",
       },
       {
         title: "Mutual aid (2 h / month)",
