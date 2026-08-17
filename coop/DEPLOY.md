@@ -42,6 +42,7 @@ Ne pas exécuter `seed-demo-neighbors` en production.
 | `CORS_ORIGIN` | `https://ton-domaine.vercel.app` (ou domaine custom) |
 | `TURNSTILE_SECRET_KEY` | secret Turnstile |
 | `TURNSTILE_SKIP` | `false` |
+| `TURNSTILE_HOSTNAMES` | `picoop.be,www.picoop.be,pi-mocha-delta.vercel.app` |
 | `RESEND_API_KEY` | clé Resend |
 | `EMAIL_FROM` | `Pi COOP <noreply@ton-domaine.be>` |
 | `APP_PUBLIC_URL` | URL publique du front |

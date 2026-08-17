@@ -1,7 +1,7 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
-import { Turnstile } from "@marsidev/react-turnstile";
+import { FormEvent, useMemo, useRef, useState } from "react";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { StreetCombobox } from "@/components/StreetCombobox";
 import { Button } from "@/components/ui/button";
 import {
@@ -48,6 +48,7 @@ export function RegisterForm() {
   const [toast, setToast] = useState<{ title: string; body: string } | null>(
     null,
   );
+  const turnstileRef = useRef<TurnstileInstance | null>(null);
 
   const skipTurnstile = process.env.NEXT_PUBLIC_TURNSTILE_SKIP === "true";
   const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? "";
@@ -109,6 +110,8 @@ export function RegisterForm() {
     } catch (err) {
       setError(err instanceof Error ? err.message : "Erreur d’inscription");
     } finally {
+      turnstileRef.current?.reset();
+      setToken(undefined);
       setLoading(false);
     }
   }
@@ -248,7 +251,14 @@ export function RegisterForm() {
           </div>
 
           {!skipTurnstile && siteKey ? (
-            <Turnstile siteKey={siteKey} onSuccess={setToken} />
+            <Turnstile
+              ref={turnstileRef}
+              siteKey={siteKey}
+              options={{ action: "signup" }}
+              onSuccess={setToken}
+              onExpire={() => setToken(undefined)}
+              onError={() => setToken(undefined)}
+            />
           ) : null}
 
           <Button type="submit" size="xl" className="w-full" disabled={loading}>

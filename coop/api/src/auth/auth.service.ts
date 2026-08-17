@@ -26,8 +26,8 @@ export class AuthService {
     private readonly turnstile: TurnstileService,
   ) {}
 
-  async register(dto: RegisterDto, ip?: string) {
-    await this.turnstile.verify(dto.turnstileToken, ip);
+  async register(dto: RegisterDto) {
+    await this.turnstile.verify(dto.turnstileToken);
 
     if (dto.ageBands.length !== dto.householdSize) {
       throw new BadRequestException(
