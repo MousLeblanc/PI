@@ -162,7 +162,7 @@ export const en = {
     how: "How it works",
     legal: "Legal notice",
     privacy: "Privacy",
-    phase: "Pi COOP is only Phase\u00a01. Coming soon: Pi Academy and Pi Finance.",
+    phase: "Pi COOP is only Phase\u00a01. Coming soon: Pi Academy and Pi Invest.",
   },
   legal: {
     metaTitle: "Legal notice — Pi COOP",

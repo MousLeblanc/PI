@@ -15,7 +15,7 @@ export function SiteFooter() {
             <Link href="/" className="text-foreground">
               COOP
             </Link>{" "}
-            · Finance · Academy
+            · Invest · Academy
           </span>
           <nav className="flex flex-wrap gap-4">
             <Link

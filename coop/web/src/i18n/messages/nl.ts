@@ -169,7 +169,7 @@ export const nl = {
     legal: "Wettelijke vermeldingen",
     privacy: "Privacy",
     phase:
-      "Pi COOP is enkel Fase\u00a01. Binnenkort: Pi Academy en Pi Finance.",
+      "Pi COOP is enkel Fase\u00a01. Binnenkort: Pi Academy en Pi Invest.",
   },
   legal: {
     metaTitle: "Wettelijke vermeldingen — Pi COOP",

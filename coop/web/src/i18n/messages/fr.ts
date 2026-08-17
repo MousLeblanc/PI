@@ -166,7 +166,7 @@ export const fr = {
     legal: "Mentions légales",
     privacy: "Confidentialité",
     phase:
-      "Pi COOP n’est que la Phase\u00a01. Bientôt : Pi Academy et Pi Finance.",
+      "Pi COOP n’est que la Phase\u00a01. Bientôt : Pi Academy et Pi Invest.",
   },
   legal: {
     metaTitle: "Mentions légales — Pi COOP",
