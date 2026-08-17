@@ -166,16 +166,27 @@ export const en = {
   },
   legal: {
     metaTitle: "Legal notice — Pi COOP",
-    metaDescription: "Legal notice for Pi COOP pre-registration.",
+    metaDescription: "Legal notice for the Pi COOP pre-registration site.",
     back: "← Back",
     title: "Legal notice",
     publisherTitle: "Publisher",
-    publisherBody:
-      "The Pi COOP pre-registration site is published as part of the Pi citizen cooperative project (Belgium). Full identity details (legal form, company number, registered office) will be completed once the entity is formally constituted.",
-    contact: "Provisional contact:",
+    publisherIntro:
+      "The website www.picoop.be is published by Mustapha El Abyad, a natural-person enterprise, trading as “à votre service”.",
+    publisherItems: [
+      "Enterprise number: 1007.072.509",
+      "VAT: BE 1007.072.509",
+      "Address: Avenue Emile de Beco 51, 1050 Ixelles, Belgium",
+    ],
+    publisherCoop:
+      "Pi COOP is a citizen cooperative project. The cooperative entity has not yet been constituted. These notices will be updated once it is created.",
+    contact: "Contact:",
+    contactEmail: "info@picoop.be",
     hostingTitle: "Hosting",
-    hostingBody:
-      "Frontend: Vercel Inc. — Backend / database: cloud providers (e.g. Railway, Neon) depending on the production environment.",
+    hosting: [
+      "Website: Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States.",
+      "API: Railway Corp., 548 Market Street PMB 42068, San Francisco, CA 94104, United States.",
+      "Database: Neon, Inc., hosted in the European Union.",
+    ],
     natureTitle: "Nature of the service",
     natureBefore: "Pre-registration is",
     natureFree: "free",
@@ -183,6 +194,16 @@ export const en = {
       "and does not constitute a purchase commitment. Prices shown in the Pi digital leaflet are",
     natureEstimates: "non-contractual estimates",
     natureEnd: ".",
+    natureAfter:
+      "The first store aimed at is a neighbourhood shop, not a hypermarket. No payment is requested today. An opening pack would only be offered if premises and cooperative statutes exist.",
+    ipTitle: "Intellectual property",
+    ipBody:
+      "The texts, the π logo, the visual identity and the other elements of the site are protected. Unauthorised reproduction is prohibited.",
+    lawTitle: "Applicable law",
+    lawBody:
+      "The site is governed by Belgian law. In the event of a dispute, Belgian courts have jurisdiction, without prejudice to mandatory consumer-protection rules.",
+    relatedPrivacy: "Privacy policy",
+    updated: "Last updated: 17 August 2026",
   },
   privacy: {
     metaTitle: "Privacy — Pi COOP",
@@ -191,29 +212,66 @@ export const en = {
     title: "Privacy policy",
     controllerTitle: "Data controller",
     controllerBody:
-      "Pi COOP processes your data to manage pre-registration for the citizen cooperative. Contact:",
+      "The data controller is Mustapha El Abyad, a natural-person enterprise (trading as “à votre service”), enterprise number 1007.072.509, Avenue Emile de Beco 51, 1050 Ixelles, Belgium. Contact:",
+    contactEmail: "info@picoop.be",
     dataTitle: "Data collected",
     data: [
-      "Email and password (hashed)",
-      "Household size and age bands (no exact ages)",
+      "Email and password (stored only as a hash)",
+      "Household size and age bands (no exact ages, no names of household members)",
       "Postal code, street, house number",
       "Optional consent to display the house number anonymously on the street",
+      "Technical security data (Cloudflare Turnstile anti-bot verification)",
+      "Aggregated audience measurement (Vercel Analytics), without advertising cookies",
+      "Language preference (pi_locale cookie)",
     ],
     purposeTitle: "Purposes",
     purposes: [
       "Create and secure your pre-registration account",
-      "Measure interest by postal code (store opening)",
-      "Inform you about the launch (email)",
+      "Count persons by postal code (10,000-person opening threshold)",
+      "Inform you of the launch by email",
       "Display anonymous house numbers if you consented",
+      "Protect the form against automated sign-ups",
+      "Understand site traffic, without targeted advertising",
+      "Remember the display language",
     ],
     legalTitle: "Legal basis",
     legalBody:
-      "Performance of pre-contractual steps at your request, legitimate interest in organising the cooperative, and consent for the public display of the house number.",
+      "Pre-contractual steps at your request (creating the account), legitimate interest in organising the cooperative project and securing the site, and consent for the public display of the house number. You may withdraw that consent at any time by writing to the contact address.",
+    recipientsTitle: "Recipients",
+    recipients: [
+      "Vercel (website hosting)",
+      "Railway (API)",
+      "Neon (database, European Union)",
+      "Resend (welcome email)",
+      "Cloudflare (Turnstile anti-bot)",
+    ],
+    recipientsAfter:
+      "These providers act only to operate the service. We do not sell your data. There is no Facebook pixel and no targeted advertising on picoop.be.",
+    transfersTitle: "Transfers outside the European Economic Area",
+    transfersBody:
+      "Vercel, Railway, Resend and Cloudflare are established in the United States. Transfers rely on their contractual safeguards (including standard contractual clauses where applicable). The Neon database is hosted in the European Union.",
+    cookiesTitle: "Cookies and similar technologies",
+    cookies: [
+      "pi_locale: essential cookie, stores FR / NL / EN, one-year duration",
+      "Cloudflare Turnstile: strictly necessary for the security of the registration form",
+      "Vercel Analytics: audience measurement without advertising cookies",
+    ],
+    cookiesAfter:
+      "No consent banner is shown, because the site does not use advertising cookies or marketing tracking.",
     retentionTitle: "Retention",
     retentionBody:
-      "Data is kept for the pre-registration and launch phase, then according to applicable legal obligations.",
+      "Account data is kept for the pre-registration phase. It is erased on request, or reviewed when the cooperative is constituted (taken over by the new entity with notice, or deleted). Technical security logs are kept only as long as needed.",
+    childrenTitle: "Household and children",
+    childrenBody:
+      "We do not create accounts for children. Household age bands (including 0–4 and 5–17) are recorded without exact age and without first names, solely to count persons and explain future contribution rules.",
     rightsTitle: "Your rights",
     rightsBody:
-      "Under the GDPR, you have the right of access, rectification, erasure, restriction and objection. Write to contact@picoop.be. You may also lodge a complaint with the Belgian Data Protection Authority (APD / GBA).",
+      "Under the GDPR, you have the right of access, rectification, erasure, restriction, objection, portability, and withdrawal of consent for the house-number display. Write to",
+    rightsAfter:
+      "You may also lodge a complaint with the Belgian Data Protection Authority (APD / GBA), Rue de la Presse 35, 1000 Brussels.",
+    apdLabel: "autoriteprotectiondonnees.be",
+    apdUrl: "https://www.autoriteprotectiondonnees.be",
+    relatedLegal: "Legal notice",
+    updated: "Last updated: 17 August 2026",
   },
 } satisfies Messages;

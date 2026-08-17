@@ -173,16 +173,27 @@ export const nl = {
   },
   legal: {
     metaTitle: "Wettelijke vermeldingen — Pi COOP",
-    metaDescription: "Wettelijke vermeldingen van de voorinschrijving Pi COOP.",
+    metaDescription: "Wettelijke vermeldingen van de voorinschrijvingssite Pi COOP.",
     back: "← Terug",
     title: "Wettelijke vermeldingen",
     publisherTitle: "Uitgever",
-    publisherBody:
-      "De voorinschrijvingssite Pi COOP wordt uitgegeven in het kader van het burgercoöperatieproject Pi (België). De volledige identiteitsvermeldingen (rechtsvorm, ondernemingsnummer, zetel) worden aangevuld zodra de entiteit formeel is opgericht.",
-    contact: "Voorlopig contact:",
+    publisherIntro:
+      "De website www.picoop.be wordt uitgegeven door Mustapha El Abyad, onderneming natuurlijke persoon, handelsnaam « à votre service ».",
+    publisherItems: [
+      "Ondernemingsnummer: 1007.072.509",
+      "BTW: BE 1007.072.509",
+      "Adres: Avenue Emile de Beco 51, 1050 Elsene",
+    ],
+    publisherCoop:
+      "Pi COOP is een burgercoöperatieproject. De coöperatieve entiteit is nog niet opgericht. Deze vermeldingen worden bijgewerkt zodra ze bestaat.",
+    contact: "Contact:",
+    contactEmail: "info@picoop.be",
     hostingTitle: "Hosting",
-    hostingBody:
-      "Frontend: Vercel Inc. — Backend / databank: cloudaanbieders (bv. Railway, Neon) volgens de productieomgeving.",
+    hosting: [
+      "Website: Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, Verenigde Staten.",
+      "API: Railway Corp., 548 Market Street PMB 42068, San Francisco, CA 94104, Verenigde Staten.",
+      "Databank: Neon, Inc., hosting in de Europese Unie.",
+    ],
     natureTitle: "Aard van de dienst",
     natureBefore: "De voorinschrijving is",
     natureFree: "gratis",
@@ -190,6 +201,16 @@ export const nl = {
       "en vormt geen aankoopverbintenis. De prijzen in de Digitale folder Pi zijn",
     natureEstimates: "niet-contractuele schattingen",
     natureEnd: ".",
+    natureAfter:
+      "De eerste beoogde winkel is een buurtwinkel, geen hypermarkt. Vandaag wordt geen betaling gevraagd. Een openingspakket zou alleen worden aangeboden als er een pand en coöperatiestatuten zijn.",
+    ipTitle: "Intellectuele eigendom",
+    ipBody:
+      "De teksten, het π-logo, de visuele identiteit en de andere elementen van de site zijn beschermd. Ongeoorloofde reproductie is verboden.",
+    lawTitle: "Toepasselijk recht",
+    lawBody:
+      "De site valt onder Belgisch recht. Bij een geschil zijn de Belgische rechtbanken bevoegd, onverminderd dwingende regels van consumentenbescherming.",
+    relatedPrivacy: "Privacybeleid",
+    updated: "Laatst bijgewerkt: 17 augustus 2026",
   },
   privacy: {
     metaTitle: "Privacy — Pi COOP",
@@ -198,29 +219,66 @@ export const nl = {
     title: "Privacybeleid",
     controllerTitle: "Verwerkingsverantwoordelijke",
     controllerBody:
-      "Pi COOP verwerkt je gegevens om de voorinschrijving bij de burgercoöperatie te beheren. Contact:",
+      "De verwerkingsverantwoordelijke is Mustapha El Abyad, onderneming natuurlijke persoon (handelsnaam « à votre service »), ondernemingsnummer 1007.072.509, Avenue Emile de Beco 51, 1050 Elsene. Contact:",
+    contactEmail: "info@picoop.be",
     dataTitle: "Verzamelde gegevens",
     data: [
-      "E-mail en wachtwoord (gehasht)",
-      "Gezinsgrootte en leeftijdsschijven (geen exacte leeftijden)",
+      "E-mail en wachtwoord (enkel als hash bewaard)",
+      "Gezinsgrootte en leeftijdsschijven (geen exacte leeftijden, geen namen van gezinsleden)",
       "Postcode, straat, huisnummer",
       "Optionele toestemming voor anonieme weergave van het nummer in de straat",
+      "Technische beveiligingsgegevens (anti-botverificatie Cloudflare Turnstile)",
+      "Geaggregeerde audiencestats (Vercel Analytics), zonder advertentiecookies",
+      "Taalvoorkeur (cookie pi_locale)",
     ],
     purposeTitle: "Doelen",
     purposes: [
       "Je voorinschrijvingsaccount aanmaken en beveiligen",
-      "De interesse per postcode meten (winkelopening)",
-      "Je informeren over de lancering (e-mail)",
+      "Personen per postcode tellen (drempel van 10.000 personen om te openen)",
+      "Je per e-mail informeren over de lancering",
       "Anonieme huisnummers tonen als je daarvoor toestemming gaf",
+      "Het formulier beschermen tegen automatische inschrijvingen",
+      "Het bezoek aan de site begrijpen, zonder gerichte reclame",
+      "De weergavetaal onthouden",
     ],
     legalTitle: "Rechtsgrond",
     legalBody:
-      "Uitvoering van precontractuele maatregelen op jouw verzoek, gerechtvaardigd belang om de coöperatie te organiseren, en toestemming voor de openbare weergave van het huisnummer.",
+      "Precontractuele maatregelen op jouw verzoek (account aanmaken), gerechtvaardigd belang om het coöperatieproject te organiseren en de site te beveiligen, en toestemming voor de openbare weergave van het huisnummer. Je kan die toestemming op elk moment intrekken door naar het contactadres te schrijven.",
+    recipientsTitle: "Ontvangers",
+    recipients: [
+      "Vercel (hosting van de site)",
+      "Railway (API)",
+      "Neon (databank, Europese Unie)",
+      "Resend (welkomstmail)",
+      "Cloudflare (anti-bot Turnstile)",
+    ],
+    recipientsAfter:
+      "Deze dienstverleners handelen enkel om de dienst te laten werken. We verkopen je gegevens niet. Er is geen Facebookpixel en geen gerichte reclame op picoop.be.",
+    transfersTitle: "Doorgiften buiten de Europese Economische Ruimte",
+    transfersBody:
+      "Vercel, Railway, Resend en Cloudflare zijn gevestigd in de Verenigde Staten. Doorgiften steunen op hun contractuele waarborgen (onder meer de standaardcontractbepalingen, waar van toepassing). De Neon-databank wordt in de Europese Unie gehost.",
+    cookiesTitle: "Cookies en vergelijkbare technologieën",
+    cookies: [
+      "pi_locale: essentiële cookie, onthoudt FR / NL / EN, geldig één jaar",
+      "Cloudflare Turnstile: strikt noodzakelijk voor de beveiliging van het inschrijvingsformulier",
+      "Vercel Analytics: audiencestats zonder advertentiecookies",
+    ],
+    cookiesAfter:
+      "Er wordt geen toestemmingsbanner getoond, omdat de site geen advertentiecookies of marketingtracking gebruikt.",
     retentionTitle: "Bewaring",
     retentionBody:
-      "De gegevens worden bewaard tijdens de voorinschrijvingsfase en de lancering, daarna volgens de toepasselijke wettelijke verplichtingen.",
+      "Accountgegevens worden bewaard tijdens de voorinschrijving. Ze worden op verzoek gewist, of herbekeken wanneer de coöperatie is opgericht (overname door de nieuwe entiteit met informatie, of wissing). Technische beveiligingslogboeken worden slechts zo lang bewaard als nodig.",
+    childrenTitle: "Gezin en kinderen",
+    childrenBody:
+      "We maken geen account aan voor een kind. De leeftijdsschijven van het gezin (inclusief 0–4 en 5–17 jaar) worden geregistreerd zonder exacte leeftijd en zonder voornaam, enkel om personen te tellen en de toekomstige bijdrageregels uit te leggen.",
     rightsTitle: "Jouw rechten",
     rightsBody:
-      "Overeenkomstig de AVG heb je recht op inzage, rectificatie, wissing, beperking en bezwaar. Schrijf naar contact@picoop.be. Je kan ook een klacht indienen bij de Gegevensbeschermingsautoriteit (GBA, België).",
+      "Overeenkomstig de AVG heb je recht op inzage, rectificatie, wissing, beperking, bezwaar, overdraagbaarheid, en intrekking van de toestemming voor de weergave van het huisnummer. Schrijf naar",
+    rightsAfter:
+      "Je kan ook een klacht indienen bij de Gegevensbeschermingsautoriteit (GBA), Drukpersstraat 35, 1000 Brussel.",
+    apdLabel: "gegevensbeschermingsautoriteit.be",
+    apdUrl: "https://www.gegevensbeschermingsautoriteit.be",
+    relatedLegal: "Wettelijke vermeldingen",
+    updated: "Laatst bijgewerkt: 17 augustus 2026",
   },
 } satisfies Messages;

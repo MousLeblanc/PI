@@ -31,11 +31,17 @@ export default async function MentionsLegalesPage() {
           <h2 className="text-base font-semibold text-foreground">
             {t.publisherTitle}
           </h2>
-          <p>{t.publisherBody}</p>
+          <p>{t.publisherIntro}</p>
+          <ul className="list-disc space-y-1 pl-5">
+            {t.publisherItems.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p>{t.publisherCoop}</p>
           <p>
             {t.contact}{" "}
-            <a className="text-emerald-800 underline" href="mailto:contact@picoop.be">
-              contact@picoop.be
+            <a className="text-emerald-800 underline" href={`mailto:${t.contactEmail}`}>
+              {t.contactEmail}
             </a>
           </p>
         </section>
@@ -43,7 +49,11 @@ export default async function MentionsLegalesPage() {
           <h2 className="text-base font-semibold text-foreground">
             {t.hostingTitle}
           </h2>
-          <p>{t.hostingBody}</p>
+          <ul className="list-disc space-y-1 pl-5">
+            {t.hosting.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </section>
         <section className="space-y-2">
           <h2 className="text-base font-semibold text-foreground">
@@ -56,7 +66,25 @@ export default async function MentionsLegalesPage() {
             <strong className="text-foreground">{t.natureEstimates}</strong>
             {t.natureEnd}
           </p>
+          <p>{t.natureAfter}</p>
         </section>
+        <section className="space-y-2">
+          <h2 className="text-base font-semibold text-foreground">{t.ipTitle}</h2>
+          <p>{t.ipBody}</p>
+        </section>
+        <section className="space-y-2">
+          <h2 className="text-base font-semibold text-foreground">{t.lawTitle}</h2>
+          <p>{t.lawBody}</p>
+        </section>
+        <p>
+          <Link
+            href="/confidentialite"
+            className="text-emerald-800 underline-offset-4 hover:underline"
+          >
+            {t.relatedPrivacy}
+          </Link>
+        </p>
+        <p className="text-xs">{t.updated}</p>
       </div>
     </main>
   );
