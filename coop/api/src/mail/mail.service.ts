@@ -27,6 +27,7 @@ export class MailService {
     const siteUrl = this.publicSiteUrl();
     const shareText = `Rejoins Pi COOP — supermarché citoyen à prix grossiste + 20 centimes. Préinscription gratuite : ${siteUrl}`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(siteUrl)}`;
     const mailtoUrl = `mailto:?subject=${encodeURIComponent('Rejoins Pi COOP')}&body=${encodeURIComponent(shareText)}`;
     // No emoji in subject: better inbox placement than spam
     const subject = 'Bienvenue chez Pi COOP — vous êtes co-propriétaire';
@@ -57,6 +58,7 @@ export class MailService {
       '',
       'Aujourd’hui vous ne payez rien. Le bouche-à-oreille est notre seule publicité.',
       `Inviter 3 voisins ou amis (WhatsApp) : ${whatsappUrl}`,
+      `Publier dans un groupe Facebook : ${facebookUrl}`,
       `Ou par email : ${mailtoUrl}`,
       `Site : ${siteUrl}`,
       '',
@@ -89,9 +91,14 @@ export class MailService {
         <p>La première zone à <strong>10&nbsp;000 personnes</strong> (chaque membre du foyer compte) débloque le magasin historique. Les suivantes suivent sur la roadmap. Votre inscription allonge le compteur π.</p>
         <p>Aujourd’hui vous ne payez rien. Le bouche-à-oreille est notre seule publicité.</p>
 
-        <p style="margin:28px 0 12px">
+        <p style="margin:28px 0 10px">
           <a href="${escapeHtml(whatsappUrl)}" style="display:inline-block;background:#1f6f54;color:#ffffff;text-decoration:none;padding:14px 22px;border-radius:999px;font-weight:600">
             Partager Pi COOP autour de moi
+          </a>
+        </p>
+        <p style="margin:0 0 12px">
+          <a href="${escapeHtml(facebookUrl)}" style="display:inline-block;background:#ffffff;color:#1f6f54;border:2px solid #1f6f54;text-decoration:none;padding:12px 20px;border-radius:999px;font-weight:600">
+            Publier dans un groupe Facebook
           </a>
         </p>
         <p style="font-size:13px;color:#5b6b63;margin:0 0 16px">

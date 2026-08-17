@@ -22,9 +22,19 @@ const manrope = Manrope({
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await resolveLocale();
   const messages = getMessages(locale);
+  const localeTag =
+    locale === "nl" ? "nl_BE" : locale === "en" ? "en_GB" : "fr_BE";
   return {
     title: messages.meta.title,
     description: messages.meta.description,
+    openGraph: {
+      title: messages.meta.title,
+      description: messages.meta.description,
+      url: "https://www.picoop.be",
+      siteName: "Pi COOP",
+      locale: localeTag,
+      type: "website",
+    },
   };
 }
 
