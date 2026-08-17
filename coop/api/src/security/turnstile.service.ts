@@ -7,7 +7,6 @@ import { ConfigService } from '@nestjs/config';
 
 const SITEVERIFY_URL =
   'https://challenges.cloudflare.com/turnstile/v0/siteverify';
-const EXPECTED_ACTION = 'signup';
 const MAX_TOKEN_LENGTH = 2048;
 
 type SiteverifyResult = {
@@ -23,7 +22,10 @@ export class TurnstileService {
 
   constructor(private readonly config: ConfigService) {}
 
-  async verify(token: string | undefined): Promise<void> {
+  async verify(
+    token: string | undefined,
+    expectedAction = 'signup',
+  ): Promise<void> {
     const skip = this.config.get<string>('TURNSTILE_SKIP') === 'true';
     if (skip) {
       this.logger.debug('Turnstile skipped (TURNSTILE_SKIP=true)');
@@ -64,7 +66,7 @@ export class TurnstileService {
 
     if (
       !result.success ||
-      result.action !== EXPECTED_ACTION ||
+      result.action !== expectedAction ||
       !result.hostname ||
       !expectedHostnames.has(result.hostname)
     ) {

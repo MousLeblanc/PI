@@ -18,18 +18,15 @@ export class RegisterRateLimitGuard implements CanActivate {
 
   canActivate(context: ExecutionContext): boolean {
     const req = context.switchToHttp().getRequest<Request>();
-    const ip =
-      (req.headers['cf-connecting-ip'] as string | undefined) ??
-      (req.headers['x-forwarded-for'] as string | undefined)?.split(',')[0]?.trim() ??
-      req.ip ??
-      'unknown';
+    const ip = req.ip ?? 'unknown';
+    const route = (req.originalUrl ?? req.url ?? '/auth').split('?')[0];
 
     const max = Number(this.config.get('RATE_LIMIT_REGISTER_MAX') ?? 5);
     const windowMs = Number(
       this.config.get('RATE_LIMIT_REGISTER_WINDOW_MS') ?? 600_000,
     );
     const now = Date.now();
-    const key = `register:${ip}`;
+    const key = `${route}:${ip}`;
     let bucket = this.buckets.get(key);
 
     if (!bucket || now >= bucket.resetAt) {

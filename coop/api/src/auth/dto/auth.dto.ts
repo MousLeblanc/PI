@@ -69,4 +69,8 @@ export class LoginDto {
   @IsString()
   @MinLength(8)
   password!: string;
+
+  @IsOptional()
+  @IsString()
+  turnstileToken?: string;
 }

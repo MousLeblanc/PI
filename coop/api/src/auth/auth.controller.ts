@@ -14,6 +14,7 @@ export class AuthController {
   }
 
   @Post('login')
+  @UseGuards(RegisterRateLimitGuard)
   login(@Body() dto: LoginDto) {
     return this.auth.login(dto);
   }

@@ -27,7 +27,7 @@ export class AuthService {
   ) {}
 
   async register(dto: RegisterDto) {
-    await this.turnstile.verify(dto.turnstileToken);
+    await this.turnstile.verify(dto.turnstileToken, 'signup');
 
     if (dto.ageBands.length !== dto.householdSize) {
       throw new BadRequestException(
@@ -82,6 +82,7 @@ export class AuthService {
   }
 
   async login(dto: LoginDto) {
+    await this.turnstile.verify(dto.turnstileToken, 'login');
     const email = dto.email.trim().toLowerCase();
     const user = await this.prisma.user.findUnique({ where: { email } });
     if (!user) {
