@@ -77,6 +77,10 @@ export default {
             textShadow: "0 0 12px rgba(16,185,129,0.55)",
           },
         },
+        "live-dot": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.28" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.7s ease-out both",
@@ -84,6 +88,7 @@ export default {
         "pulse-soft": "pulse-soft 3s ease-in-out infinite",
         "pi-digit": "pi-digit 0.65s ease-out",
         "pi-glow": "pi-glow 1.1s ease-in-out 2",
+        "live-dot": "live-dot 2.4s ease-in-out infinite",
       },
     },
   },
