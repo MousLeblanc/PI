@@ -47,6 +47,9 @@ export const en = {
     placeholder: "e.g. 1050",
     unknownPostal: "Unknown postal code",
     pioneer: "You can be the pioneer here — share the link locally.",
+    needPostal: "Enter your postal code to see where your city stands.",
+    people: "{count} people",
+    goal: "Goal: 10,000 people to open.",
     cp: "PC {code}",
     exploded: "Target smashed — next tier {tier}",
     explodedBody:
@@ -58,7 +61,7 @@ export const en = {
     kicker: "National race",
     title: "The race for the first supermarket",
     intro:
-      "Which city will hit 10,000 people first? The first tier opens a pilot Pi supermarket at human scale, for members. The next cities join the opening roadmap.",
+      "Which city will hit 10,000 people first?",
     remaining: "{count} more to unlock",
     exploded: "Opening target smashed · next tier {tier}",
   },

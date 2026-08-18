@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { getLeaderboard, type LeaderboardItem } from "@/lib/api";
-import { getCommune } from "@/lib/belgium";
-import { OPENING_TARGET, getStretchMeta } from "@/lib/stretch";
+import { getCommuneShort } from "@/lib/belgium";
 import { cn } from "@/lib/utils";
 import { useI18n } from "@/i18n/use-t";
 
@@ -18,7 +17,7 @@ export function CityLeaderboard() {
     const load = async () => {
       try {
         const res = await getLeaderboard(8);
-        if (alive) setItems(res.items);
+        if (alive) setItems(res.items.filter((row) => row.count > 0));
       } catch {
         if (alive) setItems([]);
       }
@@ -31,14 +30,7 @@ export function CityLeaderboard() {
     };
   }, []);
 
-  const rows =
-    items.length > 0
-      ? items
-      : [
-          { postalCode: "1000", count: 0 },
-          { postalCode: "1030", count: 0 },
-          { postalCode: "4000", count: 0 },
-        ];
+  if (items.length === 0) return null;
 
   return (
     <div className="mt-10 overflow-hidden rounded-2xl border border-emerald-900/10 bg-[var(--bg-deep,#0f2a22)] text-emerald-50 shadow-lg">
@@ -55,15 +47,15 @@ export function CityLeaderboard() {
       </div>
 
       <ol className="m-0 list-none space-y-0 p-0">
-        {rows.map((row, i) => {
-          const meta = getStretchMeta(row.count);
-          const label = getCommune(row.postalCode) ?? `CP ${row.postalCode}`;
+        {items.map((row, i) => {
+          const label =
+            getCommuneShort(row.postalCode) ?? `CP ${row.postalCode}`;
           const rank = i + 1;
           return (
             <li
               key={row.postalCode}
               className={cn(
-                "flex flex-wrap items-center justify-between gap-3 border-b border-white/5 px-5 py-3.5 last:border-0 sm:px-6",
+                "flex items-center justify-between gap-3 border-b border-white/5 px-5 py-3.5 last:border-0 sm:px-6",
                 i < 3 && "bg-white/[0.03]",
               )}
             >
@@ -79,33 +71,13 @@ export function CityLeaderboard() {
                 >
                   {i < 3 ? MEDALS[i] : rank}
                 </span>
-                <div className="min-w-0">
-                  <p className="m-0 truncate font-medium text-white">
-                    {label}{" "}
-                    <span className="text-emerald-200/60">
-                      ({row.postalCode})
-                    </span>
-                  </p>
-                  {meta.exploded ? (
-                    <p className="m-0 text-xs text-amber-300">
-                      {t("leaderboard.exploded", {
-                        tier: meta.nextTier.toLocaleString(numberLocale),
-                      })}
-                    </p>
-                  ) : (
-                    <p className="m-0 text-xs text-emerald-200/55">
-                      {t("leaderboard.remaining", {
-                        count: (
-                          OPENING_TARGET - row.count
-                        ).toLocaleString(numberLocale),
-                      })}
-                    </p>
-                  )}
-                </div>
+                <p className="m-0 truncate font-medium text-white">
+                  {label}{" "}
+                  <span className="text-emerald-200/60">({row.postalCode})</span>
+                </p>
               </div>
-              <p className="m-0 tabular-nums text-sm font-semibold text-emerald-100">
-                {row.count.toLocaleString(numberLocale)} /{" "}
-                {OPENING_TARGET.toLocaleString(numberLocale)}
+              <p className="m-0 shrink-0 tabular-nums text-sm font-semibold text-emerald-100">
+                {row.count.toLocaleString(numberLocale)}
               </p>
             </li>
           );

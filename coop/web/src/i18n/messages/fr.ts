@@ -47,6 +47,9 @@ export const fr = {
     placeholder: "ex. 1050",
     unknownPostal: "Code postal inconnu",
     pioneer: "Vous pouvez être le pionnier ici — partagez le lien localement.",
+    needPostal: "Entrez votre code postal pour voir où en est votre ville.",
+    people: "{count} personnes",
+    goal: "Objectif : 10 000 personnes pour ouvrir.",
     cp: "CP {code}",
     exploded: "Objectif explosé — prochain palier {tier}",
     explodedBody:
@@ -58,7 +61,7 @@ export const fr = {
     kicker: "Course nationale",
     title: "La course au premier supermarché",
     intro:
-      "Quelle ville franchira 10\u00a0000 personnes en premier\u00a0? Le premier palier ouvre un supermarché pilote Pi à taille humaine, aux membres. Les villes suivantes entrent sur la roadmap d’ouverture.",
+      "Quelle ville franchira 10\u00a0000 personnes en premier\u00a0?",
     remaining: "Encore {count} pour débloquer",
     exploded: "Objectif d’ouverture explosé · prochain palier {tier}",
   },

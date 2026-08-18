@@ -50,6 +50,9 @@ export const nl = {
     placeholder: "bv. 1050",
     unknownPostal: "Onbekende postcode",
     pioneer: "Jij kan hier de pionier zijn — deel de link lokaal.",
+    needPostal: "Vul je postcode in om te zien waar jouw stad staat.",
+    people: "{count} personen",
+    goal: "Doel: 10.000 personen om te openen.",
     cp: "PC {code}",
     exploded: "Doel overschreden — volgende drempel {tier}",
     explodedBody:
@@ -61,7 +64,7 @@ export const nl = {
     kicker: "Nationale race",
     title: "De race naar de eerste supermarkt",
     intro:
-      "Welke stad haalt als eerste 10.000 personen\u00a0? De eerste drempel opent een piloot-Pi-supermarkt op menselijke schaal, voor de leden. De volgende steden komen op de openingsroadmap.",
+      "Welke stad haalt als eerste 10.000 personen\u00a0?",
     remaining: "Nog {count} om te ontgrendelen",
     exploded: "Openingsdoel overschreden · volgende drempel {tier}",
   },
