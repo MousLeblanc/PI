@@ -7,8 +7,6 @@ import { formatPiFromCount } from "@/lib/belgium";
 import { PI_DECIMALS } from "@/data/pi-decimals";
 import { useI18n } from "@/i18n/use-t";
 
-const VISIBLE_HEAD = 14; // caractères après "3," avant d’abréger
-
 export function PiCounter() {
   const { t, numberLocale } = useI18n();
   const [total, setTotal] = useState(0);
@@ -42,11 +40,9 @@ export function PiCounter() {
   // 1 personne = 1 décimale → "3,1" ; 0 personne → "3,"
   const full = formatPiFromCount(total, PI_DECIMALS);
   const frac = total === 0 ? "" : full.slice(2); // après "3,"
-  const abbreviated = frac.length > VISIBLE_HEAD;
-  const head = abbreviated ? frac.slice(0, VISIBLE_HEAD) : frac;
-  const glowLen = Math.min(3, head.length);
-  const steady = glowLen > 0 ? head.slice(0, -glowLen) : head;
-  const glow = glowLen > 0 ? head.slice(-glowLen) : "";
+  const glowLen = Math.min(3, frac.length);
+  const steady = glowLen > 0 ? frac.slice(0, -glowLen) : frac;
+  const glow = glowLen > 0 ? frac.slice(-glowLen) : "";
 
   const coopWord = total > 1 ? t("pi.coopMany") : t("pi.coopOne");
   const decWord = total > 1 ? t("pi.decMany") : t("pi.decOne");
@@ -78,9 +74,6 @@ export function PiCounter() {
                 >
                   {glow}
                 </span>
-                {abbreviated ? (
-                  <span className="text-emerald-800/70">…</span>
-                ) : null}
               </>
             ) : null}
           </span>
