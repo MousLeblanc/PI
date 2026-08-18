@@ -12,9 +12,9 @@ export const fr = {
     title: "Vos courses à prix grossiste +\u00a020\u00a0centimes",
     titleAria: "Voir le détail des marges fixes",
     subtitleBefore: "Marge fixe, jamais cachée. Devenez",
-    subtitleStrong: "coopérateur · co-propriétaire",
+    subtitleStrong: "futur coopérateur",
     subtitleAfter:
-      "de votre magasin citoyen : 10\u00a0€/mois de part coopérative et 2\u00a0h de bénévolat. Préinscription 100\u00a0% gratuite.",
+      "de votre supermarché citoyen. Préinscription 100\u00a0% gratuite — aucun paiement aujourd’hui. Les 10\u00a0€/mois et 2\u00a0h de bénévolat ne commencent qu’à l’ouverture, une fois la coopérative constituée.",
     footnote:
       "20\u00a0centimes sur l’essentiel du rayon · 50\u00a0centimes sur les produits plus chers (huile, langes…) — détail dans «\u00a0Comment ça marche\u00a0?\u00a0».",
     ctaUnlock: "Débloquer les prix dans ma ville",
@@ -50,7 +50,7 @@ export const fr = {
     cp: "CP {code}",
     exploded: "Objectif explosé — prochain palier {tier}",
     explodedBody:
-      "Ouverture validée pour cette ville. Continuez : plus on est nombreux, plus le pouvoir de négociation est fort.",
+      "Seuil d’intérêt atteint pour cette ville. L’ouverture ne se fait que s’il y a un local et des statuts. Continuez : plus on est nombreux, plus le pouvoir de négociation est fort.",
     remaining:
       "{pct}\u00a0% · encore {remaining} personnes pour débloquer l’ouverture ici",
   },
@@ -69,7 +69,7 @@ export const fr = {
     pillars: [
       {
         title: "Votre part dans la coopérative",
-        body: "Ici, pas d’actionnaires invisibles. Dès l’ouverture, chaque membre du foyer contribue 10 € / mois — ce n’est pas un abonnement : c’est votre part dans la coopérative. Vous n’êtes pas clients, vous êtes co-propriétaires de votre magasin. Ce fonds collectif sert à acheter en volume.",
+        body: "Ici, pas d’actionnaires invisibles. Dès l’ouverture, une fois la coopérative constituée, chaque membre du foyer contribue 10 € / mois — ce n’est pas un abonnement : c’est votre part. Vous n’êtes pas clients : vous devenez co-propriétaires de votre magasin. Ce fonds collectif sert à acheter en volume.",
       },
       {
         title: "L’entraide (2 h / mois)",
@@ -98,10 +98,10 @@ export const fr = {
     error: "Erreur",
   },
   register: {
-    sectionTitle: "Devenir coopérateur",
+    sectionTitle: "Devenir futur coopérateur",
     sectionIntro:
-      "Rejoignez la chaîne Pi dans votre code postal. Aucun paiement aujourd’hui — vous entrez comme futur co-propriétaire.",
-    title: "Devenir coopérateur",
+      "Rejoignez la chaîne Pi dans votre code postal. Aucun paiement aujourd’hui — vous entrez comme futur coopérateur.",
+    title: "Devenir futur coopérateur",
     description:
       "Préinscription gratuite · vous rejoignez la chaîne Pi · sans paiement aujourd’hui",
     email: "Email",
@@ -117,7 +117,7 @@ export const fr = {
     unknownPostal: "Code postal inconnu",
     optIn:
       "Montrer l’exemple dans ma rue : afficher le numéro de ma maison pour encourager mes voisins (anonyme — aucun nom).",
-    submit: "Je deviens coopérateur — c’est gratuit",
+    submit: "Je deviens futur coopérateur — c’est gratuit",
     submitting: "Envoi…",
     success:
       "Préinscription réussie. Un email de bienvenue vous sera envoyé.",
@@ -127,7 +127,7 @@ export const fr = {
       AGE_18_64: "18–64 ans (bénévolat)",
       AGE_65_PLUS: "65+ ans",
     },
-    toastTitle: "Bienvenue, coopérateur !",
+    toastTitle: "Bienvenue, futur coopérateur !",
     toastOne:
       "Inscription validée. Grâce à vous, Pi gagne une décimale — vous êtes le chiffre {total}.",
     toastMany:
@@ -145,11 +145,11 @@ export const fr = {
   },
   pi: {
     empty:
-      "Soyez le premier coopérateur : vous écrirez le « 1 » de 3,14…",
+      "Soyez le premier inscrit : vous écrirez le « 1 » de 3,14…",
     filled:
       "{count} {coopWord} = {count} {decWord}. Rejoignez-nous pour allonger la chaîne !",
-    coopOne: "coopérateur",
-    coopMany: "coopérateurs",
+    coopOne: "inscrit",
+    coopMany: "inscrits",
     decOne: "décimale",
     decMany: "décimales",
   },

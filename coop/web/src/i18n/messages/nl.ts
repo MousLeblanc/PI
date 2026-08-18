@@ -14,9 +14,9 @@ export const nl = {
     title: "Jouw boodschappen aan groothandelsprijs +\u00a020\u00a0cent",
     titleAria: "Bekijk de details van de vaste marges",
     subtitleBefore: "Vaste marge, nooit verborgen. Word",
-    subtitleStrong: "coöperant · mede-eigenaar",
+    subtitleStrong: "toekomstige coöperant",
     subtitleAfter:
-      "van je burgerwinkel: 10\u00a0€/maand coöperatief aandeel en 2\u00a0u vrijwilligerswerk. Voorinschrijving 100\u00a0% gratis.",
+      "van je burgersupermarkt. Voorinschrijving 100\u00a0% gratis — vandaag geen betaling. De 10\u00a0€/maand en 2\u00a0u vrijwilligerswerk starten pas bij de opening, zodra de coöperatie is opgericht.",
     footnote:
       "20\u00a0cent op het dagelijkse schap · 50\u00a0cent op duurdere producten (olie, luiers…) — details in «\u00a0Hoe werkt het\u00a0?\u00a0».",
     ctaUnlock: "Ontgrendel de prijzen in mijn stad",
@@ -53,7 +53,7 @@ export const nl = {
     cp: "PC {code}",
     exploded: "Doel overschreden — volgende drempel {tier}",
     explodedBody:
-      "Opening bevestigd voor deze stad. Ga door: hoe meer we zijn, hoe sterker de onderhandelingskracht.",
+      "Interessedrempel bereikt voor deze stad. Opening volgt alleen als er een pand en statuten zijn. Ga door: hoe meer we zijn, hoe sterker de onderhandelingskracht.",
     remaining:
       "{pct}\u00a0% · nog {remaining} personen om de opening hier te ontgrendelen",
   },
@@ -72,7 +72,7 @@ export const nl = {
     pillars: [
       {
         title: "Jouw aandeel in de coöperatie",
-        body: "Hier geen onzichtbare aandeelhouders. Vanaf de opening draagt elk gezinslid 10 € / maand bij — dit is geen abonnement: het is jouw aandeel in de coöperatie. Jullie zijn geen klanten, jullie zijn mede-eigenaars van jullie winkel. Dit collectieve fonds dient om in volume te kopen.",
+        body: "Hier geen onzichtbare aandeelhouders. Vanaf de opening, zodra de coöperatie is opgericht, draagt elk gezinslid 10 € / maand bij — dit is geen abonnement: het is jouw aandeel. Jullie zijn geen klanten: jullie worden mede-eigenaars van jullie winkel. Dit collectieve fonds dient om in volume te kopen.",
       },
       {
         title: "Wederzijdse hulp (2 u / maand)",
@@ -101,10 +101,10 @@ export const nl = {
     error: "Fout",
   },
   register: {
-    sectionTitle: "Coöperant worden",
+    sectionTitle: "Toekomstige coöperant worden",
     sectionIntro:
-      "Word lid van de Pi-keten in jouw postcode. Vandaag geen betaling — je stapt in als toekomstige mede-eigenaar.",
-    title: "Coöperant worden",
+      "Word lid van de Pi-keten in jouw postcode. Vandaag geen betaling — je stapt in als toekomstige coöperant.",
+    title: "Toekomstige coöperant worden",
     description:
       "Gratis voorinschrijving · je vervoegt de Pi-keten · vandaag zonder betaling",
     email: "E-mail",
@@ -120,7 +120,7 @@ export const nl = {
     unknownPostal: "Onbekende postcode",
     optIn:
       "Het voorbeeld geven in mijn straat: het nummer van mijn huis tonen om mijn buren aan te moedigen (anoniem — geen naam).",
-    submit: "Ik word coöperant — het is gratis",
+    submit: "Ik word toekomstige coöperant — het is gratis",
     submitting: "Verzenden…",
     success:
       "Voorinschrijving gelukt. Je ontvangt een welkomstmail.",
@@ -130,7 +130,7 @@ export const nl = {
       AGE_18_64: "18–64 jaar (vrijwilligerswerk)",
       AGE_65_PLUS: "65+ jaar",
     },
-    toastTitle: "Welkom, coöperant!",
+    toastTitle: "Welkom, toekomstige coöperant!",
     toastOne:
       "Inschrijving bevestigd. Dankzij jou wint Pi een decimaal — jij bent cijfer {total}.",
     toastMany:
@@ -148,11 +148,11 @@ export const nl = {
   },
   pi: {
     empty:
-      "Wees de eerste coöperant: jij schrijft de « 1 » van 3,14…",
+      "Wees de eerste ingeschrevene: jij schrijft de « 1 » van 3,14…",
     filled:
       "{count} {coopWord} = {count} {decWord}. Doe mee om de keten te verlengen!",
-    coopOne: "coöperant",
-    coopMany: "coöperanten",
+    coopOne: "persoon",
+    coopMany: "personen",
     decOne: "decimaal",
     decMany: "decimalen",
   },

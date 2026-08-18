@@ -14,9 +14,9 @@ export const en = {
     title: "Your groceries at wholesale price +\u00a020\u00a0cents",
     titleAria: "See the fixed-margin details",
     subtitleBefore: "Fixed margin, never hidden. Become a",
-    subtitleStrong: "co-operator · co-owner",
+    subtitleStrong: "future co-operator",
     subtitleAfter:
-      "of your citizen store: €10/month cooperative share and 2\u00a0hours of volunteering. Pre-registration is 100%\u00a0free.",
+      "of your citizen supermarket. Pre-registration is 100%\u00a0free — no payment today. The €10/month and 2 hours of volunteering start only at opening, once the cooperative is constituted.",
     footnote:
       "20\u00a0cents on everyday items · 50\u00a0cents on pricier products (oil, nappies…) — details in “How it works”.",
     ctaUnlock: "Unlock prices in my city",
@@ -50,7 +50,7 @@ export const en = {
     cp: "PC {code}",
     exploded: "Target smashed — next tier {tier}",
     explodedBody:
-      "Opening confirmed for this city. Keep going: the more of us there are, the stronger our bargaining power.",
+      "Interest threshold reached for this city. Opening only happens if there is a premises and statutes. Keep going: the more of us there are, the stronger our bargaining power.",
     remaining:
       "{pct}% · {remaining} more people to unlock opening here",
   },
@@ -69,7 +69,7 @@ export const en = {
     pillars: [
       {
         title: "Your share in the cooperative",
-        body: "No invisible shareholders here. From opening day, every household member contributes €10 / month — this is not a subscription: it is your share in the cooperative. You are not customers, you are co-owners of your store. This collective fund is used to buy in volume.",
+        body: "No invisible shareholders here. From opening day, once the cooperative is constituted, every household member contributes €10 / month — this is not a subscription: it is your share. You are not customers: you become co-owners of your store. This collective fund is used to buy in volume.",
       },
       {
         title: "Mutual aid (2 h / month)",
@@ -98,10 +98,10 @@ export const en = {
     error: "Error",
   },
   register: {
-    sectionTitle: "Become a co-operator",
+    sectionTitle: "Become a future co-operator",
     sectionIntro:
-      "Join the Pi chain in your postal code. No payment today — you come in as a future co-owner.",
-    title: "Become a co-operator",
+      "Join the Pi chain in your postal code. No payment today — you come in as a future co-operator.",
+    title: "Become a future co-operator",
     description:
       "Free pre-registration · you join the Pi chain · no payment today",
     email: "Email",
@@ -117,7 +117,7 @@ export const en = {
     unknownPostal: "Unknown postal code",
     optIn:
       "Lead by example on my street: show my house number to encourage neighbours (anonymous — no name).",
-    submit: "I become a co-operator — it’s free",
+    submit: "I become a future co-operator — it’s free",
     submitting: "Sending…",
     success: "Pre-registration successful. A welcome email will be sent.",
     ageBands: {
@@ -126,7 +126,7 @@ export const en = {
       AGE_18_64: "18–64 years (volunteering)",
       AGE_65_PLUS: "65+ years",
     },
-    toastTitle: "Welcome, co-operator!",
+    toastTitle: "Welcome, future co-operator!",
     toastOne:
       "Registration confirmed. Thanks to you, Pi gains a decimal — you are digit {total}.",
     toastMany:
@@ -142,11 +142,11 @@ export const en = {
     },
   },
   pi: {
-    empty: "Be the first co-operator: you will write the “1” in 3.14…",
+    empty: "Be the first to sign up: you will write the “1” in 3.14…",
     filled:
       "{count} {coopWord} = {count} {decWord}. Join us to lengthen the chain!",
-    coopOne: "co-operator",
-    coopMany: "co-operators",
+    coopOne: "person",
+    coopMany: "people",
     decOne: "decimal",
     decMany: "decimals",
   },
