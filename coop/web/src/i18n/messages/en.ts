@@ -16,7 +16,7 @@ export const en = {
     subtitleBefore: "Fixed margin, never hidden. Become a",
     subtitleStrong: "future co-operator",
     subtitleAfter:
-      "of your citizen supermarket. Pre-registration is 100%\u00a0free — no payment today. The €10/month and 2 hours of volunteering start only at opening, once the cooperative is constituted.",
+      "of your citizen supermarket. Pre-registration is free. The €10/month and 2 hours of volunteering start only at opening, once the cooperative is constituted.",
     footnote:
       "20\u00a0cents on everyday items · 50\u00a0cents on pricier products (oil, nappies…) — details in “How it works”.",
     ctaUnlock: "Unlock prices in my city",
@@ -103,10 +103,7 @@ export const en = {
   register: {
     sectionTitle: "Become a future co-operator",
     sectionIntro:
-      "Join the Pi chain in your postal code. No payment today — you come in as a future co-operator.",
-    title: "Become a future co-operator",
-    description:
-      "Free pre-registration · you join the Pi chain · no payment today",
+      "Enter your household and address. You count toward the 10,000-person threshold for your postal code.",
     email: "Email",
     password: "Password (8+)",
     household: "Household size",

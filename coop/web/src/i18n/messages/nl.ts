@@ -16,7 +16,7 @@ export const nl = {
     subtitleBefore: "Vaste marge, nooit verborgen. Word",
     subtitleStrong: "toekomstige coöperant",
     subtitleAfter:
-      "van je burgersupermarkt. Voorinschrijving 100\u00a0% gratis — vandaag geen betaling. De 10\u00a0€/maand en 2\u00a0u vrijwilligerswerk starten pas bij de opening, zodra de coöperatie is opgericht.",
+      "van je burgersupermarkt. De voorinschrijving is gratis. De 10\u00a0€/maand en 2\u00a0u vrijwilligerswerk starten pas bij de opening, zodra de coöperatie is opgericht.",
     footnote:
       "20\u00a0cent op het dagelijkse schap · 50\u00a0cent op duurdere producten (olie, luiers…) — details in «\u00a0Hoe werkt het\u00a0?\u00a0».",
     ctaUnlock: "Ontgrendel de prijzen in mijn stad",
@@ -106,10 +106,7 @@ export const nl = {
   register: {
     sectionTitle: "Toekomstige coöperant worden",
     sectionIntro:
-      "Word lid van de Pi-keten in jouw postcode. Vandaag geen betaling — je stapt in als toekomstige coöperant.",
-    title: "Toekomstige coöperant worden",
-    description:
-      "Gratis voorinschrijving · je vervoegt de Pi-keten · vandaag zonder betaling",
+      "Geef je gezin en adres op. Je telt mee voor de drempel van 10.000 personen in jouw postcode.",
     email: "E-mail",
     password: "Wachtwoord (8+)",
     household: "Gezinsgrootte",

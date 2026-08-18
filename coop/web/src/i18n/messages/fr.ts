@@ -14,7 +14,7 @@ export const fr = {
     subtitleBefore: "Marge fixe, jamais cachée. Devenez",
     subtitleStrong: "futur coopérateur",
     subtitleAfter:
-      "de votre supermarché citoyen. Préinscription 100\u00a0% gratuite — aucun paiement aujourd’hui. Les 10\u00a0€/mois et 2\u00a0h de bénévolat ne commencent qu’à l’ouverture, une fois la coopérative constituée.",
+      "de votre supermarché citoyen. La préinscription est gratuite. Les 10\u00a0€/mois et 2\u00a0h de bénévolat ne commencent qu’à l’ouverture, une fois la coopérative constituée.",
     footnote:
       "20\u00a0centimes sur l’essentiel du rayon · 50\u00a0centimes sur les produits plus chers (huile, langes…) — détail dans «\u00a0Comment ça marche\u00a0?\u00a0».",
     ctaUnlock: "Débloquer les prix dans ma ville",
@@ -103,10 +103,7 @@ export const fr = {
   register: {
     sectionTitle: "Devenir futur coopérateur",
     sectionIntro:
-      "Rejoignez la chaîne Pi dans votre code postal. Aucun paiement aujourd’hui — vous entrez comme futur coopérateur.",
-    title: "Devenir futur coopérateur",
-    description:
-      "Préinscription gratuite · vous rejoignez la chaîne Pi · sans paiement aujourd’hui",
+      "Indiquez votre foyer et votre adresse. Vous comptez pour le seuil de 10\u00a0000 personnes de votre code postal.",
     email: "Email",
     password: "Mot de passe (8+)",
     household: "Taille du ménage",

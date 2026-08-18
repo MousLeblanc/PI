@@ -4,13 +4,7 @@ import { FormEvent, useMemo, useRef, useState } from "react";
 import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { StreetCombobox } from "@/components/StreetCombobox";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -124,11 +118,7 @@ export function RegisterForm() {
 
   return (
     <Card className="border-slate-200/80 shadow-lg shadow-slate-900/5">
-      <CardHeader>
-        <CardTitle>{t("register.title")}</CardTitle>
-        <CardDescription>{t("register.description")}</CardDescription>
-      </CardHeader>
-      <CardContent>
+      <CardContent className="p-6">
         <form onSubmit={onSubmit} className="grid gap-5">
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-2">
