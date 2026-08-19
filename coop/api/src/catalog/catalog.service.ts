@@ -10,6 +10,7 @@ type CatalogSeed = {
   retailEur: number;
   /** basic = quotidien (0,20 €) ; premium = forte valeur (0,50 €) */
   tier: 'basic' | 'premium';
+  imageUrl: string;
 };
 
 @Injectable()
@@ -24,6 +25,7 @@ export class CatalogService {
         wholesaleEur: 0.62,
         retailEur: 1.49,
         tier: 'basic',
+        imageUrl: '/folder/lait.jpg',
       },
       {
         id: 'oeufs',
@@ -31,6 +33,7 @@ export class CatalogService {
         wholesaleEur: 1.45,
         retailEur: 2.95,
         tier: 'basic',
+        imageUrl: '/folder/oeufs.jpg',
       },
       {
         id: 'farine',
@@ -38,6 +41,7 @@ export class CatalogService {
         wholesaleEur: 0.78,
         retailEur: 1.89,
         tier: 'basic',
+        imageUrl: '/folder/farine.jpg',
       },
       {
         id: 'pommes',
@@ -45,6 +49,7 @@ export class CatalogService {
         wholesaleEur: 1.15,
         retailEur: 2.79,
         tier: 'basic',
+        imageUrl: '/folder/pommes.jpg',
       },
       {
         id: 'riz',
@@ -52,6 +57,7 @@ export class CatalogService {
         wholesaleEur: 1.55,
         retailEur: 3.29,
         tier: 'basic',
+        imageUrl: '/folder/riz.jpg',
       },
       {
         id: 'pates',
@@ -59,6 +65,7 @@ export class CatalogService {
         wholesaleEur: 0.72,
         retailEur: 1.79,
         tier: 'basic',
+        imageUrl: '/folder/pates.jpg',
       },
       {
         id: 'huile-olive',
@@ -66,6 +73,7 @@ export class CatalogService {
         wholesaleEur: 6.4,
         retailEur: 11.95,
         tier: 'premium',
+        imageUrl: '/folder/huile-olive.jpg',
       },
       {
         id: 'langes',
@@ -73,6 +81,7 @@ export class CatalogService {
         wholesaleEur: 12.8,
         retailEur: 22.9,
         tier: 'premium',
+        imageUrl: '/folder/langes.jpg',
       },
       {
         id: 'lessive',
@@ -80,6 +89,7 @@ export class CatalogService {
         wholesaleEur: 7.2,
         retailEur: 14.5,
         tier: 'premium',
+        imageUrl: '/folder/lessive.jpg',
       },
     ];
 
@@ -89,6 +99,7 @@ export class CatalogService {
       return {
         id: item.id,
         name: item.name,
+        imageUrl: item.imageUrl,
         wholesaleEur: item.wholesaleEur,
         retailEur: item.retailEur,
         tier: item.tier,

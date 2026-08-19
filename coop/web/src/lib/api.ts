@@ -8,6 +8,7 @@ export type FolderPiResponse = {
   items: Array<{
     id: string;
     name: string;
+    imageUrl: string;
     wholesaleEur: number;
     retailEur: number;
     piPriceEur: number;

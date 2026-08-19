@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getFolderPi, type FolderPiResponse } from "@/lib/api";
@@ -37,7 +38,16 @@ export function FolderPi() {
             key={item.id}
             className="overflow-hidden transition-shadow hover:shadow-md"
           >
-            <CardHeader className="pb-3">
+            <div className="relative aspect-[4/3] bg-emerald-50/60">
+              <Image
+                src={item.imageUrl}
+                alt={item.name}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover"
+              />
+            </div>
+            <CardHeader className="pb-3 pt-4">
               <p className="text-sm font-medium text-foreground">
                 {item.name}
               </p>
