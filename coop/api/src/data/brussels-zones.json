@@ -1,0 +1,48 @@
+{
+  "zones": [
+    {
+      "id": "brussels-nord-ouest",
+      "postalCodes": ["1090", "1081", "1082", "1083"]
+    },
+    {
+      "id": "brussels-ouest",
+      "postalCodes": ["1080"]
+    },
+    {
+      "id": "brussels-sud-ouest",
+      "postalCodes": ["1070"]
+    },
+    {
+      "id": "brussels-centre-nord",
+      "postalCodes": ["1020", "1120", "1130"]
+    },
+    {
+      "id": "brussels-centre",
+      "postalCodes": ["1000"]
+    },
+    {
+      "id": "brussels-nord-est",
+      "postalCodes": ["1030"]
+    },
+    {
+      "id": "brussels-nord-compact",
+      "postalCodes": ["1210", "1140"]
+    },
+    {
+      "id": "brussels-centre-est",
+      "postalCodes": ["1050", "1040"]
+    },
+    {
+      "id": "brussels-est",
+      "postalCodes": ["1200", "1150", "1160", "1170"]
+    },
+    {
+      "id": "brussels-sud",
+      "postalCodes": ["1180"]
+    },
+    {
+      "id": "brussels-sud-compact",
+      "postalCodes": ["1190", "1060"]
+    }
+  ]
+}

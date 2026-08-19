@@ -6,32 +6,58 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import { getPostalGauges } from "@/lib/api";
+import { Button } from "@/components/ui/button";
+import { getZones, type ZoneGaugeItem } from "@/lib/api";
 import { getCommune, getCommuneShort } from "@/lib/belgium";
+import { getMilestoneState } from "@/lib/milestones";
 import { getStretchMeta } from "@/lib/stretch";
+import { isBrusselsZone } from "@/lib/zones";
 import { cn } from "@/lib/utils";
 import { useI18n } from "@/i18n/use-t";
+
+function zoneName(zoneId: string, t: (key: string) => string): string {
+  if (isBrusselsZone(zoneId)) {
+    return t(`zones.${zoneId}.name`);
+  }
+  const cp = zoneId.replace(/^cp-/, "");
+  return getCommuneShort(cp) ?? cp;
+}
+
+function zoneCommunes(zoneId: string, t: (key: string) => string): string {
+  if (isBrusselsZone(zoneId)) {
+    return t(`zones.${zoneId}.communes`);
+  }
+  return "";
+}
 
 export function PostalGauges() {
   const { t, numberLocale } = useI18n();
   const [filter, setFilter] = useState("");
-  const [count, setCount] = useState<number | null>(null);
+  const [focus, setFocus] = useState<ZoneGaugeItem | null>(null);
+  const [expanded, setExpanded] = useState(false);
 
   const valid = /^\d{4}$/.test(filter);
   const commune = getCommune(filter);
 
   useEffect(() => {
+    const cp = new URLSearchParams(window.location.search).get("cp");
+    if (cp && /^\d{4}$/.test(cp)) {
+      setFilter(cp);
+    }
+  }, []);
+
+  useEffect(() => {
     if (!valid || !commune) {
-      setCount(null);
+      setFocus(null);
       return;
     }
     let alive = true;
     const load = async () => {
       try {
-        const next = await getPostalGauges(filter);
-        if (alive) setCount(next.items[0]?.count ?? 0);
+        const res = await getZones(filter);
+        if (alive) setFocus(res.focus ?? null);
       } catch {
-        if (alive) setCount(0);
+        if (alive) setFocus(null);
       }
     };
     load();
@@ -42,8 +68,17 @@ export function PostalGauges() {
     };
   }, [filter, valid, commune]);
 
-  const meta = getStretchMeta(count ?? 0);
-  const label = getCommuneShort(filter) ?? commune ?? "";
+  useEffect(() => {
+    setExpanded(false);
+  }, [filter]);
+
+  const count = focus?.count ?? 0;
+  const meta = getStretchMeta(count);
+  const milestone = getMilestoneState(count);
+  const zoneId = focus?.zoneId ?? "";
+  const title = zoneId ? zoneName(zoneId, t) : "";
+  const communes = zoneId ? zoneCommunes(zoneId, t) : "";
+  const showBreakdown = (focus?.breakdown.length ?? 0) > 1;
 
   return (
     <div className="space-y-5">
@@ -67,8 +102,9 @@ export function PostalGauges() {
         ) : null}
       </div>
 
-      {valid && commune && count !== null ? (
+      {valid && commune && focus ? (
         <Card
+          id={isBrusselsZone(focus.zoneId) ? focus.zoneId : undefined}
           className={cn(
             "max-w-xl",
             meta.exploded && "border-amber-300/80 ring-1 ring-amber-200/60",
@@ -76,15 +112,18 @@ export function PostalGauges() {
         >
           <CardHeader className="pb-3">
             <div className="flex items-baseline justify-between gap-3">
-              <CardTitle className="text-xl">{label}</CardTitle>
+              <CardTitle className="text-xl">{title}</CardTitle>
               <span className="text-sm tabular-nums font-medium text-foreground">
                 {t("gauges.people", {
                   count: count.toLocaleString(numberLocale),
                 })}
               </span>
             </div>
+            {communes ? (
+              <p className="text-sm text-muted-foreground">{communes}</p>
+            ) : null}
             <p className="text-xs text-muted-foreground">
-              {t("gauges.cp", { code: filter })}
+              {t("gauges.yourCp", { code: filter })}
             </p>
           </CardHeader>
           <CardContent className="space-y-3">
@@ -115,6 +154,54 @@ export function PostalGauges() {
                 {t("gauges.goal")}
               </p>
             )}
+
+            {milestone.reached.length > 0 ? (
+              <ul className="space-y-1 text-xs text-emerald-800">
+                {milestone.reached.map((m) => (
+                  <li key={m.key}>✓ {t(`gauges.milestones.${m.key}`)}</li>
+                ))}
+              </ul>
+            ) : null}
+            {milestone.next ? (
+              <p className="text-xs text-muted-foreground">
+                {t("gauges.nextMilestone", {
+                  count: milestone.next.at.toLocaleString(numberLocale),
+                  label: t(`gauges.milestones.${milestone.next.key}`),
+                })}
+              </p>
+            ) : null}
+
+            {showBreakdown ? (
+              <div className="border-t pt-3">
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="sm"
+                  className="h-auto px-0 text-emerald-800 hover:bg-transparent hover:underline"
+                  onClick={() => setExpanded((v) => !v)}
+                >
+                  {expanded ? t("gauges.hideBreakdown") : t("gauges.showBreakdown")}
+                </Button>
+                {expanded ? (
+                  <ul className="mt-2 space-y-1.5 text-sm">
+                    {focus.breakdown.map((row) => (
+                      <li
+                        key={row.postalCode}
+                        className="flex items-center justify-between gap-3"
+                      >
+                        <span className="text-muted-foreground">
+                          {getCommuneShort(row.postalCode) ?? row.postalCode}{" "}
+                          <span className="text-xs">({row.postalCode})</span>
+                        </span>
+                        <span className="tabular-nums font-medium">
+                          {row.count.toLocaleString(numberLocale)}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </div>
+            ) : null}
           </CardContent>
         </Card>
       ) : null}

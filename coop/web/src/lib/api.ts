@@ -36,6 +36,27 @@ export type LeaderboardResponse = {
   items: LeaderboardItem[];
 };
 
+export type ZoneBreakdownItem = {
+  postalCode: string;
+  count: number;
+};
+
+export type ZoneGaugeItem = {
+  zoneId: string;
+  count: number;
+  postalCodes: string[];
+  breakdown: ZoneBreakdownItem[];
+  target: number;
+  brussels: boolean;
+};
+
+export type ZonesResponse = {
+  openingTarget: number;
+  focus?: ZoneGaugeItem;
+  items: ZoneGaugeItem[];
+  otherItems: ZoneGaugeItem[];
+};
+
 export type SocialProofResponse = {
   postalCode: string;
   streetName: string;
@@ -74,6 +95,11 @@ export function getLeaderboard(limit = 8) {
   return apiGet<LeaderboardResponse>(
     `/gauges/leaderboard?limit=${encodeURIComponent(String(limit))}`,
   );
+}
+
+export function getZones(code?: string) {
+  const q = code ? `?code=${encodeURIComponent(code)}` : "";
+  return apiGet<ZonesResponse>(`/gauges/zones${q}`);
 }
 
 export function getSocialProof(postalCode: string, streetName: string) {

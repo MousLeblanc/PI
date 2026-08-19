@@ -21,6 +21,11 @@ export class GaugesController {
     return this.gauges.getLeaderboard(Number.isFinite(n) ? n : 10);
   }
 
+  @Get('zones')
+  zones(@Query('code') code?: string) {
+    return this.gauges.getZones(code);
+  }
+
   @Get('social-proof')
   socialProof(
     @Query('postalCode') postalCode: string,

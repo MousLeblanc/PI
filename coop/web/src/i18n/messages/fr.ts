@@ -36,32 +36,91 @@ export const fr = {
       "* Prix cibles estimés à titre indicatif. Non contractuels.",
   },
   gauges: {
-    title: "Débloquez le premier supermarché Pi dans votre ville",
+    title: "Débloquez le premier supermarché Pi dans votre bassin de vie",
     introLead: "10\u00a0000 personnes",
     introMid:
-      "= le point de bascule pour ouvrir un supermarché à taille humaine (chaque membre du foyer compte — une famille de 5 = +5). Pas un hypermarché classique : le nôtre, à nous. Au‑delà, la jauge continue : plus on est nombreux, plus le pouvoir de négociation est fort. La",
-    introStrong: "première ville",
+      "= le point de bascule pour ouvrir un supermarché à taille humaine (chaque membre du foyer compte — une famille de 5 = +5). Pas un hypermarché classique : le nôtre, à nous. Les petites communes sont regroupées en bassins de vie équivalents. Au‑delà, la jauge continue : plus on est nombreux, plus le pouvoir de négociation est fort. La",
+    introStrong: "première zone",
     introEnd:
-      "à franchir le cap ouvre en premier. Aujourd’hui vous ne payez rien ; le pack d’ouverture ne se paie que lorsqu’un local et des statuts existent. Les suivantes suivent sur la roadmap.",
+      "à franchir le cap ouvre en premier. Aujourd’hui vous ne payez rien ; le pack d’ouverture ne se paie que lorsqu’un local et des statuts existent.",
     postalLabel: "Votre code postal",
-    placeholder: "ex. 1050",
+    placeholder: "ex. 1090",
     unknownPostal: "Code postal inconnu",
     pioneer: "Vous pouvez être le pionnier ici — partagez le lien localement.",
-    needPostal: "Entrez votre code postal pour voir où en est votre ville.",
-    people: "{count} personnes",
-    goal: "Objectif : 10 000 personnes pour ouvrir.",
+    needPostal: "Entrez votre code postal pour voir où en est votre bassin de vie.",
+    people: "{count} / 10\u00a0000",
+    goal: "Objectif : 10 000 personnes pour ouvrir la zone.",
+    yourCp: "Votre code postal : {code}",
     cp: "CP {code}",
     exploded: "Objectif explosé — prochain palier {tier}",
     explodedBody:
-      "Seuil d’intérêt atteint pour cette ville. L’ouverture ne se fait que s’il y a un local et des statuts. Continuez : plus on est nombreux, plus le pouvoir de négociation est fort.",
+      "Seuil d’intérêt atteint pour cette zone. L’ouverture ne se fait que s’il y a un local et des statuts. Continuez : plus on est nombreux, plus le pouvoir de négociation est fort.",
     remaining:
       "{pct}\u00a0% · encore {remaining} personnes pour débloquer l’ouverture ici",
+    showBreakdown: "Voir le détail par commune",
+    hideBreakdown: "Masquer le détail par commune",
+    nextMilestone: "Prochain palier ({count}) : {label}",
+    milestones: {
+      m1: "Palier 1 — assez de voisins pour une première rencontre locale",
+      m2: "Palier 2 — première étape de faisabilité commerciale",
+      m3: "Palier 3 — recherche active de local",
+      m4: "Palier 4 — ouverture éligible (local + statuts requis)",
+    },
+  },
+  zones: {
+    "brussels-nord-ouest": {
+      name: "Zone Nord-Ouest",
+      communes: "Jette, Koekelberg, Berchem-Sainte-Agathe, Ganshoren",
+    },
+    "brussels-ouest": {
+      name: "Zone Ouest",
+      communes: "Molenbeek-Saint-Jean",
+    },
+    "brussels-sud-ouest": {
+      name: "Zone Sud-Ouest",
+      communes: "Anderlecht",
+    },
+    "brussels-centre-nord": {
+      name: "Zone Centre-Nord",
+      communes: "Laeken, Neder-Over-Heembeek, Haren",
+    },
+    "brussels-centre": {
+      name: "Zone Centre",
+      communes: "Bruxelles-Ville",
+    },
+    "brussels-nord-est": {
+      name: "Zone Nord-Est",
+      communes: "Schaerbeek",
+    },
+    "brussels-nord-compact": {
+      name: "Zone Nord compact",
+      communes: "Saint-Josse-ten-Noode, Evere",
+    },
+    "brussels-centre-est": {
+      name: "Zone Centre-Est",
+      communes: "Ixelles, Etterbeek",
+    },
+    "brussels-est": {
+      name: "Zone Est",
+      communes: "Woluwe-Saint-Lambert, Woluwe-Saint-Pierre, Auderghem, Watermael-Boitsfort",
+    },
+    "brussels-sud": {
+      name: "Zone Sud",
+      communes: "Uccle",
+    },
+    "brussels-sud-compact": {
+      name: "Zone Sud compact",
+      communes: "Forest, Saint-Gilles",
+    },
   },
   leaderboard: {
-    kicker: "Course nationale",
-    title: "La course au premier supermarché",
+    kicker: "Course à l’ouverture",
+    title: "Quelle zone ouvrira en premier ?",
     intro:
-      "Quelle ville franchira 10\u00a0000 personnes en premier\u00a0?",
+      "Les bassins de vie de Bruxelles en compétition amicale. Chaque personne du foyer compte — la première zone à 10\u00a0000 ouvre en premier.",
+    progress: "{pct}\u00a0%",
+    communeFallback: "Commune {cp}",
+    outsideBrussels: "Ailleurs en Belgique",
     remaining: "Encore {count} pour débloquer",
     exploded: "Objectif d’ouverture explosé · prochain palier {tier}",
   },
@@ -103,7 +162,7 @@ export const fr = {
   register: {
     sectionTitle: "Devenir futur coopérateur",
     sectionIntro:
-      "Indiquez votre foyer et votre adresse. Vous comptez pour le seuil de 10\u00a0000 personnes de votre code postal.",
+      "Indiquez votre foyer et votre adresse. Vous comptez pour le seuil de 10\u00a0000 personnes de votre bassin de vie.",
     email: "Email",
     password: "Mot de passe (8+)",
     household: "Taille du ménage",
@@ -121,6 +180,12 @@ export const fr = {
     submitting: "Envoi…",
     success:
       "Préinscription réussie. Un email de bienvenue vous sera envoyé.",
+    sharePrompt:
+      "Partagez autour de vous — vous venez de rejoindre l’équipe {zone} !",
+    shareCta: "Partager Pi COOP",
+    shareCopied: "Message copié",
+    shareMessage:
+      "J’ai rejoint l’équipe {zone} de Pi COOP ! Aide-nous à ouvrir notre supermarché coopératif : {url}",
     ageBands: {
       AGE_0_4: "0–4 ans (quotas bébé)",
       AGE_5_17: "5–17 ans",
@@ -228,7 +293,7 @@ export const fr = {
     purposeTitle: "Finalités",
     purposes: [
       "Créer et sécuriser votre compte de préinscription",
-      "Compter les personnes par code postal (seuil d’ouverture de 10 000 personnes)",
+      "Compter les personnes par code postal et les agréger par bassin de vie pour l’affichage public (seuil d’ouverture de 10 000 personnes par zone)",
       "Vous informer du lancement par email",
       "Afficher des numéros de maison anonymes si vous y avez consenti",
       "Protéger le formulaire contre les inscriptions automatisées",

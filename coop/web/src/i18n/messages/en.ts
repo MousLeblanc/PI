@@ -36,32 +36,91 @@ export const en = {
     disclaimer: "* Target prices for guidance only. Non-contractual.",
   },
   gauges: {
-    title: "Unlock the first Pi supermarket in your city",
+    title: "Unlock the first Pi supermarket in your life basin",
     introLead: "10,000 people",
     introMid:
-      "= the tipping point to open a human-scale supermarket (every household member counts — a family of 5 = +5). Not a conventional hypermarket: ours, together. Beyond that, the gauge keeps going: the more of us there are, the stronger our bargaining power. The",
-    introStrong: "first city",
+      "= the tipping point to open a human-scale supermarket (every household member counts — a family of 5 = +5). Not a conventional hypermarket: ours, together. Smaller communes are grouped into equivalent life basins. Beyond that, the gauge keeps going: the more of us there are, the stronger our bargaining power. The",
+    introStrong: "first zone",
     introEnd:
-      "to cross the line opens first. You pay nothing today; the opening pack is only paid once there is a premises and statutes. The next ones follow on an opening roadmap.",
+      "to cross the line opens first. You pay nothing today; the opening pack is only paid once there is a premises and statutes.",
     postalLabel: "Your postal code",
-    placeholder: "e.g. 1050",
+    placeholder: "e.g. 1090",
     unknownPostal: "Unknown postal code",
     pioneer: "You can be the pioneer here — share the link locally.",
-    needPostal: "Enter your postal code to see where your city stands.",
-    people: "{count} people",
-    goal: "Goal: 10,000 people to open.",
+    needPostal: "Enter your postal code to see where your life basin stands.",
+    people: "{count} / 10,000",
+    goal: "Goal: 10,000 people to open the zone.",
+    yourCp: "Your postal code: {code}",
     cp: "PC {code}",
     exploded: "Target smashed — next tier {tier}",
     explodedBody:
-      "Interest threshold reached for this city. Opening only happens if there is a premises and statutes. Keep going: the more of us there are, the stronger our bargaining power.",
+      "Interest threshold reached for this zone. Opening only happens if there is a premises and statutes. Keep going: the more of us there are, the stronger our bargaining power.",
     remaining:
       "{pct}% · {remaining} more people to unlock opening here",
+    showBreakdown: "See breakdown by commune",
+    hideBreakdown: "Hide breakdown by commune",
+    nextMilestone: "Next milestone ({count}): {label}",
+    milestones: {
+      m1: "Tier 1 — enough neighbours for a first local meeting",
+      m2: "Tier 2 — first commercial feasibility step",
+      m3: "Tier 3 — active search for premises",
+      m4: "Tier 4 — opening eligible (premises + statutes required)",
+    },
+  },
+  zones: {
+    "brussels-nord-ouest": {
+      name: "North-West Zone",
+      communes: "Jette, Koekelberg, Berchem-Sainte-Agathe, Ganshoren",
+    },
+    "brussels-ouest": {
+      name: "West Zone",
+      communes: "Molenbeek-Saint-Jean",
+    },
+    "brussels-sud-ouest": {
+      name: "South-West Zone",
+      communes: "Anderlecht",
+    },
+    "brussels-centre-nord": {
+      name: "North Centre Zone",
+      communes: "Laeken, Neder-Over-Heembeek, Haren",
+    },
+    "brussels-centre": {
+      name: "Centre Zone",
+      communes: "Brussels City",
+    },
+    "brussels-nord-est": {
+      name: "North-East Zone",
+      communes: "Schaerbeek",
+    },
+    "brussels-nord-compact": {
+      name: "Compact North Zone",
+      communes: "Saint-Josse-ten-Noode, Evere",
+    },
+    "brussels-centre-est": {
+      name: "East Centre Zone",
+      communes: "Ixelles, Etterbeek",
+    },
+    "brussels-est": {
+      name: "East Zone",
+      communes: "Woluwe-Saint-Lambert, Woluwe-Saint-Pierre, Auderghem, Watermael-Boitsfort",
+    },
+    "brussels-sud": {
+      name: "South Zone",
+      communes: "Uccle",
+    },
+    "brussels-sud-compact": {
+      name: "Compact South Zone",
+      communes: "Forest, Saint-Gilles",
+    },
   },
   leaderboard: {
-    kicker: "National race",
-    title: "The race for the first supermarket",
+    kicker: "Race to open",
+    title: "Which zone will open first?",
     intro:
-      "Which city will hit 10,000 people first?",
+      "Brussels life basins in a friendly race. Every household member counts — the first zone to 10,000 opens first.",
+    progress: "{pct}%",
+    communeFallback: "Commune {cp}",
+    outsideBrussels: "Elsewhere in Belgium",
     remaining: "{count} more to unlock",
     exploded: "Opening target smashed · next tier {tier}",
   },
@@ -103,7 +162,7 @@ export const en = {
   register: {
     sectionTitle: "Become a future co-operator",
     sectionIntro:
-      "Enter your household and address. You count toward the 10,000-person threshold for your postal code.",
+      "Enter your household and address. You count toward the 10,000-person threshold for your life basin.",
     email: "Email",
     password: "Password (8+)",
     household: "Household size",
@@ -120,6 +179,12 @@ export const en = {
     submit: "I become a future co-operator — it’s free",
     submitting: "Sending…",
     success: "Pre-registration successful. A welcome email will be sent.",
+    sharePrompt:
+      "Share around you — you just joined the {zone} team!",
+    shareCta: "Share Pi COOP",
+    shareCopied: "Message copied",
+    shareMessage:
+      "I joined the {zone} team at Pi COOP! Help us open our cooperative supermarket: {url}",
     ageBands: {
       AGE_0_4: "0–4 years (baby quotas)",
       AGE_5_17: "5–17 years",
@@ -223,7 +288,7 @@ export const en = {
     purposeTitle: "Purposes",
     purposes: [
       "Create and secure your pre-registration account",
-      "Count persons by postal code (10,000-person opening threshold)",
+      "Count persons by postal code and aggregate by life basin for public display (10,000-person opening threshold per zone)",
       "Inform you of the launch by email",
       "Display anonymous house numbers if you consented",
       "Protect the form against automated sign-ups",

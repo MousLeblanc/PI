@@ -39,32 +39,91 @@ export const nl = {
       "* Richtprijzen ter indicatie. Niet contractueel.",
   },
   gauges: {
-    title: "Ontgrendel de eerste Pi-supermarkt in jouw stad",
+    title: "Ontgrendel de eerste Pi-supermarkt in jouw leefbekken",
     introLead: "10.000 personen",
     introMid:
-      "= het kantelpunt om een supermarkt op menselijke schaal te openen (elk gezinslid telt — een gezin van 5 = +5). Geen klassieke hypermarkt: de onze, van ons. Daarna loopt de meter verder: hoe meer we zijn, hoe sterker de onderhandelingskracht. De",
-    introStrong: "eerste stad",
+      "= het kantelpunt om een supermarkt op menselijke schaal te openen (elk gezinslid telt — een gezin van 5 = +5). Geen klassieke hypermarkt: de onze, van ons. Kleinere gemeenten worden gegroepeerd in equivalente leefbekkens. Daarna loopt de meter verder: hoe meer we zijn, hoe sterker de onderhandelingskracht. De",
+    introStrong: "eerste zone",
     introEnd:
-      "die de kaap haalt, opent als eerste. Vandaag betaal je niets; het openingspakket betaal je pas als er een pand en statuten zijn. De volgende volgen op de roadmap.",
+      "die de kaap haalt, opent als eerste. Vandaag betaal je niets; het openingspakket betaal je pas als er een pand en statuten zijn.",
     postalLabel: "Jouw postcode",
-    placeholder: "bv. 1050",
+    placeholder: "bv. 1090",
     unknownPostal: "Onbekende postcode",
     pioneer: "Jij kan hier de pionier zijn — deel de link lokaal.",
-    needPostal: "Vul je postcode in om te zien waar jouw stad staat.",
-    people: "{count} personen",
-    goal: "Doel: 10.000 personen om te openen.",
+    needPostal: "Vul je postcode in om te zien waar jouw leefbekken staat.",
+    people: "{count} / 10.000",
+    goal: "Doel: 10.000 personen om de zone te openen.",
+    yourCp: "Jouw postcode: {code}",
     cp: "PC {code}",
     exploded: "Doel overschreden — volgende drempel {tier}",
     explodedBody:
-      "Interessedrempel bereikt voor deze stad. Opening volgt alleen als er een pand en statuten zijn. Ga door: hoe meer we zijn, hoe sterker de onderhandelingskracht.",
+      "Interessedrempel bereikt voor deze zone. Opening volgt alleen als er een pand en statuten zijn. Ga door: hoe meer we zijn, hoe sterker de onderhandelingskracht.",
     remaining:
       "{pct}\u00a0% · nog {remaining} personen om de opening hier te ontgrendelen",
+    showBreakdown: "Detail per gemeente bekijken",
+    hideBreakdown: "Detail per gemeente verbergen",
+    nextMilestone: "Volgende drempel ({count}): {label}",
+    milestones: {
+      m1: "Drempel 1 — genoeg buren voor een eerste lokale ontmoeting",
+      m2: "Drempel 2 — eerste stap in commerciële haalbaarheid",
+      m3: "Drempel 3 — actief zoeken naar een pand",
+      m4: "Drempel 4 — opening mogelijk (pand + statuten vereist)",
+    },
+  },
+  zones: {
+    "brussels-nord-ouest": {
+      name: "Zone Noord-West",
+      communes: "Jette, Koekelberg, Berchem-Saint-Agathe, Ganshoren",
+    },
+    "brussels-ouest": {
+      name: "Zone West",
+      communes: "Molenbeek-Saint-Jean",
+    },
+    "brussels-sud-ouest": {
+      name: "Zone Zuid-West",
+      communes: "Anderlecht",
+    },
+    "brussels-centre-nord": {
+      name: "Zone Centrum-Noord",
+      communes: "Laken, Neder-Over-Heembeek, Haren",
+    },
+    "brussels-centre": {
+      name: "Zone Centrum",
+      communes: "Brussel-Stad",
+    },
+    "brussels-nord-est": {
+      name: "Zone Noord-Oost",
+      communes: "Schaarbeek",
+    },
+    "brussels-nord-compact": {
+      name: "Zone Noord compact",
+      communes: "Sint-Joost-ten-Node, Evere",
+    },
+    "brussels-centre-est": {
+      name: "Zone Centrum-Oost",
+      communes: "Elsene, Etterbeek",
+    },
+    "brussels-est": {
+      name: "Zone Oost",
+      communes: "Sint-Lambrechts-Woluwe, Sint-Pieters-Woluwe, Oudergem, Watermaal-Bosvoorde",
+    },
+    "brussels-sud": {
+      name: "Zone Zuid",
+      communes: "Ukkel",
+    },
+    "brussels-sud-compact": {
+      name: "Zone Zuid compact",
+      communes: "Vorst, Sint-Gillis",
+    },
   },
   leaderboard: {
-    kicker: "Nationale race",
-    title: "De race naar de eerste supermarkt",
+    kicker: "Race naar opening",
+    title: "Welke zone opent als eerste?",
     intro:
-      "Welke stad haalt als eerste 10.000 personen\u00a0?",
+      "De leefbekkens van Brussel in een vriendschappelijke race. Elk gezinslid telt — de eerste zone met 10.000 opent als eerste.",
+    progress: "{pct}\u00a0%",
+    communeFallback: "Gemeente {cp}",
+    outsideBrussels: "Elders in België",
     remaining: "Nog {count} om te ontgrendelen",
     exploded: "Openingsdoel overschreden · volgende drempel {tier}",
   },
@@ -106,7 +165,7 @@ export const nl = {
   register: {
     sectionTitle: "Toekomstige coöperant worden",
     sectionIntro:
-      "Geef je gezin en adres op. Je telt mee voor de drempel van 10.000 personen in jouw postcode.",
+      "Geef je gezin en adres op. Je telt mee voor de drempel van 10.000 personen in jouw leefbekken.",
     email: "E-mail",
     password: "Wachtwoord (8+)",
     household: "Gezinsgrootte",
@@ -124,6 +183,12 @@ export const nl = {
     submitting: "Verzenden…",
     success:
       "Voorinschrijving gelukt. Je ontvangt een welkomstmail.",
+    sharePrompt:
+      "Deel rondom je — je bent net toegetreden tot het team {zone}!",
+    shareCta: "Pi COOP delen",
+    shareCopied: "Bericht gekopieerd",
+    shareMessage:
+      "Ik ben toegetreden tot het team {zone} van Pi COOP! Help ons onze coöperatieve supermarkt te openen: {url}",
     ageBands: {
       AGE_0_4: "0–4 jaar (babyquota)",
       AGE_5_17: "5–17 jaar",
@@ -230,7 +295,7 @@ export const nl = {
     purposeTitle: "Doelen",
     purposes: [
       "Je voorinschrijvingsaccount aanmaken en beveiligen",
-      "Personen per postcode tellen (drempel van 10.000 personen om te openen)",
+      "Personen per postcode tellen en aggregeren per leefbekken voor publieke weergave (drempel van 10.000 personen per zone)",
       "Je per e-mail informeren over de lancering",
       "Anonieme huisnummers tonen als je daarvoor toestemming gaf",
       "Het formulier beschermen tegen automatische inschrijvingen",

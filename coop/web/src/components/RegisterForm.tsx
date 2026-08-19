@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/select";
 import { register } from "@/lib/api";
 import { getCommune } from "@/lib/belgium";
+import { zoneLabelFromPostalCode } from "@/lib/zones";
 import { WelcomeToast } from "@/components/WelcomeToast";
 import { translateApiError } from "@/i18n/api-errors";
 import { useI18n } from "@/i18n/use-t";
@@ -45,6 +46,11 @@ export function RegisterForm() {
   const [toast, setToast] = useState<{ title: string; body: string } | null>(
     null,
   );
+  const [share, setShare] = useState<{
+    postalCode: string;
+    zoneLabel: string;
+  } | null>(null);
+  const [shareCopied, setShareCopied] = useState(false);
   const turnstileRef = useRef<TurnstileInstance | null>(null);
 
   const skipTurnstile = process.env.NEXT_PUBLIC_TURNSTILE_SKIP === "true";
@@ -94,6 +100,11 @@ export function RegisterForm() {
             ? t("register.toastOne", { total })
             : t("register.toastMany", { added, from, total }),
       });
+      setShare({
+        postalCode,
+        zoneLabel: zoneLabelFromPostalCode(postalCode, t),
+      });
+      setShareCopied(false);
       setStatus(t("register.success"));
       formEl.reset();
       setHouseholdSize(2);
@@ -113,6 +124,25 @@ export function RegisterForm() {
       turnstileRef.current?.reset();
       setToken(undefined);
       setLoading(false);
+    }
+  }
+
+  async function onShare() {
+    if (!share) return;
+    const url = `https://www.picoop.be/?cp=${encodeURIComponent(share.postalCode)}`;
+    const text = t("register.shareMessage", {
+      zone: share.zoneLabel,
+      url,
+    });
+    try {
+      if (typeof navigator.share === "function") {
+        await navigator.share({ text, url });
+        return;
+      }
+      await navigator.clipboard.writeText(text);
+      setShareCopied(true);
+    } catch {
+      /* user cancelled share sheet */
     }
   }
 
@@ -257,6 +287,22 @@ export function RegisterForm() {
           </Button>
 
           {status && <p className="text-sm font-medium text-primary">{status}</p>}
+          {share ? (
+            <div className="rounded-xl border border-emerald-200/80 bg-emerald-50/60 p-4">
+              <p className="text-sm leading-relaxed text-foreground">
+                {t("register.sharePrompt", { zone: share.zoneLabel })}
+              </p>
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                className="mt-3"
+                onClick={onShare}
+              >
+                {shareCopied ? t("register.shareCopied") : t("register.shareCta")}
+              </Button>
+            </div>
+          ) : null}
           {error && <p className="text-sm text-destructive">{error}</p>}
         </form>
         <WelcomeToast

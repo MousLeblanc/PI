@@ -1,5 +1,6 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
+import { BRUSSELS_ZONES, isBrusselsZone, resolveZoneId } from './zones.util';
 
 const DEFAULT_TARGET = 10_000;
 
@@ -87,6 +88,97 @@ export class GaugesService {
         postalCode: g.postalCode,
         count: g._sum.householdSize ?? 0,
       })),
+    };
+  }
+
+  async getZones(code?: string) {
+    if (code && !/^\d{4}$/.test(code)) {
+      throw new BadRequestException('Code postal invalide');
+    }
+
+    const grouped = await this.prisma.user.groupBy({
+      by: ['postalCode'],
+      _sum: { householdSize: true },
+    });
+
+    const byCp = new Map(
+      grouped.map((g) => [g.postalCode, g._sum.householdSize ?? 0]),
+    );
+
+    type ZoneAgg = {
+      count: number;
+      postalCodes: string[];
+      breakdown: Array<{ postalCode: string; count: number }>;
+    };
+
+    const zoneMap = new Map<string, ZoneAgg>();
+
+    for (const zone of BRUSSELS_ZONES) {
+      zoneMap.set(zone.id, {
+        count: 0,
+        postalCodes: [...zone.postalCodes],
+        breakdown: [],
+      });
+    }
+
+    for (const [postalCode, count] of byCp) {
+      const zoneId = resolveZoneId(postalCode);
+      if (!zoneMap.has(zoneId)) {
+        zoneMap.set(zoneId, {
+          count: 0,
+          postalCodes: [postalCode],
+          breakdown: [],
+        });
+      }
+      const zone = zoneMap.get(zoneId)!;
+      zone.count += count;
+      zone.breakdown.push({ postalCode, count });
+      if (!zone.postalCodes.includes(postalCode)) {
+        zone.postalCodes.push(postalCode);
+      }
+    }
+
+    for (const zone of zoneMap.values()) {
+      zone.breakdown.sort((a, b) => b.count - a.count || a.postalCode.localeCompare(b.postalCode));
+      zone.postalCodes.sort();
+    }
+
+    const items = [...zoneMap.entries()]
+      .map(([zoneId, data]) => ({
+        zoneId,
+        count: data.count,
+        postalCodes: data.postalCodes,
+        breakdown: data.breakdown,
+        target: DEFAULT_TARGET,
+        brussels: isBrusselsZone(zoneId),
+      }))
+      .sort((a, b) => b.count - a.count || a.zoneId.localeCompare(b.zoneId));
+
+    const brusselsItems = items.filter((item) => item.brussels);
+    const otherItems = items.filter((item) => !item.brussels && item.count > 0);
+
+    if (code) {
+      const zoneId = resolveZoneId(code);
+      const focus = items.find((item) => item.zoneId === zoneId) ?? {
+        zoneId,
+        count: 0,
+        postalCodes: [code],
+        breakdown: [{ postalCode: code, count: 0 }],
+        target: DEFAULT_TARGET,
+        brussels: isBrusselsZone(zoneId),
+      };
+      return {
+        openingTarget: DEFAULT_TARGET,
+        focus,
+        items: brusselsItems,
+        otherItems,
+      };
+    }
+
+    return {
+      openingTarget: DEFAULT_TARGET,
+      items: brusselsItems,
+      otherItems,
     };
   }
 
