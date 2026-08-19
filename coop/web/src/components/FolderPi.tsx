@@ -46,6 +46,9 @@ export function FolderPi() {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
               />
+              <span className="absolute left-3 top-3 rounded-full bg-emerald-900/90 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-white shadow-sm">
+                {t("folder.organicBadge")}
+              </span>
             </div>
             <CardHeader className="pb-3 pt-4">
               <p className="text-sm font-medium text-foreground">

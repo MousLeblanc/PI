@@ -27,6 +27,7 @@ export const nl = {
     intro:
       "Vergelijk zelf. Hetzelfde product, 100\u00a0% bio, rechtstreeks van de groothandel op je bord.",
     badge: "Digitale folder Pi",
+    organicBadge: "Bio",
     formula:
       "Groothandelsprijs + vaste marge (0,20\u00a0€ of 0,50\u00a0€) = Pi-prijs",
     inStore: "{price}\u00a0€ in de winkel",

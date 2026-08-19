@@ -27,6 +27,7 @@ export const en = {
     intro:
       "Compare for yourself. The same product, 100%\u00a0organic, from the wholesaler to your plate.",
     badge: "Pi digital leaflet",
+    organicBadge: "Organic",
     formula: "Wholesale + fixed margin (€0.20 or €0.50) = Pi price",
     inStore: "€{price} in store",
     piPrice: "Pi price",

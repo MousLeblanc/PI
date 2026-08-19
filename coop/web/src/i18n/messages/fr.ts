@@ -25,6 +25,7 @@ export const fr = {
     intro:
       "Comparez par vous-même. Le même produit, en qualité 100\u00a0% bio, directement du grossiste à votre assiette.",
     badge: "Folder Digital Pi",
+    organicBadge: "Bio",
     formula: "Prix grossiste + marge fixe (0,20\u00a0€ ou 0,50\u00a0€) = prix Pi",
     inStore: "{price}\u00a0€ en magasin",
     piPrice: "Prix Pi",
