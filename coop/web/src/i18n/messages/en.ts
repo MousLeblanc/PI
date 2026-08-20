@@ -229,6 +229,7 @@ export const en = {
   },
   footer: {
     how: "How it works",
+    facebook: "Facebook",
     legal: "Legal notice",
     privacy: "Privacy",
     phase: "Pi COOP is only Phase\u00a01. Coming soon: Pi Academy and Pi Invest.",

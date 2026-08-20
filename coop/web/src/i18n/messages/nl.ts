@@ -235,6 +235,7 @@ export const nl = {
   },
   footer: {
     how: "Hoe werkt het",
+    facebook: "Facebook",
     legal: "Wettelijke vermeldingen",
     privacy: "Privacy",
     phase:

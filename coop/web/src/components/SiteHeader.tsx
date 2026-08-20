@@ -18,7 +18,7 @@ export function SiteHeader() {
           <span className="font-display text-xl font-semibold tracking-tight text-foreground">
             Pi COOP
           </span>
-          <span className="mt-1 hidden text-[11px] font-medium tracking-wide text-emerald-800 sm:block">
+          <span className="mt-1 text-[11px] font-medium tracking-wide text-emerald-800">
             {t("brand.slogan")}
           </span>
         </Link>

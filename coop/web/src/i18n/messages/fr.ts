@@ -232,6 +232,7 @@ export const fr = {
   },
   footer: {
     how: "Comment ça marche",
+    facebook: "Facebook",
     legal: "Mentions légales",
     privacy: "Confidentialité",
     phase:
