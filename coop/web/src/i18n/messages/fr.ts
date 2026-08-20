@@ -8,6 +8,9 @@ export const fr = {
     cta: "Préinscription",
     langLabel: "Langue",
   },
+  brand: {
+    slogan: "Le nombre fait la force",
+  },
   hero: {
     title: "Vos courses à prix grossiste +\u00a020\u00a0centimes",
     titleAria: "Voir le détail des marges fixes",
@@ -118,7 +121,7 @@ export const fr = {
     kicker: "Course à l’ouverture",
     title: "Quelle zone ouvrira en premier ?",
     intro:
-      "Les bassins de vie de Bruxelles en compétition amicale. Chaque personne du foyer compte — la première zone à 10\u00a0000 ouvre en premier.",
+      "Le nombre fait la force. Les bassins de vie de Bruxelles en compétition amicale — chaque personne du foyer compte. La première zone à 10\u00a0000 ouvre en premier.",
     progress: "{pct}\u00a0%",
     communeFallback: "Commune {cp}",
     outsideBrussels: "Ailleurs en Belgique",

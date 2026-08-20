@@ -13,9 +13,14 @@ export function SiteHeader() {
       <div className="mx-auto flex w-[min(1120px,calc(100%-2rem))] items-center justify-between gap-3 py-4">
         <Link
           href="/"
-          className="font-display text-xl font-semibold tracking-tight text-foreground"
+          className="group flex flex-col leading-none"
         >
-          Pi COOP
+          <span className="font-display text-xl font-semibold tracking-tight text-foreground">
+            Pi COOP
+          </span>
+          <span className="mt-1 hidden text-[11px] font-medium tracking-wide text-emerald-800 sm:block">
+            {t("brand.slogan")}
+          </span>
         </Link>
         <div className="flex items-center gap-2 sm:gap-3">
           <LanguageSwitcher />

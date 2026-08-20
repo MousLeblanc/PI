@@ -10,6 +10,9 @@ export const en = {
     cta: "Pre-register",
     langLabel: "Language",
   },
+  brand: {
+    slogan: "Strength in numbers",
+  },
   hero: {
     title: "Your groceries at wholesale price +\u00a020\u00a0cents",
     titleAria: "See the fixed-margin details",
@@ -118,7 +121,7 @@ export const en = {
     kicker: "Race to open",
     title: "Which zone will open first?",
     intro:
-      "Brussels life basins in a friendly race. Every household member counts — the first zone to 10,000 opens first.",
+      "Strength in numbers. Brussels life basins in a friendly race — every household member counts. The first zone to 10,000 opens first.",
     progress: "{pct}%",
     communeFallback: "Commune {cp}",
     outsideBrussels: "Elsewhere in Belgium",

@@ -16,6 +16,9 @@ export function SiteFooter() {
               COOP
             </Link>{" "}
             · Invest · Academy
+            <span className="mt-1 block text-emerald-800 sm:mt-0 sm:ml-2 sm:inline">
+              {t("brand.slogan")}
+            </span>
           </span>
           <nav className="flex flex-wrap gap-4">
             <Link

@@ -10,6 +10,9 @@ export const nl = {
     cta: "Voorinschrijving",
     langLabel: "Taal",
   },
+  brand: {
+    slogan: "Het getal maakt de kracht",
+  },
   hero: {
     title: "Jouw boodschappen aan groothandelsprijs +\u00a020\u00a0cent",
     titleAria: "Bekijk de details van de vaste marges",
@@ -121,7 +124,7 @@ export const nl = {
     kicker: "Race naar opening",
     title: "Welke zone opent als eerste?",
     intro:
-      "De leefbekkens van Brussel in een vriendschappelijke race. Elk gezinslid telt — de eerste zone met 10.000 opent als eerste.",
+      "Het getal maakt de kracht. De leefbekkens van Brussel in een vriendschappelijke race — elk gezinslid telt. De eerste zone met 10.000 opent als eerste.",
     progress: "{pct}\u00a0%",
     communeFallback: "Gemeente {cp}",
     outsideBrussels: "Elders in België",
