@@ -157,17 +157,17 @@ export const fr = {
   social: {
     title: "Vos voisins sont déjà là",
     intro:
-      "Vérifiez si vos voisins sont déjà inscrits dans votre rue (les données sont 100\u00a0% anonymisées).",
+      "Vérifiez si des voisins se sont déjà inscrits dans votre rue — sans afficher d’adresse ni de nom.",
     cp: "CP",
     street: "Rue",
     see: "Voir",
     loading: "…",
     hint: "Sélectionnez une rue puis cliquez sur Voir.",
-    none: "Aucun numéro public pour cette rue.",
+    none: "Pas encore assez de voisins affichés ici — invitez quelqu’un de votre rue.",
     anonymous:
-      "Affichage anonyme — uniquement les numéros dont les habitants ont donné leur accord.",
+      "Affichage anonyme — uniquement le nombre de foyers inscrits (à partir de 2), jamais de numéro de maison.",
     chooseStreet: "Choisissez ou saisissez une rue",
-    houseNo: "n° {n}",
+    volume: "{count} voisins sont déjà inscrits dans {street} !",
     error: "Erreur",
   },
   register: {
@@ -185,8 +185,6 @@ export const fr = {
     street: "Rue",
     houseNumber: "N°",
     unknownPostal: "Code postal inconnu",
-    optIn:
-      "Montrer l’exemple dans ma rue : afficher le numéro de ma maison pour encourager mes voisins (anonyme — aucun nom).",
     submit: "Je deviens futur coopérateur — c’est gratuit",
     submitting: "Envoi…",
     success:
@@ -296,8 +294,7 @@ export const fr = {
     data: [
       "Email et mot de passe (stocké uniquement sous forme hashée)",
       "Taille du ménage et tranches d’âge (pas d’âges exacts, pas de noms des membres)",
-      "Code postal, rue, numéro de maison",
-      "Consentement optionnel à l’affichage anonyme du numéro dans la rue",
+      "Code postal, rue, numéro de maison (conservés pour le compte ; le numéro n’est jamais affiché publiquement)",
       "Données techniques de sécurité (vérification anti-bot Cloudflare Turnstile)",
       "Mesure d’audience agrégée (Vercel Analytics), sans cookies publicitaires",
       "Préférence de langue (cookie pi_locale)",
@@ -307,14 +304,14 @@ export const fr = {
       "Créer et sécuriser votre compte de préinscription",
       "Compter les personnes par code postal et les agréger par bassin de vie pour l’affichage public (seuil d’ouverture de 10 000 personnes par zone)",
       "Vous informer du lancement par email",
-      "Afficher des numéros de maison anonymes si vous y avez consenti",
+      "Afficher un volume anonyme de foyers inscrits par rue (à partir de 2 foyers, sans numéro de maison)",
       "Protéger le formulaire contre les inscriptions automatisées",
       "Comprendre la fréquentation du site, sans publicité ciblée",
       "Mémoriser la langue d’affichage",
     ],
     legalTitle: "Base légale",
     legalBody:
-      "Mesures précontractuelles à votre demande (création du compte), intérêt légitime à organiser le projet de coopérative et à sécuriser le site, et consentement pour l’affichage public du numéro de maison. Vous pouvez retirer ce consentement à tout moment en écrivant à l’adresse de contact.",
+      "Mesures précontractuelles à votre demande (création du compte), et intérêt légitime à organiser le projet de coopérative, à sécuriser le site et à afficher des volumes anonymes par rue pour encourager la mobilisation locale.",
     recipientsTitle: "Destinataires",
     recipients: [
       "Vercel (hébergement du site)",
@@ -344,13 +341,13 @@ export const fr = {
       "Nous ne créons pas de compte pour un enfant. Les tranches d’âge du ménage (y compris 0–4 ans et 5–17 ans) sont enregistrées sans âge exact et sans prénom, uniquement pour compter les personnes et expliquer les règles futures de cotisation.",
     rightsTitle: "Vos droits",
     rightsBody:
-      "Conformément au RGPD, vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation, d’opposition, de portabilité, et de retrait du consentement pour l’affichage du numéro de maison. Écrivez à",
+      "Conformément au RGPD, vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation, d’opposition et de portabilité. Écrivez à",
     rightsAfter:
       "Vous pouvez aussi introduire une plainte auprès de l’Autorité de protection des données (APD), rue de la Presse 35, 1000 Bruxelles.",
     apdLabel: "autoriteprotectiondonnees.be",
     apdUrl: "https://www.autoriteprotectiondonnees.be",
     relatedLegal: "Mentions légales",
-    updated: "Dernière mise à jour : 17 août 2026",
+    updated: "Dernière mise à jour : 21 août 2026",
   },
 };
 

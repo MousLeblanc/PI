@@ -6,17 +6,20 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
 import { getSocialProof } from "@/lib/api";
 import { getCommune } from "@/lib/belgium";
 import { useI18n } from "@/i18n/use-t";
 import { translateApiError } from "@/i18n/api-errors";
 
 export function SocialProof() {
-  const { t } = useI18n();
+  const { t, numberLocale } = useI18n();
   const [postalCode, setPostalCode] = useState("1050");
   const [streetName, setStreetName] = useState("");
-  const [numbers, setNumbers] = useState<string[] | null>(null);
+  const [result, setResult] = useState<{
+    count: number;
+    published: boolean;
+    street: string;
+  } | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const commune = getCommune(postalCode);
@@ -31,9 +34,13 @@ export function SocialProof() {
     setError(null);
     try {
       const res = await getSocialProof(postalCode, streetName);
-      setNumbers(res.houseNumbers);
+      setResult({
+        count: res.count,
+        published: res.published,
+        street: res.streetName,
+      });
     } catch (err) {
-      setNumbers([]);
+      setResult(null);
       setError(
         err instanceof Error
           ? translateApiError(err.message, t)
@@ -61,7 +68,7 @@ export function SocialProof() {
                 const next = e.target.value.replace(/\D/g, "").slice(0, 4);
                 setPostalCode(next);
                 setStreetName("");
-                setNumbers(null);
+                setResult(null);
               }}
               placeholder="1050"
               inputMode="numeric"
@@ -82,7 +89,7 @@ export function SocialProof() {
               value={streetName}
               onChange={(v) => {
                 setStreetName(v);
-                setNumbers(null);
+                setResult(null);
               }}
               required
             />
@@ -102,21 +109,18 @@ export function SocialProof() {
 
         <p className="text-sm text-muted-foreground">{t("social.anonymous")}</p>
 
-        <div className="flex flex-wrap gap-2">
-          {numbers === null ? (
-            <span className="text-sm text-muted-foreground">
-              {t("social.hint")}
-            </span>
-          ) : numbers.length === 0 ? (
-            <span className="text-sm text-muted-foreground">
-              {t("social.none")}
-            </span>
+        <div>
+          {result === null ? (
+            <p className="text-sm text-muted-foreground">{t("social.hint")}</p>
+          ) : result.published ? (
+            <p className="font-display text-lg font-semibold text-emerald-900">
+              {t("social.volume", {
+                count: result.count.toLocaleString(numberLocale),
+                street: result.street,
+              })}
+            </p>
           ) : (
-            numbers.map((n) => (
-              <Badge key={n} variant="outline" className="text-sm">
-                {t("social.houseNo", { n })}
-              </Badge>
-            ))
+            <p className="text-sm text-muted-foreground">{t("social.none")}</p>
           )}
         </div>
       </CardContent>

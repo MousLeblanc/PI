@@ -157,17 +157,17 @@ export const en = {
   social: {
     title: "Your neighbours are already here",
     intro:
-      "Check whether your neighbours have already signed up on your street (data is 100%\u00a0anonymised).",
+      "Check whether neighbours have already signed up on your street — without showing any address or name.",
     cp: "PC",
     street: "Street",
     see: "See",
     loading: "…",
     hint: "Select a street, then click See.",
-    none: "No public number for this street.",
+    none: "Not enough neighbours shown here yet — invite someone on your street.",
     anonymous:
-      "Anonymous display — only numbers whose residents have agreed.",
+      "Anonymous display — only the number of signed-up households (from 2 up), never a house number.",
     chooseStreet: "Choose or type a street",
-    houseNo: "No. {n}",
+    volume: "{count} neighbours have already signed up on {street}!",
     error: "Error",
   },
   register: {
@@ -185,8 +185,6 @@ export const en = {
     street: "Street",
     houseNumber: "No.",
     unknownPostal: "Unknown postal code",
-    optIn:
-      "Lead by example on my street: show my house number to encourage neighbours (anonymous — no name).",
     submit: "I become a future co-operator — it’s free",
     submitting: "Sending…",
     success: "Pre-registration successful. A welcome email will be sent.",
@@ -291,8 +289,7 @@ export const en = {
     data: [
       "Email and password (stored only as a hash)",
       "Household size and age bands (no exact ages, no names of household members)",
-      "Postal code, street, house number",
-      "Optional consent to display the house number anonymously on the street",
+      "Postal code, street, house number (kept for the account; the house number is never shown publicly)",
       "Technical security data (Cloudflare Turnstile anti-bot verification)",
       "Aggregated audience measurement (Vercel Analytics), without advertising cookies",
       "Language preference (pi_locale cookie)",
@@ -302,14 +299,14 @@ export const en = {
       "Create and secure your pre-registration account",
       "Count persons by postal code and aggregate by life basin for public display (10,000-person opening threshold per zone)",
       "Inform you of the launch by email",
-      "Display anonymous house numbers if you consented",
+      "Display an anonymous count of signed-up households per street (from 2 households up, without house numbers)",
       "Protect the form against automated sign-ups",
       "Understand site traffic, without targeted advertising",
       "Remember the display language",
     ],
     legalTitle: "Legal basis",
     legalBody:
-      "Pre-contractual steps at your request (creating the account), legitimate interest in organising the cooperative project and securing the site, and consent for the public display of the house number. You may withdraw that consent at any time by writing to the contact address.",
+      "Pre-contractual steps at your request (creating the account), and legitimate interest in organising the cooperative project, securing the site, and showing anonymous street-level volumes to encourage local mobilisation.",
     recipientsTitle: "Recipients",
     recipients: [
       "Vercel (website hosting)",
@@ -339,12 +336,12 @@ export const en = {
       "We do not create accounts for children. Household age bands (including 0–4 and 5–17) are recorded without exact age and without first names, solely to count persons and explain future contribution rules.",
     rightsTitle: "Your rights",
     rightsBody:
-      "Under the GDPR, you have the right of access, rectification, erasure, restriction, objection, portability, and withdrawal of consent for the house-number display. Write to",
+      "Under the GDPR, you have the right of access, rectification, erasure, restriction, objection and portability. Write to",
     rightsAfter:
       "You may also lodge a complaint with the Belgian Data Protection Authority (APD / GBA), Rue de la Presse 35, 1000 Brussels.",
     apdLabel: "autoriteprotectiondonnees.be",
     apdUrl: "https://www.autoriteprotectiondonnees.be",
     relatedLegal: "Legal notice",
-    updated: "Last updated: 17 August 2026",
+    updated: "Last updated: 21 August 2026",
   },
 } satisfies Messages;

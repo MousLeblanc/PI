@@ -190,29 +190,25 @@ export class GaugesService {
       throw new BadRequestException('Code postal invalide');
     }
 
+    /** Hide exact volume when only one household — avoids re-identification. */
+    const MIN_PUBLIC_COUNT = 2;
+
     const needle = normalizeStreet(streetName);
     const rows = await this.prisma.user.findMany({
-      where: {
-        postalCode,
-        optInPublicNumber: true,
-      },
-      select: { houseNumber: true, streetName: true },
-      orderBy: { houseNumber: 'asc' },
-      take: 500,
+      where: { postalCode },
+      select: { streetName: true },
+      take: 2000,
     });
 
-    const houseNumbers = [
-      ...new Set(
-        rows
-          .filter((r) => normalizeStreet(r.streetName) === needle)
-          .map((r) => r.houseNumber),
-      ),
-    ];
+    const count = rows.filter(
+      (r) => normalizeStreet(r.streetName) === needle,
+    ).length;
 
     return {
       postalCode,
       streetName: streetName.trim(),
-      houseNumbers,
+      count: count >= MIN_PUBLIC_COUNT ? count : 0,
+      published: count >= MIN_PUBLIC_COUNT,
     };
   }
 }

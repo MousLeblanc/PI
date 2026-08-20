@@ -5,7 +5,6 @@ import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { StreetCombobox } from "@/components/StreetCombobox";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
@@ -38,7 +37,6 @@ export function RegisterForm() {
   ]);
   const [postalCode, setPostalCode] = useState("");
   const [streetName, setStreetName] = useState("");
-  const [optIn, setOptIn] = useState(false);
   const [token, setToken] = useState<string | undefined>();
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -87,7 +85,7 @@ export function RegisterForm() {
         postalCode,
         streetName,
         houseNumber: String(form.get("houseNumber")),
-        optInPublicNumber: optIn,
+        optInPublicNumber: false,
         turnstileToken: token,
       });
       const added = Number(data.decimalsAdded ?? householdSize) || householdSize;
@@ -111,7 +109,6 @@ export function RegisterForm() {
       setAgeBands(["AGE_18_64", "AGE_18_64"]);
       setPostalCode("");
       setStreetName("");
-      setOptIn(false);
       setToken(undefined);
     } catch (err) {
       setError(
@@ -257,18 +254,6 @@ export function RegisterForm() {
               <Label htmlFor="houseNumber">{t("register.houseNumber")}</Label>
               <Input id="houseNumber" name="houseNumber" required />
             </div>
-          </div>
-
-          <div className="flex items-start gap-3 rounded-xl border bg-white p-4">
-            <Checkbox
-              id="optIn"
-              checked={optIn}
-              onCheckedChange={(v) => setOptIn(v === true)}
-              className="mt-0.5"
-            />
-            <Label htmlFor="optIn" className="font-normal leading-relaxed">
-              {t("register.optIn")}
-            </Label>
           </div>
 
           {!skipTurnstile && siteKey ? (

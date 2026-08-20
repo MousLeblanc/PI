@@ -160,17 +160,17 @@ export const nl = {
   social: {
     title: "Je buren zijn er al",
     intro:
-      "Kijk of je buren al ingeschreven zijn in jouw straat (de gegevens zijn 100\u00a0% geanonimiseerd).",
+      "Kijk of buren al ingeschreven zijn in jouw straat — zonder adres of naam te tonen.",
     cp: "PC",
     street: "Straat",
     see: "Bekijk",
     loading: "…",
     hint: "Kies een straat en klik op Bekijk.",
-    none: "Geen openbaar nummer voor deze straat.",
+    none: "Nog niet genoeg buren hier getoond — nodig iemand uit je straat uit.",
     anonymous:
-      "Anonieme weergave — enkel nummers waarvan de bewoners akkoord gingen.",
+      "Anonieme weergave — enkel het aantal ingeschreven gezinnen (vanaf 2), nooit een huisnummer.",
     chooseStreet: "Kies of typ een straat",
-    houseNo: "nr. {n}",
+    volume: "{count} buren zijn al ingeschreven in {street}!",
     error: "Fout",
   },
   register: {
@@ -188,8 +188,6 @@ export const nl = {
     street: "Straat",
     houseNumber: "Nr.",
     unknownPostal: "Onbekende postcode",
-    optIn:
-      "Het voorbeeld geven in mijn straat: het nummer van mijn huis tonen om mijn buren aan te moedigen (anoniem — geen naam).",
     submit: "Ik word toekomstige coöperant — het is gratis",
     submitting: "Verzenden…",
     success:
@@ -298,8 +296,7 @@ export const nl = {
     data: [
       "E-mail en wachtwoord (enkel als hash bewaard)",
       "Gezinsgrootte en leeftijdsschijven (geen exacte leeftijden, geen namen van gezinsleden)",
-      "Postcode, straat, huisnummer",
-      "Optionele toestemming voor anonieme weergave van het nummer in de straat",
+      "Postcode, straat, huisnummer (bewaard voor het account; het huisnummer wordt nooit publiek getoond)",
       "Technische beveiligingsgegevens (anti-botverificatie Cloudflare Turnstile)",
       "Geaggregeerde audiencestats (Vercel Analytics), zonder advertentiecookies",
       "Taalvoorkeur (cookie pi_locale)",
@@ -309,14 +306,14 @@ export const nl = {
       "Je voorinschrijvingsaccount aanmaken en beveiligen",
       "Personen per postcode tellen en aggregeren per leefbekken voor publieke weergave (drempel van 10.000 personen per zone)",
       "Je per e-mail informeren over de lancering",
-      "Anonieme huisnummers tonen als je daarvoor toestemming gaf",
+      "Een anoniem aantal ingeschreven gezinnen per straat tonen (vanaf 2 gezinnen, zonder huisnummer)",
       "Het formulier beschermen tegen automatische inschrijvingen",
       "Het bezoek aan de site begrijpen, zonder gerichte reclame",
       "De weergavetaal onthouden",
     ],
     legalTitle: "Rechtsgrond",
     legalBody:
-      "Precontractuele maatregelen op jouw verzoek (account aanmaken), gerechtvaardigd belang om het coöperatieproject te organiseren en de site te beveiligen, en toestemming voor de openbare weergave van het huisnummer. Je kan die toestemming op elk moment intrekken door naar het contactadres te schrijven.",
+      "Precontractuele maatregelen op jouw verzoek (account aanmaken), en gerechtvaardigd belang om het coöperatieproject te organiseren, de site te beveiligen en anonieme volumes per straat te tonen om de lokale mobilisatie te stimuleren.",
     recipientsTitle: "Ontvangers",
     recipients: [
       "Vercel (hosting van de site)",
@@ -346,12 +343,12 @@ export const nl = {
       "We maken geen account aan voor een kind. De leeftijdsschijven van het gezin (inclusief 0–4 en 5–17 jaar) worden geregistreerd zonder exacte leeftijd en zonder voornaam, enkel om personen te tellen en de toekomstige bijdrageregels uit te leggen.",
     rightsTitle: "Jouw rechten",
     rightsBody:
-      "Overeenkomstig de AVG heb je recht op inzage, rectificatie, wissing, beperking, bezwaar, overdraagbaarheid, en intrekking van de toestemming voor de weergave van het huisnummer. Schrijf naar",
+      "Overeenkomstig de AVG heb je recht op inzage, rectificatie, wissing, beperking, bezwaar en overdraagbaarheid. Schrijf naar",
     rightsAfter:
       "Je kan ook een klacht indienen bij de Gegevensbeschermingsautoriteit (GBA), Drukpersstraat 35, 1000 Brussel.",
     apdLabel: "gegevensbeschermingsautoriteit.be",
     apdUrl: "https://www.gegevensbeschermingsautoriteit.be",
     relatedLegal: "Wettelijke vermeldingen",
-    updated: "Laatst bijgewerkt: 17 augustus 2026",
+    updated: "Laatst bijgewerkt: 21 augustus 2026",
   },
 } satisfies Messages;

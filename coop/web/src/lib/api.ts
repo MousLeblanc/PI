@@ -61,7 +61,8 @@ export type ZonesResponse = {
 export type SocialProofResponse = {
   postalCode: string;
   streetName: string;
-  houseNumbers: string[];
+  count: number;
+  published: boolean;
 };
 
 export type StreetSuggestion = {
