@@ -149,6 +149,9 @@ export const nl = {
         body: "De groothandelsprijs staat in het schap. We tellen er een vaste, minimale werkingsmarge bij: 20 cent op dagelijkse producten, en 50 cent op duurdere producten (olie, luiers…). Niets is verborgen — je weet waar elke cent naartoe gaat. (Richtprijzen.)",
       },
     ],
+    openingStagesTitle: "Stapsgewijs openen",
+    openingStagesBody:
+      "De eerste Pi-winkel start zonder koelkast, met een breed maar eenvoudig assortiment: droog en houdbaar voedsel (zetmeel, sauzen, conserven, oliën…), dranken, huishoud- en schoonmaakproducten, hygiëne en cosmetica, en andere dagelijkse essentials zonder koudeketen. Koelkasten en verse producten volgen later, als winkel, vrijwilligers en logistiek stabiel zijn.",
   },
   social: {
     title: "Je buren zijn er al",

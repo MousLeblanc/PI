@@ -45,6 +45,15 @@ export function HowItWorks() {
           );
         })}
       </div>
+
+      <div className="mx-auto mt-12 max-w-2xl border-t border-emerald-900/10 pt-10 text-center">
+        <h3 className="font-display text-2xl font-semibold tracking-tight">
+          {messages.how.openingStagesTitle}
+        </h3>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+          {messages.how.openingStagesBody}
+        </p>
+      </div>
     </div>
   );
 }

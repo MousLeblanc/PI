@@ -146,6 +146,9 @@ export const fr = {
         body: "Le prix du grossiste s’affiche en rayon. On y ajoute une marge de fonctionnement fixe et minime : 20 centimes sur les produits du quotidien, et 50 centimes sur les produits plus chers (huile, langes…). Rien n’est caché — vous savez où va chaque centime. (Prix cibles estimés.)",
       },
     ],
+    openingStagesTitle: "Ouverture par étapes",
+    openingStagesBody:
+      "Le premier magasin Pi démarre sans frigos, avec un rayon large mais simple à gérer : alimentation sèche et de longue conservation (féculents, sauces, conserves, huiles…), boissons, produits d’entretien et ménage, hygiène et cosmétique, et d’autres essentiels du quotidien qui ne demandent pas de chaîne du froid. Les frigos et les produits frais arriveront plus tard, quand le magasin, les bénévoles et la logistique seront stables.",
   },
   social: {
     title: "Vos voisins sont déjà là",

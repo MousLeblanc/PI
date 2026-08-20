@@ -146,6 +146,9 @@ export const en = {
         body: "The wholesale price is shown on the shelf. We add a small fixed operating margin: 20 cents on everyday products, and 50 cents on pricier ones (oil, nappies…). Nothing is hidden — you know where every cent goes. (Estimated target prices.)",
       },
     ],
+    openingStagesTitle: "Opening in stages",
+    openingStagesBody:
+      "The first Pi store opens without fridges, with a broad but easy-to-run range: dry and long-life food (starches, sauces, tins, oils…), drinks, household and cleaning products, hygiene and cosmetics, and other everyday essentials that don’t need a cold chain. Fridges and fresh products come later, once the store, volunteering and logistics are stable.",
   },
   social: {
     title: "Your neighbours are already here",
