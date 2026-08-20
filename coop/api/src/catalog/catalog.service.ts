@@ -44,12 +44,12 @@ export class CatalogService {
         imageUrl: '/folder/farine.jpg',
       },
       {
-        id: 'pommes',
-        name: 'Pommes bio Belgique 1kg',
-        wholesaleEur: 1.15,
-        retailEur: 2.79,
-        tier: 'basic',
-        imageUrl: '/folder/pommes.jpg',
+        id: 'cafe',
+        name: 'Café bio grains 250g',
+        wholesaleEur: 5.8,
+        retailEur: 9.9,
+        tier: 'premium',
+        imageUrl: '/folder/cafe.jpg',
       },
       {
         id: 'riz',
