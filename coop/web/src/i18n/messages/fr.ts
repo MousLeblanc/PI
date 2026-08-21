@@ -154,6 +154,26 @@ export const fr = {
     openingStagesBody:
       "Le premier magasin Pi démarre sans frigos, avec un rayon large mais simple à gérer : alimentation sèche et de longue conservation (féculents, sauces, conserves, huiles…), boissons, produits d’entretien et ménage, hygiène et cosmétique, et d’autres essentiels du quotidien qui ne demandent pas de chaîne du froid. Les frigos et les produits frais arriveront plus tard, quand le magasin, les bénévoles et la logistique seront stables.",
   },
+  manifesto: {
+    eyebrow: "Notre manifeste",
+    title: "Reprendre le contrôle, ensemble.",
+    p1: "Pendant trop longtemps, on nous a dit que face à l’inflation, il n’y avait rien à faire. Qu’il fallait accepter, en silence, des marges opaques et des prix qui montent sans explication. Isolés, chacun dans son caddie, on devient petits. Et seuls, on change peu.",
+    p2Before: "Ils ont oublié une chose :",
+    p2Strong: "petit n’est pas une faiblesse quand on se réunit.",
+    p3: "C’est de là qu’est né Pi COOP. Comme le nombre π : un petit signe, une force qui n’en finit pas.",
+    p4: "Pi COOP n’est pas un supermarché de plus. C’est une coopérative citoyenne née d’une urgence : arrêter de subir.",
+    ticket:
+      "Dans un ticket de caisse classique, vous ne payez pas seulement ce qu’il y a dans le panier. Vous financez aussi le loyer des grands surfaces, les salaires d’une pyramide de management, la publicité, et des marges qui ne vous appartiennent pas.",
+    ruleLead:
+      "Chez Pi COOP, la règle est inverse — simple, et elle ne changera pas :",
+    rule:
+      "nous achetons ensemble, au prix du grossiste ; nous affichons ce prix ; nous y ajoutons une marge fixe et minime — 20\u00a0centimes sur l’essentiel du rayon, 50\u00a0centimes sur les produits plus chers. Rien de plus, rien de caché.",
+    volunteer:
+      "Dès l’ouverture, chaque adulte de 18 à 64 ans donne 2 heures par mois. Moins d’intermédiaires, des prix qui tiennent, et du lien qui revient dans le quartier.",
+    closing:
+      "Il est temps de reprendre le pouvoir sur nos courses — et sur nos vies.",
+    cta: "Je me préinscris gratuitement",
+  },
   social: {
     title: "Vos voisins sont déjà là",
     intro:
@@ -237,6 +257,7 @@ export const fr = {
   },
   footer: {
     how: "Comment ça marche",
+    manifesto: "Manifeste",
     facebook: "Facebook",
     legal: "Mentions légales",
     privacy: "Confidentialité",

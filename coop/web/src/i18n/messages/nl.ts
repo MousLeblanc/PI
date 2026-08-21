@@ -157,6 +157,26 @@ export const nl = {
     openingStagesBody:
       "De eerste Pi-winkel start zonder koelkast, met een breed maar eenvoudig assortiment: droog en houdbaar voedsel (zetmeel, sauzen, conserven, oliën…), dranken, huishoud- en schoonmaakproducten, hygiëne en cosmetica, en andere dagelijkse essentials zonder koudeketen. Koelkasten en verse producten volgen later, als winkel, vrijwilligers en logistiek stabiel zijn.",
   },
+  manifesto: {
+    eyebrow: "Ons manifest",
+    title: "De controle terugpakken, samen.",
+    p1: "Te lang kreeg men te horen dat er tegenover inflatie niets te doen viel. Dat we in stilte ondoorzichtige marges en stijgende prijzen zonder uitleg moesten aanvaarden. Geïsoleerd, ieder in de eigen winkelwagen, worden we klein. En alleen veranderen we weinig.",
+    p2Before: "Men vergat één ding:",
+    p2Strong: "klein is geen zwakte als we ons verenigen.",
+    p3: "Daaruit is Pi COOP ontstaan. Zoals het getal π: een klein teken, een kracht zonder einde.",
+    p4: "Pi COOP is geen supermarkt te meer. Het is een burgercoöperatie geboren uit urgentie: stoppen met ondergaan.",
+    ticket:
+      "Op een klassieke kassaticket betaal je niet alleen wat er in het mandje zit. Je betaalt ook de huur van grote winkels, de lonen van een managementpiramide, reclame, en marges die jou niet toebehoren.",
+    ruleLead:
+      "Bij Pi COOP is de regel omgekeerd — eenvoudig, en die verandert niet:",
+    rule:
+      "we kopen samen, tegen groothandelsprijs; we tonen die prijs; we voegen een vaste, minimale marge toe — 20\u00a0cent op het dagelijkse schap, 50\u00a0cent op duurdere producten. Niets meer, niets verborgen.",
+    volunteer:
+      "Vanaf de opening geeft elke volwassene van 18 tot 64 jaar 2 uur per maand. Minder tussenpersonen, prijzen die standhouden, en opnieuw band in de buurt.",
+    closing:
+      "Het is tijd om de macht over onze boodschappen — en over ons leven — terug te nemen.",
+    cta: "Ik schrijf me gratis voor",
+  },
   social: {
     title: "Je buren zijn er al",
     intro:
@@ -240,6 +260,7 @@ export const nl = {
   },
   footer: {
     how: "Hoe werkt het",
+    manifesto: "Manifest",
     facebook: "Facebook",
     legal: "Wettelijke vermeldingen",
     privacy: "Privacy",

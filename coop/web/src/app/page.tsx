@@ -3,6 +3,7 @@
 import { CityLeaderboard } from "@/components/CityLeaderboard";
 import { FolderPi } from "@/components/FolderPi";
 import { HowItWorks } from "@/components/HowItWorks";
+import { Manifesto } from "@/components/Manifesto";
 import { PiCounter } from "@/components/PiCounter";
 import { PostalGauges } from "@/components/PostalGauges";
 import { RegisterForm } from "@/components/RegisterForm";
@@ -97,7 +98,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="scroll-mt-24 bg-white/50 py-16 sm:py-20">
+      <section
+        id="manifeste"
+        className="scroll-mt-24 bg-white/50 py-16 sm:py-20"
+      >
+        <div className="mx-auto w-[min(1120px,calc(100%-2rem))]">
+          <Manifesto />
+        </div>
+      </section>
+
+      <section className="scroll-mt-24 py-16 sm:py-20">
         <div className="mx-auto w-[min(1120px,calc(100%-2rem))]">
           <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
             {t("social.title")}

@@ -154,6 +154,26 @@ export const en = {
     openingStagesBody:
       "The first Pi store opens without fridges, with a broad but easy-to-run range: dry and long-life food (starches, sauces, tins, oils…), drinks, household and cleaning products, hygiene and cosmetics, and other everyday essentials that don’t need a cold chain. Fridges and fresh products come later, once the store, volunteering and logistics are stable.",
   },
+  manifesto: {
+    eyebrow: "Our manifesto",
+    title: "Take back control, together.",
+    p1: "For too long, we were told that faced with inflation, there was nothing to be done. That we had to accept, in silence, opaque margins and prices that rise without explanation. Isolated, each in our own trolley, we become small. And alone, we change little.",
+    p2Before: "They forgot one thing:",
+    p2Strong: "small is not a weakness when we come together.",
+    p3: "That is where Pi COOP was born. Like the number π: a small sign, a force that never ends.",
+    p4: "Pi COOP is not just another supermarket. It is a citizen cooperative born of an urgency: to stop putting up with it.",
+    ticket:
+      "On a classic checkout receipt, you are not only paying for what is in the basket. You are also funding the rent of giant stores, the salaries of a management pyramid, advertising, and margins that do not belong to you.",
+    ruleLead:
+      "At Pi COOP, the rule is the opposite — simple, and it will not change:",
+    rule:
+      "we buy together, at wholesale price; we show that price; we add a small fixed margin — 20\u00a0cents on everyday shelf staples, 50\u00a0cents on pricier products. Nothing more, nothing hidden.",
+    volunteer:
+      "From opening day, every adult aged 18 to 64 gives 2 hours a month. Fewer middlemen, prices that hold, and neighbourhood ties that return.",
+    closing:
+      "It is time to take back power over our groceries — and over our lives.",
+    cta: "I pre-register for free",
+  },
   social: {
     title: "Your neighbours are already here",
     intro:
@@ -234,6 +254,7 @@ export const en = {
   },
   footer: {
     how: "How it works",
+    manifesto: "Manifesto",
     facebook: "Facebook",
     legal: "Legal notice",
     privacy: "Privacy",

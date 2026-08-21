@@ -27,6 +27,12 @@ export function SiteFooter() {
             >
               {t("footer.how")}
             </Link>
+            <Link
+              href="/#manifeste"
+              className="hover:text-foreground hover:underline"
+            >
+              {t("footer.manifesto")}
+            </Link>
             <a
               href="https://www.facebook.com/people/PI-COOP/61592984963066/"
               target="_blank"
