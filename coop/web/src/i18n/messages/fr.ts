@@ -64,11 +64,14 @@ export const fr = {
     showBreakdown: "Voir le détail par commune",
     hideBreakdown: "Masquer le détail par commune",
     nextMilestone: "Prochain palier ({count}) : {label}",
+    nextBasinInfo:
+      "Prochaine séance d’info dans ce bassin : à {count} ménages (tous les 50).",
     milestones: {
-      m1: "Palier 1 — assez de voisins pour une première rencontre locale",
-      m2: "Palier 2 — première étape de faisabilité commerciale",
-      m3: "Palier 3 — recherche active de local",
-      m4: "Palier 4 — ouverture éligible (local + statuts requis)",
+      m1: "500 — enquête préférences produits",
+      m2: "2 000 — constitution de la coopérative",
+      m3: "3 000 — réservation des parts sociales",
+      m4: "4 000 — premiers paiements + bail du local",
+      m5: "5 000 — ouverture imminente",
     },
   },
   zones: {
@@ -136,22 +139,107 @@ export const fr = {
     title: "Comment ça marche\u00a0?",
     intro:
       "La recette Pi COOP en quatre règles. Un supermarché à taille humaine, pas un hypermarché classique : une coopérative citoyenne où le pouvoir d’achat revient aux membres.",
+    flows: {
+      subtitle:
+        "La survie du magasin ne dépend pas d’une marge en % sur vos courses.",
+      share: {
+        title: "Part 25 €",
+        body: "Frigos, rayons, caisses — l’équipement du magasin.",
+      },
+      abo: {
+        title: "Abo 10 € / mois",
+        body: "Loyer, énergie du froid, équipe d’encadrement.",
+      },
+      margin: {
+        title: "Marge 20 / 50 centimes",
+        body: "Casse et invendus seulement — rien d’autre.",
+      },
+      example:
+        "Exemple : un produit à 10 € au gros → magasin à +20 % = 12 €. Chez Pi : 10,20 € (sec) ou 10,50 € (frais).",
+      prepaidTitle: "Pourquoi le prépaiement change tout",
+      prepaidBody:
+        "Avant d’acheter, les membres rechargent leur carte. Cet argent sert à commander par gros volumes (palettes / camions), au prix de gros, et autant que possible au plus près des producteurs — sans empiler la logique « distributeur + marge en pourcentage ». Résultat : on négocie plus bas qu’un magasin classique qui passe par des intermédiaires et applique souvent ~20 % (ou plus) sur le ticket. Chez Pi : prix de gros + 20 ou 50 centimes. Les 10 € d’abonnement ? Ils paient loyer et encadrement — et avec l’écart de prix dès les premières courses, cet abonnement est en pratique amorti très vite sur le panier (ordre de grandeur : quelques produits chers suffisent souvent à le « rattraper »).",
+    },
+    simulator: {
+      title: "Combien d’abonnements pour mon foyer ?",
+      intro:
+        "Règle simple : environ 250 € de plafond d’achats par personne / mois → 1 abonnement à 10 €. Cumulez si besoin.",
+      peopleLabel: "Nombre de personnes qui font les courses",
+      result:
+        "Il vous faut {abos} abonnement(s) → plafond {cap} € / mois (abonnement {monthly} € / mois).",
+      hint: "C’est une indication. À l’ouverture, vous choisirez selon votre vrai budget.",
+    },
     pillars: [
       {
-        title: "Part sociale + abonnement",
-        body: "L’équipement (part sociale) : pas d’actionnaires invisibles — ce sont les coopérateurs qui détiennent la coopérative. À l’ouverture, chaque ménage prend au moins une part à 25 €. Par ce geste, vous devenez coopérateur et copropriétaire de la coopérative. Cet argent sert uniquement à équiper le supermarché (frigos, rayons, caisses) — jamais à payer le fonctionnement ni les courses du mois. Le fonctionnement (abonnement) : 10 € / mois donnent droit à un plafond de 250 € d’achats (ordre de grandeur du budget alimentaire d’une personne). Pourquoi un plafond ? Pour éviter qu’un seul abonnement serve à faire les courses de plusieurs foyers en usant de l’infrastructure sans la financer. Famille ou gros volume ? Vous cumulez les abonnements selon vos besoins (ex. 30 € pour 750 € de plafond). Chaque euro de cet abonnement paie les frais fixes : loyer, électricité des chambres froides, salaires de l’équipe d’encadrement.",
+        title: "Vous êtes le patron",
+        subtitle: "La part sociale",
+        bullets: [
+          {
+            label: "Le principe",
+            text: "Vous devenez copropriétaire de votre supermarché coopératif — pas d’actionnaires invisibles.",
+          },
+          {
+            label: "Le montant",
+            text: "25 € minimum par foyer (à payer une seule fois à l’ouverture).",
+          },
+          {
+            label: "À quoi ça sert ?",
+            text: "Cet argent finance uniquement notre équipement matériel (frigos, rayons, caisses).",
+          },
+        ],
       },
       {
-        title: "Les courses (la carte prépayée)",
-        body: "Chez Pi COOP, nous n’empruntons pas d’argent aux banques. Vous rechargez donc votre carte membre à l’avance par virement bancaire. Ce solde devient votre budget courses — votre monnaie Pi COOP —, utilisable dans la limite de votre plafond d’abonnement. Pourquoi payer à l’avance\u00a0? Votre argent sert directement à acheter la marchandise par camions entiers. Zéro crédit bancaire, zéro marge cachée\u00a0: votre argent paie strictement votre nourriture.",
+        title: "Un fonctionnement équitable",
+        subtitle: "L’abonnement",
+        bullets: [
+          { label: "Le montant", text: "10 € / mois." },
+          {
+            label: "L’avantage",
+            text: "Il vous donne droit à un plafond d’achats de 250 € (budget mensuel moyen pour une personne).",
+          },
+          {
+            label: "À quoi ça sert ?",
+            text: "Il couvre nos charges fixes (loyer, électricité, encadrement).",
+          },
+        ],
+        note: "Les grandes familles cumulent simplement les abonnements (ex. : 20 € pour un plafond de 500 € d’achats).",
       },
       {
-        title: "L’entraide (2 h / mois) : le secret de nos prix",
-        body: "La règle : chaque adulte de 18 à 65 ans du foyer donne 2 heures par mois pour faire tourner le magasin (caisse, mise en rayon, aide en cuisine). Les plus jeunes et les plus de 65 ans en sont exemptés, sauf s’ils le souhaitent. L’impact sur le ticket : ces heures réduisent la masse salariale. Sans ce coût à plein, on peut tenir la marge fixe de 20 ou 50 centimes. C’est ce qui fait tenir les prix bas sur vos courses. Manger mieux pour moins cher : grâce à cette entraide et à l’achat groupé au prix de gros, l’objectif est que des produits sains et bio coûtent souvent moins cher que l’équivalent industriel ultra-transformé en grande surface — sans promesse individuelle sur chaque article. L’engagement : toute la coopérative repose sur cette entraide. Les absences répétées ou non justifiées entraînent la suspension temporaire de la carte d’achats. Des prix bas exigent que chacun tienne sa part.",
+        title: "Notre force de frappe",
+        subtitle: "La carte prépayée",
+        bullets: [
+          {
+            label: "Le fonctionnement",
+            text: "Vous rechargez votre carte membre par virement, puis vous payez vos courses en caisse avec.",
+          },
+          {
+            label: "Notre super-pouvoir",
+            text: "Cette trésorerie commune nous permet d’acheter des camions entiers aux producteurs, sans dépendre des banques !",
+          },
+          {
+            label: "Le prix en rayon",
+            text: "Vous payez le vrai prix du produit, plus une marge fixe infime (0,20 € sur le sec, 0,50 € sur le frais) pour couvrir la casse. Rien de caché.",
+          },
+        ],
       },
       {
-        title: "Le prix juste",
-        body: "En rayon, vous payez la marchandise au vrai prix de gros (direct producteur). Nous ajoutons simplement une petite marge fixe pour absorber la casse et les invendus\u00a0: +20\u00a0centimes sur le sec, et +50\u00a0centimes sur le frais et les produits chers.",
+        title: "Le secret de nos prix",
+        subtitle: "L’entraide",
+        bullets: [
+          {
+            label: "La règle",
+            text: "Chaque membre adulte (18 à 65 ans) donne 2 heures de son temps par mois pour faire tourner le magasin.",
+          },
+          {
+            label: "Les missions",
+            text: "Mise en rayon, caisse, accueil, nettoyage…",
+          },
+          {
+            label: "Le résultat",
+            text: "C’est l’âme du projet. En écrasant massivement nos coûts salariaux, nous écrasons vos prix en rayon !",
+          },
+        ],
+        note: "Moins de 18 ans et 65+ ne sont pas tenus de participer (sauf s’ils le souhaitent).",
       },
     ],
     openingStagesTitle: "Ouverture : ce qu’on trouve dès le premier jour",

@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getZones, type ZoneGaugeItem } from "@/lib/api";
 import { getCommune, getCommuneShort } from "@/lib/belgium";
-import { getMilestoneState } from "@/lib/milestones";
+import { getMilestoneState, nextBasinInfoAt } from "@/lib/milestones";
 import { getStretchMeta } from "@/lib/stretch";
 import { isBrusselsZone } from "@/lib/zones";
 import { cn } from "@/lib/utils";
@@ -75,6 +75,7 @@ export function PostalGauges() {
   const count = focus?.count ?? 0;
   const meta = getStretchMeta(count);
   const milestone = getMilestoneState(count);
+  const basinInfoAt = nextBasinInfoAt(count);
   const zoneId = focus?.zoneId ?? "";
   const title = zoneId ? zoneName(zoneId, t) : "";
   const communes = zoneId ? zoneCommunes(zoneId, t) : "";
@@ -170,6 +171,11 @@ export function PostalGauges() {
                 })}
               </p>
             ) : null}
+            <p className="text-xs text-muted-foreground">
+              {t("gauges.nextBasinInfo", {
+                count: basinInfoAt.toLocaleString(numberLocale),
+              })}
+            </p>
 
             {showBreakdown ? (
               <div className="border-t pt-3">

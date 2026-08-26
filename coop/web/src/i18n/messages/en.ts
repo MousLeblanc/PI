@@ -64,11 +64,14 @@ export const en = {
     showBreakdown: "See breakdown by commune",
     hideBreakdown: "Hide breakdown by commune",
     nextMilestone: "Next milestone ({count}): {label}",
+    nextBasinInfo:
+      "Next info session in this basin: at {count} households (every 50).",
     milestones: {
-      m1: "Tier 1 — enough neighbours for a first local meeting",
-      m2: "Tier 2 — first commercial feasibility step",
-      m3: "Tier 3 — active search for premises",
-      m4: "Tier 4 — opening eligible (premises + statutes required)",
+      m1: "500 — product preference survey",
+      m2: "2,000 — cooperative constitution",
+      m3: "3,000 — share reservation",
+      m4: "4,000 — first payments + lease",
+      m5: "5,000 — imminent opening",
     },
   },
   zones: {
@@ -136,22 +139,107 @@ export const en = {
     title: "How it works",
     intro:
       "The Pi COOP recipe in four rules. A human-scale supermarket, not a conventional hypermarket: a citizen cooperative where purchasing power returns to members.",
+    flows: {
+      subtitle:
+        "The store’s survival does not depend on a %-margin on your groceries.",
+      share: {
+        title: "€25 share",
+        body: "Fridges, shelves, checkouts — store equipment.",
+      },
+      abo: {
+        title: "€10 / month subscription",
+        body: "Rent, cold energy, supervising team.",
+      },
+      margin: {
+        title: "20 / 50 cent margin",
+        body: "Spoilage and unsold stock only — nothing else.",
+      },
+      example:
+        "Example: a product at €10 wholesale → shop with +20% = €12. At Pi: €10.20 (dry) or €10.50 (fresh).",
+      prepaidTitle: "Why prepaying changes everything",
+      prepaidBody:
+        "Members top up their card before buying. That money is used to order in bulk (pallets / trucks), at wholesale price, as close as possible to producers — without stacking the “distributor + percentage margin” logic. Result: sharper negotiation than a classic shop with middlemen and often ~20% (or more) on the ticket. At Pi: wholesale + 20 or 50 cents. The €10 subscription? It pays rent and supervision — and with the price gap from the first shops, that subscription is in practice amortised quickly on the basket (order of magnitude: a few pricey items often suffice).",
+    },
+    simulator: {
+      title: "How many subscriptions for my household?",
+      intro:
+        "Simple rule: about €250 purchase cap per person / month → 1 subscription at €10. Stack if needed.",
+      peopleLabel: "Number of people shopping for",
+      result:
+        "You need {abos} subscription(s) → {cap} € / month cap (subscription {monthly} € / month).",
+      hint: "A guideline. At opening, you choose according to your real budget.",
+    },
     pillars: [
       {
-        title: "Share capital + subscription",
-        body: "Equipment (share): no invisible shareholders — the co-operators own the cooperative. At opening, each household takes at least one €25 share. With that step, you become a co-operator and co-owner of the cooperative. That money only funds the supermarket fit-out (fridges, shelves, checkouts) — never running costs or the month’s groceries. Running costs (subscription): €10 / month unlocks a €250 spending cap (roughly one person’s food budget). Why a cap? So one subscription cannot cover shopping for several households while using the infrastructure without funding it. Larger family or higher volume? Stack subscriptions as needed (e.g. €30 for a €750 cap). Every euro of that subscription pays fixed costs: rent, cold-room electricity, supervising staff.",
+        title: "You’re in charge",
+        subtitle: "The share",
+        bullets: [
+          {
+            label: "The principle",
+            text: "You become co-owner of your cooperative supermarket — no invisible shareholders.",
+          },
+          {
+            label: "The amount",
+            text: "€25 minimum per household (one-time payment at opening).",
+          },
+          {
+            label: "What it funds",
+            text: "Equipment only: fridges, shelves, checkouts.",
+          },
+        ],
       },
       {
-        title: "Groceries (the prepaid card)",
-        body: "At Pi COOP, we do not borrow money from banks. So you top up your member card in advance by bank transfer. That balance becomes your grocery budget — your Pi COOP currency — usable within your subscription cap. Why pay ahead? Your money goes straight into buying goods by the truckload. Zero bank credit, zero hidden margin: your money pays strictly for your food.",
+        title: "Fair running costs",
+        subtitle: "The subscription",
+        bullets: [
+          { label: "The amount", text: "€10 / month." },
+          {
+            label: "The benefit",
+            text: "A €250 purchase cap (roughly one person’s monthly food budget).",
+          },
+          {
+            label: "What it covers",
+            text: "Fixed costs: rent, electricity, supervision.",
+          },
+        ],
+        note: "Larger families simply stack subscriptions (e.g. €20 for a €500 cap).",
       },
       {
-        title: "Mutual aid (2 h / month): the secret of our prices",
-        body: "The rule: every adult aged 18 to 65 in the household gives 2 hours a month to keep the store running (checkout, shelving, kitchen help). Younger people and those over 65 are exempt, unless they wish to take part. Impact on the receipt: those hours cut the wage bill. Without that full cost, we can hold the fixed margin of 20 or 50 cents. That is what keeps grocery prices low. Eat better for less: thanks to this mutual aid and pooled wholesale buying, the aim is for healthy organic products to often cost less than the ultra-processed industrial equivalent in a classic supermarket — without a promise on every single item. The commitment: the whole cooperative rests on this mutual aid. Repeated or unjustified absences lead to temporary suspension of the shopping card. Low prices require everyone to do their share.",
+        title: "Our bargaining power",
+        subtitle: "The prepaid card",
+        bullets: [
+          {
+            label: "How it works",
+            text: "Top up your member card by bank transfer, then pay at checkout.",
+          },
+          {
+            label: "Our superpower",
+            text: "Pooled cash lets us buy full truckloads from producers — no bank dependency!",
+          },
+          {
+            label: "Shelf price",
+            text: "True product cost plus a tiny fixed margin (€0.20 dry, €0.50 fresh) for spoilage. Nothing hidden.",
+          },
+        ],
       },
       {
-        title: "Fair price",
-        body: "On the shelf, you pay goods at the true wholesale price (direct from the producer). We simply add a small fixed margin to absorb spoilage and unsold stock: +20\u00a0cents on dry goods, and +50\u00a0cents on fresh and pricier products.",
+        title: "The secret of our prices",
+        subtitle: "Mutual aid",
+        bullets: [
+          {
+            label: "The rule",
+            text: "Every adult member (18–65) gives 2 hours a month to keep the store running.",
+          },
+          {
+            label: "Tasks",
+            text: "Shelving, checkout, welcome desk, cleaning…",
+          },
+          {
+            label: "The result",
+            text: "The heart of the project. By slashing wage costs, we slash your shelf prices!",
+          },
+        ],
+        note: "Under-18s and 65+ are not required to take part (unless they wish to).",
       },
     ],
     openingStagesTitle: "Opening: what you find from day one",

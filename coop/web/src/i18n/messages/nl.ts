@@ -67,11 +67,14 @@ export const nl = {
     showBreakdown: "Detail per gemeente bekijken",
     hideBreakdown: "Detail per gemeente verbergen",
     nextMilestone: "Volgende drempel ({count}): {label}",
+    nextBasinInfo:
+      "Volgende infosessie in dit bekken: bij {count} gezinnen (elke 50).",
     milestones: {
-      m1: "Drempel 1 — genoeg buren voor een eerste lokale ontmoeting",
-      m2: "Drempel 2 — eerste stap in commerciële haalbaarheid",
-      m3: "Drempel 3 — actief zoeken naar een pand",
-      m4: "Drempel 4 — opening mogelijk (pand + statuten vereist)",
+      m1: "500 — enquête productvoorkeuren",
+      m2: "2.000 — oprichting van de coöperatie",
+      m3: "3.000 — reservatie van aandelen",
+      m4: "4.000 — eerste betalingen + huurcontract",
+      m5: "5.000 — opening nabij",
     },
   },
   zones: {
@@ -138,23 +141,108 @@ export const nl = {
   how: {
     title: "Hoe werkt het\u00a0?",
     intro:
-      "Het Pi COOP-recept in vier regels. Een supermarkt op menselijke schaal, geen klassieke hypermarkt: een burgercoöperatie waar de koopkracht terug naar de leden gaat.",
+      "Le Pi COOP-recept in vier regels. Een supermarkt op menselijke schaal, geen klassieke hypermarkt: een burgercoöperatie waar de koopkracht terug naar de leden gaat.",
+    flows: {
+      subtitle:
+        "De overleving van de winkel hangt niet af van een %-marge op je boodschappen.",
+      share: {
+        title: "Aandeel 25 €",
+        body: "Koelkasten, rekken, kassa’s — uitrusting van de winkel.",
+      },
+      abo: {
+        title: "Abonnement 10 € / maand",
+        body: "Huur, koude-energie, begeleidend team.",
+      },
+      margin: {
+        title: "Marge 20 / 50 cent",
+        body: "Enkel bederf en onverkocht — niets anders.",
+      },
+      example:
+        "Voorbeeld: product aan 10 € groothandel → winkel met +20 % = 12 €. Bij Pi: 10,20 € (droog) of 10,50 € (vers).",
+      prepaidTitle: "Waarom vooraf opladen alles verandert",
+      prepaidBody:
+        "Leden laden hun kaart op vóór aankoop. Dat geld dient om in groot volume te bestellen (palletten / vrachtwagens), tegen groothandelsprijs, zo dicht mogelijk bij de producenten — zonder de logica « distributeur + procentmarge » te stapelen. Resultaat: scherper onderhandelen dan een klassieke winkel met tussenpersonen en vaak ~20 % (of meer) op het ticket. Bij Pi: groothandelsprijs + 20 of 50 cent. De 10 € abonnement? Dat betaalt huur en begeleiding — en met het prijsverschil vanaf de eerste boodschappen is dat abonnement in de praktijk snel terugverdiend op het mandje (orde van grootte: enkele duurdere producten volstaan vaak).",
+    },
+    simulator: {
+      title: "Hoeveel abonnementen voor mijn gezin?",
+      intro:
+        "Rekenregel: ongeveer 250 € aankoopplafond per persoon / maand → 1 abonnement van 10 €. Stapelen indien nodig.",
+      peopleLabel: "Aantal personen voor de boodschappen",
+      result:
+        "Je hebt {abos} abonnement(en) nodig → plafond {cap} € / maand (abonnement {monthly} € / maand).",
+      hint: "Richtlijn. Bij de opening kies je zelf volgens je echte budget.",
+    },
     pillars: [
       {
-        title: "Aandeel + abonnement",
-        body: "Uitrusting (aandeel): geen onzichtbare aandeelhouders — de coöperanten bezitten de coöperatie. Bij de opening neemt elk gezin minstens één aandeel van 25 €. Daarmee word je coöperant en mede-eigenaar van de coöperatie. Dat geld dient enkel om de supermarkt uit te rusten (koelkasten, rekken, kassa’s) — nooit om de werking of de boodschappen van de maand te betalen. Werking (abonnement): 10 € / maand geeft recht op een plafond van 250 € aankopen (ongeveer het voedingsbudget van één persoon). Waarom een plafond? Om te vermijden dat één abonnement de boodschappen van meerdere gezinnen dekt terwijl de infrastructuur wordt gebruikt zonder ze te financieren. Groot gezin of groter volume? Stapelen volgens nood (bv. 30 € voor 750 € plafond). Elke euro van dat abonnement betaalt de vaste kosten: huur, elektriciteit van de koelruimtes, lonen van het begeleidende team.",
+        title: "Jij bent de baas",
+        subtitle: "Het aandeel",
+        bullets: [
+          {
+            label: "Het principe",
+            text: "Je wordt mede-eigenaar van je coöperatieve supermarkt — geen onzichtbare aandeelhouders.",
+          },
+          {
+            label: "Het bedrag",
+            text: "Minimaal 25 € per gezin (eenmalig bij de opening).",
+          },
+          {
+            label: "Waarvoor dient het?",
+            text: "Enkel materiële uitrusting (koelkasten, rekken, kassa’s).",
+          },
+        ],
       },
       {
-        title: "Boodschappen (de voorafbetaalde kaart)",
-        body: "Bij Pi COOP lenen we geen geld bij banken. Je laadt je ledenkaart dus vooraf op via overschrijving. Dat saldo wordt je boodschappenbudget — jouw Pi COOP-munt —, bruikbaar binnen je abonnementsplafond. Waarom vooraf betalen? Jouw geld dient rechtstreeks om goederen per vrachtwagen te kopen. Geen bankkrediet, geen verborgen marge: jouw geld betaalt strikt jouw voedsel.",
+        title: "Een eerlijke werking",
+        subtitle: "Het abonnement",
+        bullets: [
+          { label: "Het bedrag", text: "10 € / maand." },
+          {
+            label: "Het voordeel",
+            text: "Een aankoopplafond van 250 € (gemiddeld maandbudget voor één persoon).",
+          },
+          {
+            label: "Waarvoor dient het?",
+            text: "Vaste kosten: huur, elektriciteit, begeleiding.",
+          },
+        ],
+        note: "Grote gezinnen stapelen gewoon abonnementen (bv. 20 € voor een plafond van 500 €).",
       },
       {
-        title: "Wederzijdse hulp (2 u / maand): het geheim van onze prijzen",
-        body: "De regel: elke volwassene van 18 tot 65 jaar in het gezin geeft 2 uur per maand om de winkel te doen draaien (kassa, vakken vullen, hulp in de keuken). Jongeren en 65-plussers zijn vrijgesteld, tenzij ze willen meedoen. Impact op het ticket: die uren verlagen de loonmassa. Zonder die volle kost kunnen we de vaste marge van 20 of 50 cent aanhouden. Dat houdt de boodschappenprijzen laag. Beter eten voor minder: dankzij deze wederzijdse hulp en groepsinkoop tegen groothandelsprijs is het doel dat gezonde bioproducten vaak minder kosten dan het ultra-verwerkte industriële equivalent in een klassieke supermarkt — zonder belofte per artikel. Het engagement: de hele coöperatie steunt op deze hulp. Herhaalde of ongerechtvaardigde afwezigheid leidt tot tijdelijke schorsing van de aankoopkaart. Lage prijzen eisen dat iedereen zijn deel doet.",
+        title: "Onze slagkracht",
+        subtitle: "De voorafbetaalde kaart",
+        bullets: [
+          {
+            label: "De werking",
+            text: "Je laadt je ledenkaart op via overschrijving en betaalt ermee aan de kassa.",
+          },
+          {
+            label: "Onze superkracht",
+            text: "Gezamenlijke kasstroom laat ons volle vrachtwagens bij producenten kopen — zonder banken!",
+          },
+          {
+            label: "De prijs in het schap",
+            text: "De echte productprijs plus een mini vaste marge (0,20 € droog, 0,50 € vers) voor bederf. Niets verborgen.",
+          },
+        ],
       },
       {
-        title: "De eerlijke prijs",
-        body: "In het schap betaal je de goederen aan de echte groothandelsprijs (rechtstreeks van de producent). We voegen enkel een kleine vaste marge toe om bederf en onverkocht op te vangen: +20\u00a0cent op droog, en +50\u00a0cent op vers en duurdere producten.",
+        title: "Het geheim van onze prijzen",
+        subtitle: "Wederzijdse hulp",
+        bullets: [
+          {
+            label: "De regel",
+            text: "Elk volwassen lid (18–65 jaar) geeft 2 uur per maand om de winkel te doen draaien.",
+          },
+          {
+            label: "De taken",
+            text: "Vakken vullen, kassa, onthaal, schoonmaak…",
+          },
+          {
+            label: "Het resultaat",
+            text: "De ziel van het project. Door de loonkosten te drukken, drukken we jouw schapprijzen!",
+          },
+        ],
+        note: "Jongeren onder 18 en 65+ hoeven niet mee te doen (tenzij ze dat willen).",
       },
     ],
     openingStagesTitle: "Opening: wat je vanaf dag één vindt",
