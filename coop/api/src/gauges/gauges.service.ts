@@ -64,7 +64,7 @@ export class GaugesService {
     return {
       items: grouped.map((g) => ({
         postalCode: g.postalCode,
-        count: g._count._all,
+        count: g._count._all ?? 0,
         target: DEFAULT_TARGET,
       })),
     };
@@ -75,16 +75,20 @@ export class GaugesService {
     const grouped = await this.prisma.user.groupBy({
       by: ['postalCode'],
       _count: { _all: true },
-      orderBy: { _count: { _all: 'desc' } },
-      take,
     });
 
     return {
       openingTarget: DEFAULT_TARGET,
-      items: grouped.map((g) => ({
-        postalCode: g.postalCode,
-        count: g._count._all,
-      })),
+      items: grouped
+        .map((g) => ({
+          postalCode: g.postalCode,
+          count: g._count._all ?? 0,
+        }))
+        .sort(
+          (a, b) =>
+            b.count - a.count || a.postalCode.localeCompare(b.postalCode),
+        )
+        .slice(0, take),
     };
   }
 
@@ -99,7 +103,7 @@ export class GaugesService {
     });
 
     const byCp = new Map(
-      grouped.map((g) => [g.postalCode, g._count._all]),
+      grouped.map((g) => [g.postalCode, g._count._all ?? 0]),
     );
 
     type ZoneAgg = {
