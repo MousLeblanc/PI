@@ -230,9 +230,9 @@ export const fr = {
     },
     toastTitle: "Bienvenue, futur coopérateur !",
     toastOne:
-      "Inscription validée. Grâce à vous, Pi gagne une décimale — vous êtes le chiffre {total}.",
+      "Inscription validée. Grâce à vous, Pi gagne une décimale — votre ménage est le chiffre {total}.",
     toastMany:
-      "Inscription validée. Grâce à vous, Pi gagne une décimale — vous êtes le chiffre {total}.",
+      "Inscription validée. Grâce à vous, Pi gagne une décimale — votre ménage est le chiffre {total}.",
     errors: {
       generic: "Erreur d’inscription",
       impossible: "Inscription impossible",
@@ -246,11 +246,11 @@ export const fr = {
   },
   pi: {
     empty:
-      "Soyez le premier inscrit : vous écrirez le « 1 » de 3,14…",
+      "Soyez le premier ménage inscrit : vous écrirez le « 1 » de 3,14…",
     filled:
       "{count} {coopWord} = {count} {decWord}. Rejoignez-nous pour allonger la chaîne !",
-    coopOne: "inscrit",
-    coopMany: "inscrits",
+    coopOne: "ménage",
+    coopMany: "ménages",
     decOne: "décimale",
     decMany: "décimales",
   },

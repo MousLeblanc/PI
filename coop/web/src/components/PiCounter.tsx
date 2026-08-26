@@ -9,6 +9,7 @@ import { useI18n } from "@/i18n/use-t";
 export function PiCounter() {
   const { t, numberLocale } = useI18n();
   const [total, setTotal] = useState(0);
+  const [display, setDisplay] = useState("3,");
   const prevTotal = useRef(0);
   const [flash, setFlash] = useState(false);
 
@@ -24,8 +25,16 @@ export function PiCounter() {
         }
         prevTotal.current = next.total;
         setTotal(next.total);
+        // 1 ménage = 1 décimale — display API = source de vérité
+        setDisplay(
+          next.display ||
+            formatPiFromCount(next.total, PI_DECIMALS),
+        );
       } catch {
-        if (alive) setTotal(0);
+        if (alive) {
+          setTotal(0);
+          setDisplay("3,");
+        }
       }
     };
     load();
@@ -36,9 +45,8 @@ export function PiCounter() {
     };
   }, []);
 
-  // 1 personne = 1 décimale → "3,1" ; 0 personne → "3,"
-  const full = formatPiFromCount(total, PI_DECIMALS);
-  const frac = total === 0 ? "" : full.slice(2); // après "3,"
+  // display = "3," ou "3,141…" — 1 ménage préinscrit = 1 décimale
+  const frac = total === 0 ? "" : display.slice(2);
   const glowLen = Math.min(3, frac.length);
   const steady = glowLen > 0 ? frac.slice(0, -glowLen) : frac;
   const glow = glowLen > 0 ? frac.slice(-glowLen) : "";

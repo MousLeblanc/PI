@@ -229,9 +229,9 @@ export const en = {
     },
     toastTitle: "Welcome, future co-operator!",
     toastOne:
-      "Registration confirmed. Thanks to you, Pi gains a decimal — you are digit {total}.",
+      "Registration confirmed. Thanks to you, Pi gains a decimal — your household is digit {total}.",
     toastMany:
-      "Registration confirmed. Thanks to you, Pi gains a decimal — you are digit {total}.",
+      "Registration confirmed. Thanks to you, Pi gains a decimal — your household is digit {total}.",
     errors: {
       generic: "Registration error",
       impossible: "Registration failed",
@@ -243,11 +243,11 @@ export const en = {
     },
   },
   pi: {
-    empty: "Be the first to sign up: you will write the “1” in 3.14…",
+    empty: "Be the first household to sign up: you will write the “1” in 3.14…",
     filled:
       "{count} {coopWord} = {count} {decWord}. Join us to lengthen the chain!",
-    coopOne: "person",
-    coopMany: "people",
+    coopOne: "household",
+    coopMany: "households",
     decOne: "decimal",
     decMany: "decimals",
   },

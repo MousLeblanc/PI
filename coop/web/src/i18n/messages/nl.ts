@@ -233,9 +233,9 @@ export const nl = {
     },
     toastTitle: "Welkom, toekomstige coöperant!",
     toastOne:
-      "Inschrijving bevestigd. Dankzij jou wint Pi een decimaal — jij bent cijfer {total}.",
+      "Inschrijving bevestigd. Dankzij jou wint Pi een decimaal — jouw gezin is cijfer {total}.",
     toastMany:
-      "Inschrijving bevestigd. Dankzij jou wint Pi een decimaal — jij bent cijfer {total}.",
+      "Inschrijving bevestigd. Dankzij jou wint Pi een decimaal — jouw gezin is cijfer {total}.",
     errors: {
       generic: "Inschrijvingsfout",
       impossible: "Inschrijving onmogelijk",
@@ -249,11 +249,11 @@ export const nl = {
   },
   pi: {
     empty:
-      "Wees de eerste ingeschrevene: jij schrijft de « 1 » van 3,14…",
+      "Wees het eerste gezin dat zich inschrijft: jij schrijft de « 1 » van 3,14…",
     filled:
       "{count} {coopWord} = {count} {decWord}. Doe mee om de keten te verlengen!",
-    coopOne: "persoon",
-    coopMany: "personen",
+    coopOne: "gezin",
+    coopMany: "gezinnen",
     decOne: "decimaal",
     decMany: "decimalen",
   },

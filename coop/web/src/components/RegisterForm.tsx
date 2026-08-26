@@ -89,7 +89,8 @@ export function RegisterForm() {
         turnstileToken: token,
       });
       const added = Number(data.decimalsAdded ?? 1) || 1;
-      const total = Number(data.piPersonCount ?? added) || added;
+      const total =
+        Number(data.piHouseholdCount ?? data.piPersonCount ?? added) || added;
       const from = Math.max(1, total - added + 1);
       setToast({
         title: t("register.toastTitle"),

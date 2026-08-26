@@ -73,6 +73,8 @@ export class AuthService {
     return {
       user,
       accessToken,
+      piHouseholdCount,
+      /** @deprecated alias — même valeur que piHouseholdCount */
       piPersonCount: piHouseholdCount,
       decimalsAdded: 1,
     };
