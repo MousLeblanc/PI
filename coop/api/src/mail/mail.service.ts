@@ -51,19 +51,19 @@ export class MailService {
       'Comment allons-nous casser les prix ?',
       '',
       '1. Marge fixe, jamais cachée',
-      'Prix grossiste + 20 centimes sur le quotidien, + 50 centimes sur les produits plus chers (huile, langes…). Prix cibles estimés, non contractuels.',
+      'Prix de gros (direct producteur) + 20 centimes sur le sec, + 50 centimes sur le frais et les produits chers. Cette marge sert à absorber la casse et les invendus. Prix cibles estimés, non contractuels.',
       '',
       '2. La force du nombre',
-      'Plus on est nombreux dans votre bassin de vie, plus on négocie fort. Objectif : 10 000 personnes pour ouvrir.',
+      'Plus on est nombreux, plus on négocie fort. Objectif : 5 000 ménages pour lancer le projet.',
       '',
       '3. L’entraide (à l’ouverture)',
-      'Chaque adulte de 18–64 ans donne 2 heures par mois (caisse, rayons…). Les 0–17 ans et les 65+ sont exemptés.',
+      'Chaque adulte de 18–65 ans donne 2 heures par mois (caisse, rayons…). Les 0–17 ans et les 65+ sont exemptés.',
       '',
-      '4. Votre cotisation (à l’ouverture)',
-      'Une fois la coopérative constituée et le magasin ouvert : 10 € / mois / personne (enfants inclus). Ce n’est pas un abonnement : c’est votre contribution de membre.',
+      '4. Part sociale + abonnement (à l’ouverture)',
+      'Une fois la coopérative constituée et le magasin ouvert : part sociale 25 € minimum (équipement du magasin), puis abonnement 10 € / mois pour un plafond d’achats de 250 € (cumulable si vous dépensez plus).',
       '',
-      `La course aux 10 000 — ${placeLabel}`,
-      'La première zone à 10 000 personnes (chaque membre du foyer compte) ouvre en premier. Votre foyer allonge le compteur π.',
+      `Objectif 5 000 ménages — ${placeLabel}`,
+      'Votre ménage compte pour 1. Les zones les plus mobilisées seront prioritaires. Votre inscription allonge le compteur π d’une décimale.',
       '',
       'La préinscription est gratuite. Notre seule publicité : le bouche-à-oreille.',
       `Page Facebook Pi COOP : ${FACEBOOK_PAGE_URL}`,
@@ -90,19 +90,19 @@ export class MailService {
         <h2 style="font-size:17px;margin:28px 0 12px">Comment allons-nous casser les prix&nbsp;?</h2>
 
         <p style="margin:0 0 6px"><strong>1. Marge fixe, jamais cachée</strong></p>
-        <p style="margin:0 0 16px">Prix grossiste + <strong>20&nbsp;centimes</strong> sur le quotidien, + <strong>50&nbsp;centimes</strong> sur les produits plus chers (huile, langes…). <span style="color:#5b6b63;font-size:13px">(Prix cibles estimés, non contractuels.)</span></p>
+        <p style="margin:0 0 16px">Prix de gros (direct producteur) + <strong>20&nbsp;centimes</strong> sur le sec, + <strong>50&nbsp;centimes</strong> sur le frais et les produits chers. Cette marge sert à absorber la casse et les invendus. <span style="color:#5b6b63;font-size:13px">(Prix cibles estimés, non contractuels.)</span></p>
 
         <p style="margin:0 0 6px"><strong>2. La force du nombre</strong></p>
-        <p style="margin:0 0 16px">Plus on est nombreux dans votre bassin de vie, plus on négocie fort. Objectif&nbsp;: <strong>10&nbsp;000 personnes</strong> pour ouvrir.</p>
+        <p style="margin:0 0 16px">Plus on est nombreux, plus on négocie fort. Objectif&nbsp;: <strong>5&nbsp;000 ménages</strong> pour lancer le projet.</p>
 
         <p style="margin:0 0 6px"><strong>3. L’entraide (à l’ouverture)</strong></p>
-        <p style="margin:0 0 16px">Chaque adulte de 18–64 ans donne <strong>2&nbsp;heures par mois</strong> (caisse, rayons…). Les 0–17 ans et les 65+ sont exemptés.</p>
+        <p style="margin:0 0 16px">Chaque adulte de 18–65 ans donne <strong>2&nbsp;heures par mois</strong> (caisse, rayons…). Les 0–17 ans et les 65+ sont exemptés.</p>
 
-        <p style="margin:0 0 6px"><strong>4. Votre cotisation (à l’ouverture)</strong></p>
-        <p style="margin:0 0 16px">Une fois la coopérative constituée et le magasin ouvert&nbsp;: <strong>10&nbsp;€ / mois / personne</strong> (enfants inclus). Ce n’est pas un abonnement&nbsp;: c’est votre contribution de membre.</p>
+        <p style="margin:0 0 6px"><strong>4. Part sociale + abonnement (à l’ouverture)</strong></p>
+        <p style="margin:0 0 16px">Une fois la coopérative constituée et le magasin ouvert&nbsp;: <strong>part sociale 25&nbsp;€ minimum</strong> (équipement), puis <strong>abonnement 10&nbsp;€ / mois</strong> pour un plafond d’achats de <strong>250&nbsp;€</strong> (cumulable si vous dépensez plus).</p>
 
-        <h2 style="font-size:17px;margin:28px 0 8px">La course aux 10&nbsp;000 — ${escapeHtml(placeLabel)}</h2>
-        <p>La première zone à <strong>10&nbsp;000 personnes</strong> (chaque membre du foyer compte) ouvre en premier. Votre foyer allonge le compteur π.</p>
+        <h2 style="font-size:17px;margin:28px 0 8px">Objectif 5&nbsp;000 ménages — ${escapeHtml(placeLabel)}</h2>
+        <p>Votre ménage compte pour <strong>1</strong>. Les zones les plus mobilisées seront prioritaires. Votre inscription allonge le compteur π d’une décimale.</p>
         <p>La préinscription est <strong>gratuite</strong>. Notre seule publicité&nbsp;: le bouche-à-oreille.</p>
 
         <p style="margin:28px 0 10px">

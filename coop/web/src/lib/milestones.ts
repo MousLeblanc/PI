@@ -6,9 +6,9 @@ export type Milestone = {
 };
 
 export const OPENING_MILESTONES: Milestone[] = [
-  { at: 1_000, key: "m1" },
-  { at: 2_500, key: "m2" },
-  { at: 5_000, key: "m3" },
+  { at: 500, key: "m1" },
+  { at: 1_500, key: "m2" },
+  { at: 3_000, key: "m3" },
   { at: OPENING_TARGET, key: "m4" },
 ];
 

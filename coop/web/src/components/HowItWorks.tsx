@@ -1,10 +1,10 @@
 "use client";
 
-import { HandHeart, Scale, Landmark } from "lucide-react";
+import { CreditCard, HandHeart, Landmark, Scale } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useI18n } from "@/i18n/use-t";
 
-const PILLAR_ICONS = [Landmark, HandHeart, Scale] as const;
+const PILLAR_ICONS = [Landmark, CreditCard, HandHeart, Scale] as const;
 
 export function HowItWorks() {
   const { messages } = useI18n();
@@ -19,7 +19,7 @@ export function HowItWorks() {
         <p className="mt-3 text-muted-foreground">{messages.how.intro}</p>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2">
         {pillars.map((pillar, i) => {
           const Icon = PILLAR_ICONS[i] ?? Landmark;
           return (

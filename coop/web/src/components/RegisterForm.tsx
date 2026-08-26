@@ -88,7 +88,7 @@ export function RegisterForm() {
         optInPublicNumber: false,
         turnstileToken: token,
       });
-      const added = Number(data.decimalsAdded ?? householdSize) || householdSize;
+      const added = Number(data.decimalsAdded ?? 1) || 1;
       const total = Number(data.piPersonCount ?? added) || added;
       const from = Math.max(1, total - added + 1);
       setToast({

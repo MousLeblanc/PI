@@ -8,7 +8,7 @@ type CatalogSeed = {
   name: string;
   wholesaleEur: number;
   retailEur: number;
-  /** basic = quotidien (0,20 €) ; premium = forte valeur (0,50 €) */
+  /** basic = sec (20 centimes) ; premium = frais ou produits chers (50 centimes) */
   tier: 'basic' | 'premium';
   imageUrl: string;
 };
@@ -16,7 +16,7 @@ type CatalogSeed = {
 @Injectable()
 export class CatalogService {
   getFolderPi() {
-    // Prix grossiste = ordre de grandeur achat groupé / palette (BE, bio).
+    // Prix de gros = ordre de grandeur achat groupé / palette (BE, bio).
     // retailEur = prix rayon supermarché typique, pour comparaison visuelle.
     const seeds: CatalogSeed[] = [
       {
@@ -24,7 +24,7 @@ export class CatalogService {
         name: 'Lait entier bio 1L',
         wholesaleEur: 0.62,
         retailEur: 2.0,
-        tier: 'basic',
+        tier: 'premium',
         imageUrl: '/folder/lait.jpg',
       },
       {
@@ -32,7 +32,7 @@ export class CatalogService {
         name: 'Œufs bio plein air x6',
         wholesaleEur: 1.45,
         retailEur: 2.95,
-        tier: 'basic',
+        tier: 'premium',
         imageUrl: '/folder/oeufs.jpg',
       },
       {
@@ -110,7 +110,7 @@ export class CatalogService {
 
     return {
       disclaimer:
-        '* Prix cibles estimés à titre indicatif, hors TVA et hors variations grossistes. Non contractuels. Marge fixe : 0,20 € (quotidien) ou 0,50 € (produits plus chers).',
+        '* Prix cibles estimés à titre indicatif, hors TVA et hors variations grossistes. Non contractuels. Marge fixe : 20 centimes (sec) ou 50 centimes (frais et produits chers).',
       markupBasicEur: MARKUP_BASIC_EUR,
       markupPremiumEur: MARKUP_PREMIUM_EUR,
       items,

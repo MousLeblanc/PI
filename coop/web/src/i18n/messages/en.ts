@@ -4,7 +4,7 @@ export const en = {
   meta: {
     title: "Pi COOP — Citizen cooperative",
     description:
-      "Pre-register for Pi COOP: pooled organic groceries at wholesale price + 20 cents (50 cents on pricier items), transparency and solidarity.",
+      "Pre-register for Pi COOP: pooled organic groceries at wholesale price + 20 cents on dry goods (50 cents on fresh and pricier items), transparency and solidarity.",
   },
   header: {
     cta: "Pre-register",
@@ -19,9 +19,9 @@ export const en = {
     subtitleBefore: "Fixed margin, never hidden. Become a",
     subtitleStrong: "future co-operator",
     subtitleAfter:
-      "of your citizen supermarket. Pre-registration is free. The €10/month and 2 hours of volunteering start only at opening, once the cooperative is constituted.",
+      "of your citizen supermarket. Pre-registration is free. At opening: a share of at least €25, a €10 monthly subscription per €250 spending cap, and 2 hours of volunteering per adult aged 18–65.",
     footnote:
-      "20\u00a0cents on everyday items · 50\u00a0cents on pricier products (oil, nappies…) — details in “How it works”.",
+      "20\u00a0cents on dry goods · 50\u00a0cents on fresh and pricier products — details in “How it works”.",
     ctaUnlock: "Unlock prices in my city",
     ctaHow: "How it works",
   },
@@ -31,7 +31,7 @@ export const en = {
       "Compare for yourself. The same product, 100%\u00a0organic, from the wholesaler to your plate.",
     badge: "Pi digital leaflet",
     organicBadge: "Organic",
-    formula: "Wholesale + fixed margin (€0.20 or €0.50) = Pi price",
+    formula: "Wholesale + fixed margin (20\u00a0or\u00a050\u00a0cents) = Pi price",
     inStore: "€{price} in store",
     piPrice: "Pi price",
     wholesale: "of which wholesale €{price}",
@@ -40,27 +40,27 @@ export const en = {
     disclaimer: "* Target prices for guidance only. Non-contractual.",
   },
   gauges: {
-    title: "Unlock the first Pi supermarket in your life basin",
-    introLead: "10,000 people",
+    title: "Unlock the first Pi supermarket",
+    introLead: "5,000 households",
     introMid:
-      "= the tipping point to open a human-scale supermarket (every household member counts — a family of 5 = +5). Not a conventional hypermarket: ours, together. Smaller communes are grouped into equivalent life basins. Beyond that, the gauge keeps going: the more of us there are, the stronger our bargaining power. The",
-    introStrong: "first zone",
+      "= the tipping point to launch the project (each sign-up = one household). Not a conventional hypermarket: ours, together. Communes are grouped into life basins to show where mobilisation is strongest. Beyond that, the gauge keeps going: the more of us there are, the stronger our bargaining power. The",
+    introStrong: "most mobilised zone",
     introEnd:
-      "to cross the line opens first. You pay nothing today; the opening pack is only paid once there is a premises and statutes.",
+      "will be prioritised for opening. You pay nothing today. The share (€25 minimum) and the subscription only start once there is a premises and the cooperative is constituted.",
     postalLabel: "Your postal code",
     placeholder: "e.g. 1090",
     unknownPostal: "Unknown postal code",
     pioneer: "You can be the pioneer here — share the link locally.",
     needPostal: "Enter your postal code to see where your life basin stands.",
-    people: "{count} / 10,000",
-    goal: "Goal: 10,000 people to open the zone.",
+    people: "{count} / 5,000",
+    goal: "Goal: 5,000 households to launch.",
     yourCp: "Your postal code: {code}",
     cp: "PC {code}",
     exploded: "Target smashed — next tier {tier}",
     explodedBody:
       "Interest threshold reached for this zone. Opening only happens if there is a premises and statutes. Keep going: the more of us there are, the stronger our bargaining power.",
     remaining:
-      "{pct}% · {remaining} more people to unlock opening here",
+      "{pct}% · {remaining} more households to reach the goal here",
     showBreakdown: "See breakdown by commune",
     hideBreakdown: "Hide breakdown by commune",
     nextMilestone: "Next milestone ({count}): {label}",
@@ -119,9 +119,9 @@ export const en = {
   },
   leaderboard: {
     kicker: "Race to open",
-    title: "Which zone will open first?",
+    title: "Which zone is most mobilised?",
     intro:
-      "Strength in numbers. Brussels life basins in a friendly race — every household member counts. The first zone to 10,000 opens first.",
+      "Strength in numbers. Goal: 5,000 households to launch. Brussels life basins progress in parallel — the more mobilised a zone is, the higher its priority.",
     progress: "{pct}%",
     communeFallback: "Commune {cp}",
     brusselsZones: "Brussels zones",
@@ -129,30 +129,34 @@ export const en = {
     breakdown: "Breakdown by commune",
     expand: "Show",
     collapse: "Hide",
-    remaining: "{count} more to unlock",
+    remaining: "{count} more to the goal",
     exploded: "Opening target smashed · next tier {tier}",
   },
   how: {
     title: "How it works",
     intro:
-      "The Pi COOP recipe in three rules. A human-scale supermarket, not a conventional hypermarket: a citizen cooperative where purchasing power returns to members.",
+      "The Pi COOP recipe in four rules. A human-scale supermarket, not a conventional hypermarket: a citizen cooperative where purchasing power returns to members.",
     pillars: [
       {
-        title: "Your share in the cooperative",
-        body: "No invisible shareholders here. From opening day, once the cooperative is constituted, every household member contributes €10 / month — this is not a subscription: it is your share. You are not customers: you become co-owners of your store. This collective fund is used to buy in volume.",
+        title: "Share capital + subscription",
+        body: "Equipment (share): no invisible shareholders — the co-operators own the cooperative. At opening, each household takes at least one €25 share. With that step, you become a co-operator and co-owner of the cooperative. That money only funds the supermarket fit-out (fridges, shelves, checkouts) — never running costs or the month’s groceries. Running costs (subscription): €10 / month unlocks a €250 spending cap (roughly one person’s food budget). Why a cap? So one subscription cannot cover shopping for several households while using the infrastructure without funding it. Larger family or higher volume? Stack subscriptions as needed (e.g. €30 for a €750 cap). Every euro of that subscription pays fixed costs: rent, cold-room electricity, supervising staff.",
       },
       {
-        title: "Mutual aid (2 h / month)",
-        body: "No payroll = genuinely low prices. Every adult aged 18–64 gives 2 hours a month. Ages 0–17 and 65+ are exempt: solidarity does the rest.",
+        title: "Groceries (the prepaid card)",
+        body: "At Pi COOP, we do not borrow money from banks. So you top up your member card in advance by bank transfer. That balance becomes your grocery budget — your Pi COOP currency — usable within your subscription cap. Why pay ahead? Your money goes straight into buying goods by the truckload. Zero bank credit, zero hidden margin: your money pays strictly for your food.",
       },
       {
-        title: "Full transparency",
-        body: "The wholesale price is shown on the shelf. We add a small fixed operating margin: 20 cents on everyday products, and 50 cents on pricier ones (oil, nappies…). Nothing is hidden — you know where every cent goes. (Estimated target prices.)",
+        title: "Mutual aid (2 h / month): the secret of our prices",
+        body: "The rule: every adult aged 18 to 65 in the household gives 2 hours a month to keep the store running (checkout, shelving, kitchen help). Younger people and those over 65 are exempt, unless they wish to take part. Impact on the receipt: those hours cut the wage bill. Without that full cost, we can hold the fixed margin of 20 or 50 cents. That is what keeps grocery prices low. Eat better for less: thanks to this mutual aid and pooled wholesale buying, the aim is for healthy organic products to often cost less than the ultra-processed industrial equivalent in a classic supermarket — without a promise on every single item. The commitment: the whole cooperative rests on this mutual aid. Repeated or unjustified absences lead to temporary suspension of the shopping card. Low prices require everyone to do their share.",
+      },
+      {
+        title: "Fair price",
+        body: "On the shelf, you pay goods at the true wholesale price (direct from the producer). We simply add a small fixed margin to absorb spoilage and unsold stock: +20\u00a0cents on dry goods, and +50\u00a0cents on fresh and pricier products.",
       },
     ],
-    openingStagesTitle: "Opening in stages",
+    openingStagesTitle: "Opening: what you find from day one",
     openingStagesBody:
-      "The first Pi store opens without fridges, with a broad but easy-to-run range: dry and long-life food (starches, sauces, tins, oils…), drinks, household and cleaning products, hygiene and cosmetics, and other everyday essentials that don’t need a cold chain. Fridges and fresh products come later, once the store, volunteering and logistics are stable.",
+      "From day one: dry food, pre-packed fruit and vegetables (piece, net or punnet), dairy, and meat or poultry only pre-packed — no butcher counter. A small “cold” prep area can cut, vacuum-seal and freeze what might otherwise be lost. A “hot” kitchen (meals, sauces, jams) may come later, once the store is running and funding exists to build it.",
   },
   manifesto: {
     eyebrow: "Our manifesto",
@@ -167,9 +171,9 @@ export const en = {
     ruleLead:
       "At Pi COOP, the rule is the opposite — simple, and it will not change:",
     rule:
-      "we buy together, at wholesale price; we show that price; we add a small fixed margin — 20\u00a0cents on everyday shelf staples, 50\u00a0cents on pricier products. Nothing more, nothing hidden.",
+      "we buy together, at true wholesale price (direct from the producer); we show that price; we add a fixed margin — 20\u00a0cents on dry goods, 50\u00a0cents on fresh and pricier products — to absorb spoilage and unsold stock. Nothing hidden.",
     volunteer:
-      "From opening day, every adult aged 18 to 64 gives 2 hours a month. Fewer middlemen, prices that hold, and neighbourhood ties that return.",
+      "From opening day, every adult aged 18 to 65 gives 2 hours a month. Younger people and those over 65 are exempt, unless they wish to take part. Fewer middlemen, prices that hold, and neighbourhood ties that return.",
     closing:
       "It is time to take back power over our groceries — and over our lives.",
     cta: "I pre-register for free",
@@ -193,7 +197,7 @@ export const en = {
   register: {
     sectionTitle: "Become a future co-operator",
     sectionIntro:
-      "Enter your household and address. You count toward the 10,000-person threshold for your life basin.",
+      "Enter your household and address. Your household counts toward the goal of 5,000 households.",
     email: "Email",
     password: "Password (8+)",
     household: "Household size",
@@ -217,14 +221,14 @@ export const en = {
     ageBands: {
       AGE_0_4: "0–4 years (baby quotas)",
       AGE_5_17: "5–17 years",
-      AGE_18_64: "18–64 years (volunteering)",
+      AGE_18_64: "18–65 years (volunteering)",
       AGE_65_PLUS: "65+ years",
     },
     toastTitle: "Welcome, future co-operator!",
     toastOne:
       "Registration confirmed. Thanks to you, Pi gains a decimal — you are digit {total}.",
     toastMany:
-      "Registration confirmed. Your household extends Pi by {added} decimals (digits {from} to {total}). The chain now has {total} digits.",
+      "Registration confirmed. Thanks to you, Pi gains a decimal — you are digit {total}.",
     errors: {
       generic: "Registration error",
       impossible: "Registration failed",
@@ -287,7 +291,7 @@ export const en = {
     natureIntro:
       "Pre-registration is 100\u00a0% free, without obligation, and does not constitute a purchase or subscription commitment. Prices shown (on the site or in the Pi digital leaflet) are estimated target prices and are strictly non-contractual.",
     natureStore:
-      "The project aims to open a pilot supermarket at human scale, not a conventional hypermarket. No payment or contribution is requested at this stage. Share capital or an opening pack will only be offered to the public once the cooperative has been formally constituted before a notary and commercial premises have been identified.",
+      "The project aims to open a human-scale cooperative supermarket with a broad range (dry goods and pre-packed fresh), not a conventional hypermarket. No payment or contribution is requested at this stage — including no bank transfer or prepaid-card top-up. A share (€25 minimum) and a monthly subscription will only be offered once the cooperative has been constituted before a notary and premises have been identified.",
     ipTitle: "Intellectual property",
     ipBody:
       "The texts, the π logo, the visual identity and the other elements of the site are protected. Unauthorised reproduction is prohibited.",
@@ -295,7 +299,7 @@ export const en = {
     lawBody:
       "The site is governed by Belgian law. In the event of a dispute, Belgian courts have jurisdiction, without prejudice to mandatory consumer-protection rules.",
     relatedPrivacy: "Privacy policy",
-    updated: "Last updated: 18 August 2026",
+    updated: "Last updated: 26 August 2026",
   },
   privacy: {
     metaTitle: "Privacy — Pi COOP",
@@ -318,7 +322,7 @@ export const en = {
     purposeTitle: "Purposes",
     purposes: [
       "Create and secure your pre-registration account",
-      "Count persons by postal code and aggregate by life basin for public display (10,000-person opening threshold per zone)",
+      "Count households by postal code and aggregate by life basin for public display (goal of 5,000 households to launch the project)",
       "Inform you of the launch by email",
       "Display an anonymous count of signed-up households per street (from 2 households up, without house numbers)",
       "Protect the form against automated sign-ups",
@@ -354,7 +358,7 @@ export const en = {
       "Account data is kept for the pre-registration phase. It is erased on request, or reviewed when the cooperative is constituted (taken over by the new entity with notice, or deleted). Technical security logs are kept only as long as needed.",
     childrenTitle: "Household and children",
     childrenBody:
-      "We do not create accounts for children. Household age bands (including 0–4 and 5–17) are recorded without exact age and without first names, solely to count persons and explain future contribution rules.",
+      "We do not create accounts for children. Household age bands (including 0–4 and 5–17) are recorded without exact age and without first names, solely to explain future contribution and volunteering rules.",
     rightsTitle: "Your rights",
     rightsBody:
       "Under the GDPR, you have the right of access, rectification, erasure, restriction, objection and portability. Write to",
@@ -363,6 +367,6 @@ export const en = {
     apdLabel: "autoriteprotectiondonnees.be",
     apdUrl: "https://www.autoriteprotectiondonnees.be",
     relatedLegal: "Legal notice",
-    updated: "Last updated: 21 August 2026",
+    updated: "Last updated: 26 August 2026",
   },
 } satisfies Messages;

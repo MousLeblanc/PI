@@ -2,7 +2,7 @@ export const fr = {
   meta: {
     title: "Pi COOP — Coopérative citoyenne",
     description:
-      "Préinscription à Pi COOP : achats groupés bio à prix grossiste + 20 centimes (50 centimes sur produits plus chers), transparence et solidarité.",
+      "Préinscription à Pi COOP : achats groupés bio à prix de gros + 20 centimes sur le sec (50 centimes sur le frais et les produits chers), transparence et solidarité.",
   },
   header: {
     cta: "Préinscription",
@@ -17,9 +17,9 @@ export const fr = {
     subtitleBefore: "Marge fixe, jamais cachée. Devenez",
     subtitleStrong: "futur coopérateur",
     subtitleAfter:
-      "de votre supermarché citoyen. La préinscription est gratuite. Les 10\u00a0€/mois et 2\u00a0h de bénévolat ne commencent qu’à l’ouverture, une fois la coopérative constituée.",
+      "de votre supermarché citoyen. La préinscription est gratuite. À l’ouverture : une part sociale (25\u00a0€ minimum), un abonnement de 10\u00a0€ par tranche de 250\u00a0€ d’achats, et 2\u00a0h de bénévolat par adulte de 18–65 ans.",
     footnote:
-      "20\u00a0centimes sur l’essentiel du rayon · 50\u00a0centimes sur les produits plus chers (huile, langes…) — détail dans «\u00a0Comment ça marche\u00a0?\u00a0».",
+      "20\u00a0centimes sur le sec · 50\u00a0centimes sur le frais et les produits chers — détail dans «\u00a0Comment ça marche\u00a0?\u00a0».",
     ctaUnlock: "Débloquer les prix dans ma ville",
     ctaHow: "Comment ça marche\u00a0?",
   },
@@ -29,7 +29,7 @@ export const fr = {
       "Comparez par vous-même. Le même produit, en qualité 100\u00a0% bio, directement du grossiste à votre assiette.",
     badge: "Folder Digital Pi",
     organicBadge: "Bio",
-    formula: "Prix grossiste + marge fixe (0,20\u00a0€ ou 0,50\u00a0€) = prix Pi",
+    formula: "Prix de gros + marge fixe (20\u00a0ou\u00a050\u00a0centimes) = prix Pi",
     inStore: "{price}\u00a0€ en magasin",
     piPrice: "Prix Pi",
     wholesale: "dont grossiste {price}\u00a0€",
@@ -40,27 +40,27 @@ export const fr = {
       "* Prix cibles estimés à titre indicatif. Non contractuels.",
   },
   gauges: {
-    title: "Débloquez le premier supermarché Pi dans votre bassin de vie",
-    introLead: "10\u00a0000 personnes",
+    title: "Débloquez le premier supermarché Pi",
+    introLead: "5\u00a0000 ménages",
     introMid:
-      "= le point de bascule pour ouvrir un supermarché à taille humaine (chaque membre du foyer compte — une famille de 5 = +5). Pas un hypermarché classique : le nôtre, à nous. Les petites communes sont regroupées en bassins de vie équivalents. Au‑delà, la jauge continue : plus on est nombreux, plus le pouvoir de négociation est fort. La",
-    introStrong: "première zone",
+      "= le point de bascule pour lancer le projet (chaque inscription = un ménage). Pas un hypermarché classique : le nôtre, à nous. Les communes sont regroupées en bassins de vie pour voir où la mobilisation est la plus forte. Au‑delà, la jauge continue : plus on est nombreux, plus le pouvoir de négociation est fort. La",
+    introStrong: "zone la plus mobilisée",
     introEnd:
-      "à franchir le cap ouvre en premier. Aujourd’hui vous ne payez rien ; le pack d’ouverture ne se paie que lorsqu’un local et des statuts existent.",
+      "sera prioritaire pour l’ouverture. Aujourd’hui vous ne payez rien. La part sociale (25\u00a0€ minimum) et l’abonnement ne commencent que lorsqu’un local existe et que la coopérative est constituée.",
     postalLabel: "Votre code postal",
     placeholder: "ex. 1090",
     unknownPostal: "Code postal inconnu",
     pioneer: "Vous pouvez être le pionnier ici — partagez le lien localement.",
     needPostal: "Entrez votre code postal pour voir où en est votre bassin de vie.",
-    people: "{count} / 10\u00a0000",
-    goal: "Objectif : 10 000 personnes pour ouvrir la zone.",
+    people: "{count} / 5\u00a0000",
+    goal: "Objectif : 5 000 ménages pour lancer.",
     yourCp: "Votre code postal : {code}",
     cp: "CP {code}",
     exploded: "Objectif explosé — prochain palier {tier}",
     explodedBody:
       "Seuil d’intérêt atteint pour cette zone. L’ouverture ne se fait que s’il y a un local et des statuts. Continuez : plus on est nombreux, plus le pouvoir de négociation est fort.",
     remaining:
-      "{pct}\u00a0% · encore {remaining} personnes pour débloquer l’ouverture ici",
+      "{pct}\u00a0% · encore {remaining} ménages pour atteindre l’objectif ici",
     showBreakdown: "Voir le détail par commune",
     hideBreakdown: "Masquer le détail par commune",
     nextMilestone: "Prochain palier ({count}) : {label}",
@@ -119,9 +119,9 @@ export const fr = {
   },
   leaderboard: {
     kicker: "Course à l’ouverture",
-    title: "Quelle zone ouvrira en premier ?",
+    title: "Quelle zone est la plus mobilisée ?",
     intro:
-      "Le nombre fait la force. Les bassins de vie de Bruxelles en compétition amicale — chaque personne du foyer compte. La première zone à 10\u00a0000 ouvre en premier.",
+      "Le nombre fait la force. Objectif : 5\u00a0000 ménages pour lancer. Les bassins de vie de Bruxelles progressent en parallèle — plus une zone est mobilisée, plus elle sera prioritaire.",
     progress: "{pct}\u00a0%",
     communeFallback: "Commune {cp}",
     brusselsZones: "Zones de Bruxelles",
@@ -129,30 +129,34 @@ export const fr = {
     breakdown: "Détail par commune",
     expand: "Voir",
     collapse: "Masquer",
-    remaining: "Encore {count} pour débloquer",
+    remaining: "Encore {count} pour l’objectif",
     exploded: "Objectif d’ouverture explosé · prochain palier {tier}",
   },
   how: {
     title: "Comment ça marche\u00a0?",
     intro:
-      "La recette Pi COOP en trois règles. Un supermarché à taille humaine, pas un hypermarché classique : une coopérative citoyenne où le pouvoir d’achat revient aux membres.",
+      "La recette Pi COOP en quatre règles. Un supermarché à taille humaine, pas un hypermarché classique : une coopérative citoyenne où le pouvoir d’achat revient aux membres.",
     pillars: [
       {
-        title: "Votre part dans la coopérative",
-        body: "Ici, pas d’actionnaires invisibles. Dès l’ouverture, une fois la coopérative constituée, chaque membre du foyer contribue 10 € / mois — ce n’est pas un abonnement : c’est votre part. Vous n’êtes pas clients : vous devenez co-propriétaires de votre magasin. Ce fonds collectif sert à acheter en volume.",
+        title: "Part sociale + abonnement",
+        body: "L’équipement (part sociale) : pas d’actionnaires invisibles — ce sont les coopérateurs qui détiennent la coopérative. À l’ouverture, chaque ménage prend au moins une part à 25 €. Par ce geste, vous devenez coopérateur et copropriétaire de la coopérative. Cet argent sert uniquement à équiper le supermarché (frigos, rayons, caisses) — jamais à payer le fonctionnement ni les courses du mois. Le fonctionnement (abonnement) : 10 € / mois donnent droit à un plafond de 250 € d’achats (ordre de grandeur du budget alimentaire d’une personne). Pourquoi un plafond ? Pour éviter qu’un seul abonnement serve à faire les courses de plusieurs foyers en usant de l’infrastructure sans la financer. Famille ou gros volume ? Vous cumulez les abonnements selon vos besoins (ex. 30 € pour 750 € de plafond). Chaque euro de cet abonnement paie les frais fixes : loyer, électricité des chambres froides, salaires de l’équipe d’encadrement.",
       },
       {
-        title: "L’entraide (2 h / mois)",
-        body: "Pas de masse salariale = des prix vraiment bas. Chaque adulte de 18–64 ans donne 2 heures par mois. Les 0–17 ans et les 65+ sont exemptés : la solidarité fait le reste.",
+        title: "Les courses (la carte prépayée)",
+        body: "Chez Pi COOP, nous n’empruntons pas d’argent aux banques. Vous rechargez donc votre carte membre à l’avance par virement bancaire. Ce solde devient votre budget courses — votre monnaie Pi COOP —, utilisable dans la limite de votre plafond d’abonnement. Pourquoi payer à l’avance\u00a0? Votre argent sert directement à acheter la marchandise par camions entiers. Zéro crédit bancaire, zéro marge cachée\u00a0: votre argent paie strictement votre nourriture.",
       },
       {
-        title: "Transparence totale",
-        body: "Le prix du grossiste s’affiche en rayon. On y ajoute une marge de fonctionnement fixe et minime : 20 centimes sur les produits du quotidien, et 50 centimes sur les produits plus chers (huile, langes…). Rien n’est caché — vous savez où va chaque centime. (Prix cibles estimés.)",
+        title: "L’entraide (2 h / mois) : le secret de nos prix",
+        body: "La règle : chaque adulte de 18 à 65 ans du foyer donne 2 heures par mois pour faire tourner le magasin (caisse, mise en rayon, aide en cuisine). Les plus jeunes et les plus de 65 ans en sont exemptés, sauf s’ils le souhaitent. L’impact sur le ticket : ces heures réduisent la masse salariale. Sans ce coût à plein, on peut tenir la marge fixe de 20 ou 50 centimes. C’est ce qui fait tenir les prix bas sur vos courses. Manger mieux pour moins cher : grâce à cette entraide et à l’achat groupé au prix de gros, l’objectif est que des produits sains et bio coûtent souvent moins cher que l’équivalent industriel ultra-transformé en grande surface — sans promesse individuelle sur chaque article. L’engagement : toute la coopérative repose sur cette entraide. Les absences répétées ou non justifiées entraînent la suspension temporaire de la carte d’achats. Des prix bas exigent que chacun tienne sa part.",
+      },
+      {
+        title: "Le prix juste",
+        body: "En rayon, vous payez la marchandise au vrai prix de gros (direct producteur). Nous ajoutons simplement une petite marge fixe pour absorber la casse et les invendus\u00a0: +20\u00a0centimes sur le sec, et +50\u00a0centimes sur le frais et les produits chers.",
       },
     ],
-    openingStagesTitle: "Ouverture par étapes",
+    openingStagesTitle: "Ouverture : ce qu’on trouve dès le premier jour",
     openingStagesBody:
-      "Le premier magasin Pi démarre sans frigos, avec un rayon large mais simple à gérer : alimentation sèche et de longue conservation (féculents, sauces, conserves, huiles…), boissons, produits d’entretien et ménage, hygiène et cosmétique, et d’autres essentiels du quotidien qui ne demandent pas de chaîne du froid. Les frigos et les produits frais arriveront plus tard, quand le magasin, les bénévoles et la logistique seront stables.",
+      "Dès l’ouverture : alimentation sèche, fruits et légumes déjà conditionnés (pièce, filet, barquette), laitages, et viandes ou volailles uniquement préemballées — pas de boucherie à la coupe. Une petite légumerie «\u00a0froide\u00a0» permet de découper, mettre sous vide et congeler ce qui risque d’être perdu. Une cuisine «\u00a0chaude\u00a0» (plats, sauces, confitures) pourra venir plus tard, quand le magasin tourne et que des aides existent pour la financer.",
   },
   manifesto: {
     eyebrow: "Notre manifeste",
@@ -167,9 +171,9 @@ export const fr = {
     ruleLead:
       "Chez Pi COOP, la règle est inverse — simple, et elle ne changera pas :",
     rule:
-      "nous achetons ensemble, au prix du grossiste ; nous affichons ce prix ; nous y ajoutons une marge fixe et minime — 20\u00a0centimes sur l’essentiel du rayon, 50\u00a0centimes sur les produits plus chers. Rien de plus, rien de caché.",
+      "nous achetons ensemble, au vrai prix de gros (direct producteur) ; nous affichons ce prix ; nous y ajoutons une marge fixe — 20\u00a0centimes sur le sec, 50\u00a0centimes sur le frais et les produits chers — pour absorber la casse et les invendus. Rien de caché.",
     volunteer:
-      "Dès l’ouverture, chaque adulte de 18 à 64 ans donne 2 heures par mois. Moins d’intermédiaires, des prix qui tiennent, et du lien qui revient dans le quartier.",
+      "Dès l’ouverture, chaque adulte de 18 à 65 ans donne 2 heures par mois. Les plus jeunes et les plus de 65 ans en sont exemptés, sauf s’ils le souhaitent. Moins d’intermédiaires, des prix qui tiennent, et du lien qui revient dans le quartier.",
     closing:
       "Il est temps de reprendre le pouvoir sur nos courses — et sur nos vies.",
     cta: "Je me préinscris gratuitement",
@@ -193,7 +197,7 @@ export const fr = {
   register: {
     sectionTitle: "Devenir futur coopérateur",
     sectionIntro:
-      "Indiquez votre foyer et votre adresse. Vous comptez pour le seuil de 10\u00a0000 personnes de votre bassin de vie.",
+      "Indiquez votre foyer et votre adresse. Votre ménage compte pour l’objectif de 5\u00a0000 ménages.",
     email: "Email",
     password: "Mot de passe (8+)",
     household: "Taille du ménage",
@@ -218,14 +222,14 @@ export const fr = {
     ageBands: {
       AGE_0_4: "0–4 ans (quotas bébé)",
       AGE_5_17: "5–17 ans",
-      AGE_18_64: "18–64 ans (bénévolat)",
+      AGE_18_64: "18–65 ans (bénévolat)",
       AGE_65_PLUS: "65+ ans",
     },
     toastTitle: "Bienvenue, futur coopérateur !",
     toastOne:
       "Inscription validée. Grâce à vous, Pi gagne une décimale — vous êtes le chiffre {total}.",
     toastMany:
-      "Inscription validée. Votre foyer allonge Pi de {added} décimales (chiffres {from} à {total}). La chaîne compte maintenant {total} chiffres.",
+      "Inscription validée. Grâce à vous, Pi gagne une décimale — vous êtes le chiffre {total}.",
     errors: {
       generic: "Erreur d’inscription",
       impossible: "Inscription impossible",
@@ -291,7 +295,7 @@ export const fr = {
     natureIntro:
       "La préinscription est 100\u00a0% gratuite, sans obligation, et ne constitue pas un engagement d’achat ni de souscription. Les prix affichés (sur le site ou dans le Folder Digital Pi) sont des objectifs cibles estimés et sont strictement non contractuels.",
     natureStore:
-      "Le projet vise l’ouverture d’un supermarché pilote à taille humaine, et non d’un hypermarché classique. Aucun paiement ni versement n’est demandé à ce stade du projet. Des parts sociales ou un pack d’ouverture ne seront proposés au public qu’une fois la société coopérative officiellement constituée devant notaire et un local commercial identifié.",
+      "Le projet vise l’ouverture d’un supermarché coopératif à taille humaine, avec un assortiment large (sec et frais conditionné), et non d’un hypermarché classique. Aucun paiement ni versement n’est demandé à ce stade — y compris aucun virement ni recharge de carte prépayée. Une part sociale (25\u00a0€ minimum) et un abonnement mensuel ne seront proposés qu’une fois la société coopérative constituée devant notaire et un local identifié.",
     ipTitle: "Propriété intellectuelle",
     ipBody:
       "Les textes, le logo π, la charte graphique et les autres éléments du site sont protégés. Toute reproduction non autorisée est interdite.",
@@ -299,7 +303,7 @@ export const fr = {
     lawBody:
       "Le site est régi par le droit belge. En cas de litige, les tribunaux belges sont compétents, sous réserve des règles impératives de protection des consommateurs.",
     relatedPrivacy: "Politique de confidentialité",
-    updated: "Dernière mise à jour : 18 août 2026",
+    updated: "Dernière mise à jour : 26 août 2026",
   },
   privacy: {
     metaTitle: "Confidentialité — Pi COOP",
@@ -323,7 +327,7 @@ export const fr = {
     purposeTitle: "Finalités",
     purposes: [
       "Créer et sécuriser votre compte de préinscription",
-      "Compter les personnes par code postal et les agréger par bassin de vie pour l’affichage public (seuil d’ouverture de 10 000 personnes par zone)",
+      "Compter les ménages par code postal et les agréger par bassin de vie pour l’affichage public (objectif de 5 000 ménages pour lancer le projet)",
       "Vous informer du lancement par email",
       "Afficher un volume anonyme de foyers inscrits par rue (à partir de 2 foyers, sans numéro de maison)",
       "Protéger le formulaire contre les inscriptions automatisées",
@@ -359,7 +363,7 @@ export const fr = {
       "Les données de compte sont conservées le temps de la préinscription. Elles sont effacées sur demande, ou réexaminées lorsque la coopérative sera constituée (reprise par la nouvelle entité avec information, ou suppression). Les journaux techniques de sécurité ne sont gardés que le temps nécessaire.",
     childrenTitle: "Ménage et enfants",
     childrenBody:
-      "Nous ne créons pas de compte pour un enfant. Les tranches d’âge du ménage (y compris 0–4 ans et 5–17 ans) sont enregistrées sans âge exact et sans prénom, uniquement pour compter les personnes et expliquer les règles futures de cotisation.",
+      "Nous ne créons pas de compte pour un enfant. Les tranches d’âge du ménage (y compris 0–4 ans et 5–17 ans) sont enregistrées sans âge exact et sans prénom, uniquement pour expliquer les règles futures de cotisation et de bénévolat.",
     rightsTitle: "Vos droits",
     rightsBody:
       "Conformément au RGPD, vous disposez d’un droit d’accès, de rectification, d’effacement, de limitation, d’opposition et de portabilité. Écrivez à",
@@ -368,7 +372,7 @@ export const fr = {
     apdLabel: "autoriteprotectiondonnees.be",
     apdUrl: "https://www.autoriteprotectiondonnees.be",
     relatedLegal: "Mentions légales",
-    updated: "Dernière mise à jour : 21 août 2026",
+    updated: "Dernière mise à jour : 26 août 2026",
   },
 };
 

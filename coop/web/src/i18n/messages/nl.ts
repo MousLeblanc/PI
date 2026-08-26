@@ -4,7 +4,7 @@ export const nl = {
   meta: {
     title: "Pi COOP — Burgercoöperatie",
     description:
-      "Voorinschrijving bij Pi COOP: groepsinkopen bio aan groothandelsprijs + 20 cent (50 cent op duurdere producten), transparantie en solidariteit.",
+      "Voorinschrijving bij Pi COOP: groepsinkopen bio aan groothandelsprijs + 20 cent op droog (50 cent op vers en duurdere producten), transparantie en solidariteit.",
   },
   header: {
     cta: "Voorinschrijving",
@@ -19,9 +19,9 @@ export const nl = {
     subtitleBefore: "Vaste marge, nooit verborgen. Word",
     subtitleStrong: "toekomstige coöperant",
     subtitleAfter:
-      "van je burgersupermarkt. De voorinschrijving is gratis. De 10\u00a0€/maand en 2\u00a0u vrijwilligerswerk starten pas bij de opening, zodra de coöperatie is opgericht.",
+      "van je burgersupermarkt. De voorinschrijving is gratis. Bij de opening: een aandeel van minstens 25\u00a0€, een abonnement van 10\u00a0€ per schijf van 250\u00a0€ aankopen, en 2\u00a0u vrijwilligerswerk per volwassene van 18–65 jaar.",
     footnote:
-      "20\u00a0cent op het dagelijkse schap · 50\u00a0cent op duurdere producten (olie, luiers…) — details in «\u00a0Hoe werkt het\u00a0?\u00a0».",
+      "20\u00a0cent op droog · 50\u00a0cent op vers en duurdere producten — details in «\u00a0Hoe werkt het\u00a0?\u00a0».",
     ctaUnlock: "Ontgrendel de prijzen in mijn stad",
     ctaHow: "Hoe werkt het\u00a0?",
   },
@@ -32,7 +32,7 @@ export const nl = {
     badge: "Digitale folder Pi",
     organicBadge: "Bio",
     formula:
-      "Groothandelsprijs + vaste marge (0,20\u00a0€ of 0,50\u00a0€) = Pi-prijs",
+      "Groothandelsprijs + vaste marge (20\u00a0of\u00a050\u00a0cent) = Pi-prijs",
     inStore: "{price}\u00a0€ in de winkel",
     piPrice: "Pi-prijs",
     wholesale: "waarvan groothandel {price}\u00a0€",
@@ -43,27 +43,27 @@ export const nl = {
       "* Richtprijzen ter indicatie. Niet contractueel.",
   },
   gauges: {
-    title: "Ontgrendel de eerste Pi-supermarkt in jouw leefbekken",
-    introLead: "10.000 personen",
+    title: "Ontgrendel de eerste Pi-supermarkt",
+    introLead: "5.000 gezinnen",
     introMid:
-      "= het kantelpunt om een supermarkt op menselijke schaal te openen (elk gezinslid telt — een gezin van 5 = +5). Geen klassieke hypermarkt: de onze, van ons. Kleinere gemeenten worden gegroepeerd in equivalente leefbekkens. Daarna loopt de meter verder: hoe meer we zijn, hoe sterker de onderhandelingskracht. De",
-    introStrong: "eerste zone",
+      "= het kantelpunt om het project te lanceren (elke inschrijving = één gezin). Geen klassieke hypermarkt: de onze, van ons. Gemeenten worden gegroepeerd in leefbekkens om te zien waar de mobilisatie het sterkst is. Daarna loopt de meter verder: hoe meer we zijn, hoe sterker de onderhandelingskracht. De",
+    introStrong: "meest gemobiliseerde zone",
     introEnd:
-      "die de kaap haalt, opent als eerste. Vandaag betaal je niets; het openingspakket betaal je pas als er een pand en statuten zijn.",
+      "krijgt voorrang voor de opening. Vandaag betaal je niets. Het aandeel (minstens 25\u00a0€) en het abonnement starten pas als er een pand is en de coöperatie is opgericht.",
     postalLabel: "Jouw postcode",
     placeholder: "bv. 1090",
     unknownPostal: "Onbekende postcode",
     pioneer: "Jij kan hier de pionier zijn — deel de link lokaal.",
     needPostal: "Vul je postcode in om te zien waar jouw leefbekken staat.",
-    people: "{count} / 10.000",
-    goal: "Doel: 10.000 personen om de zone te openen.",
+    people: "{count} / 5.000",
+    goal: "Doel: 5.000 gezinnen om te lanceren.",
     yourCp: "Jouw postcode: {code}",
     cp: "PC {code}",
     exploded: "Doel overschreden — volgende drempel {tier}",
     explodedBody:
       "Interessedrempel bereikt voor deze zone. Opening volgt alleen als er een pand en statuten zijn. Ga door: hoe meer we zijn, hoe sterker de onderhandelingskracht.",
     remaining:
-      "{pct}\u00a0% · nog {remaining} personen om de opening hier te ontgrendelen",
+      "{pct}\u00a0% · nog {remaining} gezinnen om het doel hier te bereiken",
     showBreakdown: "Detail per gemeente bekijken",
     hideBreakdown: "Detail per gemeente verbergen",
     nextMilestone: "Volgende drempel ({count}): {label}",
@@ -122,9 +122,9 @@ export const nl = {
   },
   leaderboard: {
     kicker: "Race naar opening",
-    title: "Welke zone opent als eerste?",
+    title: "Welke zone is het meest gemobiliseerd?",
     intro:
-      "Het getal maakt de kracht. De leefbekkens van Brussel in een vriendschappelijke race — elk gezinslid telt. De eerste zone met 10.000 opent als eerste.",
+      "Het getal maakt de kracht. Doel: 5.000 gezinnen om te lanceren. De leefbekkens van Brussel vorderen parallel — hoe sterker een zone gemobiliseerd is, hoe hoger de prioriteit.",
     progress: "{pct}\u00a0%",
     communeFallback: "Gemeente {cp}",
     brusselsZones: "Brusselse zones",
@@ -132,30 +132,34 @@ export const nl = {
     breakdown: "Detail per gemeente",
     expand: "Tonen",
     collapse: "Verbergen",
-    remaining: "Nog {count} om te ontgrendelen",
+    remaining: "Nog {count} tot het doel",
     exploded: "Openingsdoel overschreden · volgende drempel {tier}",
   },
   how: {
     title: "Hoe werkt het\u00a0?",
     intro:
-      "Het Pi COOP-recept in drie regels. Een supermarkt op menselijke schaal, geen klassieke hypermarkt: een burgercoöperatie waar de koopkracht terug naar de leden gaat.",
+      "Het Pi COOP-recept in vier regels. Een supermarkt op menselijke schaal, geen klassieke hypermarkt: een burgercoöperatie waar de koopkracht terug naar de leden gaat.",
     pillars: [
       {
-        title: "Jouw aandeel in de coöperatie",
-        body: "Hier geen onzichtbare aandeelhouders. Vanaf de opening, zodra de coöperatie is opgericht, draagt elk gezinslid 10 € / maand bij — dit is geen abonnement: het is jouw aandeel. Jullie zijn geen klanten: jullie worden mede-eigenaars van jullie winkel. Dit collectieve fonds dient om in volume te kopen.",
+        title: "Aandeel + abonnement",
+        body: "Uitrusting (aandeel): geen onzichtbare aandeelhouders — de coöperanten bezitten de coöperatie. Bij de opening neemt elk gezin minstens één aandeel van 25 €. Daarmee word je coöperant en mede-eigenaar van de coöperatie. Dat geld dient enkel om de supermarkt uit te rusten (koelkasten, rekken, kassa’s) — nooit om de werking of de boodschappen van de maand te betalen. Werking (abonnement): 10 € / maand geeft recht op een plafond van 250 € aankopen (ongeveer het voedingsbudget van één persoon). Waarom een plafond? Om te vermijden dat één abonnement de boodschappen van meerdere gezinnen dekt terwijl de infrastructuur wordt gebruikt zonder ze te financieren. Groot gezin of groter volume? Stapelen volgens nood (bv. 30 € voor 750 € plafond). Elke euro van dat abonnement betaalt de vaste kosten: huur, elektriciteit van de koelruimtes, lonen van het begeleidende team.",
       },
       {
-        title: "Wederzijdse hulp (2 u / maand)",
-        body: "Geen loonmassa = écht lage prijzen. Elke volwassene van 18–64 jaar geeft 2 uur per maand. 0–17 jaar en 65+ zijn vrijgesteld: solidariteit doet de rest.",
+        title: "Boodschappen (de voorafbetaalde kaart)",
+        body: "Bij Pi COOP lenen we geen geld bij banken. Je laadt je ledenkaart dus vooraf op via overschrijving. Dat saldo wordt je boodschappenbudget — jouw Pi COOP-munt —, bruikbaar binnen je abonnementsplafond. Waarom vooraf betalen? Jouw geld dient rechtstreeks om goederen per vrachtwagen te kopen. Geen bankkrediet, geen verborgen marge: jouw geld betaalt strikt jouw voedsel.",
       },
       {
-        title: "Totale transparantie",
-        body: "De groothandelsprijs staat in het schap. We tellen er een vaste, minimale werkingsmarge bij: 20 cent op dagelijkse producten, en 50 cent op duurdere producten (olie, luiers…). Niets is verborgen — je weet waar elke cent naartoe gaat. (Richtprijzen.)",
+        title: "Wederzijdse hulp (2 u / maand): het geheim van onze prijzen",
+        body: "De regel: elke volwassene van 18 tot 65 jaar in het gezin geeft 2 uur per maand om de winkel te doen draaien (kassa, vakken vullen, hulp in de keuken). Jongeren en 65-plussers zijn vrijgesteld, tenzij ze willen meedoen. Impact op het ticket: die uren verlagen de loonmassa. Zonder die volle kost kunnen we de vaste marge van 20 of 50 cent aanhouden. Dat houdt de boodschappenprijzen laag. Beter eten voor minder: dankzij deze wederzijdse hulp en groepsinkoop tegen groothandelsprijs is het doel dat gezonde bioproducten vaak minder kosten dan het ultra-verwerkte industriële equivalent in een klassieke supermarkt — zonder belofte per artikel. Het engagement: de hele coöperatie steunt op deze hulp. Herhaalde of ongerechtvaardigde afwezigheid leidt tot tijdelijke schorsing van de aankoopkaart. Lage prijzen eisen dat iedereen zijn deel doet.",
+      },
+      {
+        title: "De eerlijke prijs",
+        body: "In het schap betaal je de goederen aan de echte groothandelsprijs (rechtstreeks van de producent). We voegen enkel een kleine vaste marge toe om bederf en onverkocht op te vangen: +20\u00a0cent op droog, en +50\u00a0cent op vers en duurdere producten.",
       },
     ],
-    openingStagesTitle: "Stapsgewijs openen",
+    openingStagesTitle: "Opening: wat je vanaf dag één vindt",
     openingStagesBody:
-      "De eerste Pi-winkel start zonder koelkast, met een breed maar eenvoudig assortiment: droog en houdbaar voedsel (zetmeel, sauzen, conserven, oliën…), dranken, huishoud- en schoonmaakproducten, hygiëne en cosmetica, en andere dagelijkse essentials zonder koudeketen. Koelkasten en verse producten volgen later, als winkel, vrijwilligers en logistiek stabiel zijn.",
+      "Vanaf dag één: droog voedsel, voorverpakte groenten en fruit (stuk, net of bakje), zuivel, en vlees of gevogelte enkel voorverpakt — geen beenhouwerij aan de snede. Een kleine «\u00a0koude\u00a0» bereidingsruimte kan snijden, vacuüm trekken en invriezen wat anders verloren gaat. Een «\u00a0warme\u00a0» keuken (gerechten, sauzen, confituur) kan later volgen, als de winkel draait en er steun is om ze te financieren.",
   },
   manifesto: {
     eyebrow: "Ons manifest",
@@ -170,9 +174,9 @@ export const nl = {
     ruleLead:
       "Bij Pi COOP is de regel omgekeerd — eenvoudig, en die verandert niet:",
     rule:
-      "we kopen samen, tegen groothandelsprijs; we tonen die prijs; we voegen een vaste, minimale marge toe — 20\u00a0cent op het dagelijkse schap, 50\u00a0cent op duurdere producten. Niets meer, niets verborgen.",
+      "we kopen samen, tegen de echte groothandelsprijs (rechtstreeks van de producent); we tonen die prijs; we voegen een vaste marge toe — 20\u00a0cent op droog, 50\u00a0cent op vers en duurdere producten — om bederf en onverkocht op te vangen. Niets verborgen.",
     volunteer:
-      "Vanaf de opening geeft elke volwassene van 18 tot 64 jaar 2 uur per maand. Minder tussenpersonen, prijzen die standhouden, en opnieuw band in de buurt.",
+      "Vanaf de opening geeft elke volwassene van 18 tot 65 jaar 2 uur per maand. Jongeren en 65-plussers zijn vrijgesteld, tenzij ze willen meedoen. Minder tussenpersonen, prijzen die standhouden, en opnieuw band in de buurt.",
     closing:
       "Het is tijd om de macht over onze boodschappen — en over ons leven — terug te nemen.",
     cta: "Ik schrijf me gratis voor",
@@ -196,7 +200,7 @@ export const nl = {
   register: {
     sectionTitle: "Toekomstige coöperant worden",
     sectionIntro:
-      "Geef je gezin en adres op. Je telt mee voor de drempel van 10.000 personen in jouw leefbekken.",
+      "Geef je gezin en adres op. Jouw gezin telt mee voor het doel van 5.000 gezinnen.",
     email: "E-mail",
     password: "Wachtwoord (8+)",
     household: "Gezinsgrootte",
@@ -221,14 +225,14 @@ export const nl = {
     ageBands: {
       AGE_0_4: "0–4 jaar (babyquota)",
       AGE_5_17: "5–17 jaar",
-      AGE_18_64: "18–64 jaar (vrijwilligerswerk)",
+      AGE_18_64: "18–65 jaar (vrijwilligerswerk)",
       AGE_65_PLUS: "65+ jaar",
     },
     toastTitle: "Welkom, toekomstige coöperant!",
     toastOne:
       "Inschrijving bevestigd. Dankzij jou wint Pi een decimaal — jij bent cijfer {total}.",
     toastMany:
-      "Inschrijving bevestigd. Jouw gezin verlengt Pi met {added} decimalen (cijfers {from} tot {total}). De keten telt nu {total} cijfers.",
+      "Inschrijving bevestigd. Dankzij jou wint Pi een decimaal — jij bent cijfer {total}.",
     errors: {
       generic: "Inschrijvingsfout",
       impossible: "Inschrijving onmogelijk",
@@ -294,7 +298,7 @@ export const nl = {
     natureIntro:
       "De voorinschrijving is 100\u00a0% gratis, zonder verplichting, en vormt geen aankoop- of inschrijvingsverbintenis. De getoonde prijzen (op de site of in de Digitale folder Pi) zijn geschatte richtprijzen en strikt niet-contractueel.",
     natureStore:
-      "Het project streeft naar een pilootsupermarkt op menselijke schaal, geen klassieke hypermarkt. In deze fase wordt geen betaling of bijdrage gevraagd. Aandelen of een openingspakket worden pas aan het publiek aangeboden zodra de coöperatieve vennootschap formeel is opgericht voor notaris en een handelszaak is geïdentificeerd.",
+      "Het project streeft naar een coöperatieve supermarkt op menselijke schaal, met een breed assortiment (droog en voorverpakt vers), geen klassieke hypermarkt. In deze fase wordt geen betaling gevraagd — inclusief geen overschrijving of oplading van een voorafbetaalde kaart. Een aandeel (minstens 25\u00a0€) en een maandelijks abonnement worden pas aangeboden zodra de coöperatie is opgericht voor notaris en er een pand is.",
     ipTitle: "Intellectuele eigendom",
     ipBody:
       "De teksten, het π-logo, de visuele identiteit en de andere elementen van de site zijn beschermd. Ongeoorloofde reproductie is verboden.",
@@ -302,7 +306,7 @@ export const nl = {
     lawBody:
       "De site valt onder Belgisch recht. Bij een geschil zijn de Belgische rechtbanken bevoegd, onverminderd dwingende regels van consumentenbescherming.",
     relatedPrivacy: "Privacybeleid",
-    updated: "Laatst bijgewerkt: 18 augustus 2026",
+    updated: "Laatst bijgewerkt: 26 augustus 2026",
   },
   privacy: {
     metaTitle: "Privacy — Pi COOP",
@@ -325,7 +329,7 @@ export const nl = {
     purposeTitle: "Doelen",
     purposes: [
       "Je voorinschrijvingsaccount aanmaken en beveiligen",
-      "Personen per postcode tellen en aggregeren per leefbekken voor publieke weergave (drempel van 10.000 personen per zone)",
+      "Gezinnen per postcode tellen en aggregeren per leefbekken voor publieke weergave (doel van 5.000 gezinnen om het project te lanceren)",
       "Je per e-mail informeren over de lancering",
       "Een anoniem aantal ingeschreven gezinnen per straat tonen (vanaf 2 gezinnen, zonder huisnummer)",
       "Het formulier beschermen tegen automatische inschrijvingen",
@@ -361,7 +365,7 @@ export const nl = {
       "Accountgegevens worden bewaard tijdens de voorinschrijving. Ze worden op verzoek gewist, of herbekeken wanneer de coöperatie is opgericht (overname door de nieuwe entiteit met informatie, of wissing). Technische beveiligingslogboeken worden slechts zo lang bewaard als nodig.",
     childrenTitle: "Gezin en kinderen",
     childrenBody:
-      "We maken geen account aan voor een kind. De leeftijdsschijven van het gezin (inclusief 0–4 en 5–17 jaar) worden geregistreerd zonder exacte leeftijd en zonder voornaam, enkel om personen te tellen en de toekomstige bijdrageregels uit te leggen.",
+      "We maken geen account aan voor een kind. De leeftijdsschijven van het gezin (inclusief 0–4 en 5–17 jaar) worden geregistreerd zonder exacte leeftijd en zonder voornaam, enkel om de toekomstige bijrage- en vrijwilligersregels uit te leggen.",
     rightsTitle: "Jouw rechten",
     rightsBody:
       "Overeenkomstig de AVG heb je recht op inzage, rectificatie, wissing, beperking, bezwaar en overdraagbaarheid. Schrijf naar",
@@ -370,6 +374,6 @@ export const nl = {
     apdLabel: "gegevensbeschermingsautoriteit.be",
     apdUrl: "https://www.gegevensbeschermingsautoriteit.be",
     relatedLegal: "Wettelijke vermeldingen",
-    updated: "Laatst bijgewerkt: 21 augustus 2026",
+    updated: "Laatst bijgewerkt: 26 augustus 2026",
   },
 } satisfies Messages;

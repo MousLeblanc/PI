@@ -1,8 +1,8 @@
-/** Opening tipping point — first store eligible */
-export const OPENING_TARGET = 10_000;
+/** Opening tipping point — launch eligible (households) */
+export const OPENING_TARGET = 5_000;
 
 const STRETCH_STEPS = [
-  15_000, 20_000, 25_000, 30_000, 40_000, 50_000, 75_000, 100_000,
+  7_500, 10_000, 15_000, 20_000, 25_000, 30_000, 40_000, 50_000,
 ];
 
 export type StretchMeta = {
@@ -19,7 +19,7 @@ export function getStretchMeta(count: number): StretchMeta {
   const exploded = safe >= OPENING_TARGET;
   const nextFromList = STRETCH_STEPS.find((t) => t > safe);
   const nextTier =
-    nextFromList ?? Math.ceil((safe + 1) / 10_000) * 10_000;
+    nextFromList ?? Math.ceil((safe + 1) / 5_000) * 5_000;
 
   return {
     count: safe,
