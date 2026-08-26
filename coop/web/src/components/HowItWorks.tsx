@@ -73,10 +73,53 @@ export function HowItWorks() {
                     {pillar.note}
                   </p>
                 ) : null}
+                {"legalNote" in pillar && pillar.legalNote ? (
+                  <p className="mt-3 border-l-2 border-amber-200/80 pl-3 text-xs leading-relaxed text-muted-foreground">
+                    {pillar.legalNote}
+                  </p>
+                ) : null}
               </CardContent>
             </Card>
           );
         })}
+      </div>
+
+      <div className="mx-auto mt-10 max-w-2xl rounded-2xl border border-emerald-100 bg-emerald-50/40 px-5 py-6 sm:px-6">
+        <h3 className="font-display text-xl font-semibold tracking-tight text-emerald-950">
+          {messages.how.v2.title}
+        </h3>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+          {messages.how.v2.intro}
+        </p>
+        <ul className="mt-4 space-y-2 text-sm leading-relaxed text-emerald-950/90">
+          {messages.how.v2.bullets.map((line) => (
+            <li key={line} className="flex gap-2">
+              <span className="shrink-0 font-semibold text-emerald-700" aria-hidden>
+                •
+              </span>
+              {line}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-4 text-sm font-medium text-emerald-900">
+          {messages.how.v2.closing}
+        </p>
+        <p className="mt-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+          {messages.how.v2.examplesLead}
+        </p>
+        <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-emerald-950/90">
+          {messages.how.v2.examples.map((line) => (
+            <li key={line} className="flex gap-2">
+              <span className="shrink-0 text-emerald-700" aria-hidden>
+                —
+              </span>
+              {line}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+          {messages.how.v2.examplesNote}
+        </p>
       </div>
 
       <div className="mx-auto mt-12 max-w-2xl space-y-10 border-t border-emerald-900/10 pt-10 text-center">

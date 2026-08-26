@@ -158,7 +158,9 @@ export const nl = {
         body: "Enkel bederf en onverkocht — niets anders.",
       },
       example:
-        "Voorbeeld: product aan 10 € groothandel → winkel met +20 % = 12 €. Bij Pi: 10,20 € (droog) of 10,50 € (vers).",
+        "Hypothese aan 5 € groothandel: winkel +20 % ≈ 6 € → bij Pi: 5,20 € (droog). Hypothese aan 10 € groothandel: winkel +20 % ≈ 12 € → bij Pi: 10,20 € (droog) of 10,50 € (vers).",
+      exampleNote:
+        "Illustratie van de margeregel, geen prijsbelofte. Als groepsinkoop ons goedkoper laat inkopen, daalt ook de schapprijs: steeds werkelijke aankoopprijs + 20 of 50 cent.",
       prepaidTitle: "Waarom vooraf opladen alles verandert",
       prepaidBody:
         "Leden laden hun kaart op vóór aankoop. Dat geld dient om in groot volume te bestellen (palletten / vrachtwagens), tegen groothandelsprijs, zo dicht mogelijk bij de producenten — zonder de logica « distributeur + procentmarge » te stapelen. Resultaat: scherper onderhandelen dan een klassieke winkel met tussenpersonen en vaak ~20 % (of meer) op het ticket. Bij Pi: groothandelsprijs + 20 of 50 cent. De 10 € abonnement? Dat betaalt huur en begeleiding — en met het prijsverschil vanaf de eerste boodschappen is dat abonnement in de praktijk snel terugverdiend op het mandje (orde van grootte: enkele duurdere producten volstaan vaak).",
@@ -243,8 +245,30 @@ export const nl = {
           },
         ],
         note: "Jongeren onder 18 en 65+ hoeven niet mee te doen (tenzij ze dat willen).",
+        legalNote:
+          "De 2 u / maand zijn een voorwaarde om boodschappen te doen als lid — geen arbeid. Vóór de opening: overeenkomst, verzekering en korte opleiding.",
       },
     ],
+    v2: {
+      title: "Pi COOP: de « prijs »-versie van burgercoöperaties",
+      intro:
+        "Andere coöperatieve supermarkten bestaan al: wederzijdse hulp, bio, gezondere producten. Dezelfde geest.",
+      bullets: [
+        "Het abonnement betaalt huur en team — geen verborgen marge op elk product.",
+        "De kleine vaste marge (20 of 50 cent) dient enkel voor bederf.",
+        "De voorafbetaalde kaart laat ons in groot volume kopen, zo dicht mogelijk bij producenten.",
+      ],
+      closing:
+        "Kort gezegd: dezelfde coöp-geest, andere prijsregel — geen procentmarge op elk artikel.",
+      examplesLead:
+        "Illustratie (hoe de marge werkt, geen belofte tot op de cent) :",
+      examples: [
+        "Hypothese aan 5 € groothandel: winkel +20 % ≈ 6 € → bij Pi: 5,20 € (droog).",
+        "Hypothese aan 10 € groothandel: winkel +20 % ≈ 12 € → bij Pi: 10,20 € (droog) of 10,50 € (vers).",
+      ],
+      examplesNote:
+        "Als groepsinkoop ons nog goedkoper laat inkopen, daalt ook jouw schapprijs: steeds werkelijke aankoopprijs + 20 of 50 cent.",
+    },
     openingStagesTitle: "Opening: wat je vanaf dag één vindt",
     openingStagesBody:
       "Vanaf dag één: droog voedsel, voorverpakte groenten en fruit (stuk, net of bakje), zuivel, en vlees — charcuterie of gevogelte enkel voorverpakt —, geen beenhouwerij aan de snede.",

@@ -155,7 +155,9 @@ export const en = {
         body: "Spoilage and unsold stock only — nothing else.",
       },
       example:
-        "Example: a product at €10 wholesale → shop with +20% = €12. At Pi: €10.20 (dry) or €10.50 (fresh).",
+        "At a hypothetical €5 wholesale: shop at +20% ≈ €6 → at Pi: €5.20 (dry). At €10 wholesale: shop at +20% ≈ €12 → at Pi: €10.20 (dry) or €10.50 (fresh).",
+      exampleNote:
+        "Margin rule illustration, not a price guarantee. If pooled buying lowers our wholesale cost, shelf price drops too: always actual purchase price + 20 or 50 cents.",
       prepaidTitle: "Why prepaying changes everything",
       prepaidBody:
         "Members top up their card before buying. That money is used to order in bulk (pallets / trucks), at wholesale price, as close as possible to producers — without stacking the “distributor + percentage margin” logic. Result: sharper negotiation than a classic shop with middlemen and often ~20% (or more) on the ticket. At Pi: wholesale + 20 or 50 cents. The €10 subscription? It pays rent and supervision — and with the price gap from the first shops, that subscription is in practice amortised quickly on the basket (order of magnitude: a few pricey items often suffice).",
@@ -240,8 +242,30 @@ export const en = {
           },
         ],
         note: "Under-18s and 65+ are not required to take part (unless they wish to).",
+        legalNote:
+          "The 2 h / month are a condition for shopping once you are a member — not employment. Before opening: agreement, insurance and brief training.",
       },
     ],
+    v2: {
+      title: "Pi COOP: the “price” version of citizen co-ops",
+      intro:
+        "Other citizen supermarkets already exist: mutual aid, organic, healthier products. We share the same spirit.",
+      bullets: [
+        "The subscription pays rent and staff — not a hidden margin on every product.",
+        "The small fixed margin (20 or 50 cents) covers spoilage only.",
+        "The prepaid card lets us buy in bulk, as close as possible to producers.",
+      ],
+      closing:
+        "In short: same co-op spirit, different price rule — no %-margin on every item.",
+      examplesLead:
+        "Illustration (how the margin works, not a penny-perfect promise):",
+      examples: [
+        "Hypothetical €5 wholesale: shop at +20% ≈ €6 → at Pi: €5.20 (dry).",
+        "Hypothetical €10 wholesale: shop at +20% ≈ €12 → at Pi: €10.20 (dry) or €10.50 (fresh).",
+      ],
+      examplesNote:
+        "If pooled buying lets us negotiate even lower wholesale, your shelf price drops too: always actual purchase price + 20 or 50 cents.",
+    },
     openingStagesTitle: "Opening: what you find from day one",
     openingStagesBody:
       "From day one: dry food, pre-packed fruit and vegetables (piece, net or punnet), dairy, and meat — cold cuts or poultry only pre-packed —, no butcher counter.",

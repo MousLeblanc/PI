@@ -155,7 +155,9 @@ export const fr = {
         body: "Casse et invendus seulement — rien d’autre.",
       },
       example:
-        "Exemple : un produit à 10 € au gros → magasin à +20 % = 12 €. Chez Pi : 10,20 € (sec) ou 10,50 € (frais).",
+        "Hypothèse à 5 € au gros : magasin à +20 % ≈ 6 € → chez Pi : 5,20 € (sec). Hypothèse à 10 € au gros : magasin à +20 % ≈ 12 € → chez Pi : 10,20 € (sec) ou 10,50 € (frais).",
+      exampleNote:
+        "Illustration de la règle de marge, pas une promesse au centime près. Si l’achat groupé nous coûte moins au gros, le prix en rayon baisse aussi : toujours prix d’achat réel + 20 ou 50 centimes.",
       prepaidTitle: "Pourquoi le prépaiement change tout",
       prepaidBody:
         "Avant d’acheter, les membres rechargent leur carte. Cet argent sert à commander par gros volumes (palettes / camions), au prix de gros, et autant que possible au plus près des producteurs — sans empiler la logique « distributeur + marge en pourcentage ». Résultat : on négocie plus bas qu’un magasin classique qui passe par des intermédiaires et applique souvent ~20 % (ou plus) sur le ticket. Chez Pi : prix de gros + 20 ou 50 centimes. Les 10 € d’abonnement ? Ils paient loyer et encadrement — et avec l’écart de prix dès les premières courses, cet abonnement est en pratique amorti très vite sur le panier (ordre de grandeur : quelques produits chers suffisent souvent à le « rattraper »).",
@@ -240,8 +242,30 @@ export const fr = {
           },
         ],
         note: "Moins de 18 ans et 65+ ne sont pas tenus de participer (sauf s’ils le souhaitent).",
+        legalNote:
+          "Les 2 h / mois sont une condition pour faire ses courses une fois membre — ce n’est pas un emploi. Avant l’ouverture : convention, assurance et formation courte.",
       },
     ],
+    v2: {
+      title: "Pi COOP : la version « prix » des coops citoyennes",
+      intro:
+        "D’autres supermarchés coopératifs existent déjà : entraide, bio, produits plus sains. On part du même esprit.",
+      bullets: [
+        "L’abonnement paie le loyer et l’équipe — pas une marge cachée sur chaque produit.",
+        "La petite marge fixe (20 ou 50 centimes) sert uniquement à la casse.",
+        "La carte prépayée permet d’acheter par gros volumes, au plus près des producteurs.",
+      ],
+      closing:
+        "En clair : même esprit coop, autre règle de prix — pas de marge en % sur chaque article.",
+      examplesLead:
+        "Illustration (mécanique de marge, pas une promesse au centime près) :",
+      examples: [
+        "Hypothèse à 5 € au gros : magasin à +20 % ≈ 6 € → chez Pi : 5,20 € (sec).",
+        "Hypothèse à 10 € au gros : magasin à +20 % ≈ 12 € → chez Pi : 10,20 € (sec) ou 10,50 € (frais).",
+      ],
+      examplesNote:
+        "Si nos achats groupés nous permettent de négocier encore moins cher au gros, votre prix en rayon baisse aussi : toujours prix d’achat réel + 20 ou 50 centimes.",
+    },
     openingStagesTitle: "Ouverture : ce qu’on trouve dès le premier jour",
     openingStagesBody:
       "Dès l’ouverture : alimentation sèche, fruits et légumes déjà conditionnés (pièce, filet, barquette), laitages, et viandes — charcuterie ou volailles uniquement préemballées —, pas de boucherie à la coupe.",
