@@ -156,7 +156,10 @@ export const fr = {
     ],
     openingStagesTitle: "Ouverture : ce qu’on trouve dès le premier jour",
     openingStagesBody:
-      "Dès l’ouverture : alimentation sèche, fruits et légumes déjà conditionnés (pièce, filet, barquette), laitages, et viandes ou volailles uniquement préemballées — pas de boucherie à la coupe. Une petite légumerie «\u00a0froide\u00a0» permet de découper, mettre sous vide et congeler ce qui risque d’être perdu. Une cuisine «\u00a0chaude\u00a0» (plats, sauces, confitures) pourra venir plus tard, quand le magasin tourne et que des aides existent pour la financer.",
+      "Dès l’ouverture : alimentation sèche, fruits et légumes déjà conditionnés (pièce, filet, barquette), laitages, et viandes — charcuterie ou volailles uniquement préemballées —, pas de boucherie à la coupe.",
+    zeroWasteTitle: "Objectif zéro déchet",
+    zeroWasteBody:
+      "Dès le premier jour, une petite légumerie «\u00a0froide\u00a0» permet de découper, mettre sous vide et congeler les produits frais qui risquent de se perdre. Une cuisine de transformation «\u00a0chaude\u00a0» (sauces, confitures) viendra dans un second temps, une fois le magasin lancé.",
   },
   manifesto: {
     eyebrow: "Notre manifeste",

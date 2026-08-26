@@ -46,13 +46,23 @@ export function HowItWorks() {
         })}
       </div>
 
-      <div className="mx-auto mt-12 max-w-2xl border-t border-emerald-900/10 pt-10 text-center">
-        <h3 className="font-display text-2xl font-semibold tracking-tight">
-          {messages.how.openingStagesTitle}
-        </h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-          {messages.how.openingStagesBody}
-        </p>
+      <div className="mx-auto mt-12 max-w-2xl space-y-10 border-t border-emerald-900/10 pt-10 text-center">
+        <div>
+          <h3 className="font-display text-2xl font-semibold tracking-tight">
+            {messages.how.openingStagesTitle}
+          </h3>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            {messages.how.openingStagesBody}
+          </p>
+        </div>
+        <div>
+          <h3 className="font-display text-2xl font-semibold tracking-tight">
+            {messages.how.zeroWasteTitle}
+          </h3>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            {messages.how.zeroWasteBody}
+          </p>
+        </div>
       </div>
     </div>
   );

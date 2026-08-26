@@ -159,7 +159,10 @@ export const nl = {
     ],
     openingStagesTitle: "Opening: wat je vanaf dag één vindt",
     openingStagesBody:
-      "Vanaf dag één: droog voedsel, voorverpakte groenten en fruit (stuk, net of bakje), zuivel, en vlees of gevogelte enkel voorverpakt — geen beenhouwerij aan de snede. Een kleine «\u00a0koude\u00a0» bereidingsruimte kan snijden, vacuüm trekken en invriezen wat anders verloren gaat. Een «\u00a0warme\u00a0» keuken (gerechten, sauzen, confituur) kan later volgen, als de winkel draait en er steun is om ze te financieren.",
+      "Vanaf dag één: droog voedsel, voorverpakte groenten en fruit (stuk, net of bakje), zuivel, en vlees — charcuterie of gevogelte enkel voorverpakt —, geen beenhouwerij aan de snede.",
+    zeroWasteTitle: "Doel: zero waste",
+    zeroWasteBody:
+      "Vanaf dag één kan een kleine «\u00a0koude\u00a0» bereidingsruimte verse producten snijden, vacuüm trekken en invriezen die anders verloren gaan. Een «\u00a0warme\u00a0» verwerkingskeuken (sauzen, confituur) volgt in een tweede fase, zodra de winkel draait.",
   },
   manifesto: {
     eyebrow: "Ons manifest",

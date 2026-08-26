@@ -156,7 +156,10 @@ export const en = {
     ],
     openingStagesTitle: "Opening: what you find from day one",
     openingStagesBody:
-      "From day one: dry food, pre-packed fruit and vegetables (piece, net or punnet), dairy, and meat or poultry only pre-packed — no butcher counter. A small “cold” prep area can cut, vacuum-seal and freeze what might otherwise be lost. A “hot” kitchen (meals, sauces, jams) may come later, once the store is running and funding exists to build it.",
+      "From day one: dry food, pre-packed fruit and vegetables (piece, net or punnet), dairy, and meat — cold cuts or poultry only pre-packed —, no butcher counter.",
+    zeroWasteTitle: "Zero-waste goal",
+    zeroWasteBody:
+      "From day one, a small “cold” prep kitchen can cut, vacuum-seal and freeze fresh products that might otherwise be lost. A “hot” processing kitchen (sauces, jams) will come in a second phase, once the store is up and running.",
   },
   manifesto: {
     eyebrow: "Our manifesto",
