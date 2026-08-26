@@ -141,7 +141,7 @@ export const en = {
       "The Pi COOP recipe in four rules. A human-scale supermarket, not a conventional hypermarket: a citizen cooperative where purchasing power returns to members.",
     flows: {
       subtitle:
-        "The store’s survival does not depend on a %-margin on your groceries.",
+        "At Pi COOP, the store’s survival does not depend on a %-margin on your groceries.",
       share: {
         title: "€25 share",
         body: "Fridges, shelves, checkouts — store equipment.",
@@ -154,18 +154,14 @@ export const en = {
         title: "20 / 50 cent margin",
         body: "Spoilage and unsold stock only — nothing else.",
       },
-      example:
-        "At a hypothetical €5 wholesale: shop at +20% ≈ €6 → at Pi: €5.20 (dry). At €10 wholesale: shop at +20% ≈ €12 → at Pi: €10.20 (dry) or €10.50 (fresh).",
-      exampleNote:
-        "Margin rule illustration, not a price guarantee. If pooled buying lowers our wholesale cost, shelf price drops too: always actual purchase price + 20 or 50 cents.",
       prepaidTitle: "Why prepaying changes everything",
       prepaidBody:
-        "Members top up their card before buying. That money is used to order in bulk (pallets / trucks), at wholesale price, as close as possible to producers — without stacking the “distributor + percentage margin” logic. Result: sharper negotiation than a classic shop with middlemen and often ~20% (or more) on the ticket. At Pi: wholesale + 20 or 50 cents. The €10 subscription? It pays rent and supervision — and with the price gap from the first shops, that subscription is in practice amortised quickly on the basket (order of magnitude: a few pricey items often suffice).",
+        "Members top up their card before buying. That money is used to order in bulk (pallets / trucks), at wholesale price, as close as possible to producers — without stacking the “distributor + percentage margin” logic. Result: sharper negotiation than a classic shop with middlemen and often ~20% (or more) on the ticket. At Pi: wholesale + 20 or 50 cents. The €10 subscription? It pays rent and supervision — and with the price gap from the first shops, that subscription is in practice amortised quickly on the basket.",
     },
     simulator: {
-      title: "How many subscriptions for my household?",
+      title: "Estimate your Pi COOP budget",
       intro:
-        "Simple rule: about €250 purchase cap per person / month → 1 subscription at €10. Stack if needed.",
+        "About €250 purchase cap per person / month → 1 subscription at €10. Stack if needed.",
       peopleLabel: "Number of people shopping for",
       result:
         "You need {abos} subscription(s) → {cap} € / month cap (subscription {monthly} € / month).",
@@ -308,6 +304,38 @@ export const en = {
     chooseStreet: "Choose or type a street",
     volume: "{count} neighbours have already signed up on {street}!",
     error: "Error",
+  },
+  join: {
+    title: "Join the cooperative, together",
+    whereHeading: "Where is the project today?",
+    whereParagraphs: [
+      "Pi COOP is not yet incorporated before a notary. That is normal at this stage.",
+      "To open, we need registered households — and people ready to help the project move forward.",
+    ],
+    howHeading: "Two ways to take part",
+    paths: [
+      {
+        title: "Future co-operator",
+        lines: [
+          "Free pre-registration, no commitment.",
+          "Every household feeds the gauge and our bargaining power.",
+        ],
+      },
+      {
+        title: "Project pioneer",
+        lines: [
+          "Neighbourhood outreach, premises, legal, producers…",
+          "Write to us if you want to help carry the project.",
+        ],
+      },
+    ],
+    statusHeading: "No financial commitment today",
+    status:
+      "Share capital and subscription will only be requested as opening approaches.",
+    ctaRegister: "Pre-register for free",
+    ctaHelp: "Offer my help",
+    ctaHelpSubject: "Pi COOP — offer to help the project",
+    helpEmail: "info@picoop.be",
   },
   register: {
     sectionTitle: "Become a future co-operator",

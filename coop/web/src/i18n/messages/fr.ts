@@ -141,7 +141,7 @@ export const fr = {
       "La recette Pi COOP en quatre règles. Un supermarché à taille humaine, pas un hypermarché classique : une coopérative citoyenne où le pouvoir d’achat revient aux membres.",
     flows: {
       subtitle:
-        "La survie du magasin ne dépend pas d’une marge en % sur vos courses.",
+        "Au Pi COOP, la survie du magasin ne dépend pas d’une marge en % sur vos courses.",
       share: {
         title: "Part 25 €",
         body: "Frigos, rayons, caisses — l’équipement du magasin.",
@@ -154,18 +154,14 @@ export const fr = {
         title: "Marge 20 / 50 centimes",
         body: "Casse et invendus seulement — rien d’autre.",
       },
-      example:
-        "Hypothèse à 5 € au gros : magasin à +20 % ≈ 6 € → chez Pi : 5,20 € (sec). Hypothèse à 10 € au gros : magasin à +20 % ≈ 12 € → chez Pi : 10,20 € (sec) ou 10,50 € (frais).",
-      exampleNote:
-        "Illustration de la règle de marge, pas une promesse au centime près. Si l’achat groupé nous coûte moins au gros, le prix en rayon baisse aussi : toujours prix d’achat réel + 20 ou 50 centimes.",
       prepaidTitle: "Pourquoi le prépaiement change tout",
       prepaidBody:
-        "Avant d’acheter, les membres rechargent leur carte. Cet argent sert à commander par gros volumes (palettes / camions), au prix de gros, et autant que possible au plus près des producteurs — sans empiler la logique « distributeur + marge en pourcentage ». Résultat : on négocie plus bas qu’un magasin classique qui passe par des intermédiaires et applique souvent ~20 % (ou plus) sur le ticket. Chez Pi : prix de gros + 20 ou 50 centimes. Les 10 € d’abonnement ? Ils paient loyer et encadrement — et avec l’écart de prix dès les premières courses, cet abonnement est en pratique amorti très vite sur le panier (ordre de grandeur : quelques produits chers suffisent souvent à le « rattraper »).",
+        "Avant d’acheter, les membres rechargent leur carte. Cet argent sert à commander par gros volumes (palettes / camions), au prix de gros, et autant que possible au plus près des producteurs — sans empiler la logique « distributeur + marge en pourcentage ». Résultat : on négocie plus bas qu’un magasin classique qui passe par des intermédiaires et applique souvent ~20 % (ou plus) sur le ticket. Chez Pi : prix de gros + 20 ou 50 centimes. Les 10 € d’abonnement ? Ils paient loyer et encadrement — et avec l’écart de prix dès les premières courses, cet abonnement est en pratique amorti très vite sur le panier.",
     },
     simulator: {
-      title: "Combien d’abonnements pour mon foyer ?",
+      title: "Estimez votre budget Pi COOP",
       intro:
-        "Règle simple : environ 250 € de plafond d’achats par personne / mois → 1 abonnement à 10 €. Cumulez si besoin.",
+        "Environ 250 € de plafond d’achats par personne / mois → 1 abonnement à 10 €. Cumulez si besoin.",
       peopleLabel: "Nombre de personnes qui font les courses",
       result:
         "Il vous faut {abos} abonnement(s) → plafond {cap} € / mois (abonnement {monthly} € / mois).",
@@ -308,6 +304,38 @@ export const fr = {
     chooseStreet: "Choisissez ou saisissez une rue",
     volume: "{count} voisins sont déjà inscrits dans {street} !",
     error: "Erreur",
+  },
+  join: {
+    title: "Rejoignez la coopérative, ensemble",
+    whereHeading: "Où en est le projet ?",
+    whereParagraphs: [
+      "Pi COOP n’est pas encore constituée devant notaire. C’est normal à ce stade.",
+      "Pour ouvrir, il faut des ménages inscrits — et des personnes qui aident le projet à avancer.",
+    ],
+    howHeading: "Deux façons de participer",
+    paths: [
+      {
+        title: "Futur coopérateur",
+        lines: [
+          "Préinscription gratuite, sans engagement.",
+          "Chaque ménage alimente la jauge et le pouvoir de négociation.",
+        ],
+      },
+      {
+        title: "Pionnier du projet",
+        lines: [
+          "Relais de quartier, local, juridique, producteurs…",
+          "Écrivez-nous si vous voulez porter le projet avec nous.",
+        ],
+      },
+    ],
+    statusHeading: "Sans engagement financier aujourd’hui",
+    status:
+      "Parts sociales et abonnement ne seront demandés qu’à l’approche de l’ouverture.",
+    ctaRegister: "Je me préinscris gratuitement",
+    ctaHelp: "Proposer mon aide",
+    ctaHelpSubject: "Pi COOP — proposition d’aide au projet",
+    helpEmail: "info@picoop.be",
   },
   register: {
     sectionTitle: "Devenir futur coopérateur",

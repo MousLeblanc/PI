@@ -2,6 +2,7 @@
 
 import { CityLeaderboard } from "@/components/CityLeaderboard";
 import { FolderPi } from "@/components/FolderPi";
+import { JoinCall } from "@/components/JoinCall";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Manifesto } from "@/components/Manifesto";
 import { PiCounter } from "@/components/PiCounter";
@@ -123,15 +124,13 @@ export default function HomePage() {
         id="inscription"
         className="scroll-mt-24 bg-emerald-50/40 py-16 sm:py-24"
       >
-        <div className="mx-auto w-[min(720px,calc(100%-2rem))]">
-          <div className="mb-8 text-center">
-            <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-              {t("register.sectionTitle")}
-            </h2>
-            <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-              {t("register.sectionIntro")}
-            </p>
-          </div>
+        <div className="mx-auto w-[min(1120px,calc(100%-2rem))]">
+          <JoinCall />
+        </div>
+        <div
+          id="formulaire"
+          className="mx-auto mt-16 w-[min(720px,calc(100%-2rem))] scroll-mt-24"
+        >
           <RegisterForm />
         </div>
       </section>

@@ -1,5 +1,6 @@
 "use client";
 
+import { ModelDifferentiator } from "@/components/ModelDifferentiator";
 import { useI18n } from "@/i18n/use-t";
 
 export function MoneyFlows() {
@@ -8,9 +9,7 @@ export function MoneyFlows() {
 
   return (
     <div className="mx-auto mb-12 max-w-4xl">
-      <p className="text-center text-base font-medium text-emerald-950 sm:text-lg">
-        {f.subtitle}
-      </p>
+      <ModelDifferentiator className="mx-auto max-w-2xl" />
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
         {[f.share, f.abo, f.margin].map((col) => (
           <div
@@ -26,14 +25,6 @@ export function MoneyFlows() {
           </div>
         ))}
       </div>
-      <p className="mt-5 text-center text-sm leading-relaxed text-muted-foreground">
-        {f.example}
-      </p>
-      {f.exampleNote ? (
-        <p className="mt-2 text-center text-xs leading-relaxed text-muted-foreground/90">
-          {f.exampleNote}
-        </p>
-      ) : null}
       <div className="mt-6 rounded-2xl border border-emerald-200/80 bg-emerald-50/60 px-5 py-5 text-sm leading-relaxed text-emerald-950">
         <p className="font-semibold">{f.prepaidTitle}</p>
         <p className="mt-2 text-emerald-900/90">{f.prepaidBody}</p>

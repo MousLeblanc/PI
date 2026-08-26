@@ -144,7 +144,7 @@ export const nl = {
       "Le Pi COOP-recept in vier regels. Een supermarkt op menselijke schaal, geen klassieke hypermarkt: een burgercoöperatie waar de koopkracht terug naar de leden gaat.",
     flows: {
       subtitle:
-        "De overleving van de winkel hangt niet af van een %-marge op je boodschappen.",
+        "Bij Pi COOP hangt de overleving van de winkel niet af van een %-marge op je boodschappen.",
       share: {
         title: "Aandeel 25 €",
         body: "Koelkasten, rekken, kassa’s — uitrusting van de winkel.",
@@ -157,18 +157,14 @@ export const nl = {
         title: "Marge 20 / 50 cent",
         body: "Enkel bederf en onverkocht — niets anders.",
       },
-      example:
-        "Hypothese aan 5 € groothandel: winkel +20 % ≈ 6 € → bij Pi: 5,20 € (droog). Hypothese aan 10 € groothandel: winkel +20 % ≈ 12 € → bij Pi: 10,20 € (droog) of 10,50 € (vers).",
-      exampleNote:
-        "Illustratie van de margeregel, geen prijsbelofte. Als groepsinkoop ons goedkoper laat inkopen, daalt ook de schapprijs: steeds werkelijke aankoopprijs + 20 of 50 cent.",
       prepaidTitle: "Waarom vooraf opladen alles verandert",
       prepaidBody:
-        "Leden laden hun kaart op vóór aankoop. Dat geld dient om in groot volume te bestellen (palletten / vrachtwagens), tegen groothandelsprijs, zo dicht mogelijk bij de producenten — zonder de logica « distributeur + procentmarge » te stapelen. Resultaat: scherper onderhandelen dan een klassieke winkel met tussenpersonen en vaak ~20 % (of meer) op het ticket. Bij Pi: groothandelsprijs + 20 of 50 cent. De 10 € abonnement? Dat betaalt huur en begeleiding — en met het prijsverschil vanaf de eerste boodschappen is dat abonnement in de praktijk snel terugverdiend op het mandje (orde van grootte: enkele duurdere producten volstaan vaak).",
+        "Leden laden hun kaart op vóór aankoop. Dat geld dient om in groot volume te bestellen (palletten / vrachtwagens), tegen groothandelsprijs, zo dicht mogelijk bij de producenten — zonder de logica « distributeur + procentmarge » te stapelen. Resultaat: scherper onderhandelen dan een klassieke winkel met tussenpersonen en vaak ~20 % (of meer) op het ticket. Bij Pi: groothandelsprijs + 20 of 50 cent. De 10 € abonnement? Dat betaalt huur en begeleiding — en met het prijsverschil vanaf de eerste boodschappen is dat abonnement in de praktijk snel terugverdiend op het mandje.",
     },
     simulator: {
-      title: "Hoeveel abonnementen voor mijn gezin?",
+      title: "Schat je Pi COOP-budget in",
       intro:
-        "Rekenregel: ongeveer 250 € aankoopplafond per persoon / maand → 1 abonnement van 10 €. Stapelen indien nodig.",
+        "Ongeveer 250 € aankoopplafond per persoon / maand → 1 abonnement van 10 €. Stapelen indien nodig.",
       peopleLabel: "Aantal personen voor de boodschappen",
       result:
         "Je hebt {abos} abonnement(en) nodig → plafond {cap} € / maand (abonnement {monthly} € / maand).",
@@ -311,6 +307,38 @@ export const nl = {
     chooseStreet: "Kies of typ een straat",
     volume: "{count} buren zijn al ingeschreven in {street}!",
     error: "Fout",
+  },
+  join: {
+    title: "Sluit je aan bij de coöperatie, samen",
+    whereHeading: "Waar staat het project?",
+    whereParagraphs: [
+      "Pi COOP is nog niet opgericht voor notaris. Dat is normaal op dit stadium.",
+      "Om te openen hebben we ingeschreven gezinnen nodig — en mensen die het project vooruit helpen.",
+    ],
+    howHeading: "Twee manieren om mee te doen",
+    paths: [
+      {
+        title: "Toekomstige coöperant",
+        lines: [
+          "Gratis voorinschrijving, zonder engagement.",
+          "Elk gezin voedt de meter en ons onderhandelingsvermogen.",
+        ],
+      },
+      {
+        title: "Projectpionier",
+        lines: [
+          "Buurtrelais, pand, juridisch, producenten…",
+          "Schrijf ons als je het project wilt mee dragen.",
+        ],
+      },
+    ],
+    statusHeading: "Vandaag geen financiële verplichting",
+    status:
+      "Aandeel en abonnement worden pas gevraagd wanneer de opening nadert.",
+    ctaRegister: "Gratis voorinschrijven",
+    ctaHelp: "Mijn hulp aanbieden",
+    ctaHelpSubject: "Pi COOP — hulp aan het project",
+    helpEmail: "info@picoop.be",
   },
   register: {
     sectionTitle: "Toekomstige coöperant worden",

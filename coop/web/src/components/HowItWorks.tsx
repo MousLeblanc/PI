@@ -21,10 +21,7 @@ export function HowItWorks() {
         <p className="mt-3 text-muted-foreground">{messages.how.intro}</p>
       </div>
 
-      <MoneyFlows />
-      <SubscriptionSimulator />
-
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="mb-12 grid gap-5 sm:grid-cols-2">
         {pillars.map((pillar, i) => {
           const Icon = PILLAR_ICONS[i] ?? Landmark;
           return (
@@ -47,11 +44,11 @@ export function HowItWorks() {
                 ) : null}
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2.5 text-sm leading-relaxed text-muted-foreground">
+                <ul className="space-y-4 text-sm leading-loose text-muted-foreground">
                   {pillar.bullets.map((item) => (
-                    <li key={item.label} className="flex gap-2">
+                    <li key={item.label} className="flex gap-2.5">
                       <span
-                        className="mt-0.5 shrink-0 font-semibold text-emerald-700"
+                        className="mt-1 shrink-0 font-semibold text-emerald-700"
                         aria-hidden
                       >
                         •
@@ -67,7 +64,7 @@ export function HowItWorks() {
                   ))}
                 </ul>
                 {pillar.note ? (
-                  <p className="mt-3 border-l-2 border-emerald-200 pl-3 text-xs leading-relaxed text-muted-foreground">
+                  <p className="mt-4 border-l-2 border-emerald-200 pl-3 text-xs leading-relaxed text-muted-foreground">
                     <span className="font-medium text-emerald-900">Note</span>
                     {" : "}
                     {pillar.note}
@@ -83,6 +80,8 @@ export function HowItWorks() {
           );
         })}
       </div>
+
+      <MoneyFlows />
 
       <div className="mx-auto mt-10 max-w-2xl rounded-2xl border border-emerald-100 bg-emerald-50/40 px-5 py-6 sm:px-6">
         <h3 className="font-display text-xl font-semibold tracking-tight text-emerald-950">
@@ -120,6 +119,10 @@ export function HowItWorks() {
         <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
           {messages.how.v2.examplesNote}
         </p>
+      </div>
+
+      <div className="mx-auto mt-12 max-w-xl border-t border-emerald-900/10 pt-10">
+        <SubscriptionSimulator />
       </div>
 
       <div className="mx-auto mt-12 max-w-2xl space-y-10 border-t border-emerald-900/10 pt-10 text-center">

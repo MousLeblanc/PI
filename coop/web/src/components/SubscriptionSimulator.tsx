@@ -21,7 +21,7 @@ export function SubscriptionSimulator() {
   const monthly = abos * PRICE_PER_SUB;
 
   return (
-    <div className="mx-auto mb-12 max-w-xl rounded-2xl border border-emerald-100 bg-white/90 px-5 py-6 shadow-sm">
+    <div className="rounded-2xl border border-emerald-100 bg-white/90 px-5 py-6 shadow-sm">
       <h3 className="font-display text-xl font-semibold tracking-tight text-emerald-950">
         {s.title}
       </h3>
