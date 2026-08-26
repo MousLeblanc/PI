@@ -17,7 +17,7 @@ export const fr = {
     subtitleBefore: "Marge fixe, jamais cachée. Devenez",
     subtitleStrong: "futur coopérateur",
     subtitleAfter:
-      "de votre supermarché citoyen. La préinscription est gratuite. À l’ouverture : une part sociale (25\u00a0€ minimum), un abonnement de 10\u00a0€ par tranche de 250\u00a0€ d’achats, et 2\u00a0h de bénévolat par adulte de 18–65 ans.",
+      "de votre supermarché citoyen. La préinscription est gratuite. À l’ouverture, le principe est simple\u00a0: une part sociale (25\u00a0€ minimum), un abonnement de 10\u00a0€ / mois, et 2\u00a0h d’entraide par adulte (18–65 ans).",
     footnote:
       "20\u00a0centimes sur le sec · 50\u00a0centimes sur le frais et les produits chers — détail dans «\u00a0Comment ça marche\u00a0?\u00a0».",
     ctaUnlock: "Débloquer les prix dans ma ville",

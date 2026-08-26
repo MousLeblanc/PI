@@ -19,7 +19,7 @@ export const nl = {
     subtitleBefore: "Vaste marge, nooit verborgen. Word",
     subtitleStrong: "toekomstige coöperant",
     subtitleAfter:
-      "van je burgersupermarkt. De voorinschrijving is gratis. Bij de opening: een aandeel van minstens 25\u00a0€, een abonnement van 10\u00a0€ per schijf van 250\u00a0€ aankopen, en 2\u00a0u vrijwilligerswerk per volwassene van 18–65 jaar.",
+      "van je burgersupermarkt. De voorinschrijving is gratis. Bij de opening is het principe eenvoudig: een aandeel (minstens 25\u00a0€), een abonnement van 10\u00a0€ / maand, en 2\u00a0u wederzijdse hulp per volwassene (18–65).",
     footnote:
       "20\u00a0cent op droog · 50\u00a0cent op vers en duurdere producten — details in «\u00a0Hoe werkt het\u00a0?\u00a0».",
     ctaUnlock: "Ontgrendel de prijzen in mijn stad",

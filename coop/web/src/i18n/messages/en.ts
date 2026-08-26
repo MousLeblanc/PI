@@ -19,7 +19,7 @@ export const en = {
     subtitleBefore: "Fixed margin, never hidden. Become a",
     subtitleStrong: "future co-operator",
     subtitleAfter:
-      "of your citizen supermarket. Pre-registration is free. At opening: a share of at least €25, a €10 monthly subscription per €250 spending cap, and 2 hours of volunteering per adult aged 18–65.",
+      "of your citizen supermarket. Pre-registration is free. At opening, the principle is simple: a share (€25 minimum), a €10 / month subscription, and 2 hours of mutual aid per adult (18–65).",
     footnote:
       "20\u00a0cents on dry goods · 50\u00a0cents on fresh and pricier products — details in “How it works”.",
     ctaUnlock: "Unlock prices in my city",
