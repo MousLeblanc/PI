@@ -392,8 +392,8 @@ export const nl = {
       "Wees het eerste gezin dat zich inschrijft: jij schrijft de « 1 » van 3,14…",
     filled:
       "{count} {coopWord} = {count} {decWord}. Doe mee om de keten te verlengen!",
-    peopleOne: "{count} persoon",
-    peopleMany: "{count} personen",
+    peopleOne: "Al {count} toekomstige coöperant",
+    peopleMany: "Al {count} toekomstige coöperanten",
     coopOne: "gezin",
     coopMany: "gezinnen",
     decOne: "decimaal",

@@ -99,7 +99,7 @@ export function PiCounter() {
         {subtitle}
       </p>
       {peopleLabel ? (
-        <p className="text-center text-sm font-medium text-emerald-900">
+        <p className="text-center text-sm font-medium text-emerald-800">
           {peopleLabel}
         </p>
       ) : null}

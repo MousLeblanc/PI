@@ -386,8 +386,8 @@ export const en = {
     empty: "Be the first household to sign up: you will write the “1” in 3.14…",
     filled:
       "{count} {coopWord} = {count} {decWord}. Join us to lengthen the chain!",
-    peopleOne: "{count} person",
-    peopleMany: "{count} people",
+    peopleOne: "Already {count} future co-operator",
+    peopleMany: "Already {count} future co-operators",
     coopOne: "household",
     coopMany: "households",
     decOne: "decimal",
