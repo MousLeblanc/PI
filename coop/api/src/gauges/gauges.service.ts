@@ -29,12 +29,16 @@ export class GaugesService {
   }
 
   async getPiCounter() {
-    const total = await this.totalHouseholds();
+    const [total, peopleAgg] = await Promise.all([
+      this.totalHouseholds(),
+      this.prisma.user.aggregate({ _sum: { householdSize: true } }),
+    ]);
     // 1 décimale de π par ménage préinscrit
     const fracLen = Math.min(Math.max(total, 0), PI_FRAC.length);
     const display =
       fracLen === 0 ? '3,' : `3,${PI_FRAC.slice(0, fracLen)}`;
-    return { total, display, piFractionDigits: fracLen };
+    const peopleTotal = peopleAgg._sum.householdSize ?? 0;
+    return { total, peopleTotal, display, piFractionDigits: fracLen };
   }
 
   async getPostalGauges(code?: string) {

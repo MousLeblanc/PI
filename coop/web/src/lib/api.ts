@@ -19,6 +19,8 @@ export type FolderPiResponse = {
 
 export type PiCounterResponse = {
   total: number;
+  /** Somme des householdSize (personnes dans les foyers inscrits). */
+  peopleTotal: number;
   display: string;
   piFractionDigits: number;
 };

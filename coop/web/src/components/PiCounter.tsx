@@ -9,6 +9,7 @@ import { useI18n } from "@/i18n/use-t";
 export function PiCounter() {
   const { t, numberLocale } = useI18n();
   const [total, setTotal] = useState(0);
+  const [peopleTotal, setPeopleTotal] = useState(0);
   const [display, setDisplay] = useState("3,");
   const prevTotal = useRef(0);
   const [flash, setFlash] = useState(false);
@@ -25,6 +26,7 @@ export function PiCounter() {
         }
         prevTotal.current = next.total;
         setTotal(next.total);
+        setPeopleTotal(next.peopleTotal ?? 0);
         // 1 ménage = 1 décimale — display API = source de vérité
         setDisplay(
           next.display ||
@@ -33,6 +35,7 @@ export function PiCounter() {
       } catch {
         if (alive) {
           setTotal(0);
+          setPeopleTotal(0);
           setDisplay("3,");
         }
       }
@@ -58,6 +61,12 @@ export function PiCounter() {
     total === 0
       ? t("pi.empty")
       : t("pi.filled", { count, coopWord, decWord });
+  const peopleLabel =
+    peopleTotal > 0
+      ? t(peopleTotal > 1 ? "pi.peopleMany" : "pi.peopleOne", {
+          count: peopleTotal.toLocaleString(numberLocale),
+        })
+      : null;
 
   return (
     <div className="flex max-w-[min(92vw,42rem)] flex-col items-center gap-2">
@@ -89,6 +98,11 @@ export function PiCounter() {
       <p className="max-w-md text-center text-sm text-muted-foreground">
         {subtitle}
       </p>
+      {peopleLabel ? (
+        <p className="text-center text-sm font-medium text-emerald-900">
+          {peopleLabel}
+        </p>
+      ) : null}
     </div>
   );
 }

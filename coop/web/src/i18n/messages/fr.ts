@@ -389,6 +389,8 @@ export const fr = {
       "Soyez le premier ménage inscrit : vous écrirez le « 1 » de 3,14…",
     filled:
       "{count} {coopWord} = {count} {decWord}. Rejoignez-nous pour allonger la chaîne !",
+    peopleOne: "{count} personne",
+    peopleMany: "{count} personnes",
     coopOne: "ménage",
     coopMany: "ménages",
     decOne: "décimale",
