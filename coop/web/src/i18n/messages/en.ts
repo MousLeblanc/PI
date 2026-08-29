@@ -256,7 +256,7 @@ export const en = {
       examplesLead:
         "Illustration (how the margin works, not a penny-perfect promise):",
       examples: [
-        "Hypothesis: an item at €4.90 in a classic shop (≈ two ~20% markups already taken). Remove ~40%, then +20 cents → at Pi: €3.14 (dry).",
+        "Hypothesis: an item at €4.90 in a classic shop (≈ two ~20% markups already taken). Remove ~40%, then +20 cents → at Pi: €3.14 😉",
       ],
       examplesNote:
         "Marketing reading: 4.90 × 0.60 + 0.20 = 3.14. Order of magnitude for “we remove both 20%s”. Real shelf price remains actual purchase price + 20 or 50 cents.",

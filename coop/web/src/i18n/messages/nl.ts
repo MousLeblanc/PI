@@ -259,7 +259,7 @@ export const nl = {
       examplesLead:
         "Illustratie (hoe de marge werkt, geen belofte tot op de cent) :",
       examples: [
-        "Hypothese: artikel aan 4,90 € in een klassieke winkel (≈ twee ~20 % marges al genomen). Haal ~40 % weg, dan +20 cent → bij Pi: 3,14 € (droog).",
+        "Hypothese: artikel aan 4,90 € in een klassieke winkel (≈ twee ~20 % marges al genomen). Haal ~40 % weg, dan +20 cent → bij Pi: 3,14 € 😉",
       ],
       examplesNote:
         "Marketinglezing: 4,90 × 0,60 + 0,20 = 3,14. Orde van grootte voor « we halen beide 20 % weg ». De echte schapprijs blijft werkelijke aankoopprijs + 20 of 50 cent.",

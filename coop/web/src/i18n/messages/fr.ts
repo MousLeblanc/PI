@@ -256,7 +256,7 @@ export const fr = {
       examplesLead:
         "Illustration (mécanique de marge, pas une promesse au centime près) :",
       examples: [
-        "Hypothèse : article à 4,90 € en magasin classique (≈ deux fois ~20 % déjà pris). On retire ~40 %, puis +20 centimes → chez Pi : 3,14 € (sec).",
+        "Hypothèse : article à 4,90 € en magasin classique (≈ deux fois ~20 % déjà pris). On retire ~40 %, puis +20 centimes → chez Pi : 3,14 € 😉",
       ],
       examplesNote:
         "Lecture marketing : 4,90 × 0,60 + 0,20 = 3,14 €. Ordre de grandeur pour montrer l’effet « on retire les deux 20 % ». Le prix réel restera toujours prix d’achat + 20 ou 50 centimes.",
