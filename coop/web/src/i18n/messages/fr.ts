@@ -159,13 +159,12 @@ export const fr = {
         "Avant d’acheter, les membres rechargent leur carte. Cet argent sert à commander par gros volumes (palettes / camions), au prix de gros, et autant que possible au plus près des producteurs — sans empiler la logique « distributeur + marge en pourcentage ». Résultat : on négocie plus bas qu’un magasin classique qui passe par des intermédiaires et applique souvent ~20 % (ou plus) sur le ticket. Chez Pi : prix de gros + 20 ou 50 centimes. Les 10 € d’abonnement ? Ils paient loyer et encadrement — et avec l’écart de prix dès les premières courses, cet abonnement est en pratique amorti très vite sur le panier.",
     },
     simulator: {
-      title: "Estimez votre budget Pi COOP",
+      title: "L’abonnement et votre budget courses",
       intro:
-        "Environ 250 € de plafond d’achats par personne / mois → 1 abonnement à 10 €. Cumulez si besoin.",
-      peopleLabel: "Nombre de personnes qui font les courses",
-      result:
-        "Il vous faut {abos} abonnement(s) → plafond {cap} € / mois (abonnement {monthly} € / mois).",
-      hint: "C’est une indication. À l’ouverture, vous choisirez selon votre vrai budget.",
+        "1 abonnement à 10 € = 250 € de budget courses / mois. C’est tout.",
+      rule:
+        "Vous ajoutez un abonnement seulement si 250 € ne suffisent pas — pas parce que vous êtes 2, 3 ou 5 à la maison. Si vous êtes nombreux mais que 250 € suffisent, un seul abonnement suffit.",
+      hint: "À l’ouverture, vous choisirez selon votre vrai besoin — pas selon une calculatrice.",
     },
     pillars: [
       {
@@ -193,14 +192,14 @@ export const fr = {
           { label: "Le montant", text: "10 € / mois." },
           {
             label: "L’avantage",
-            text: "Il vous donne droit à un plafond d’achats de 250 € (budget mensuel moyen pour une personne).",
+            text: "Il vous donne droit à 250 € de budget courses / mois (ordre de grandeur d’une personne).",
           },
           {
             label: "À quoi ça sert ?",
             text: "Il couvre nos charges fixes (loyer, électricité, encadrement).",
           },
         ],
-        note: "Les grandes familles cumulent simplement les abonnements (ex. : 20 € pour un plafond de 500 € d’achats).",
+        note: "Les grandes familles ajoutent un abonnement seulement si elles ont besoin de plus de budget courses (ex. : 20 € pour 500 €).",
       },
       {
         title: "Notre force de frappe",

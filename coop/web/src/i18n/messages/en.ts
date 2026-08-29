@@ -159,13 +159,12 @@ export const en = {
         "Members top up their card before buying. That money is used to order in bulk (pallets / trucks), at wholesale price, as close as possible to producers — without stacking the “distributor + percentage margin” logic. Result: sharper negotiation than a classic shop with middlemen and often ~20% (or more) on the ticket. At Pi: wholesale + 20 or 50 cents. The €10 subscription? It pays rent and supervision — and with the price gap from the first shops, that subscription is in practice amortised quickly on the basket.",
     },
     simulator: {
-      title: "Estimate your Pi COOP budget",
+      title: "The subscription and your grocery budget",
       intro:
-        "About €250 purchase cap per person / month → 1 subscription at €10. Stack if needed.",
-      peopleLabel: "Number of people shopping for",
-      result:
-        "You need {abos} subscription(s) → {cap} € / month cap (subscription {monthly} € / month).",
-      hint: "A guideline. At opening, you choose according to your real budget.",
+        "1 subscription at €10 = €250 grocery budget / month. That’s it.",
+      rule:
+        "You add a subscription only if €250 is not enough — not because 2, 3 or 5 people live at home. A large household that doesn’t spend much can stay on one subscription if €250 is enough.",
+      hint: "At opening, you choose according to your real need — not a calculator.",
     },
     pillars: [
       {
@@ -193,14 +192,14 @@ export const en = {
           { label: "The amount", text: "€10 / month." },
           {
             label: "The benefit",
-            text: "A €250 purchase cap (roughly one person’s monthly food budget).",
+            text: "It gives you €250 grocery budget / month (roughly one person’s spend).",
           },
           {
             label: "What it covers",
             text: "Fixed costs: rent, electricity, supervision.",
           },
         ],
-        note: "Larger families simply stack subscriptions (e.g. €20 for a €500 cap).",
+        note: "Larger families add a subscription only if they need more grocery budget (e.g. €20 for €500).",
       },
       {
         title: "Our bargaining power",

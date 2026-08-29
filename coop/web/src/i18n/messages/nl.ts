@@ -162,13 +162,12 @@ export const nl = {
         "Leden laden hun kaart op vóór aankoop. Dat geld dient om in groot volume te bestellen (palletten / vrachtwagens), tegen groothandelsprijs, zo dicht mogelijk bij de producenten — zonder de logica « distributeur + procentmarge » te stapelen. Resultaat: scherper onderhandelen dan een klassieke winkel met tussenpersonen en vaak ~20 % (of meer) op het ticket. Bij Pi: groothandelsprijs + 20 of 50 cent. De 10 € abonnement? Dat betaalt huur en begeleiding — en met het prijsverschil vanaf de eerste boodschappen is dat abonnement in de praktijk snel terugverdiend op het mandje.",
     },
     simulator: {
-      title: "Schat je Pi COOP-budget in",
+      title: "Het abonnement en je boodschappenbudget",
       intro:
-        "Ongeveer 250 € aankoopplafond per persoon / maand → 1 abonnement van 10 €. Stapelen indien nodig.",
-      peopleLabel: "Aantal personen voor de boodschappen",
-      result:
-        "Je hebt {abos} abonnement(en) nodig → plafond {cap} € / maand (abonnement {monthly} € / maand).",
-      hint: "Richtlijn. Bij de opening kies je zelf volgens je echte budget.",
+        "1 abonnement van 10 € = 250 € boodschappenbudget / maand. Meer niet.",
+      rule:
+        "Je neemt een extra abonnement enkel als 250 € niet volstaat — niet omdat je met 2, 3 of 5 bent thuis. Een groot gezin dat weinig uitgeeft, kan bij één abonnement blijven als 250 € volstaat.",
+      hint: "Bij de opening kies je volgens je echte nood — niet volgens een rekenmachine.",
     },
     pillars: [
       {
@@ -196,14 +195,14 @@ export const nl = {
           { label: "Het bedrag", text: "10 € / maand." },
           {
             label: "Het voordeel",
-            text: "Een aankoopplafond van 250 € (gemiddeld maandbudget voor één persoon).",
+            text: "250 € boodschappenbudget / maand (orde van grootte voor één persoon).",
           },
           {
             label: "Waarvoor dient het?",
             text: "Vaste kosten: huur, elektriciteit, begeleiding.",
           },
         ],
-        note: "Grote gezinnen stapelen gewoon abonnementen (bv. 20 € voor een plafond van 500 €).",
+        note: "Grote gezinnen nemen een extra abonnement enkel als ze meer boodschappenbudget nodig hebben (bv. 20 € voor 500 €).",
       },
       {
         title: "Onze slagkracht",
