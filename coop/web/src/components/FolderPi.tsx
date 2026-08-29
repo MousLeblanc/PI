@@ -64,7 +64,7 @@ export function FolderPi() {
               <p className="text-sm text-slate-400 line-through decoration-slate-400/80">
                 {t("folder.inStore", { price: formatPrice(item.retailEur) })}
               </p>
-              <p className="font-display text-5xl font-bold leading-none tracking-tight text-emerald-800">
+              <p className="font-sans text-5xl font-bold leading-none tracking-tight text-emerald-800 tabular-nums">
                 {formatPrice(item.piPriceEur)}
                 <span className="ml-1 text-xl font-semibold">€</span>
               </p>
@@ -105,7 +105,7 @@ export function FolderPi() {
               <p className="m-0 text-sm text-emerald-100/80 sm:text-base">
                 {t("folder.compare.retail")}
               </p>
-              <p className="m-0 font-display text-2xl font-semibold tabular-nums tracking-tight text-emerald-100/90 line-through decoration-emerald-100/40 sm:text-3xl">
+              <p className="m-0 font-sans text-2xl font-semibold tabular-nums tracking-tight text-emerald-100/90 line-through decoration-emerald-100/40 sm:text-3xl">
                 {formatPrice(retailTotal)}
                 <span className="ml-1 text-lg font-medium sm:text-xl">€</span>
               </p>
@@ -114,7 +114,7 @@ export function FolderPi() {
               <p className="m-0 text-sm text-emerald-100/80 sm:text-base">
                 {t("folder.compare.pi")}
               </p>
-              <p className="m-0 font-display text-2xl font-bold tabular-nums tracking-tight text-white sm:text-3xl">
+              <p className="m-0 font-sans text-2xl font-bold tabular-nums tracking-tight text-white sm:text-3xl">
                 {formatPrice(piTotal)}
                 <span className="ml-1 text-lg font-semibold sm:text-xl">€</span>
               </p>
@@ -132,8 +132,8 @@ export function FolderPi() {
                 </p>
               ) : null}
             </div>
-            <p className="m-0 font-display text-3xl font-bold tabular-nums tracking-tight sm:text-4xl">
-              −{formatPrice(savings)}
+            <p className="m-0 font-sans text-3xl font-bold tabular-nums tracking-tight sm:text-4xl">
+              {formatPrice(savings)}
               <span className="ml-1 text-xl font-semibold sm:text-2xl">€</span>
             </p>
           </div>
