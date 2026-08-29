@@ -2,7 +2,7 @@
 
 import { useI18n } from "@/i18n/use-t";
 
-/** Règle abo → plafond, sans calculatrice (pas de cumul imposé par personne). */
+/** Règle abo → budget courses, sans calculatrice. */
 export function SubscriptionSimulator() {
   const { messages } = useI18n();
   const s = messages.how.simulator;
@@ -17,9 +17,6 @@ export function SubscriptionSimulator() {
       </p>
       <p className="mt-3 text-sm font-medium leading-relaxed text-emerald-950 sm:text-base">
         {s.rule}
-      </p>
-      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-        {s.hint}
       </p>
     </div>
   );

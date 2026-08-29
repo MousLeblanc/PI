@@ -163,11 +163,8 @@ export const nl = {
     },
     simulator: {
       title: "Het abonnement en je boodschappenbudget",
-      intro:
-        "1 abonnement van 10 € = 250 € boodschappenbudget / maand. Meer niet.",
-      rule:
-        "Je neemt een extra abonnement enkel als 250 € niet volstaat — niet omdat je met 2, 3 of 5 bent thuis. Een groot gezin dat weinig uitgeeft, kan bij één abonnement blijven als 250 € volstaat.",
-      hint: "Bij de opening kies je volgens je echte nood — niet volgens een rekenmachine.",
+      intro: "1 abonnement van 10 € = 250 € boodschappenbudget / maand.",
+      rule: "Je neemt een extra abonnement enkel als 250 € niet volstaat.",
     },
     pillars: [
       {

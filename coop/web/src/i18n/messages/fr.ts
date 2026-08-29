@@ -160,11 +160,8 @@ export const fr = {
     },
     simulator: {
       title: "L’abonnement et votre budget courses",
-      intro:
-        "1 abonnement à 10 € = 250 € de budget courses / mois. C’est tout.",
-      rule:
-        "Vous ajoutez un abonnement seulement si 250 € ne suffisent pas — pas parce que vous êtes 2, 3 ou 5 à la maison. Si vous êtes nombreux mais que 250 € suffisent, un seul abonnement suffit.",
-      hint: "À l’ouverture, vous choisirez selon votre vrai besoin — pas selon une calculatrice.",
+      intro: "1 abonnement à 10 € = 250 € de budget courses / mois.",
+      rule: "Vous ajoutez un abonnement seulement si 250 € ne suffisent pas.",
     },
     pillars: [
       {

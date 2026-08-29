@@ -160,11 +160,8 @@ export const en = {
     },
     simulator: {
       title: "The subscription and your grocery budget",
-      intro:
-        "1 subscription at €10 = €250 grocery budget / month. That’s it.",
-      rule:
-        "You add a subscription only if €250 is not enough — not because 2, 3 or 5 people live at home. A large household that doesn’t spend much can stay on one subscription if €250 is enough.",
-      hint: "At opening, you choose according to your real need — not a calculator.",
+      intro: "1 subscription at €10 = €250 grocery budget / month.",
+      rule: "You add a subscription only if €250 is not enough.",
     },
     pillars: [
       {
