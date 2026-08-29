@@ -1,13 +1,15 @@
 "use client";
 
+import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/i18n/use-t";
 
 export function Manifesto() {
-  const { t } = useI18n();
+  const { t, messages } = useI18n();
+  const rules = messages.manifesto.rules;
 
   return (
-    <div className="mx-auto max-w-2xl">
+    <div className="mx-auto max-w-3xl text-left">
       <p className="text-sm font-medium uppercase tracking-[0.14em] text-emerald-800">
         {t("manifesto.eyebrow")}
       </p>
@@ -15,7 +17,7 @@ export function Manifesto() {
         {t("manifesto.title")}
       </h2>
 
-      <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
+      <div className="mt-8 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
         <p>{t("manifesto.p1")}</p>
         <p>
           {t("manifesto.p2Before")}{" "}
@@ -23,26 +25,35 @@ export function Manifesto() {
             {t("manifesto.p2Strong")}
           </strong>
         </p>
-        <p>
-          {t("manifesto.p3")}{" "}
-          <strong className="font-medium text-emerald-900">
-            {t("brand.slogan")}
-          </strong>
-        </p>
+        <p>{t("manifesto.p3")}</p>
         <p>{t("manifesto.p4")}</p>
         <p>{t("manifesto.ticket")}</p>
       </div>
 
-      <blockquote className="mt-8 border-l-4 border-emerald-800 bg-emerald-50/60 py-5 pl-5 pr-4 sm:pl-6">
-        <p className="text-sm font-medium text-emerald-950 sm:text-base">
+      <div className="mt-8 rounded-2xl border border-emerald-900/10 bg-emerald-50/70 p-5 sm:p-6">
+        <p className="m-0 text-sm font-semibold text-emerald-950 sm:text-base">
           {t("manifesto.ruleLead")}
         </p>
-        <p className="mt-2 text-sm leading-relaxed text-emerald-950/90 sm:text-base">
-          {t("manifesto.rule")}
-        </p>
-      </blockquote>
+        <ul className="mt-4 space-y-4">
+          {rules.map((rule) => (
+            <li key={rule.title} className="flex gap-3">
+              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-700 text-white">
+                <Check className="h-3.5 w-3.5" strokeWidth={3} aria-hidden />
+              </span>
+              <div className="min-w-0">
+                <p className="m-0 text-sm font-semibold text-emerald-950 sm:text-base">
+                  {rule.title}
+                </p>
+                <p className="m-0 mt-1 text-sm leading-relaxed text-emerald-950/85 sm:text-[0.95rem]">
+                  {rule.body}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-      <div className="mt-8 space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
+      <div className="mt-8 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
         <p>{t("manifesto.volunteer")}</p>
         <p className="font-display text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
           {t("manifesto.closing")}

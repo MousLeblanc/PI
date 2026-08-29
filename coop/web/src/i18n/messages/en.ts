@@ -272,20 +272,31 @@ export const en = {
   },
   manifesto: {
     eyebrow: "Our manifesto",
-    title: "Take back control, together.",
-    p1: "For too long, we were told that faced with inflation, there was nothing to be done. That we had to accept, in silence, opaque margins and prices that rise without explanation. Isolated, each in our own trolley, we become small. And alone, we change little.",
+    title: "Take back power over our groceries.",
+    p1: "For too long, we were told there was nothing to be done about inflation. Isolated, each in our own trolley, we change little.",
     p2Before: "They forgot one thing:",
     p2Strong: "small is not a weakness when we come together.",
     p3: "That is where Pi COOP was born. Like the number π: a small sign, a force that never ends.",
-    p4: "Pi COOP is not just another supermarket. It is a citizen cooperative born of an urgency: to stop putting up with it.",
+    p4: "This is not just another supermarket. It is a citizen cooperative born of an urgency: to stop putting up with it.",
     ticket:
-      "On a classic checkout receipt, you are not only paying for what is in the basket. You are also funding the rent of giant stores, the salaries of a management pyramid, advertising, and margins that do not belong to you.",
-    ruleLead:
-      "At Pi COOP, the rule is the opposite — simple, and it will not change:",
-    rule:
-      "we buy together, at true wholesale price (direct from the producer); we show that price; we add a fixed margin — 20\u00a0cents on dry goods, 50\u00a0cents on fresh and pricier products — to absorb spoilage and unsold stock. Nothing hidden.",
+      "Today, a supermarket takes about 20% margin. Its supplier already took 20%. Result: nearly 40% too much on your receipt.",
+    ruleLead: "At Pi COOP, we have a simple rule:",
+    rules: [
+      {
+        title: "No middlemen",
+        body: "We buy direct, at true wholesale price.",
+      },
+      {
+        title: "Transparent fixed margin",
+        body: "20\u00a0cents on dry goods, 50\u00a0cents on fresh — nothing hidden.",
+      },
+      {
+        title: "The fair Pi price",
+        body: "A product shown at €4.90 elsewhere comes to about €3.14 for you.",
+      },
+    ],
     volunteer:
-      "From opening day, every adult aged 18 to 65 gives 2 hours a month. Younger people and those over 65 are exempt, unless they wish to take part. Fewer middlemen, prices that hold, and neighbourhood ties that return.",
+      "From opening day, every adult aged 18 to 65 gives 2 hours a month. Younger people and those over 65 are exempt, unless they wish to take part.",
     closing:
       "It is time to take back power over our groceries — and over our lives.",
     cta: "I pre-register for free",

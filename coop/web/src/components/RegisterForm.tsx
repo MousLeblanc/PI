@@ -145,8 +145,8 @@ export function RegisterForm() {
   }
 
   return (
-    <Card className="border-slate-200/80 shadow-lg shadow-slate-900/5">
-      <CardContent className="p-6">
+    <Card className="border border-emerald-900/5 bg-white shadow-xl shadow-emerald-950/10">
+      <CardContent className="p-6 sm:p-7">
         <form onSubmit={onSubmit} className="grid gap-5">
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="space-y-2">

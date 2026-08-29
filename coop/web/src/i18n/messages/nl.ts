@@ -275,20 +275,31 @@ export const nl = {
   },
   manifesto: {
     eyebrow: "Ons manifest",
-    title: "De controle terugpakken, samen.",
-    p1: "Te lang kreeg men te horen dat er tegenover inflatie niets te doen viel. Dat we in stilte ondoorzichtige marges en stijgende prijzen zonder uitleg moesten aanvaarden. Geïsoleerd, ieder in de eigen winkelwagen, worden we klein. En alleen veranderen we weinig.",
+    title: "De macht over onze boodschappen terugpakken.",
+    p1: "Te lang kreeg men te horen dat er tegen inflatie niets te doen viel. Geïsoleerd, ieder in de eigen winkelwagen, veranderen we weinig.",
     p2Before: "Men vergat één ding:",
     p2Strong: "klein is geen zwakte als we ons verenigen.",
     p3: "Daaruit is Pi COOP ontstaan. Zoals het getal π: een klein teken, een kracht zonder einde.",
-    p4: "Pi COOP is geen supermarkt te meer. Het is een burgercoöperatie geboren uit urgentie: stoppen met ondergaan.",
+    p4: "Dit is geen supermarkt te meer. Het is een burgercoöperatie geboren uit urgentie: stoppen met ondergaan.",
     ticket:
-      "Op een klassieke kassaticket betaal je niet alleen wat er in het mandje zit. Je betaalt ook de huur van grote winkels, de lonen van een managementpiramide, reclame, en marges die jou niet toebehoren.",
-    ruleLead:
-      "Bij Pi COOP is de regel omgekeerd — eenvoudig, en die verandert niet:",
-    rule:
-      "we kopen samen, tegen de echte groothandelsprijs (rechtstreeks van de producent); we tonen die prijs; we voegen een vaste marge toe — 20\u00a0cent op droog, 50\u00a0cent op vers en duurdere producten — om bederf en onverkocht op te vangen. Niets verborgen.",
+      "Vandaag neemt een supermarkt ongeveer 20\u00a0% marge. De leverancier nam er al 20\u00a0%. Resultaat: bijna 40\u00a0% te veel op je kassaticket.",
+    ruleLead: "Bij Pi COOP hebben we één eenvoudige regel:",
+    rules: [
+      {
+        title: "Geen tussenpersonen",
+        body: "We kopen rechtstreeks, tegen de echte groothandelsprijs.",
+      },
+      {
+        title: "Transparante vaste marge",
+        body: "20\u00a0cent op droog, 50\u00a0cent op vers — niets verborgen.",
+      },
+      {
+        title: "De eerlijke Pi-prijs",
+        body: "Een product dat elders 4,90\u00a0€ staat, komt bij jou op ongeveer 3,14\u00a0€.",
+      },
+    ],
     volunteer:
-      "Vanaf de opening geeft elke volwassene van 18 tot 65 jaar 2 uur per maand. Jongeren en 65-plussers zijn vrijgesteld, tenzij ze willen meedoen. Minder tussenpersonen, prijzen die standhouden, en opnieuw band in de buurt.",
+      "Vanaf de opening geeft elke volwassene van 18 tot 65 jaar 2 uur per maand. Jongeren en 65-plussers zijn vrijgesteld, tenzij ze willen meedoen.",
     closing:
       "Het is tijd om de macht over onze boodschappen — en over ons leven — terug te nemen.",
     cta: "Ik schrijf me gratis voor",

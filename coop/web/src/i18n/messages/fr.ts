@@ -272,20 +272,31 @@ export const fr = {
   },
   manifesto: {
     eyebrow: "Notre manifeste",
-    title: "Reprendre le contrôle, ensemble.",
-    p1: "Pendant trop longtemps, on nous a dit que face à l’inflation, il n’y avait rien à faire. Qu’il fallait accepter, en silence, des marges opaques et des prix qui montent sans explication. Isolés, chacun dans son caddie, on devient petits. Et seuls, on change peu.",
+    title: "Reprendre le pouvoir sur nos courses.",
+    p1: "Pendant trop longtemps, on nous a dit qu’il n’y avait rien à faire face à l’inflation. Isolés, chacun dans son caddie, on change peu.",
     p2Before: "Ils ont oublié une chose :",
     p2Strong: "petit n’est pas une faiblesse quand on se réunit.",
     p3: "C’est de là qu’est né Pi COOP. Comme le nombre π : un petit signe, une force qui n’en finit pas.",
-    p4: "Pi COOP n’est pas un supermarché de plus. C’est une coopérative citoyenne née d’une urgence : arrêter de subir.",
+    p4: "Ce n’est pas un supermarché de plus. C’est une coopérative citoyenne née d’une urgence : arrêter de subir.",
     ticket:
-      "Dans un ticket de caisse classique, vous ne payez pas seulement ce qu’il y a dans le panier. Vous financez aussi le loyer des grands surfaces, les salaires d’une pyramide de management, la publicité, et des marges qui ne vous appartiennent pas.",
-    ruleLead:
-      "Chez Pi COOP, la règle est inverse — simple, et elle ne changera pas :",
-    rule:
-      "nous achetons ensemble, au vrai prix de gros (direct producteur) ; nous affichons ce prix ; nous y ajoutons une marge fixe — 20\u00a0centimes sur le sec, 50\u00a0centimes sur le frais et les produits chers — pour absorber la casse et les invendus. Rien de caché.",
+      "Aujourd’hui, un supermarché prend environ 20\u00a0% de marge. Son fournisseur avait déjà pris 20\u00a0%. Résultat : près de 40\u00a0% en trop sur votre ticket de caisse.",
+    ruleLead: "Chez Pi COOP, nous avons une règle simple :",
+    rules: [
+      {
+        title: "Suppression des intermédiaires",
+        body: "Nous achetons en direct, au vrai prix de gros.",
+      },
+      {
+        title: "Marge fixe transparente",
+        body: "20\u00a0centimes sur le sec, 50\u00a0centimes sur le frais — rien de caché.",
+      },
+      {
+        title: "Le prix juste (Pi)",
+        body: "Un produit affiché 4,90\u00a0€ ailleurs vous revient à environ 3,14\u00a0€.",
+      },
+    ],
     volunteer:
-      "Dès l’ouverture, chaque adulte de 18 à 65 ans donne 2 heures par mois. Les plus jeunes et les plus de 65 ans en sont exemptés, sauf s’ils le souhaitent. Moins d’intermédiaires, des prix qui tiennent, et du lien qui revient dans le quartier.",
+      "Dès l’ouverture, chaque adulte de 18 à 65 ans donne 2 heures par mois. Les plus jeunes et les plus de 65 ans en sont exemptés, sauf s’ils le souhaitent.",
     closing:
       "Il est temps de reprendre le pouvoir sur nos courses — et sur nos vies.",
     cta: "Je me préinscris gratuitement",

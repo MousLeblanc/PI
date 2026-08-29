@@ -125,14 +125,11 @@ export default function HomePage() {
         id="inscription"
         className="scroll-mt-24 bg-emerald-50/40 py-16 sm:py-24"
       >
-        <div className="mx-auto w-[min(1120px,calc(100%-2rem))]">
+        <div className="mx-auto grid w-[min(1120px,calc(100%-2rem))] gap-10 lg:grid-cols-2 lg:items-start lg:gap-14">
           <JoinCall />
-        </div>
-        <div
-          id="formulaire"
-          className="mx-auto mt-16 w-[min(720px,calc(100%-2rem))] scroll-mt-24"
-        >
-          <RegisterForm />
+          <div id="formulaire" className="scroll-mt-24 lg:sticky lg:top-24">
+            <RegisterForm />
+          </div>
         </div>
       </section>
     </main>
