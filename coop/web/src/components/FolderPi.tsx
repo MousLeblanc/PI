@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getFolderPi, type FolderPiResponse } from "@/lib/api";
 import { useI18n } from "@/i18n/use-t";
@@ -55,7 +55,7 @@ export function FolderPi() {
                 {item.name}
               </p>
             </CardHeader>
-            <CardContent className="space-y-1.5">
+            <CardContent className="space-y-1.5 pb-5">
               <p className="text-sm text-slate-400 line-through decoration-slate-400/80">
                 {t("folder.inStore", { price: formatPrice(item.retailEur) })}
               </p>
@@ -72,19 +72,6 @@ export function FolderPi() {
                 })}
               </p>
             </CardContent>
-            <CardFooter>
-              <Badge
-                className={
-                  item.tier === "premium"
-                    ? "border-transparent bg-teal-800 text-sm font-semibold text-white hover:bg-teal-800"
-                    : "border-transparent bg-emerald-800 text-sm font-semibold text-white hover:bg-emerald-800"
-                }
-              >
-                {t("folder.markup", {
-                  cents: Math.round(item.markupEur * 100),
-                })}
-              </Badge>
-            </CardFooter>
           </Card>
         ))}
 
