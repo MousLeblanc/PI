@@ -14,15 +14,13 @@ export const en = {
     slogan: "Strength in numbers",
   },
   hero: {
-    title: "Your groceries at wholesale price +\u00a020\u00a0cents",
+    title: "Your groceries at producer-direct price +\u00a020\u00a0cents",
     titleAria: "See the fixed-margin details",
-    subtitleBefore: "Fixed margin, never hidden. Become a",
-    subtitleStrong: "future co-operator",
-    subtitleAfter:
-      "of your citizen supermarket. Pre-registration is free. At opening, the principle is simple: a share (€25 minimum), a €10 / month subscription, and 2 hours of mutual aid per adult (18–65).",
+    subtitle:
+      "Enough of the ~40% too much on the receipt (middleman + store). At Pi COOP, you pay the product’s real price, plus 20 cents — not a %-margin.",
     footnote:
       "20\u00a0cents on dry goods · 50\u00a0cents on fresh and pricier products — details in “How it works”.",
-    ctaUnlock: "Unlock prices in my city",
+    ctaUnlock: "I pre-register for free",
     ctaHow: "How it works",
   },
   folder: {

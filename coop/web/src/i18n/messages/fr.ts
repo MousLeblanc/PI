@@ -12,15 +12,13 @@ export const fr = {
     slogan: "Le nombre fait la force",
   },
   hero: {
-    title: "Vos courses à prix grossiste +\u00a020\u00a0centimes",
+    title: "Vos courses à prix direct producteur +\u00a020\u00a0centimes",
     titleAria: "Voir le détail des marges fixes",
-    subtitleBefore: "Marge fixe, jamais cachée. Devenez",
-    subtitleStrong: "futur coopérateur",
-    subtitleAfter:
-      "de votre supermarché citoyen. La préinscription est gratuite. À l’ouverture, le principe est simple\u00a0: une part sociale (25\u00a0€ minimum), un abonnement de 10\u00a0€ / mois, et 2\u00a0h d’entraide par adulte (18–65 ans).",
+    subtitle:
+      "Assez des ~40\u00a0% en trop sur le ticket (intermédiaire + magasin). Chez Pi COOP, vous payez le prix réel du produit, plus 20\u00a0centimes — pas une marge en\u00a0%.",
     footnote:
       "20\u00a0centimes sur le sec · 50\u00a0centimes sur le frais et les produits chers — détail dans «\u00a0Comment ça marche\u00a0?\u00a0».",
-    ctaUnlock: "Débloquer les prix dans ma ville",
+    ctaUnlock: "Je me préinscris gratuitement",
     ctaHow: "Comment ça marche\u00a0?",
   },
   folder: {

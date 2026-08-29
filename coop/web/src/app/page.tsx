@@ -36,11 +36,7 @@ export default function HomePage() {
           </h1>
 
           <p className="animate-fade-up-delay mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            {t("hero.subtitleBefore")}{" "}
-            <strong className="font-medium text-foreground">
-              {t("hero.subtitleStrong")}
-            </strong>{" "}
-            {t("hero.subtitleAfter")}
+            {t("hero.subtitle")}
           </p>
           <p className="animate-fade-up-delay mt-3 max-w-xl text-xs text-muted-foreground/90">
             <a href="#comment-ca-marche" className="text-emerald-800 hover:underline">
@@ -57,7 +53,12 @@ export default function HomePage() {
             >
               <a href="#inscription">{t("hero.ctaUnlock")}</a>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-2 border-emerald-800/40 bg-emerald-50/80 text-emerald-950 hover:bg-emerald-100/90"
+            >
               <a href="#comment-ca-marche">{t("hero.ctaHow")}</a>
             </Button>
           </div>

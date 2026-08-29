@@ -14,15 +14,13 @@ export const nl = {
     slogan: "Het getal maakt de kracht",
   },
   hero: {
-    title: "Jouw boodschappen aan groothandelsprijs +\u00a020\u00a0cent",
+    title: "Jouw boodschappen aan producentprijs +\u00a020\u00a0cent",
     titleAria: "Bekijk de details van de vaste marges",
-    subtitleBefore: "Vaste marge, nooit verborgen. Word",
-    subtitleStrong: "toekomstige coöperant",
-    subtitleAfter:
-      "van je burgersupermarkt. De voorinschrijving is gratis. Bij de opening is het principe eenvoudig: een aandeel (minstens 25\u00a0€), een abonnement van 10\u00a0€ / maand, en 2\u00a0u wederzijdse hulp per volwassene (18–65).",
+    subtitle:
+      "Genoeg van de ~40\u00a0% te veel op het ticket (tussenhandelaar + winkel). Bij Pi COOP betaal je de echte prijs van het product, plus 20\u00a0cent — geen procentmarge.",
     footnote:
       "20\u00a0cent op droog · 50\u00a0cent op vers en duurdere producten — details in «\u00a0Hoe werkt het\u00a0?\u00a0».",
-    ctaUnlock: "Ontgrendel de prijzen in mijn stad",
+    ctaUnlock: "Ik schrijf me gratis voor",
     ctaHow: "Hoe werkt het\u00a0?",
   },
   folder: {
