@@ -36,6 +36,14 @@ export const fr = {
       "Catalogue temporairement indisponible. Réessayez dans un instant.",
     disclaimer:
       "* Prix cibles estimés à titre indicatif. Non contractuels.",
+    compare: {
+      kicker: "Comparateur de prix",
+      title: "Sur ce panier d’exemple",
+      retail: "Magasin classique",
+      pi: "Prix Pi",
+      savings: "Économie réalisée",
+      savingsPct: "soit environ −{pct}\u00a0%",
+    },
   },
   gauges: {
     title: "Débloquez le premier supermarché Pi",

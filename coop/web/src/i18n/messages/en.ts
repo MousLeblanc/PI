@@ -36,6 +36,14 @@ export const en = {
     markup: "+{cents}\u00a0cents fixed margin",
     unavailable: "Catalogue temporarily unavailable. Please try again shortly.",
     disclaimer: "* Target prices for guidance only. Non-contractual.",
+    compare: {
+      kicker: "Price comparison",
+      title: "On this sample basket",
+      retail: "Typical store",
+      pi: "Pi price",
+      savings: "You save",
+      savingsPct: "about −{pct}%",
+    },
   },
   gauges: {
     title: "Unlock the first Pi supermarket",

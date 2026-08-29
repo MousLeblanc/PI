@@ -22,6 +22,11 @@ export function FolderPi() {
   }, []);
 
   const items = data?.items ?? [];
+  const retailTotal = items.reduce((s, i) => s + i.retailEur, 0);
+  const piTotal = items.reduce((s, i) => s + i.piPriceEur, 0);
+  const savings = retailTotal - piTotal;
+  const savingsPct =
+    retailTotal > 0 ? Math.round((savings / retailTotal) * 100) : 0;
 
   return (
     <div>
@@ -83,6 +88,57 @@ export function FolderPi() {
           </Card>
         )}
       </div>
+
+      {items.length > 0 ? (
+        <div className="mt-8 overflow-hidden rounded-2xl bg-[var(--bg-deep,#0f2a22)] text-emerald-50 shadow-lg">
+          <div className="border-b border-white/10 px-5 py-4 sm:px-6">
+            <p className="m-0 text-xs uppercase tracking-[0.2em] text-emerald-200/80">
+              {t("folder.compare.kicker")}
+            </p>
+            <h3 className="mt-1 font-display text-xl font-semibold tracking-tight text-white sm:text-2xl">
+              {t("folder.compare.title")}
+            </h3>
+          </div>
+
+          <div className="space-y-0 px-5 py-2 sm:px-6">
+            <div className="flex items-baseline justify-between gap-4 border-b border-white/5 py-3.5">
+              <p className="m-0 text-sm text-emerald-100/80 sm:text-base">
+                {t("folder.compare.retail")}
+              </p>
+              <p className="m-0 font-display text-2xl font-semibold tabular-nums tracking-tight text-emerald-100/90 line-through decoration-emerald-100/40 sm:text-3xl">
+                {formatPrice(retailTotal)}
+                <span className="ml-1 text-lg font-medium sm:text-xl">€</span>
+              </p>
+            </div>
+            <div className="flex items-baseline justify-between gap-4 py-3.5">
+              <p className="m-0 text-sm text-emerald-100/80 sm:text-base">
+                {t("folder.compare.pi")}
+              </p>
+              <p className="m-0 font-display text-2xl font-bold tabular-nums tracking-tight text-white sm:text-3xl">
+                {formatPrice(piTotal)}
+                <span className="ml-1 text-lg font-semibold sm:text-xl">€</span>
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-baseline justify-between gap-4 bg-lime-300 px-5 py-4 text-emerald-950 sm:px-6">
+            <div>
+              <p className="m-0 text-sm font-bold uppercase tracking-wide sm:text-base">
+                {t("folder.compare.savings")}
+              </p>
+              {savingsPct > 0 ? (
+                <p className="m-0 mt-0.5 text-xs font-medium text-emerald-900/80 sm:text-sm">
+                  {t("folder.compare.savingsPct", { pct: savingsPct })}
+                </p>
+              ) : null}
+            </div>
+            <p className="m-0 font-display text-3xl font-bold tabular-nums tracking-tight sm:text-4xl">
+              −{formatPrice(savings)}
+              <span className="ml-1 text-xl font-semibold sm:text-2xl">€</span>
+            </p>
+          </div>
+        </div>
+      ) : null}
 
       <p className="mt-4 text-xs text-amber-900/90">
         {t("folder.disclaimer")}

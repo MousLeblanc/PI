@@ -39,6 +39,14 @@ export const nl = {
       "Catalogus tijdelijk onbeschikbaar. Probeer het zo dadelijk opnieuw.",
     disclaimer:
       "* Richtprijzen ter indicatie. Niet contractueel.",
+    compare: {
+      kicker: "Prijsvergelijking",
+      title: "Op dit voorbeeldmandje",
+      retail: "Klassieke winkel",
+      pi: "Pi-prijs",
+      savings: "Besparing",
+      savingsPct: "ongeveer −{pct}\u00a0%",
+    },
   },
   gauges: {
     title: "Ontgrendel de eerste Pi-supermarkt",
