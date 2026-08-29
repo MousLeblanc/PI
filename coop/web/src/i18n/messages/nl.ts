@@ -147,7 +147,7 @@ export const nl = {
   how: {
     title: "Hoe werkt het\u00a0?",
     intro:
-      "Le Pi COOP-recept in vier regels. Een supermarkt op menselijke schaal, geen klassieke hypermarkt: een burgercoöperatie waar de koopkracht terug naar de leden gaat.",
+      "Vier regels. Een supermarkt op menselijke schaal — de koopkracht keert terug naar de leden.",
     flows: {
       subtitle:
         "Bij Pi COOP hangt de overleving van de winkel niet af van een %-marge op je boodschappen.",

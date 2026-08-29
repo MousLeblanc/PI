@@ -144,7 +144,7 @@ export const fr = {
   how: {
     title: "Comment ça marche\u00a0?",
     intro:
-      "La recette Pi COOP en quatre règles. Un supermarché à taille humaine, pas un hypermarché classique : une coopérative citoyenne où le pouvoir d’achat revient aux membres.",
+      "Quatre règles. Un supermarché à taille humaine — le pouvoir d’achat revient aux membres.",
     flows: {
       subtitle:
         "Au Pi COOP, la survie du magasin ne dépend pas d’une marge en % sur vos courses.",

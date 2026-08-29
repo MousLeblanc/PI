@@ -144,7 +144,7 @@ export const en = {
   how: {
     title: "How it works",
     intro:
-      "The Pi COOP recipe in four rules. A human-scale supermarket, not a conventional hypermarket: a citizen cooperative where purchasing power returns to members.",
+      "Four rules. A human-scale supermarket — purchasing power returns to members.",
     flows: {
       subtitle:
         "At Pi COOP, the store’s survival does not depend on a %-margin on your groceries.",

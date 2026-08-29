@@ -14,7 +14,7 @@ export function HowItWorks() {
 
   return (
     <div>
-      <div className="mx-auto mb-10 max-w-2xl text-center">
+      <div className="mb-10 max-w-2xl text-left">
         <h2 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
           {messages.how.title}
         </h2>
@@ -125,7 +125,7 @@ export function HowItWorks() {
         <SubscriptionSimulator />
       </div>
 
-      <div className="mx-auto mt-12 max-w-2xl space-y-10 border-t border-emerald-900/10 pt-10 text-center">
+      <div className="mt-12 max-w-2xl space-y-10 border-t border-emerald-900/10 pt-10 text-left">
         <div>
           <h3 className="font-display text-2xl font-semibold tracking-tight">
             {messages.how.openingStagesTitle}
