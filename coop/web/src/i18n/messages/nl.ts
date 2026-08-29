@@ -259,11 +259,10 @@ export const nl = {
       examplesLead:
         "Illustratie (hoe de marge werkt, geen belofte tot op de cent) :",
       examples: [
-        "Hypothese aan 5 € groothandel: winkel +20 % ≈ 6 € → bij Pi: 5,20 € (droog).",
-        "Hypothese aan 10 € groothandel: winkel +20 % ≈ 12 € → bij Pi: 10,20 € (droog) of 10,50 € (vers).",
+        "Hypothese: artikel aan 4,90 € in een klassieke winkel (≈ twee ~20 % marges al genomen). Haal ~40 % weg, dan +20 cent → bij Pi: 3,14 € (droog).",
       ],
       examplesNote:
-        "Als groepsinkoop ons nog goedkoper laat inkopen, daalt ook jouw schapprijs: steeds werkelijke aankoopprijs + 20 of 50 cent.",
+        "Marketinglezing: 4,90 × 0,60 + 0,20 = 3,14. Orde van grootte voor « we halen beide 20 % weg ». De echte schapprijs blijft werkelijke aankoopprijs + 20 of 50 cent.",
     },
     openingStagesTitle: "Opening: wat je vanaf dag één vindt",
     openingStagesBody:

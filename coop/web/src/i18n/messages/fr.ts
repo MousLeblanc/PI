@@ -256,11 +256,10 @@ export const fr = {
       examplesLead:
         "Illustration (mécanique de marge, pas une promesse au centime près) :",
       examples: [
-        "Hypothèse à 5 € au gros : magasin à +20 % ≈ 6 € → chez Pi : 5,20 € (sec).",
-        "Hypothèse à 10 € au gros : magasin à +20 % ≈ 12 € → chez Pi : 10,20 € (sec) ou 10,50 € (frais).",
+        "Hypothèse : article à 4,90 € en magasin classique (≈ deux fois ~20 % déjà pris). On retire ~40 %, puis +20 centimes → chez Pi : 3,14 € (sec).",
       ],
       examplesNote:
-        "Si nos achats groupés nous permettent de négocier encore moins cher au gros, votre prix en rayon baisse aussi : toujours prix d’achat réel + 20 ou 50 centimes.",
+        "Lecture marketing : 4,90 × 0,60 + 0,20 = 3,14 €. Ordre de grandeur pour montrer l’effet « on retire les deux 20 % ». Le prix réel restera toujours prix d’achat + 20 ou 50 centimes.",
     },
     openingStagesTitle: "Ouverture : ce qu’on trouve dès le premier jour",
     openingStagesBody:

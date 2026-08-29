@@ -256,11 +256,10 @@ export const en = {
       examplesLead:
         "Illustration (how the margin works, not a penny-perfect promise):",
       examples: [
-        "Hypothetical €5 wholesale: shop at +20% ≈ €6 → at Pi: €5.20 (dry).",
-        "Hypothetical €10 wholesale: shop at +20% ≈ €12 → at Pi: €10.20 (dry) or €10.50 (fresh).",
+        "Hypothesis: an item at €4.90 in a classic shop (≈ two ~20% markups already taken). Remove ~40%, then +20 cents → at Pi: €3.14 (dry).",
       ],
       examplesNote:
-        "If pooled buying lets us negotiate even lower wholesale, your shelf price drops too: always actual purchase price + 20 or 50 cents.",
+        "Marketing reading: 4.90 × 0.60 + 0.20 = 3.14. Order of magnitude for “we remove both 20%s”. Real shelf price remains actual purchase price + 20 or 50 cents.",
     },
     openingStagesTitle: "Opening: what you find from day one",
     openingStagesBody:
