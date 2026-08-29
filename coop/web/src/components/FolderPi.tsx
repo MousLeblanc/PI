@@ -36,34 +36,34 @@ export function FolderPi() {
         {items.map((item) => (
           <Card
             key={item.id}
-            className="overflow-hidden transition-shadow hover:shadow-md"
+            className="overflow-hidden border-emerald-100/80 transition-shadow hover:shadow-md"
           >
-            <div className="relative aspect-[4/3] bg-emerald-50/60">
+            <div className="relative mx-3 mt-3 aspect-[4/3] overflow-hidden rounded-2xl bg-emerald-50">
               <Image
                 src={item.imageUrl}
                 alt={item.name}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="object-cover"
+                className="object-contain p-4 sm:p-5"
               />
               <span className="absolute left-3 top-3 rounded-full bg-emerald-900/90 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-white shadow-sm">
                 {t("folder.organicBadge")}
               </span>
             </div>
-            <CardHeader className="pb-3 pt-4">
+            <CardHeader className="pb-2 pt-4">
               <p className="text-sm font-medium text-foreground">
                 {item.name}
               </p>
             </CardHeader>
-            <CardContent className="space-y-1">
-              <p className="text-sm text-slate-500 line-through">
+            <CardContent className="space-y-1.5">
+              <p className="text-sm text-slate-400 line-through decoration-slate-400/80">
                 {t("folder.inStore", { price: formatPrice(item.retailEur) })}
               </p>
-              <p className="font-display text-4xl font-bold tracking-tight text-emerald-800">
+              <p className="font-display text-5xl font-bold leading-none tracking-tight text-emerald-800">
                 {formatPrice(item.piPriceEur)}
-                <span className="ml-1 text-lg font-semibold">€</span>
+                <span className="ml-1 text-xl font-semibold">€</span>
               </p>
-              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-900">
+              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-900/80">
                 {t("folder.piPrice")}
               </p>
               <p className="pt-1 text-xs text-muted-foreground">
